@@ -18,7 +18,7 @@
 <body>
     <!-- 트랜스폼 학습 -->
 
-    <div id="scale">
+    <!-- <div id="scale">
         <div class="box01">
             <p>scale(1.2) - <br> X축 Y축 비율</p>
         </div>
@@ -225,15 +225,59 @@
             transform: rotateY(140deg);
             opacity: 0;
         }
-
-
-        
-
+    </style> -->
 
 
 
+    <div class="vid">
+        <video autoplay loop muted>
+            <!-- loop는 무한반복 / controls는 재생바가 생김 / muted는 무음   -->
+            <source src="img/nike.mp4" type="video/mp4">
+        </video>
+        <!-- 영상과 소리는 연결시켜줘야한다 -->
+    </div>
 
+    <h1 class="logo">
+        <img src="img/logo2.png" alt="nike로고">
+    </h1>
+    <header>
+        <nav>
+            <ul id="gnb">
+                <li><a href="#"><em>About NIKE</em></a>
+                <ul>
+                        <li><a href="#"><em>English</em></a></li>
+                </ul>
+                </li>
+                <li><a href="#"><em>Brand Info</em></a>
+                    <ul>
+                        <li><a href="#"><em>sub1</em></a></li>
+                        <li><a href="#"><em>sub2</em></a></li>
+                        <li><a href="#"><em>sub3</em></a></li>
+                        <li><a href="#"><em>sub4</em></a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><em>Community</em></a>
+                    <ul>
+                        <li><a href="#"><em>sub5</em></a></li>
+                        <li><a href="#"><em>sub6</em></a></li>
+                        <li><a href="#"><em>sub7</em></a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><em>Product Value</em></a>
+                    <ul>
+                        <li><a href="#"><em>sub8</em></a></li>
+                        <li><a href="#"><em>sub9</em></a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><em>Company History</em></a>
+                    <ul>
+                        <li><a href="#"><em>sub10</em></a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- 1뎁스 2뎁스는 유일한 하나의 id값을 주는것이 좋다 -->
+        </nav>
 
-    </style>
+    </header>
 </body>
 </html>
