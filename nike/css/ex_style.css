@@ -58,12 +58,13 @@ header nav {
     position: absolute;
     right: 0;
     top: 50px;
-    width: 220px;
-    height: auto;
     }
 #gnb>li {
+    position: relative;
 }
 #gnb>li>a {
+    height: 50px;
+    width: 220px;
     display: block;
     text-align: right;
     padding-right: 30px;
@@ -75,14 +76,36 @@ header nav {
     color: #fff;
     background-color: #111;
 }
-#gnb>li:hover a {
+#gnb>li:hover>a {
     color: #fff;
     background-color: #111;
 }
 #gnb em {
     display: inline-block;
-    transform: skewX(45deg);
+    transform: skewX(45deg) !important;
 }
 #gnb ul {
     position: absolute;
+    left: 230px;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.5s;
+}
+#gnb ul a {
+    padding-left: 50px;
+    display: block;
+    width: 150px;
+    height: 40px;
+    font: bold 16px/2.5 arial;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    background-color: #222;
+    border-bottom: 1px solid #b9fb05;
+}
+#gnb li:hover ul {
+    opacity: 1;
+}
+#gnb ul a em {
+    display: inline-block;
 }

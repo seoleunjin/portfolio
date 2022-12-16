@@ -5,6 +5,7 @@
 
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Play&display=swap');
+<script src="https://use.fontawesome.com/29f84cf8f7.js"></script> 
 /* 전체설정 */
 *{padding: 0; margin: 0;}
 ul {list-style: none;}
@@ -97,7 +98,8 @@ header {
     background-color: #111;
 }
 
-/* 2뎁스 */
+/* 2뎁스 */ 
+/* 자바로도 구현가능 */
 
 #gnb ul {
     position: absolute;
@@ -121,4 +123,149 @@ header {
 #gnb>li:hover ul {
     left: 205px;
     opacity: 1;
+}
+/*  자바스크립트의 경우 건바이건으로 지정해서 불러줘야 하지만
+css같은 경우 부모는 무조건 자손만 불러낼수 있으므로 한번으로 여러개의 
+설정할 수 있는 장점이 있다. */
+
+/* 텍스트박스설정 */
+.txtbox {
+    position: fixed;
+    right: 70px;
+    width: 340px;
+    height: 250px;
+    top: 50%;
+    margin-top: -180px;
+}
+/* 박스의 크기를 만들고 상하값 조절  */
+.txt {
+    font-size: 34px;
+    font-family: paly;
+    color: #bbb;
+    letter-spacing: -2px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.txt b {
+    margin-left: 20px;
+    color: #b9fb05;
+    font-weight: bold;
+    font-family: arial;
+}
+.big {
+    font-size: 160px;
+    font-family: 'Monoton', cursive;
+    color: #b9fb05;
+    letter-spacing: -1px
+}
+.big em {
+    font-family: play;
+    font-size: 50px;
+    color: #fff;
+}
+
+
+/* 슬라이드영역 */
+
+.side {
+    position: fixed;
+    right: -800px;  
+    /* 설정후 변경 -800px */
+    bottom: 0;
+    background-color: #111;
+    width: 800px;
+    height: 100%;
+    transform: skewX(-40deg);
+    opacity: 0.5;
+    transition: all 0.5s;
+}
+.side:hover {
+    right: -500px;
+}
+.side div {
+    position: absolute;
+    width: 400px;
+    height: 100%;
+    background-color: #000;
+    left: 150px;
+    background-origin: 0;
+    transition: all 1s;
+}
+.side:hover div {
+    left: 50px;
+}
+/* 마우스를 */
+.side p {
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    transition: all 0.8s;
+}
+.side:hover p {
+    transform: translate(0);
+}
+.side p:nth-child(1) {
+    bottom: 270px;
+    left: 50px;
+    transform: translate(400px);
+}
+.side p:nth-child(2) {
+    bottom: 160px;
+    left: 50px;
+    transform: translate(300px);
+}
+.side p:nth-child(3) {
+    left: 50px;
+    bottom: 50px;
+    transform: translate(200px);
+}
+.side em {
+    color: #a0bd50;
+    display: block;
+    transform: skewX(40deg);
+}
+.side img {}
+.side article {
+    position: absolute;
+    bottom: 40px;
+    left: 100px;
+    transform: skewX(40deg);
+    width: 150px;
+    height: 50px;
+}
+.side:hover article {
+    transform: translate(2000px);
+}
+.side i {
+    font-size: 60px;
+    color: #b9fb05;
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    animation: ani 1.5s infinite;
+}
+.side i:nth-child(1) {
+    animation-delay: 0s;
+}
+.side i:nth-child(2) {
+    animation-delay: 0.5s;
+}
+.side i:nth-child(3) {
+    animation-delay: 1.0s;
+}
+
+
+/* 애니메이션 만들기 */
+@keyframes ani {
+0% {
+    right: 0;
+    transform:scale{1}:
+    opacity: 1;
+}
+100% {
+    right: 100px;
+    transform:scale{1.5}:
+    opacity: 0;
+}
 }
