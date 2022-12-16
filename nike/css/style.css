@@ -180,9 +180,7 @@ css같은 경우 부모는 무조건 자손만 불러낼수 있으므로 한번�
     opacity: 0.5;
     transition: all 0.5s;
 }
-.side:hover {
-    right: -500px;
-}
+
 .side div {
     position: absolute;
     width: 400px;
@@ -192,9 +190,7 @@ css같은 경우 부모는 무조건 자손만 불러낼수 있으므로 한번�
     background-origin: 0;
     transition: all 1s;
 }
-.side:hover div {
-    left: 50px;
-}
+
 /* 마우스를 */
 .side p {
     width: 300px;
@@ -202,9 +198,7 @@ css같은 경우 부모는 무조건 자손만 불러낼수 있으므로 한번�
     position: absolute;
     transition: all 0.8s;
 }
-.side:hover p {
-    transform: translate(0);
-}
+
 .side p:nth-child(1) {
     bottom: 270px;
     left: 50px;
@@ -233,15 +227,14 @@ css같은 경우 부모는 무조건 자손만 불러낼수 있으므로 한번�
     transform: skewX(40deg);
     width: 150px;
     height: 50px;
+    transition: all 0.5s;
 }
-.side:hover article {
-    transform: translate(2000px);
-}
+
 .side i {
     font-size: 60px;
     color: #b9fb05;
     position: absolute;
-    bottom: 50px;
+    bottom: 0;
     right: 0;
     animation: ani 1.5s infinite;
 }
@@ -256,6 +249,18 @@ css같은 경우 부모는 무조건 자손만 불러낼수 있으므로 한번�
 }
 
 
+
+.side:hover {
+    right: -500px;}
+.side:hover div {
+        left: 50px;
+    }
+.side:hover p {
+        transform: translate(0);
+    }
+.side:hover article {
+        transform: translate(2000px);
+    }
 /* 애니메이션 만들기 */
 @keyframes ani {
 0% {
