@@ -1,0 +1,255 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Caramel&family=Orbitron&display=swap');
+/* 전체설정 */
+* {padding: 0; margin: 0;}
+ul {list-style: none;}
+img {border: none; vertical-align: bottom;}
+a {text-decoration: none; color: #111;}
+
+
+body {
+    position: fixed;
+    width: 100%;
+    height: 100%;font-family: 'Caramel', cursive;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#wrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    perspective: 800px;
+}
+/* 메뉴바설정 */
+span {
+    font-size: 60px;
+    position: absolute;
+    color: #000;
+    z-index: 3;
+    top: 40px;
+    left: 50px;
+}
+span i {}
+/* 내비설정 */
+nav {
+    position: fixed;
+    width: 150px;
+    height: 100%;
+    background-color: beige;
+    z-index: 2;
+}
+/* 내비 호면구조 */
+nav {
+    transform: rotateY(10deg);
+    transform-origin: left top;
+}
+nav h1 {
+    width: 100px;
+    left: 50%;
+    margin-left: 25px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+nav h1 img {
+    width: 100%;
+    height: auto;
+}
+#gnb {
+    position: absolute;
+    width: 100%;
+}
+#gnb li {}
+#gnb li a {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    line-height: 4;
+}
+
+section {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+section>div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+section>div.on {
+    opacity: 1;
+    z-index: 3;
+}
+
+
+/* 박스1번 */
+.box1 {
+    background-color: aqua;
+}
+.box1>p {
+    float: right;
+}
+.box1 p:nth-child(1) {
+    background-color: #ddd;
+    width: 25%;
+    height: 25%;
+}
+.box1 p:nth-child(2) {
+    background-color: #ccc;
+    width: 25%;
+    height: 25%;
+}
+.box1 p:nth-child(3) {
+    background-color: #bbb;
+    width: 50%;
+    height: 25%;
+}
+.box1 p:nth-child(4) {
+    background-color: #aaa;
+    width: 50%;
+    height: 50%;
+}
+.box1 p:nth-child(5) {
+    background-color: #111;
+    width: 25%;
+    height: 25%;
+}
+.box1 p:nth-child(6) {
+    background-color: #222;
+    width: 25%;
+    height: 25%;
+}
+.box1 p:nth-child(7) {
+    background-color: #333;
+    width: 25%;
+    height: 25%;
+}
+.box1 p:nth-child(8) {
+    background-color: #444;
+    width: 25%;
+    height: 25%;
+}
+.box1 p:nth-child(9) {
+    background-color: #555;
+    width: 25%;
+    height: 25%;
+}
+.box1 p:nth-child(10) {
+    background-color: #666;
+    width: 50%;
+    height: 25%;
+}
+.box1 p:nth-child(11) {
+    background-color: #777;
+    width: 25%;
+    height: 25%;
+}
+
+
+
+/* 박스2번 */
+.box2 {
+    background-color: antiquewhite;
+}
+.box2>p {
+    float: left;
+}
+.box2 p:nth-child(1) {
+    background-color: #ddd;
+    width: 25%;
+    height: 25%;
+}
+.box2 p:nth-child(2) {
+    background-color: #ccc;
+    width: 25%;
+    height: 25%;
+}
+.box2 p:nth-child(3) {
+    background-color: #bbb;
+    width: 50%;
+    height: 25%;
+}
+.box2 p:nth-child(4) {
+    background-color: #aaa;
+    width: 25%;
+    height: 50%;
+}
+.box2 p:nth-child(5) {
+    background-color: #111;
+    width: 50%;
+    height: 50%;
+}
+.box2 p:nth-child(6) {
+    background-color: #222;
+    width: 25%;
+    height: 25%;
+}
+.box2 p:nth-child(7) {
+    background-color: #333;
+    width: 25%;
+    height: 25%;
+}
+.box2 p:nth-child(8) {
+    background-color: #444;
+    width: 25%;
+    height: 25%;
+}
+.box2 p:nth-child(9) {
+    background-color: #555;
+    width: 25%;
+    height: 25%;
+}
+.box2 p:nth-child(10) {
+    background-color: #666;
+    width: 25%;
+    height: 25%;
+}
+.box2 p:nth-child(11) {
+    background-color: #777;
+    width: 25%;
+    height: 25%;
+}
+
+/* 박스3번 */
+.box3 {
+    background-color: rgb(233, 116, 49);
+}
+.box3>p {
+    float: left;
+}
+.box3 p:nth-child(1) {
+    background-color: #ddd;
+    width: 50%;
+    height: 100%;
+}
+.box3 p:nth-child(2) {
+    background-color: #ccc;
+    width: 25%;
+    height: 25%;
+}
+.box3 p:nth-child(3) {
+    background-color: #bbb;
+    width: 25%;
+    height: 25%;
+}
+.box3 p:nth-child(4) {
+    background-color: #aaa;
+    width: 50%;
+    height: 25%;
+}
+.box3 p:nth-child(5) {
+    background-color: #111;
+    width: 25%;
+    height: 50%;
+}
+.box3 p:nth-child(6) {
+    background-color: #222;
+    width: 25%;
+    height: 25%;
+}
+.box3 p:nth-child(7) {
+    background-color: #333;
+    width: 25%;
+    height: 25%;
+}
