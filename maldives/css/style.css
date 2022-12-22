@@ -1,10 +1,12 @@
 @charset "UTF-8";
-
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 /* 전체설정 */
 * {padding: 0; margin: 0;}
 ul {list-style: none;}
 img {border: none; vertical-align: bottom;}
-a {text-decoration: none; color: #000;}
+a {text-decoration: none; color: #000;
+    font-family: 'Poiret One', cursive;}
+body {font-family: 'Poiret One', cursive;}
 
 
 
@@ -13,7 +15,7 @@ header {
     width: 15%;
     position: fixed;
     height: 100%;
-    background-color: beige;
+    background-color: #fff;
 }
 nav {
     width: 85%;
@@ -83,8 +85,170 @@ article:nth-child(12) {
 
 
 
+
+/* header 콘텐츠 */
+header h1 {
+    width: 180px;
+    height: 136px;
+    position: absolute;
+    left: 50%;
+    margin-left: -90px;
+    top: 70px;
+    background-image: url(../img/logo1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-indent: -9999px;
+}
+#gnb {
+    position: absolute;
+    top: 50%;
+    margin-top: -100px;
+    width: 100%;
+    right: 0;
+}
+#gnb li {}
+#gnb li a {
+    display: block;
+    padding: 8px 30px ;
+    font-size: 22px;
+    font-weight: bold;
+    color: #555;
+    line-height: 1.8;
+    text-align: center;
+}
+.snsSet {
+    width: 90px;
+    position: absolute;
+    bottom: 50px;
+    right: 50%;
+    margin-right: -45px;
+}
+.snsSet a {
+    display: block;
+    float: left;
+}
+.snsSet img {
+    max-width: 100%;
+}
+/* 올래 이미지 사이즈를 최대 크기로 해라 */
+
+/* nav 콘텐츠구성 */
+nav {
+    position: relative;
+    background-color: #212121;
+}
+nav a {
+    position: absolute;
+    top: 5px;
+}
+nav img {
+    max-width: 100%;
+}
+
+nav a:nth-child(1){
+    left: 10px;
+}
+nav a:nth-child(2){
+    left: 150px;
+}
+nav a:nth-child(3){
+    right: 96px;
+}
+nav a:nth-child(4){
+    right: 10px;
+}
+
+
+/* 배경이미지 삽입 */
+.bg {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    /* repeat가 되지 않음 하지만 이미지가 깨짐 화면을 줄일시 위 아래로만 사진이 없어지기 때문에 포지션 설정*/
+    background-position: center center;
+    position: relative;
+    overflow: hidden;
+}
+.bg span {
+    font-size: 60px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    color: #fff;
+    opacity: 0;
+    transform: scale(10);
+    transition: all 0.5s;
+}
+article:nth-child(1) span {
+    opacity: 1;
+    transform: scale(1);
+    font-size: 170px;
+    bottom: -40px;
+}
+
+article:hover span {
+    opacity: 1;
+    transform: scale(1);
+}
+article:nth-child(1):hover span {
+    opacity: 0.8;
+    transform: scale(1.1);
+    color: #000;
+}
+article:nth-child(1) div {
+    background-image: url(../img/pic1.jpg);
+}
+article:nth-child(4) div {
+    background-image: url(../img/pic4.jpg);
+}
+article:nth-child(5) div {
+    background-image: url(../img/pic5.jpg);
+}
+article:nth-child(7) div {
+    background-image: url(../img/pic7.jpg);
+}
+article:nth-child(9) div {
+    background-image: url(../img/pic4.jpg);
+}
+article:nth-child(10) div {
+    background-image: url(../img/pic5.jpg);
+}
+article:nth-child(12) div {
+    background-image: url(../img/pic6.jpg);
+}
+/* 텍스트 삽입 */
+.txt {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    padding: 40px 30px;
+    box-sizing: border-box;
+    color: #000;
+    background-color: #fff;
+}
+article strong {
+    display: block;
+    font-size: 30px;
+}
+
+article em {
+    display: block;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+article:nth-child(3) {
+    background-color: #bff7fa;
+}
+
+article:nth-child(11) {
+    background-color: #e3f1ff;
+}
+
+
 /* 미디어쿼리구간설정 */
-/* 1280px이상 1599p이하구간 */
+/* 1280px이상 1599p이하구간--------------------------------------1구간 */
 @media (min-width:1280px) and (max-width:1599px){
     header {
         width: 100%;
@@ -101,8 +265,56 @@ article:nth-child(12) {
         height: auto;
         margin-left: 0;
     }
+    
+
+    /* header 콘텐츠 */
+header h1 {
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    left: 20px;
+    margin-left: 0px;
+    top: 20px;
+    background-image: url(../img/logo2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-indent: -9999px;
 }
-/* 1024px이상 1279px이하구간 */
+#gnb {
+    position: absolute;
+    top: 20px;
+    margin-top: 0;
+    width: auto;
+    right: 200px;
+}
+#gnb li {
+    float: left;
+}
+#gnb li a {
+    display: block;
+    padding: 8px 30px ;
+    font-size: 22px;
+    font-weight: bold;
+    color: #555;
+    line-height: 1.8;
+    text-align: center;
+}
+.snsSet {
+    width: 90px;
+    position: absolute;
+    bottom: 20px;
+    right: 80px;
+    margin-right: -45px;
+}
+.snsSet a {
+    display: block;
+    float: left;
+}
+.snsSet img {
+    max-width: 100%;
+}
+}
+/* 1024px이상 1279px이하구간 ---------------------------------2번구간*/
 @media (min-width:1024px) and (max-width:1279px){
     header {
         width: 100%;
@@ -173,8 +385,54 @@ article:nth-child(12) {
         background-color: #222;
         width: 25%;
     }
+        /* header 콘텐츠 */
+header h1 {
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    left: 20px;
+    margin-left: 0px;
+    top: 20px;
+    background-image: url(../img/logo2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-indent: -9999px;
 }
-/* 780px이상 1023px이하구간 */
+#gnb {
+    position: absolute;
+    top: 20px;
+    margin-top: 0;
+    width: auto;
+    right: 200px;
+}
+#gnb li {
+    float: left;
+}
+#gnb li a {
+    display: block;
+    padding: 8px 30px ;
+    font-size: 22px;
+    font-weight: bold;
+    color: #555;
+    line-height: 1.8;
+    text-align: center;
+}
+.snsSet {
+    width: 90px;
+    position: absolute;
+    bottom: 20px;
+    right: 80px;
+    margin-right: -45px;
+}
+.snsSet a {
+    display: block;
+    float: left;
+}
+.snsSet img {
+    max-width: 100%;
+}
+}
+/* 780px이상 1023px이하구간 ------------------------------3번구간*/
 @media (min-width:780px) and (max-width:1023px){
     header {
         width: 100%;
@@ -249,8 +507,54 @@ article:nth-child(12) {
         background-color: #222;
         display: none;
     }
+        /* header 콘텐츠 */
+header h1 {
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    left: 20px;
+    margin-left: 0px;
+    top: 20px;
+    background-image: url(../img/logo2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-indent: -9999px;
 }
-/* 640px이상 779px이하구간 */
+#gnb {
+    position: absolute;
+    top: 20px;
+    margin-top: 0;
+    width: auto;
+    right: 180px;
+}
+#gnb li {
+    float: left;
+}
+#gnb li a {
+    display: block;
+    padding: 8px 10px ;
+    font-size: 22px;
+    font-weight: bold;
+    color: #555;
+    line-height: 1.8;
+    text-align: center;
+}
+.snsSet {
+    width: 90px;
+    position: absolute;
+    bottom: 20px;
+    right: 80px;
+    margin-right: -45px;
+}
+.snsSet a {
+    display: block;
+    float: left;
+}
+.snsSet img {
+    max-width: 100%;
+}
+}
+/* 640px이상 779px이하구간 --------------------------------4번구간*/
 @media (min-width:640px) and (max-width:779px){
     header {
         width: 100%;
@@ -326,8 +630,55 @@ article:nth-child(12) {
         background-color: #222;
         width: 50%;
     }
+        /* header 콘텐츠 */
+header h1 {
+    width: 200px;
+    height: 40px;
+    position: absolute;
+    left: 20px;
+    margin-left: 0px;
+    top: 20px;
+    background-image: url(../img/logo2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-indent: -9999px;
 }
-/* 480px이상 639px이하구간 */
+#gnb {
+    position: absolute;
+    top: 20px;
+    margin-top: 0;
+    width: auto;
+    right: 20px;
+}
+#gnb li {
+    float: left;
+}
+#gnb li a {
+    display: block;
+    padding: 10px 10px ;
+    font-size: 17px;
+    font-weight: bold;
+    color: #555;
+    line-height: 1.8;
+    text-align: center;
+}
+.snsSet {
+    display: none;
+    width: 90px;
+    position: absolute;
+    bottom: 20px;
+    right: 80px;
+    margin-right: -45px;
+}
+.snsSet a {
+    display: block;
+    float: left;
+}
+.snsSet img {
+    max-width: 100%;
+}
+}
+/* 480px이상 639px이하구간--------------------------------5번구간 */
 @media (min-width:480px) and (max-width:639px){
     header {
         width: 100%;
@@ -405,15 +756,139 @@ article:nth-child(12) {
         background-color: #222;
         width: 50%;
     }
+        /* header 콘텐츠 */
+header h1 {
+    width: 200px;
+    height: 40px;
+    position: relative;
+    left: 20px;
+    margin-left: 0px;
+    top: 20px;
+    background-image: url(../img/logo2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-indent: -9999px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-/* 479px이하구간 */
+#gnb {
+    position: relative;
+    top: 20px;
+    margin-top: 0;
+    width: 100%;
+    height: 40px;
+    right: 0;
+}
+#gnb li {
+    width: 25%;
+    float: left;
+}
+#gnb li a {
+    display: block;
+    padding: 4px 4px ;
+    font-size: 17px;
+    font-weight: bold;
+    color: #555;
+    line-height: 1.8;
+    text-align: center;
+}
+.snsSet {
+    display: none;
+    width: 90px;
+    position: absolute;
+    bottom: 20px;
+    right: 80px;
+    margin-right: -45px;
+}
+.snsSet a {
+    display: block;
+    float: left;
+}
+.snsSet img {
+    max-width: 100%;
+}
+}
+/* 479px이하구간 -----------------------------6번구간*/
 @media (max-width:479px){
     header {
         position: fixed;
         width: 100%;
         height: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 10;
     }
-    nav {}
-    section {}
-    
+    nav {
+        display: none;
+    }
+    section {
+        width: 100%;
+        margin-left: 0;
+        z-index: 2;
+    }
+    article {
+        display: none;
+    }
+    article:nth-child(1) {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+    }
+    /* header 콘텐츠 */
+header h1 {
+    width: 140px;
+    height: 136px;
+    position: absolute;
+    left: 50%;
+    margin-left: -70px;
+    top: 70px;
+    background-image: url(../img/logo1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    text-indent: -9999px;
+}
+#gnb {
+    position: absolute;
+    top: 240px;
+    margin-top: 0;
+    width: 250px;
+    right: 0;
+    right: 50%;
+    margin-right: -125px;
+}
+#gnb li {margin-bottom: 15px;}
+#gnb li a {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: block;
+    padding: 8px 30px ;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 1.8;
+    text-align: center;
+}
+.snsSet {
+    display: none;
+    width: 90px;
+    position: absolute;
+    bottom: 50px;
+    right: 50%;
+    margin-right: -45px;
+}
+.snsSet a {
+    display: block;
+    float: left;
+}
+.snsSet img {
+    max-width: 100%;
+}
+/* 배경글씨 조절 */
+article span {
+    display: none;
+}
+
+
 }

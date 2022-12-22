@@ -23,14 +23,16 @@ body {
 }
 /* 메뉴바설정 */
 span {
-    font-size: 60px;
+    font-size: 30px;
     position: absolute;
     color: #000;
     z-index: 3;
     top: 40px;
     left: 50px;
 }
-span i {}
+span i {
+    max-width: 100%;
+}
 /* 내비설정 */
 nav {
     position: fixed;
@@ -270,4 +272,346 @@ section div.on p {
     background-color: #333;
     width: 25%;
     height: 25%;
+}
+
+
+
+/* 미디어구간 */
+/* 1280px 이상 1599px이하 */
+@media (min-width:1280px) and (max-width:1599px) {}
+/* 1024px이상 1279px이하 */
+@media (min-width:1024px) and (max-width:1279px) {
+    /* 박스1번 */
+.box1 {
+
+}
+.box1>p {
+    float: right;
+    width: 33.3333%;
+}
+.box1 p:nth-child(1) {
+    background-color: #ddd;
+    width: 33.3333%;
+    height: 25%;
+}
+.box1 p:nth-child(2) {
+    background-color: #ccc;
+    width: 66.6666%;
+    height: 25%;
+}
+.box1 p:nth-child(3) {
+    background-color: #bbb;
+    width: 66.6666%;
+    height: 50%;
+}
+.box1 p:nth-child(4) {
+    background-color: #aaa;
+    width: 33.3333%;
+    height: 25%;
+}
+.box1 p:nth-child(5) {
+    background-color: #111;
+    width: 33.3333%;
+    height: 25%;
+}
+.box1 p:nth-child(6) {
+    background-color: #222;
+    width: 33.3333%;
+    height: 25%;
+}
+.box1 p:nth-child(7) {
+    background-color: #333;
+    width: 33.3333%;
+    height: 25%;
+}
+.box1 p:nth-child(8) {
+    background-color: #444;
+    width: 33.3333%;
+    height: 25%;
+}
+.box1 p:nth-child(9) {
+    background-color: #555;
+    width: 0%;
+    height: 25%;
+}
+.box1 p:nth-child(10) {
+    background-color: #666;
+    width: 0%;
+    height: 25%;
+}
+.box1 p:nth-child(11) {
+    background-color: #777;
+    width: 0%;
+    height: 25%;
+}
+
+
+}
+/* 760px이상 1023px이하 */
+@media (min-width:760px) and (max-width:1023px) {
+        /* 박스1번 */
+.box1 {
+
+}
+.box1>p {
+    float: right;
+    width: 33.3333%;
+}
+.box1 p:nth-child(1) {
+    background-color: #ddd;
+    width: 33.3333%;
+    height: 25%;
+}
+.box1 p:nth-child(2) {
+    background-color: #ccc;
+    width: 66.6666%;
+    height: 25%;
+}
+.box1 p:nth-child(3) {
+    background-color: #bbb;
+    width: 66.6666%;
+    height: 50%;
+}
+.box1 p:nth-child(4) {
+    background-color: #aaa;
+    width: 33.3333%;
+    height: 25%;
+}
+.box1 p:nth-child(5) {
+    background-color: #111;
+    width: 33.3333%;
+    height: 25%;
+}
+.box1 p:nth-child(6) {
+    background-color: #222;
+    width: 33.3333%;
+    height: 25%;
+}
+.box1 p:nth-child(7) {
+    background-color: #333;
+    width: 33.3333%;
+    height: 25%;
+}
+.box1 p:nth-child(8) {
+    background-color: #444;
+    width: 33.3333%;
+    height: 25%;
+}
+.box1 p:nth-child(9) {
+    background-color: #555;
+    width: 0%;
+    height: 25%;
+}
+.box1 p:nth-child(10) {
+    background-color: #666;
+    width: 0%;
+    height: 25%;
+}
+.box1 p:nth-child(11) {
+    background-color: #777;
+    width: 0%;
+    height: 25%;
+}
+
+}
+/* 640px이상 759px 이하*/
+@media (min-width:640px) and (max-width:759px) {
+            /* 박스1번 */
+.box1 {
+
+}
+.box1>p {
+    float: right;
+    width: 50%;
+}
+.box1 p:nth-child(1) {
+    background-color: #ddd;
+    width: 100%;
+    height: 20%;
+}
+.box1 p:nth-child(2) {
+    background-color: #ccc;
+    width: 50%;
+    height: 20%;
+}
+.box1 p:nth-child(3) {
+    background-color: #bbb;
+    width: 50%;
+    height: 20%;
+}
+.box1 p:nth-child(4) {
+    background-color: #aaa;
+    width: 50%;
+    height: 20%;
+}
+.box1 p:nth-child(5) {
+    background-color: #111;
+    width: 50%;
+    height: 20%;
+}
+.box1 p:nth-child(6) {
+    background-color: #222;
+    width: 33.3333%;
+    height: 20%;
+}
+.box1 p:nth-child(7) {
+    background-color: #333;
+    width: 33.3333%;
+    height: 20%;
+}
+.box1 p:nth-child(8) {
+    background-color: #444;
+    width: 33.3333%;
+    height: 20%;
+}
+.box1 p:nth-child(9) {
+    background-color: #555;
+    width: 0%;
+    height: 25%;
+}
+.box1 p:nth-child(10) {
+    background-color: #666;
+    width: 0%;
+    height: 25%;
+}
+.box1 p:nth-child(11) {
+    background-color: #777;
+    width: 0%;
+    height: 25%;
+}
+
+}
+/* 480px이상 639px 이하*/
+@media (min-width:480px) and (max-width:639px) {
+                /* 박스1번 */
+.box1 {
+
+}
+.box1>p {
+    float: right;
+    width: 50%;
+}
+.box1 p:nth-child(1) {
+    background-color: #ddd;
+    width: 100%;
+    height: 20%;
+}
+.box1 p:nth-child(2) {
+    background-color: #ccc;
+    width: 50%;
+    height: 20%;
+}
+.box1 p:nth-child(3) {
+    background-color: #bbb;
+    width: 50%;
+    height: 20%;
+}
+.box1 p:nth-child(4) {
+    background-color: #aaa;
+    width: 50%;
+    height: 20%;
+}
+.box1 p:nth-child(5) {
+    background-color: #111;
+    width: 50%;
+    height: 20%;
+}
+.box1 p:nth-child(6) {
+    background-color: #222;
+    width: 33.3333%;
+    height: 20%;
+}
+.box1 p:nth-child(7) {
+    background-color: #333;
+    width: 33.3333%;
+    height: 20%;
+}
+.box1 p:nth-child(8) {
+    background-color: #444;
+    width: 33.3333%;
+    height: 20%;
+}
+.box1 p:nth-child(9) {
+    background-color: #555;
+    width: 0%;
+    height: 25%;
+}
+.box1 p:nth-child(10) {
+    background-color: #666;
+    width: 0%;
+    height: 25%;
+}
+.box1 p:nth-child(11) {
+    background-color: #777;
+    width: 0%;
+    height: 25%;
+}
+
+}
+/* 479px이하 */
+@media (max-width:479px) {
+                    /* 박스1번 */
+.box1 {
+
+}
+.box1>p {
+    float: right;
+    width: 100%;
+}
+.box1 p:nth-child(1) {
+    background-color: #ddd;
+    width: 100%;
+    height: 20%;
+}
+.box1 p:nth-child(2) {
+    background-color: #ccc;
+    width: 100%;
+    height: 20%;
+}
+.box1 p:nth-child(3) {
+    background-color: #bbb;
+    width: 100%;
+    height: 20%;
+}
+.box1 p:nth-child(4) {
+    background-color: #aaa;
+    width: 100%;
+    height: 20%;
+}
+.box1 p:nth-child(5) {
+    background-color: #111;
+    width: 0%;
+    height: 20%;
+}
+.box1 p:nth-child(6) {
+    background-color: #222;
+    width: 0%;
+    height: 20%;
+}
+.box1 p:nth-child(7) {
+    background-color: #333;
+    width: 0%;
+    height: 20%;
+}
+.box1 p:nth-child(8) {
+    background-color: #444;
+    width: 0%;
+    height: 20%;
+}
+.box1 p:nth-child(9) {
+    background-color: #555;
+    width: 0%;
+    height: 25%;
+}
+.box1 p:nth-child(10) {
+    background-color: #666;
+    width: 0%;
+    height: 25%;
+}
+.box1 p:nth-child(11) {
+    background-color: #777;
+    width: 0%;
+    height: 25%;
+}
+
 }
