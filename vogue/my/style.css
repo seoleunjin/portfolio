@@ -106,63 +106,72 @@ section div.on p {
 }
 
 /* 박스1번 */
-.box1 {
+
+.box1>p {
 
 }
-.box1>p {
-    float: right;
-}
 .box1 p:nth-child(1) {
+    float: left;
     background-color: #ddd;
     width: 25%;
     height: 25%;
 }
 .box1 p:nth-child(2) {
+    float: left;
     background-color: #ccc;
     width: 25%;
     height: 25%;
 }
 .box1 p:nth-child(3) {
+    float: right;
     background-color: #bbb;
     width: 50%;
     height: 25%;
 }
 .box1 p:nth-child(4) {
+    float: right;
     background-color: #aaa;
     width: 50%;
     height: 50%;
 }
 .box1 p:nth-child(5) {
+        float: right;
     background-color: #111;
     width: 25%;
     height: 25%;
 }
 .box1 p:nth-child(6) {
+        float: right;
     background-color: #222;
     width: 25%;
     height: 25%;
 }
 .box1 p:nth-child(7) {
+        float: right;
     background-color: #333;
     width: 25%;
     height: 25%;
 }
 .box1 p:nth-child(8) {
+    float: left;
     background-color: #444;
     width: 25%;
     height: 25%;
 }
 .box1 p:nth-child(9) {
+    float: left;
     background-color: #555;
     width: 25%;
     height: 25%;
 }
 .box1 p:nth-child(10) {
+    float: left;
     background-color: #666;
     width: 50%;
     height: 25%;
 }
 .box1 p:nth-child(11) {
+    float: left;
     background-color: #777;
     width: 25%;
     height: 25%;

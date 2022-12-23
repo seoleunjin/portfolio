@@ -134,12 +134,12 @@ section>div.on>p {
 }
 /* 박스1설정 */
 .box1 {
-    background-color: aquamarine;
+
 
 }
 
 .box1>p{
-    display: ;
+
     float: right;
 }
 .box1>p:nth-child(1) {
@@ -201,7 +201,7 @@ section>div.on>p {
 
 /* 박스2설정 */
 .box2 {
-    background-color: blue;
+
 }
 .box2>p{
     float: left;
@@ -263,7 +263,7 @@ section>div.on>p {
 }
 /* 박스3설정 */
 .box3 {
-    background-color: bisque;
+
 }
 .box3>p {
     float: left;
@@ -326,4 +326,126 @@ section>div.on>p {
         transform: scale(1.5);
         color: #888;
     }
+}
+
+
+
+
+section strong {
+    font-size: 50px;
+}
+section span {
+    font-size: 20px;
+}
+section p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /*overflow: hidden 사진이 커지면 스크롤 바가 생기기 때문에 크기가 커지면 감춰져라 */
+}
+
+
+
+/* 박스 1 내부설정 */
+.box1 >p:nth-child(2){
+    background-image: url(../img/m1.jpg);
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+.box1>p:nth-child(5) {
+    background-image: url(../img/m3.jpg);
+    background-size: contain;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+}
+.box1>p:nth-child(4) {
+    background-image: url(../img/m2.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.box1>p:nth-child(8) {
+    background-image: url(../img/m4.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.box1>p:nth-child(10) {
+    background-image: url(../img/m5.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* 박스2 내부설정 */
+.box2>p:nth-child(2) {
+    background-image: url(../img/w1.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.box2>p:nth-child(4) {
+    background-image: url(../img/w2.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+.box2>p:nth-child(5) {
+    background-image: url(../img/w3.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.box2>p:nth-child(6) {
+    background-image: url(../img/w4.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+.box2>p:nth-child(8) {
+    background-image: url(../img/w5.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.box2>p:nth-child(10) {
+    background-image: url(../img/w6.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+.box2>p:nth-child(11) {
+    background-image: url(../img/w7.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+/* 박스3 내부설정 */
+.box3>p:nth-child(1){
+    background-image: url(../img/k1.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+.box3>p:nth-child(3){
+    background-image: url(../img/k2.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+.box3>p:nth-child(5){
+    background-image: url(../img/k3.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+.box3>p:nth-child(7){
+    background-image: url(../img/k4.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
 }
