@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스움직임임펙트</title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+</head>
+<body>
+    <div class="box">
+        <p>Lorem ipsum <span class="style1">dolor</span> sit amet <span class="style2">consectetur</span> Iure qui doloribus <span class="style3">officia</span> sed. <br> Nostrum maiores <span class="style4">dolorum nulla</span> itaque placeat et, <span class="style5">vitae sed magni</span> reprehenderit sint </p>
+    </div>
+    
+    <div class="count">
+        <p>X좌표 : <em></em></p>
+        <p>Y좌표 : <em></em></p>
+    </div>
+
+    <div class="cursor">
+    
+    </div>
+    
+
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+
+
+        body {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            font-family: 'Gamja Flower', cursive;
+            background-color: blueviolet;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+        }
+        .box p {
+            font-size: 33px;
+            text-align: center;
+            color: #fff;
+            line-height: 2;
+        }
+        .box span {
+            border-bottom: dashed 3px #fff;
+            display: inline-block;
+            padding-bottom: 2px;
+        }
+
+        .count {
+            position: fixed;
+            font-size: 30px;
+            font-weight: bold;
+            right: 150px;
+            top: 50px;
+            color: #fff;
+        }
+
+        .cursor {
+            z-index: 9999px;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 3px solid #fff;
+            left: 0;
+            top: 0;
+            pointer-events: none;
+            /* 관통해서 클릭해라 */
+            transition: background-color 0.5s,
+                        border-color 0.5s,
+                        border-radius 0.5s,
+                        transform 0.2s;
+        }
+        .cursor.style1 {
+            background-color: rgba(255, 165, 0, 0.4);
+            border-color: orange;
+        }
+        .cursor.style2 {
+            border-radius: 0;
+            transform: rotate(360deg);
+        }
+
+
+
+
+    </style>
+
+
+    <script>
+        $(document).ready(function(){
+            // 마우스를 따라 다녀라
+            $(window).mousemove(function(e){
+                $('.cursor').css({'cursor':'none'})
+                let x = e.pageX 
+                let y = e.pageY
+
+                $('.count p').eq(0).children('em').text(x);
+                // count p:nth-child(1) em
+                $('.count p').eq(1).children('em').text(y);
+                $('.cursor').css({'left' : x-25 ,'top' : y-25 })
+
+                // span중에서 style1번 안으로 들어갔을때 cursor에 style1이라는 클래스특징을 더해라
+
+            })
+
+            $('.style1').mouseenter(function(){
+                    $('.cursor').addClass('style1')
+                });
+            $('.style1').mouseenter(function(){
+                $('.cursor').removeClass('style1')
+            });
+
+
+
+        })
+
+    </script>
+</body>
+</html>

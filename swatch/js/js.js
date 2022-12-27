@@ -49,6 +49,16 @@ $(document).ready(function(){
         $('.box h2').eq(1).text(posy);
     
         $('.p11').css({'bottom':20-posy/30,'right':20+posx/30})
+        $('.p12').css({'bottom':-40-posy/30,'right':130+posx/30})
+        $('.p13').css({'bottom':180-posy/30,'right':60+posx/30})
+        $('.p21').css({'bottom':-480-posy/30,'right':-180+posx/30})
+        $('.p22').css({'bottom':-40-posy/30,'right':130+posx/30})
+        $('.p31').css({'bottom':30-posy/30,'right':180+posx/30})
+        $('.p32').css({'bottom':-270-posy/30,'right':110+posx/30})
+        $('.p33').css({'bottom':-130-posy/30,'right':-70+posx/30})
+        $('.p41').css({'bottom':-120-posy/30,'right': 20+posx/30})
+        $('.p42').css({'bottom':-180-posy/30,'right': 0+posx/30})
+
     
     
     
