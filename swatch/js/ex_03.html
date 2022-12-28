@@ -10,6 +10,9 @@
 </head>
 <body>
     <div class="box">
+        <div class="mainImg">
+            <img src="../img/bg1.jpg" alt="">
+        </div>
         <p>Lorem ipsum <span class="style1">dolor</span> sit amet <span class="style2">consectetur</span> Iure qui doloribus <span class="style3">officia</span> sed. <br> Nostrum maiores <span class="style4">dolorum nulla</span> itaque placeat et, <span class="style5">vitae sed magni</span> reprehenderit sint </p>
     </div>
     
@@ -29,11 +32,16 @@
 
 
         body {
+            z-index: 500;
             position: fixed;
             width: 100%;
             height: 100%;
             font-family: 'Gamja Flower', cursive;
             background-color: blueviolet;
+            perspective: 800px;
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
         * {
             margin: 0;
@@ -41,6 +49,7 @@
         }
 
         .box {
+            z-index: 3;
             position: fixed;
             width: 100%;
             height: 100%;
@@ -50,9 +59,10 @@
         
         }
         .box p {
+            position: absolute;
             font-size: 33px;
             text-align: center;
-            color: #fff;
+            color: #000;
             line-height: 2;
         }
         .box span {
@@ -70,30 +80,33 @@
             color: #fff;
         }
 
+
         .cursor {
-            z-index: 9999px;
+            width: 20px;
+            height: 20px;
             position: absolute;
-            width: 50px;
-            height: 50px;
             border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 3px solid #fff;
-            left: 0;
-            top: 0;
+            z-index: 9999;
             pointer-events: none;
-            /* 관통해서 클릭해라 */
-            transition: background-color 0.5s,
-                        border-color 0.5s,
-                        border-radius 0.5s,
-                        transform 0.2s;
+            /* 관통해라 */
+            background-color: #fff;
+        } 
+
+        .mainImg {
+            width: 50%;
+            height: 60%;
+            background-color: #ccc;
+            position: relative;
+            overflow: hidden;
         }
-        .cursor.style1 {
-            background-color: rgba(255, 165, 0, 0.4);
-            border-color: orange;
-        }
-        .cursor.style2 {
-            border-radius: 0;
-            transform: rotate(360deg);
+        .mainImg img {
+            position: absolute;
+            left: -5%;
+            top: -5%;
+            width: 110%;
+            height: 110%;
+            transition: transform 500ms cubic-bezier(0.25,0.46,0.45,0.84);
+            transform: translate(0 , 0);
         }
 
 
@@ -103,32 +116,39 @@
 
 
     <script>
+
+
         $(document).ready(function(){
-            // 마우스를 따라 다녀라
-            $(window).mousemove(function(e){
-                $('.cursor').css({'cursor':'none'})
-                let x = e.pageX 
-                let y = e.pageY
+            // 마우스가 윈도우에서 움직일때 커서가 나를 따라 다녀라
+            // $(window).mousemove(function(e){
 
-                $('.count p').eq(0).children('em').text(x);
-                // count p:nth-child(1) em
-                $('.count p').eq(1).children('em').text(y);
-                $('.cursor').css({'left' : x-25 ,'top' : y-25 })
+            //     let x= e.pageX
+            //     let y= e.pageY
 
-                // span중에서 style1번 안으로 들어갔을때 cursor에 style1이라는 클래스특징을 더해라
+            //     $('.cursor').css('left' : x-10, 'top': y-10)
 
-            })
+                
 
-            $('.style1').mouseenter(function(){
-                    $('.cursor').addClass('style1')
+
+            // })
+            // mainImg에서 마우스가 움직이면 나를 따라 다녀라
+            $('.mainImg').mousemove(function(e){
+
+            let x= e.pageX;
+            let y= e.pageY;
+
+            $('.cursor').css({'left' : x-10, 'top': y-10});
+            let reX = $(window).width()/2-x;
+            let reY = $(window).height()/2-y;
+            $('.mainImg img').css({'transform':'translate('+reX+'px,'+reY+'px'})
                 });
-            $('.style1').mouseenter(function(){
-                $('.cursor').removeClass('style1')
-            });
 
+        
 
 
         })
+
+
 
     </script>
 </body>
