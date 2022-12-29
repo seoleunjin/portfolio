@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 스크립트연결 -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="jquery.mousewheel.js"></script>
+</head>
+<body>
+        <header>
+                <ul class="gnb">
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Menu</a></li>
+                </ul>
+        </header>
+    
+    <div class="sec">
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+    </div>
+
+    <div class="box">
+        <p>X값 :</p>
+        <p>Y값 :</p>
+    </div>
+
+
+
+
+    <style>
+        *{padding: 0; margin: 0;}
+        ul {list-style: none;}
+        a {text-decoration: none; color: #111;}
+        header {
+            position: fixed;
+            width: 100%;
+            height: 100px;
+            z-index: 9999;
+        }
+        .gnb {
+            position: fixed;
+            width: 100%;
+            height: 100px;
+            background-color: orange;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+            box-sizing: border-box;
+
+        }
+        .gnb li {}
+        .gnb li a {
+            display: block;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        
+        section {
+            width: 100%;
+            height: 100%;
+        }
+
+        section:nth-child(1) {
+            background-color: beige;
+        }
+        section:nth-child(2) {
+            background-color: burlywood;
+        }
+        section:nth-child(3) {
+            background-color: chartreuse;
+        }
+        section:nth-child(4) {
+            background-color: navajowhite;
+        }
+        section:nth-child(5) {
+            background-color: yellow;
+        }
+        section:nth-child(6) {
+            background-color: lemonchiffon;
+        }
+        section:nth-child(7) {
+            background-color: aquamarine;
+        }
+        section:nth-child(8) {
+            background-color: palevioletred;
+        }
+
+        .box {
+            position: fixed;
+            top: 150px;
+            right: 50px;
+            z-index: 9999;
+        }
+        .box p {
+            font-size: 32px;
+            color: purple;
+            font-weight: bold;
+        }
+
+    </style>
+
+    <script>
+        $(document).ready(function(){
+
+            let ht = $(window).height();
+            console.log(ht);
+            let hea = $('header').height();
+            console.log(hea);
+            let sec = $('.sec').height();
+            console.log(sec);
+
+
+            $(window).resize(function(){
+                let ht = $(window).height();
+                $('section').height(ht);
+                // 임시설정 700px값은 사라지고 윈도우의 크기로 바뀜
+            });
+
+            // 섹션에서 마우스가 움직일때, 위치 값을 나타내어라
+            $('section').mousemove(function(e){
+                let x = e.pageX;
+                let y = e.pageY;
+
+                $('.box p').eq(0).text(x);
+                $('.box p').eq(1).text(y);
+
+                // 메뉴를 선택 했을때, 섹션으로 이동해라
+
+            $('.gnb il').click(function(){
+                let i = $(this).index();
+                let ht = $(window).height();
+                let oth = $('section').eq(i).text().top;
+                $('html, body').stop().animate({'scrollTop':ht*i},1400)
+                $('section').eq(i).text(oth);
+            })
+            });
+            // 마우스에서 휠을 올렸을때 내렸을때, 움직인다.
+            $('section').mousewheel(function(event,delta){
+
+                if(delta>0){
+                        // 이전페이지로 이동
+                        let prev = $(this).prev().offset().top;
+                        $('html,body').stop().animate({'scrollTop':prev},1400)
+
+
+
+
+                }else if (delta<0){
+                //    다음페이지로이동
+                let next = $(this).next().offset().top;
+                        $('html,body').stop().animate({'scrollTop':next},1400)
+
+
+                }
+                
+
+            })
+
+        })
+    </script>
+</body>
+</html>
