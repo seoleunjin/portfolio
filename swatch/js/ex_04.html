@@ -23,7 +23,7 @@
                 </ul>
         </header>
     
-    <div class="sec">
+    <div >
         <section></section>
         <section></section>
         <section></section>
@@ -75,7 +75,10 @@
         
         section {
             width: 100%;
-            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: magenta;
         }
 
         section:nth-child(1) {
@@ -121,11 +124,7 @@
         $(document).ready(function(){
 
             let ht = $(window).height();
-            console.log(ht);
-            let hea = $('header').height();
-            console.log(hea);
-            let sec = $('.sec').height();
-            console.log(sec);
+            
 
 
             $(window).resize(function(){
@@ -141,17 +140,19 @@
 
                 $('.box p').eq(0).text(x);
                 $('.box p').eq(1).text(y);
-
+});
                 // 메뉴를 선택 했을때, 섹션으로 이동해라
 
             $('.gnb il').click(function(){
                 let i = $(this).index();
                 let ht = $(window).height();
-                let oth = $('section').eq(i).text().top;
-                $('html, body').stop().animate({'scrollTop':ht*i},1400)
-                $('section').eq(i).text(oth);
+                let oht = $('section').eq(i).offsets().top;
+
+                $('html,body').stop().animate({'scrollTop':ht*i},1400)
+                $('section').eq(i).text(oht);
+
             })
-            });
+            
             // 마우스에서 휠을 올렸을때 내렸을때, 움직인다.
             $('section').mousewheel(function(event,delta){
 
@@ -160,15 +161,10 @@
                         let prev = $(this).prev().offset().top;
                         $('html,body').stop().animate({'scrollTop':prev},1400)
 
-
-
-
                 }else if (delta<0){
                 //    다음페이지로이동
                 let next = $(this).next().offset().top;
-                        $('html,body').stop().animate({'scrollTop':next},1400)
-
-
+                        $('html,body').stop().animate({'scrollTop':next},1400)   
                 }
                 
 
@@ -176,5 +172,5 @@
 
         })
     </script>
-</body>
+</body>      
 </html>

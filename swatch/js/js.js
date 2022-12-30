@@ -67,7 +67,36 @@ $(document).ready(function(){
         let sc = $(this).scrollTop();
         $('h1').text(sc);
         // 스크롤은 윈도우로 만들기
-    })
+            //  애니메이트작성법 .animate({속성명:속성값},지속시간);
+
+        let ht =$(window).height();
+        // if(sc>=0 && sc<ht){
+        //     $('#gnb li').removeClass('on')
+        //     $('#gnb li').eq(0).addClass('on')
+        
+        // };
+        // if(sc>=ht*1 && sc<ht*2){
+        //     $('#gnb li').removeClass('on')
+        //     $('#gnb li').eq(1).addClass('on')
+        // };
+        // if(sc>=ht*2 && sc<ht*3){
+        //     $('#gnb li').removeClass('on')
+        //     $('#gnb li').eq(2).addClass('on')
+        // };
+        // if(sc>=ht*3 && sc<ht*4){
+        //     $('#gnb li').removeClass('on')
+        //     $('#gnb li').eq(3).addClass('on')
+        // };
+            for(var ab=0; ab<5; ab++){
+        if(sc>=ht*ab && sc<ht*(ab+1)){
+                $('#gnb li').removeClass('on')
+                $('#gnb li').eq(ab).addClass('on')
+    }
+
+}
+    });
+
+
     // 애니메이트 작성법 .animate({속성명 : 속석값}.지속시간)
     // 문제3번 li를 클릭했을때, 스크롤탑을 해당 높이로 가게 만들어라.
     $('#gnb li').click(function(){
@@ -75,6 +104,9 @@ $(document).ready(function(){
         let i = $(this).index();
         // 순번
         let ht = $(window).height();
+        // 클릭했을때 나에게 클래스 on값을 붙여라.
+        $('#gnb li').removeClass('on')
+        $(this).addClass('on')
 
 
         $('html, body').animate({'scrollTop':ht*i},1400,'easeOutBounce');
@@ -86,7 +118,7 @@ $(document).ready(function(){
     // h1에 마우스가 들어갔을때 나의 위치깂을 찾아라.
     $('h1').mouseenter(function(){
         let abc = $(this).offset().top;
-        alert(abc)
+        alert(abc);
         
     });
 
@@ -103,5 +135,7 @@ $(document).ready(function(){
             $('html,body').stop().animate({'scrollTop':next},1400)
         }
     })
+    
+    
 
     })
