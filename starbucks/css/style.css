@@ -5,20 +5,6 @@ ul {list-style: none;}
 a {text-decoration: none; color: #333;}
 img {vertical-align: bottom; border: none;}
 
-@charset "UTF-8";
-
-* {
-  margin: 0;
-  padding: 0;
-}
-a {
-  text-decoration: none;
-  color: #000;
-}
-ul {list-style: none;}
-img {border: none;
-vertical-align: bottom;}
-
 
 /*  화면크기설정 */
 header {
@@ -125,7 +111,7 @@ nav .gnb>li>a {display: block;
 
 
 /* 서브메뉴 */
-
+/* 
 .sub_menu {display: none;
   position: relative;}
   .sub_menu>div {
@@ -175,7 +161,61 @@ nav .gnb>li>a {display: block;
     .sub7 {
       background-color: beige;
       height: 50px;
-    }
+    } */
+
+
+               /* 서브메뉴 */
+
+
+       
+
+.sub_menu>div {width: 100%;
+  padding: 20px 0;
+
+
+
+}
+
+.sub_menu {
+position: relative;
+}
+.sub_menu #wrapper {
+  display: flex;
+}
+.sub_menu>div {position: absolute;
+left: 0;
+top:0px;
+display: none;
+width: 100%;
+
+}
+.sub1 {background-color: black;
+}
+.sub1 ul {width: 20%;}
+.sub1 li {}
+.sub1 li:nth-child(1) {font-weight: bold;
+  margin-bottom: 20px;}
+
+  .sub2 {background-color: red;
+  height: 50px;
+}
+.sub3 {background-color: blue;
+height: 50px;
+}
+.sub4 {background-color:green;
+height: 50px;
+}
+.sub5 {background-color:lime;
+height: 50px;
+
+}
+.sub6 {background-color:pink;
+height: 50px;
+}
+.sub7 {background-color:peachpuff;
+height: 50px;
+}
+
 
 /* 컨텐츠1번설정 */
 .con1 {
@@ -253,9 +293,9 @@ position: absolute;
   top: 30%;
   left: 10%;
 }
-.tea1 img {
-  top: 20%;
-  left: 30%;
+.tea3 img {
+  top: 30%;
+  left: 0%;
 }
 
 

@@ -12,10 +12,13 @@ $(document).ready(function(){
 
     
     $('.search a').click(function(){
+
         $('.search').animate({'width':'160px'},800,function(){
-            $('.search').find('input').stop().animate({'opacity':1},500)
+
+            $('.search').find('input').stop().animate({'opacity':1},200)
         })
-    })
+    });
+
     // .search form input 보다는 find 전확하게 찾을수 있다. search>form>input 는 쓰면 안된다.
     // addClass는 안에 ,function을 쓸수없다 animate는 가능
 
@@ -25,7 +28,7 @@ $(document).ready(function(){
     $('.gnb li').mouseenter(function(){
         let i =$(this).index()
         console.log(i)
-        $('.sub_menuLdiv').slideUp()
+        $('.sub_menu>div').slideUp()
         $('.sub'+(i+1)).eq(i).slideDown()
     });
     $('header').mouseleave(function(){
@@ -33,7 +36,7 @@ $(document).ready(function(){
     });
     
 
-    // 스크롤바가 일정한 거리만큼 이동했을떄 promotionimg롸txt가 움직여라
+    // 스크롤바가 일정한 거리만큼 이동했을떄 promotionimg와 promotiontxt가 움직여라
     // left 0 rigth 0을 조절
     $(window).scroll(function(){
         let sc = $(this).scrollTop()
