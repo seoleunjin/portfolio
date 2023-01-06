@@ -42,14 +42,14 @@ $(document).ready(function(){
     setInterval(function(){
         if(b<18)b++;
         if(b==18)b=0;
-        // b가 5보다 작을떄 2초에 한번 씩 숫자가 5까지 올라간다
-        // 5가되면 b는 0으로 리셋
+        // b가 18보다 작을떄 2초에 한번 씩 숫자가 18까지 올라간다
+        // 18가되면 b는 0으로 리셋
         console.log(b)
         $('#image p').eq(b).fadeOut('slow')
         $('#image p').eq(b).fadeIn('fast')
     },2000)
 
-
+    
 
 
 })

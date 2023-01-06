@@ -29,22 +29,23 @@ h1{
 }
 
 .gnb {
-    width: 500px;
-    right: 0;
+    width: 1000px;
     top: 30px;
     position: fixed;
     display: flex;
     justify-content: space-around;
+    right: 10px;
+    box-sizing: border-box;
 }
 .gnb li {
-    
+    width: 20%;
 }
 .gnb a {
     display: block;
     font-size: 20px;
 }
 
-.time {
+section {
     position: fixed;
     top: 200px;
     right: -200px;
@@ -58,8 +59,50 @@ h1{
     font-size: 40px;
     width: 450px;
     height: 200px;
-    background-color: aqua;
     top: 50%;
     margin-top: -100px;
     left: 30px;
+}
+.txt p {
+    color: #fff;
+}
+.txt em:nth-child(1) {
+    color: #999;
+}
+
+.time {
+    position: absolute;
+    top: 100px;
+    left: 135px;
+    width: 550px;
+    height: 310px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+
+.time span {}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    left: 0;
+    bottom: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+nav li {
+    width: 20%;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 24px;
+    color: #fff;
 }

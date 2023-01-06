@@ -47,7 +47,6 @@ display: none;}
     margin-right: auto;
     display: flex;
     align-items: center;
-
 }
 
 .left {
@@ -61,17 +60,59 @@ display: none;}
     width: 760px;
     height: 75px;
     overflow: hidden;
+
     position: relative;
 }
 .container ul {
     display: flex;
     position: absolute;
-    width: 2160px;
-    left: 0;
-    right: 0;
+    width: 960px;
+    top: 0;
     justify-content: center;
     transition: all 0.8s;
 }
-.container li {
-    margin-left: 2px;
+
+.p1 {
+    left: 0;
+    animation: ani1 100s linear infinite;
 }
+.p2 {
+    left: 960px;
+    animation:  ani2 100s linear infinite;
+}
+
+
+@keyframes ani1 {
+    0% {left: 0;}
+    50% {
+        left: -960px;
+    }
+    50.000001% {
+        left: 960px;
+    }
+    100% {
+        left: 0;
+    }
+}
+@keyframes ani2 {
+    0% {left: 960px;}
+    50% {
+        left: 0px;
+    }
+    100% {
+        left: -960px;
+    }
+}
+
+.container:hover ul {
+    animation-play-state: paused;
+    /* 마우스 커버를 올리면 animation을 멈춰라 */
+}
+.container li:hover {
+    transform: scale(1.2);
+}
+
+
+.container li {
+}
+
