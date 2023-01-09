@@ -1,0 +1,307 @@
+@charset "UTF-8";
+/* 전체설정 */
+* {margin: 0; padding: 0;}
+ul,ol {list-style: none;}
+a {text-decoration: none; color: #000;}
+img {vertical-align: bottom; border: none;}
+
+
+
+/* 기본설정 */
+header {
+    width: 100%;
+    height: 120px;
+    background-color: bisque;
+}
+.logo {}
+nav {}
+
+
+.slide {
+    width: 100%;
+    height: 600px;
+    background-color: aquamarine;
+}
+.relation {
+    width: 100%;
+    height: 120px;
+    background-color: yellow;
+}
+.gallery {
+    width: 100%;
+    height: 600px;
+    background-color: bisque;
+}
+.infosection {
+    width: 100%;
+    height: 600px;
+    background-color: blueviolet
+}
+.review {
+    width: 100%;
+    height: 600px;
+    background-color:rosybrown
+}
+.map {
+    width: 100%;
+    height: 600px;
+    background-color: gray
+}
+
+.wrap {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+}
+
+
+/* 해더설정 */
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+}
+header .wrap {
+    display: flex;
+    justify-content: space-between;
+} 
+header .logo {
+    width: 10%;
+    height: 100%;
+    background-color: yellowgreen;
+}
+header nav {
+    width: 80%;
+    height: 100%;
+    background-color: yellowgreen;
+}
+
+/* 슬라이드설정 */
+.slide {
+    margin-top: 120px;
+    
+}
+.slide .wrap {
+    display: flex;
+    align-items: center;
+}
+.slide .txtBox {
+    width: 600px;
+    height: 400px;
+    background-color: palevioletred;
+    margin-left: 100px;
+
+}
+.slide em {}
+.slide h2 {}
+.slide p {}
+
+/* 릴레이션설정 */
+.relation {
+    position: relative;
+}
+.relation .wrap {}
+.relation .form {
+    width: 80%;
+    height: 100%;
+    background-color: antiquewhite;
+}
+.relation .vidioBox {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    background-color: burlywood;
+    right: 4%;
+    top: -150px;
+}
+
+/* 갤러리설정 */
+.gallery {
+}
+.gallery .wrap {
+    position: relative;
+    display: flex;
+}
+.gallery .txtBox {
+    width:  30%;
+    height: 100%;
+    background-color: violet;
+}
+.gallery .imgBox {
+    width: 70%;
+    height: 100%;
+    position: relative;
+    background-color: thistle;
+}
+.gallery ul {
+    width: 2040px;
+    left: 100px;
+    top: 100px;
+    /* li이 호버시 100px이상 넘어가면 안된다 */
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+}
+.gallery li {
+    width: 250px;
+    height: 300px;
+    margin-left: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.gallery li:hover {
+    transform: translateY(-50px);
+}
+.gallery li.on {
+    transform: translateY(-50px);
+}
+
+/* 좌우버튼설정 갤러리용 리뷰 공통사항*/
+.btn {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    display: flex;
+}
+.btn p {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+}
+.btn .left {
+    margin-right: 5px;
+}
+.btn .right {}
+
+/* 인포섹션설정 */
+.infosection {}
+.infosection .wrap {}
+.infosection .titleBox {
+    text-align: center;
+    padding-top: 50px;
+    box-sizing: border-box;
+    font-size: 50px;
+}
+.infosection .conBox {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 400px;
+    background-color: tomato;
+}
+.infosection ul {
+
+    width: 100%;
+    height: 100%;
+}
+.infosection ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.infosection li {
+    float: left;
+    background-color: black;
+}
+.infosection li:nth-child(1){
+    width: 49%;
+    height: 100%;
+    margin-right: 1%;
+}
+.infosection li:nth-child(2) {
+    height: 49%;
+    width: 24.5%;
+    margin-right: 0.5%;
+}
+.infosection li:nth-child(3) {
+    height: 49%;
+    width: 24.5%;
+    margin-left: 0.5%;
+}
+.infosection li:nth-child(4) {
+    height: 49%;
+    width: 24.5%;
+    margin-right: 0.5%;
+    margin-top: 1%;
+}
+.infosection li:nth-child(5) {
+    height: 49%;
+    width: 24.5%;
+    margin-left: 0.5%;
+    margin-top: 1%;
+}
+
+
+/* 리뷰설정 */
+.review {
+    position: relative;
+}
+.review .wrap {
+    position: relative;
+}
+.review .titleBox {
+    text-align: center;
+    padding-top: 50px;
+    box-sizing: border-box;
+    font-size: 50px;
+}
+.review .conBox {
+}
+.review ul {
+    width: 2600px;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -100px;
+    overflow: hidden;
+
+}
+.review li {
+    width: 500px;
+    height: 200px;
+    background-color: #fff;
+    margin: 0 10px;
+}
+.review li a {}
+
+/* 맵설정 */
+.map { position: relative;}
+.map iframe {
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+}
+.map .wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.map .titleBox {
+    text-align: center;
+    padding-top: 50px;
+    box-sizing: border-box;
+    font-size: 50px;
+}
+
+.map .footer {
+    width: 100%;
+    height: 120px;
+    background-color: #666;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* ############################미디어쿼리구간 */
+/* 1450px 이상일때 */
+@media(min-width:1450px){
+    .wrap {
+        width: 1440px;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+/* 전체설정 */
+* {margin: 0; padding: 0;}
+ul {list-style: none;}
+img {vertical-align: bottom; border: 0;}
+a {text-decoration: none; color: #444545;}
+
+
+/* 기본설정 */
+header {
+    width: 100%;
+    height: 200px;
+    background-color: wheat;
+    display: flex;
+    position: fixed;
+    align-items:center;
+    top: 0;
+    left: 0;
+}
+header h1 {
+    width: 20%;
+}
+header .menu {
+    width: 80%;
+}
+header .sns {
+}
+header .my {
+}
+section {
+    width: 100%;
+    height: 1080px;
+}
+.slide {
+    background-color: tan;
+}
+.news {
+    width: 100%;
+    height: 820px;
+    background-color: violet;
+}
+.intro {
+    background-color: skyblue;
+}
+.campaign {
+
+    background-color: yellow;
+}
+.question {
+    background-color: springgreen;
+}
+.vegan {
+    background-color: thistle;
+}
+footer {
+    height: 120px;
+    background-color: #999;
+}
+
+/* 해더설정 */
+header {
+    position: relative;
+}
+.menu {
+}
+.menu ul {
+    display: flex;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: yellow;
+}
+.menu li {}
+.menu a {
+    display: block;
+    font-size: 28px;
+}
+.sns {
+    width: 150px;
+    height: 30px;
+    background-color: yellowgreen;
+    border-radius: 20pvx;
+    position: absolute;
+    top: 0;
+    right: 250px;
+}
+.sns ul {
+    width: 100%;
+    
+    justify-content: space-around;
+    display: flex;
+}
+.sns li {
+}
+.sns a {
+    display: block;
+}
+.sns i {
+    width: 100%;
+    height: 100%;
+    color: #000;
+}
+.my {
+    width: 200px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: yellowgreen;
+    background-color: yellowgreen;
+}
+.my ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.my li {}
+.my a {
+    display: block;
+    font-size: 18px;
+}
+
+/* 슬라이드설정 */

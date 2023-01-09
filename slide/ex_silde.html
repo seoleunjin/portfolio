@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+
+<style>
+    * {
+        margin: 0; padding: 0;
+    }
+    ul {list-style: none;}
+    .wrap {position: relative;}
+    .slide {
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        position: relative;
+    }
+    .slide ul {
+        width: auto;
+        height: 500px;
+        display: flex;
+
+    }
+    .slide li {
+        width: 100%;
+        height: 500px;
+        background-position: center top;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 100%;
+        min-width: 100px;
+    }
+    .slide li:nth-child(1) {
+        background-image: url(img/0.png);
+        left: 0;
+    }
+    .slide li:nth-child(2) {
+        background-image: url(img/1.png);
+    }
+    .slide li:nth-child(3) {
+        background-image: url(img/2.png);
+    }
+    .btn {
+        left: 50%;
+        bottom: 80px;
+        z-index: 9999;
+        position: absolute;
+    }
+    .btn ul {
+        display: flex;
+    }
+    .btn li {
+        background-image: url(img/btnVisual.png);
+        background-position: 0 -16px;
+        width: 14px;
+        height: 15.5px;
+        margin: 0 5px;
+        background-size: cover;
+    }
+    .btn li.on {
+        background-position: 0 0;
+    }
+
+
+
+
+</style>
+
+<script>
+    $(document).ready(function(){
+        // btn을 클릭했을때 슬라이드 li가 이동해라
+        $('.btn li').click(function(){
+            let i = $(this).index();
+            $('.slide li').eq(i-1).css({'left':0}).stop().animate({'left':'-100%'})
+            $('.slide li').eq(i).css({'left':'100%'}).stop().animate({'left':0})
+            $('.btn li').removeClass('on')
+            $(this).addClass('on')
+        });
+
+
+        
+        // 일정시간 간격으로 버튼을 순차적으로 자동으로 클릭해라
+        // function timer 타이머라는 함수를 만들면 멈춰버린다
+        // timer() 라쓰면 다시 작동
+
+        let a= 0;
+        function timer(){
+            a++;
+            if(a==3) a=0;
+            $('.btn li').eq(a).trigger('click')
+        };
+
+        let silde = setInterval(timer,2000);
+        
+        $('.wrap').mouseenter(function(){
+            clearInterval(silde)
+        });
+
+        $('.wrap').mouseleave(function(){
+            silde = setInterval(timer,2000);
+        });
+        
+    })
+
+
+
+
+</script>
+
+
+    <!-- <style> 내가만든 ccs js
+        * {margin: 0; padding: 0;}
+        body {
+            position: relative;
+        }
+        .slide {
+            width: 1920px;
+            height: 500px;
+            background-color: yellow;
+        }
+        .slide ul {
+            width: 100%;
+            height: 100%;
+            list-style: none;
+            display: flex;
+            position: relative;
+            overflow: hidden;
+        } 
+        .slide li {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: -100%;
+        }
+        .slide li:nth-child(1) {
+            background-image: url(img/0.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            left: 0;
+        }
+        .slide li:nth-child(2) {
+            background-image: url(img/1.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .slide li:nth-child(3) {
+            background-image: url(img/2.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .btn {
+            position: absolute;
+            top: 350px;
+            left: 955px;
+            width: 100px;
+            height: 16px;
+        }
+        .btn ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+        .btn li {
+            box-sizing: border-box;
+            padding-left: 10px;
+            width: 14px;
+            height: 15.5px;
+            background-image: url(img/btnVisual.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom;
+        }
+        .btn li:nth-child(1) {
+            background-position: top;
+        }
+        .btn li:nth-child(2).on1 {
+            background-position: top;
+        }
+        .btn li:nth-child(3).on2 {
+            background-position: top;
+        }
+
+    </style>
+
+<script>
+    $(document).ready(function(){
+
+        let i = 0;
+        setInterval(function(){
+        i++;
+        if(i==3) i=0;
+        $('.num li').eq(i-1).css({'left':'0'}).animate({'left':'-100%'})
+        $('.num li').eq(i).css({'left':'100%'}).animate({'left':'0'})
+        },5000)
+
+        $('.num li').eq(0).addClass(on)
+        
+    })
+</script> -->
+</head>
+<body>
+    <div class="wrap">
+        <div class="slide">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="btn">
+            <ul>
+                <li class="on"></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
