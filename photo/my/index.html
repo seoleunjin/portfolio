@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포토 갤러리</title>
+    <!-- 제이쿼리CDN -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+
+
+    <style>
+        /* 전체설정 */
+        * {margin: 0; padding: 0;}
+        ul {list-style: none;}
+        a {text-decoration: none; color: #000;}
+        img {vertical-align: bottom; border: none;}
+        body {width: 100%; height: 4500px;}
+
+        /* 로고설정 */
+        h1 {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+        /* gnb 설정 */
+        .gnb {
+            position: fixed;
+            display: flex;
+            top: 50%;
+            margin-top: -250px;
+            cursor: pointer;
+        }
+        .gnb li {
+            padding: 10px;
+        }
+        /* txt 설정 */
+        .txt {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+
+        }
+        /* section설정 */
+        section {
+            position: fixed;
+            width: 4000px;
+            top: 50%;
+            margin-top: -150px;
+        }
+        article {
+            float: left;
+            width: 180px;
+            height: 300px;
+            background-color: yellowgreen;
+            margin: 10px;
+            transition: all 0.5s;
+        }
+        article:nth-child(6) {
+            background-color: yellow;
+        }
+        article:nth-child(7) {
+            background-color: yellow;
+        }
+        article:nth-child(8) {
+            background-color: yellow;
+        }
+        article:nth-child(9) {
+            background-color: yellow;
+        }
+        article:nth-child(10) {
+            background-color: yellow;
+        }
+        article:nth-child(16) {
+            background-color: yellow;
+        }
+        article:nth-child(17) {
+            background-color: yellow;
+        }
+        article:nth-child(18) {
+            background-color: yellow;
+        }
+        article:nth-child(19) {
+            background-color: yellow;
+        }
+        article:nth-child(20) {
+            background-color: yellow;
+        }
+
+        article:hover {
+            margin-top: -20px;
+        }
+
+    </style>
+    <script>
+        $(document).ready(function(){
+            $(window).resize(function(){
+            let an = $('article').size()
+            let aw = $('article').width()
+            // 섹션의 가로 리사이즈 시키기
+            $('section').width(an*(aw+20));
+            $('body').height(an*(aw+20));
+            });
+            let i =0;
+            // let a =5;
+            $(window).scroll(function(){
+                let sc = $(window).scrollTop();
+                $('h1').text(sc)
+                $('section').stop().animate({'left':-sc})
+            });
+            // 내가한것 스크롤바 위치가 같이 변하지 않아서 불편하다
+            // $('.gnb li').click(function(){
+            //     let li = $(this).index()
+            //     if(li==4) li=0;
+            //     console.log(li)
+            //     let b = $('article').width();
+            //     $('section').stop().animate({'left':-(li*a)*(b+20)},600)
+            // })
+            $('.gnb li').click(function(){
+                let li = $(this).index()
+                $('html,body').scrollTop(1000*li)
+            });
+        });
+        
+    </script>
+</head>
+<body>
+    <h1>로고</h1>
+    <ul class="gnb">
+        <li>Artwork_01~</li>
+        <li>Artwork_06~</li>
+        <li>Artwork_10~</li>
+        <li>Artwork_15~</li>
+    </ul>
+    <p class="txt"> Lorem ipsum <br>
+        dolor sit amet consectetur.</p>
+    <section>
+        <article class="on"></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+    </section>
+</body>
+</html>

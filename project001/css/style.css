@@ -117,6 +117,7 @@ header nav {
 
 /* 갤러리설정 */
 .gallery {
+    overflow: hidden;
 }
 .gallery .wrap {
     position: relative;
@@ -135,6 +136,7 @@ header nav {
 }
 .gallery ul {
     width: 2040px;
+    /* 변경 될 값 */
     left: 100px;
     top: 100px;
     /* li이 호버시 100px이상 넘어가면 안된다 */
@@ -236,6 +238,7 @@ header nav {
 
 /* 리뷰설정 */
 .review {
+    overflow: hidden;
     position: relative;
 }
 .review .wrap {
@@ -298,6 +301,517 @@ header nav {
 }
 
 /* ############################미디어쿼리구간 */
+
+
+/* 1280px이하일때  */
+@media(max-width:1280px){
+
+    .slide .txtBox {
+        width: 400px;
+        height: 300px;
+        background-color: palevioletred;
+        margin-left: 5 0px;
+    }
+    /* 비디오설정 */
+
+    .relation .vidioBox {
+        top: -200px;
+    }
+    .relation .form {
+        width: 100%;
+    }
+}
+
+
+/* 1025px이상 1279px이하 */
+@media(min-width:1025px) and (max-width:1279px){}
+
+
+/* 768px이상 1024px이하 딱 태블릿사이즈구간*/
+@media(min-width:768px) and (max-width:1024px){
+    /* 해더설정 */
+header {
+    height: 180px;
+}
+header .wrap {
+    flex-direction: column;
+} 
+header .logo {
+    width: 20%;
+    /* 백그라운드 이미지를 넣을때는 너비 20%에 마진 0에 오토로 해야함 */
+    text-align: center;
+    margin: 0 auto;
+}
+header nav {
+    width: 100%;
+    background-color: yellow;
+}
+/* 슬라이드설정 */
+.slide {
+    margin-top: 180px;
+}
+.slide .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slide .txtBox {
+    width: 60%;
+    margin-left: 0;
+}
+/* 비디오설정 */
+.relation .vidioBox {
+    display: none;
+}
+
+/* 갤러리설정 */
+.gallery {
+}
+.gallery .wrap {
+    flex-direction: column;
+}
+.gallery .txtBox {
+    width:  100%;
+    height: 30%;
+}
+.gallery .imgBox {
+    width: 100%;
+
+}
+.gallery ul {
+    left: 0;
+    top: 20%;  
+}
+.gallery li {
+    width: 200px;
+    height: 250px;
+}
+/* 리뷰설정 */
+.review ul {
+    width: 2600px;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -150px;
+    overflow: hidden;
+
+}
+.review li {
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    margin: 0 10px;
+}
+}
+
+
+/* 661px이상 767px이하 */
+@media(min-width:661px) and (max-width:767px){
+
+        /* 해더설정 */
+header {
+    height: 180px;
+}
+header .wrap {
+    flex-direction: column;
+} 
+header .logo {
+    width: 20%;
+    /* 백그라운드 이미지를 넣을때는 너비 20%에 마진 0에 오토로 해야함 */
+    text-align: center;
+    margin: 0 auto;
+}
+header nav {
+    width: 100%;
+    background-color: yellow;
+}
+/* 슬라이드설정 */
+.slide {
+    margin-top: 180px;
+}
+.slide .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slide .txtBox {
+    width: 60%;
+    margin-left: 0;
+}
+/* 비디오설정 */
+.relation .vidioBox {
+    display: none;
+}
+
+/* 갤러리설정 */
+.gallery {
+}
+.gallery .wrap {
+    flex-direction: column;
+}
+.gallery .txtBox {
+    width:  100%;
+    height: 30%;
+}
+.gallery .imgBox {
+    width: 100%;
+
+}
+.gallery ul {
+    left: 0;
+    top: 20%;  
+}
+.gallery li {
+    width: 200px;
+    height: 250px;
+}
+/* 리뷰설정 */
+.review ul {
+    width: 2600px;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -150px;
+    overflow: hidden;
+
+}
+.review li {
+    width: 300px;
+    height: 250px;
+    background-color: #fff;
+    margin: 0 10px;
+}
+/* 인포섹션설정 */
+
+.infosection .conBox {
+    width: 90%;
+}
+
+.infosection li {
+    float: left;
+    background-color: black;
+}
+.infosection li:nth-child(1){
+    width: 100%;
+    height: 50%;
+    margin-right: 0;
+
+}
+.infosection li:nth-child(2) {
+    height: 24%;
+    width: 49%;
+    margin-right: 0.5%;
+    margin-top: 1%;
+}
+.infosection li:nth-child(3) {
+    height: 24%;
+    width: 49.5%;
+    margin-left: 0.5%;
+    margin-top: 1%;
+}
+.infosection li:nth-child(4) {
+    height: 24%;
+    width: 49.5%;
+    margin-right: 0.5%;
+    margin-top: 1%;
+}
+.infosection li:nth-child(5) {
+    height: 24%;
+    width: 49.5%;
+    margin-left: 0.5%;
+    margin-top: 1%;
+}
+
+}
+
+
+/*421px이상 660px이하 */
+@media(min-width:421px) and (max-width:660px){
+    
+
+/* 해더설정 */
+header {
+    height: 180px;
+}
+header .wrap {
+    flex-direction: column;
+} 
+header .logo {
+    width: 20%;
+    /* 백그라운드 이미지를 넣을때는 너비 20%에 마진 0에 오토로 해야함 */
+    text-align: center;
+    margin: 0 auto;
+}
+header nav {
+    width: 100%;
+    background-color: yellow;
+}
+/* 슬라이드설정 */
+.slide {
+    margin-top: 180px;
+}
+.slide .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slide .txtBox {
+    width: 80%;
+    margin-left: 0;
+}
+/* 비디오설정 */
+.relation .vidioBox {
+    display: none;
+}
+
+/* 갤러리설정 */
+.gallery {
+}
+.gallery .wrap {
+    flex-direction: column;
+}
+.gallery .txtBox {
+    width:  100%;
+    height: 30%;
+}
+.gallery .imgBox {
+    width: 100%;
+
+}
+.gallery ul {
+    left: 0;
+    top: 20%; 
+    width: 3240px;
+}
+.gallery li {
+    width: 400px;
+    height: 250px;
+}
+/* 리뷰설정 */
+.review ul {
+    width: 2600px;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -150px;
+    overflow: hidden;
+
+}
+.review li {
+    width: 400px;
+    height: 250px;
+    background-color: #fff;
+    margin: 0 10px;
+}
+/* 인포섹션설정 */
+
+.infosection .conBox {
+    width: 90%;
+}
+
+.infosection li {
+    float: left;
+    background-color: black;
+}
+.infosection li {
+    display: none;
+}
+.infosection li:nth-child(1){
+    width: 100%;
+    height: 100%;
+    margin-right: 0;
+    display: block;
+
+}
+.infosection li:nth-child(2) {
+    height: 24%;
+    width: 49%;
+    margin-right: 0.5%;
+    margin-top: 1%;
+}
+.infosection li:nth-child(3) {
+    height: 24%;
+    width: 49.5%;
+    margin-left: 0.5%;
+    margin-top: 1%;
+}
+.infosection li:nth-child(4) {
+    height: 24%;
+    width: 49.5%;
+    margin-right: 0.5%;
+    margin-top: 1%;
+}
+.infosection li:nth-child(5) {
+    height: 24%;
+    width: 49.5%;
+    margin-left: 0.5%;
+    margin-top: 1%;
+}
+
+/* 좌우버튼설정 갤러리용 리뷰 공통사항*/
+.btn {
+    right: 50%;
+    margin-right: -52.5px;
+    display: flex;
+}
+.btn p {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+}
+.btn .left {
+    margin-right: 5px;
+}
+.btn .right {}
+
+}
+
+/*420px이하 */
+@media(max-width:420px){
+    
+
+    /* 해더설정 */
+    header {
+        height: 180px;
+    }
+    header .wrap {
+        flex-direction: column;
+    } 
+    header .logo {
+        width: 20%;
+        /* 백그라운드 이미지를 넣을때는 너비 20%에 마진 0에 오토로 해야함 */
+        text-align: center;
+        margin: 0 auto;
+    }
+    header nav {
+        width: 100%;
+        background-color: yellow;
+    }
+    /* 슬라이드설정 */
+    .slide {
+        margin-top: 180px;
+    }
+    .slide .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .slide .txtBox {
+        width: 80%;
+        margin-left: 0;
+    }
+    /* 비디오설정 */
+    .relation .vidioBox {
+        display: none;
+    }
+    
+    /* 갤러리설정 */
+    .gallery {
+    }
+    .gallery .wrap {
+        flex-direction: column;
+    }
+    .gallery .txtBox {
+        width:  100%;
+        height: 30%;
+    }
+    .gallery .imgBox {
+        width: 100%;
+    
+    }
+    .gallery ul {
+        left: 0;
+        top: 20%; 
+        width: 3240px;
+    }
+    .gallery li {
+        width: 400px;
+        height: 250px;
+    }
+    /* 리뷰설정 */
+    .review ul {
+        width: 2600px;
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -150px;
+        overflow: hidden;
+    
+    }
+    .review li {
+        width: 400px;
+        height: 250px;
+        background-color: #fff;
+        margin: 0 10px;
+    }
+    /* 인포섹션설정 */
+    
+    .infosection .conBox {
+        width: 90%;
+    }
+    
+    .infosection li {
+        float: left;
+        background-color: black;
+    }
+    .infosection li {
+        display: none;
+    }
+    .infosection li:nth-child(1){
+        width: 100%;
+        height: 100%;
+        margin-right: 0;
+        display: block;
+    
+    }
+    .infosection li:nth-child(2) {
+        height: 24%;
+        width: 49%;
+        margin-right: 0.5%;
+        margin-top: 1%;
+    }
+    .infosection li:nth-child(3) {
+        height: 24%;
+        width: 49.5%;
+        margin-left: 0.5%;
+        margin-top: 1%;
+    }
+    .infosection li:nth-child(4) {
+        height: 24%;
+        width: 49.5%;
+        margin-right: 0.5%;
+        margin-top: 1%;
+    }
+    .infosection li:nth-child(5) {
+        height: 24%;
+        width: 49.5%;
+        margin-left: 0.5%;
+        margin-top: 1%;
+    }
+    
+    /* 좌우버튼설정 갤러리용 리뷰 공통사항*/
+    .btn {
+        right: 50%;
+        margin-right: -52.5px;
+        display: flex;
+    }
+    .btn p {
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+    }
+    .btn .left {
+        margin-right: 5px;
+    }
+    .btn .right {}
+    
+    }
+
+
 /* 1450px 이상일때 */
 @media(min-width:1450px){
     .wrap {
@@ -305,3 +819,4 @@ header nav {
         margin: 0 auto;
     }
 }
+
