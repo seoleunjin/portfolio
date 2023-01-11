@@ -4,153 +4,160 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>프로젝트01_한국동물보호연합 웹사이트 리뉴얼</title>
+    <title>설은진</title>
+    <!-- 폰트어썸 -->
+    <script src="https://use.fontawesome.com/b15c56ccc9.js"></script>
     <!-- 외부스타일시트연결 -->
     <link rel="stylesheet" href="style.css">
-    <!-- 스크립트연결 -->
+    <!--제이쿼리 CDN -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="js.js"></script>
 
 </head>
 <body>
-    <header>
-        <h1 class="logo">logo</h1>
-        <div class="menu">
-            <ul>
-                <li><a href="#">하는일</a></li>
-                <li><a href="#">커뮤니티</a></li>
-                <li><a href="#">자료</a></li>
-                <li><a href="#">시설</a></li>
-                <li><a href="#">봉사</a></li>
-            </ul>
-        </div>
-        <div class="sns">
-            <ul>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-            </ul>
-        </div>
-        <div class="my">
-            <ul>
-                <li><a href="#">마이</a></li>
-                <li><a href="#">로그인</a></li>
-                <li><a href="#">회원가입</a></li>
-            </ul>
-        </div>
-    </header>
-    <section class="slide">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div>
-            <p>하루종일 좁고 답답한 케이지에서 지내는 아이들...</p>
-        </div>
-        <ul class="sponBox">
-            <li><a href="#">후원</a></li>
-            <li><a href="#">지원</a></li>
-            <li><a href="#">서명</a></li>
-        </ul>
-        <ul class="gnb">
-            <li class="on"></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-        <p class="but">
-        </p>
-
-    </section>
-    <section class="news">
-            <p>News</p>
-            <ul class="animal">
-                <li><a href="#">반려</a></li>
-                <li><a href="#">동물</a></li>
-                <li><a href="#">야생</a></li>
-                <li><a href="#">모피</a></li>
-                <li><a href="#">수생</a></li>
-                <li><a href="#">농장</a></li>
-            </ul>
-    </section>
-    <section class="intro">
-            <h2>동물보호연합은</h2>
-            <p>동물보호법 개정 및 동물보호 정책마련 실현, <br>
-                캠페인과 홍보를 활동하고 있으며, <br>
-                우리 사회에서 만연해 있는 동물학대를 방지하고, <br>
-                동물사랑과 동물보호 의식을 향상시킴을 목적으로 합니다. <br> 
-            </p>
-
-        <div class="act">
-            <h2></h2>
-            <div class="lawBox">
+<div class="wrap">
+        <header>
+            <div class="util">
+                <ul class="util_sns">
+                   <li><i class="fa fa-youtube-play" aria-hidden="true"></i></li>
+                   <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+                   <li><i class="fa fa-internet-explorer" aria-hidden="true"></i></li>
+                </ul>
+                <ul class="util_my">
+                    <li><img src="images/util_my.png" alt=""></li>
+                    <li>로그인</li>
+                    <li>회원가입</li>
+                </ul>
+            </div>
+            <h1>로고</h1>
+            <nav class="nav">
+                <ul class="menu01"><a href="#">저희단체는?</a></ul>
+                <ul class="menu02"><a href="#">커뮤니티</a></ul>
+                <ul class="menu03"><a href="#">자료</a></ul>
+                <ul class="menu04"><a href="#">시설</a></ul>
+                <ul class="menu05"><a href="#">봉사</a></ul>
+            </nav>
+        </header>
+        <section class="slider">
+            <div class="imgBox">
+                <ul>
+                    <li><p>하루종일 좁고 답답한 케이지에서 지내는 아이들...</p></li>
+                    <li><p></p></li>
+                    <li><p></p></li>
+                    <li><p></p></li>
+                </ul>
+            </div>
+            <div class="iconBox" title="position으로 설정">
                 <ul>
                     <li></li>
                     <li></li>
                     <li></li>
                 </ul>
             </div>
-            <div class="improvBox">
+            <div class="bar">
                 <ul>
-                    <li></li>
-                    <li></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
                 </ul>
             </div>
-            <div class="nameBox">
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
-            <div class="recBox">
-                <p></p>
-                <ul>
-                    <li></li> 
-                    <li></li>
-                    <li></li>
-                </ul>
-                <p></p>
-            </div>
-        </div>
-    </section>
-    <section class="campaign">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-    </section>
-    <section class="question">
-        <div class="work">
-            <h2></h2>
-        </div>
-        <div class="txtBox">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+        </section>
+        <section class="news" title="bg">
+            <h2>News</h2>
+            <ul class="iconBox">
+                <li><p></p>반려</li>
+                <li><p></p>동물</li>
+                <li><p></p>야생</li>
+                <li><p></p>모피</li>
+                <li><p></p>수생</li>
+                <li><p></p>농장</li>
             </ul>
-        </div>
-        <h4>자주하는질문 더 알아보기</h4>
-    </section>
-    <section class="vegan">
-        <div class="txtBox">
-            <h2></h2>
-            <p></p>
-        </div>
-        <div class="imgBox">
-            <p></p>
-            <p></p>
-            <p></p>
-            <h2></h2>
-        </div>
+        </section>
+        <section class="intro">
+            <div class="txtBox">
+                <h1>동물보호연합은</h1>
+                <p>동물보호법 개정 및 동물보호 정책마련 실현, <br>
+                    캠페인과 홍보를 활동하고 있으며, <br>
+                    우리 사회에서 만연해 있는 동물학대를 방지하고, <br>
+                    동물사랑과 동물보호 의식을 향상시킴을 목적으로 합니다. </p>
+            </div>
+            <div class="conBox">
+                <ul class="activi">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <ul class="activi_btn">
+                    <li><a href="#">법안개정</a></li>
+                    <li><a href="#">개선운동</a></li>
+                    <li><a href="#">서명운동</a></li>
+                    <li><a href="#">후원금내역</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="campaign" title="text 가 들어가있는 이미지 bg = attachment로 고정 ">
+            <div class="box01"><p></p></div>
+            <div class="box02"><p></p></div>
+            <div class="box03"><p></p></div>
+            <div class="box04"><p></p></div> 
+        </section>
+        <section class="ques">
+            <div class="imgBox">
+                <h1>산책 중 강아지를 잃어버렸을땐?</h1>
+            </div>
+            <div class="conBox"> 
+                <ul>
+                    <li> 
+                        <h1>1.주변에서 찾기</h1><p>멀지 않는 곳에서 누군가가 보호 할 수 <br>
+                            있습니다. <em>평소 반려동물과 함께하는 <br> 산책길</em>을 확인하세요.</p>
+                    </li>
+                    <li>
+                        <h1>2.전단지 만들기</h1><p>반려동물을 잃어버렸을 때의 <br>
+                            <em>골든타임은 보통 3시간입니다</em>. <br>
+                            잃어버린 시간, 장소, 외형 특징을 <br>
+                            기반으로 전단지 제작을 준비합니다.</p>
+                    </li>
+                    <li>
+                        <h1>3.동물병원 방문하기</h1>
+                        <p> <em> 유기동물은 동물병원을 거쳐<br>
+                                보호소로 이동</em>하기 때문에 동물병원에<br>
+                            전단지를 배포하는것이 좋습니다.</p>
+                    </li>
+                    <li>
+                        <h1>4. 동물보호센터 확인하기</h1><p>각 지방자치단체의 유기동물들은 
+                            동물보호소로 보내지고 들어간 아이들은
+                            <em>
+                                ‘동물보호 관리시스템’ 홈페이지에
+                                수시로  공고
+                            </em>됩니다.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="more"><p>자주하는 질문 더 보기</p><p></p></div>
+        </section>
+        <section class="vagen">
+            <div class="txtBox">
+                <h1>It’s Delicious!</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+            </div>
+            <div class="txtBox02">
+                <p>Yummy Yummy Yummy Yummy Yummy Yummy Yummy Yummy Yummy Yummy Yummy Yummy Yummy Yummy Yummy Yummy Yummy Yummy Yummy Yummy </p>
+                <p>TellMe TellMe TellMe TellMe TellMe TellMe TellMe TellMe TellMe TellMe TellMe TellMe TellMe TellMe TellMe TellMe TellMe TellMe TellMe TellMe TellMe TellMe TellMe TellMe TellMe TellMe TellMe TellMe TellMe TellMe </p>
+            </div>
+            <div class="imgBox">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="more"><p>비건 더 알아보기</p><p></p></div>
+        </section>
+        <footer></footer>
         <p></p>
-    </section>
-    <footer>
-        <p></p>
-    </footer>
+        <div class="top"></div>   
+</div> 
 </body>
 </html>

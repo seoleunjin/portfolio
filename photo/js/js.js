@@ -6,8 +6,8 @@ $(document).ready(function(){
     let a = $('article').size()
     // article의 갯수 구하기 size()
     let awd = $('article').width()
-    $('section').width(a*(awd+20));
-    $('body').height(a*(awd+20));
+    $('section').width((a*(awd+20))+600);
+    $('body').height((a*(awd+20))+600);
     // 섹션의 와이드와 바디의 높이값을 변환시킴
     });
 
@@ -25,4 +25,27 @@ $(document).ready(function(){
         $('html,body').scrollTop(1000*li)
 
     });
+
+    // 아티클을 클릭했을때 내가 클릭한 그 아이에게 addClass를 해라 
+    // 모든 아티클에겐 removeClass를 먼저해라
+    
+    $('article h2').click(function(e){
+        e.preventDefault(); //기존에 있었던 a의 이벤트값을 없애라.
+
+        $('article').removeClass('on')
+        $(this).parent().addClass('on')
+
+
+    });
+
+    // 스펜을 클릭했을때 아티클에 removeClass를 해라
+    $('article span').click(function(){
+
+        $(this).parent().removeClass('on')
+        
+        
+
+
+    })
+
 })

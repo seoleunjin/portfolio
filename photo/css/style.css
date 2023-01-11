@@ -23,7 +23,7 @@ h1 {
     left: 60px;
     /*top: 150px;  임시설정 - section에 위치를 잡고 항상 section위에 배치하 예정*/
     top: 50%;
-    margin-top: -260px;  /* 설정 끝 */
+    margin-top: -300px;  /* 섹션먼저 설정 후 설정하기 */
     display: flex;
 }
 .gnb li {
@@ -40,14 +40,133 @@ h1 {
 /* section 설정 */
 section {
     position: fixed;
-    width: 4000px;
+    width: 4600px;
+    height: 400px;
     top: 50%;
     margin-top: -200px;
 }
 article {
     width: 180px;
     height: 400px;
-    background-color: yellowgreen;
+    background-color: #fff;
     float: left;
     margin: 10px;
+    position: relative;
+    box-shadow: 3px 3px 3px #bbb;/* 오른쪽 아래 블러 색상 */
+    overflow: hidden;
+    transition: all 0.7s;
+    top: 50%;
+    margin-top: -200px;
 }
+
+article h2 {
+    position: absolute;
+    top: 300px;
+    right: 0;
+    background-color: #111;
+    opacity: 0.4;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    z-index: 5;
+}
+article:hover h2 {
+    opacity: 0.8;
+    transition: all 0.5s;
+}
+article h2 a {
+    display: block;
+    font-size: 14px;
+    line-height: 3.5;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #fff;
+    padding-left: 20px;
+}
+article strong {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    opacity: 0.4;
+    text-align: center;
+    transition: all 0.5s;
+}
+article strong img {}
+article p {
+    background-color: tomato;
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    margin-top: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.8s;
+    /* p가 가지고 있는 기본 높이값 없애기*/
+}
+article p img {}
+article em {
+    z-index: 3;
+    display: inline-block;
+    position: absolute;
+    bottom: 50px;
+    right: -300px;
+    /* 변환할예정 */
+    transition: all 1s;
+
+}
+article span {
+    position: absolute;
+    right: -300px;
+    top: 110px;
+    font-size: 20px;
+    color: #fff;
+    z-index: 10;
+    cursor: pointer;
+    border: 1px dotted #fff;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+article:hover strong {
+    opacity: 1;
+}
+
+
+/* article .on설정 */
+article.on {
+    width: 780px;
+    height: 500px;
+    margin-top: -250px;
+}
+article.on strong {
+    opacity: 0;
+}
+article.on h2 {
+    height: 100px;
+    background-color: #111;
+    opacity: 0.3;
+    top: 100px;
+    right: 0;
+}
+article.on h2 a {
+    font-size: 30px;
+}
+article.on p {
+    height: 500px;
+    margin-top: -250px;
+    opacity: 1;
+}
+article.on em {
+    right: 20px;
+    
+}
+article.on span {
+    right: 20px;
+}
+
+

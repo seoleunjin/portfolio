@@ -9,201 +9,158 @@ a {text-decoration: none; color: #444545;}
 body {font-family: 'Noto Sans KR', sans-serif;}
 
 /* 기본설정 */
-header {
+body {
     width: 100%;
-    height: 200px;
-    background-color: wheat;
+}
+.wrap {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+header {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    background-color: tomato;
     display: flex;
-    position: fixed;
-    align-items:center;
+}
+.util {
+    width: 250px;
+    height: auto;
+    position: absolute;
     top: 0;
-    left: 0;
+    right: 15px;
+    display: flex;
+}
+.util_sns {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 20px;
+}
+.util_my {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    align-items: center;
 }
 header h1 {
+    width: 10%;
+    height: 100%;
+    background-color: aqua;
+}
+header nav {
+    width: 90%;
+    height: 100%;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+}
+header nav ul {
     width: 20%;
+    text-align: center;
 }
-header .menu {
-    width: 80%;
-}
-header .sns {
-}
-header .my {
-}
+
 section {
     width: 100%;
     height: 1080px;
+    margin-bottom: 30px;
 }
-.slide {
-    background-color: tan;
-}
-.news {
-    width: 100%;
-    height: 820px;
+
+.slider {
+    position: relative;
     background-color: violet;
 }
-.intro {
-    background-color: skyblue;
-}
-.campaign {
-
-    background-color: yellow;
-}
-.question {
-    background-color: springgreen;
-}
-.vegan {
-    height: 800px;
-    background-color: thistle;
-}
-footer {
-    height: 120px;
-    background-color: #999;
-}
-
-/* 해더설정 */
-header {
-    position: relative;
-}
-.menu {
-}
-.menu ul {
-    display: flex;
-    height: 100px;
-    justify-content: space-around;
-    align-items: center;
-    background-color: yellow;
-}
-.menu li {}
-.menu a {
-    display: block;
-    font-size: 28px;
-}
-.sns {
-    width: 150px;
-    height: 30px;
-    background-color: yellowgreen;
-    border-radius: 20pvx;
+.slider .imgBox {
     position: absolute;
-    top: 0;
-    right: 250px;
 }
-.sns ul {
-    width: 100%;
-    
-    justify-content: space-around;
-    display: flex;
+.slider .imgBox ul {}
+.slider .imgBox li {}
+
+
+.slider .iconBox {
+    position: absolute;
+    width: 24%;
+    height: 140px;
+    background-color: aliceblue;
+    left: 40px;
+    bottom: 80px;
 }
-.sns li {
-}
-.sns a {
-    display: block;
-}
-.sns i {
+.slider .iconBox ul {
     width: 100%;
     height: 100%;
-    color: #000;
-}
-.my {
-    width: 200px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: yellowgreen;
-    background-color: yellowgreen;
-}
-.my ul {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-.my li {}
-.my a {
-    display: block;
-    font-size: 18px;
-}
 
-/* 슬라이드설정 */
-.slide {
-    position: relative;
 }
-.slide div {
-    width: 100%;
+.slider .iconBox li {
+    float: left;
+    width: 33.3333%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.slide div:nth-child(1){
-    background-color: rgb(249, 193, 183);
-}
-.slide div:nth-child(2){
-    background-color: rgb(249, 159, 143);
-}
-.slide div:nth-child(3){
-    background-color: rgb(248, 126, 105);
-}
-.slide div:nth-child(4){
-    background-color: tomato;
+    background-color: yellow;
 }
 
-.sponBox {
+.slider .bar {
     position: absolute;
-    bottom: 80px ;
-    left: 0;
-    display: flex;
-    width: 460px;
-    height: 40px;
-    justify-content: space-around;
-}
-
-.gnb {
-    position: absolute;
-    top: 510px;
+    top: 50%;
+    margin-top: -56px;
     right: 15px;
-    width: 14px;
-    height: 62px;
-}
-.gnb li {
-    width: 14px;
-    height: 15px;
-    background-image: url(img/btnVisual.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom center;
-}
-.gnb li.on {
-    background-position: top center;
-}
-
-.but {
-    position: absolute;
-    top: 515px;
-    left: 850px;
-    width: 50px;
-    height: 50px;
+    height: 112px;
+    width: 24px;
     background-color: aliceblue;
 }
+.slider .bar ul {}
+.slider .bar li {}
+.slider .bar a {}
 
-/* 뉴스설정 */
 .news {
+    height: 600px;
+}
+.news h2 {
+    height: 20%;
+    background-color: turquoise;
+}
+.news .iconBox {
+    height: 80%;
+    background-color: thistle;
 }
 
-.news p {
-    width: 100%;
-    height: 10%;
-    font-size: 48px;
-    font-family: 'Comic Neue', cursive;
-    font-weight: bold;
-    padding-top: 140px;
-    margin-left: 100px;
+.intro {
 }
-.animal {
-    width: 100%;
-    height: 90%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
+.intro .txtBox {
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-color: sandybrown;
 }
+.intro .conBox {
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-color: salmon;
+}
+
+.campaign {}
+.box01 {}
+.box02 {}
+.box03 {}
+.box04 {}
+
+.ques {}
+.ques .imgBox {}
+.ques .conBox{}
+.ques .more {}
+
+.vagen {}
+.vagen .txtBox {}
+.vagen .imgBox {}
+.vagen .more {}
+
+footer {}
+footer p {}
+.top {}
+
+
+
+
 
 
