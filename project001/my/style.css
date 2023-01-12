@@ -8,20 +8,12 @@ img {vertical-align: bottom; border: 0;}
 a {text-decoration: none; color: #444545;}
 body {font-family: 'Noto Sans KR', sans-serif;}
 
+
 /* 기본설정 */
-body {
-    width: 100%;
-}
-.wrap {
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-}
 header {
     position: relative;
     width: 100%;
     height: 180px;
-    background-color: tomato;
     display: flex;
 }
 .util {
@@ -31,6 +23,7 @@ header {
     top: 0;
     right: 15px;
     display: flex;
+    top: 15px;
 }
 .util_sns {
     display: flex;
@@ -46,22 +39,47 @@ header {
     align-items: center;
 }
 header h1 {
+    position: absolute;
     width: 10%;
     height: 100%;
-    background-color: aqua;
 }
-header nav {
-    width: 90%;
+.gnb {
+    width: 100%;
     height: 100%;
-    background-color: antiquewhite;
+}
+.gnb ul {
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
-header nav ul {
-    width: 20%;
+.gnb li {
+    width: 10%;
     text-align: center;
 }
-
+.nav {
+    width: 100%;
+    height: 180px;
+    z-index: 9999;
+    position: relative;
+}
+.nav ul {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+.nav li {
+    padding: 100px;
+}
+.nav a {
+    display: block;
+    font-size: 18px;
+}
 section {
     width: 100%;
     height: 1080px;
@@ -81,22 +99,21 @@ section {
 
 .slider .iconBox {
     position: absolute;
-    width: 24%;
-    height: 140px;
-    background-color: aliceblue;
+    width: 460px;
+    height: 200px;
     left: 40px;
     bottom: 80px;
 }
 .slider .iconBox ul {
     width: 100%;
     height: 100%;
+    display: flex;
 
 }
 .slider .iconBox li {
     float: left;
     width: 33.3333%;
     height: 100%;
-    background-color: yellow;
 }
 
 .slider .bar {
@@ -104,9 +121,8 @@ section {
     top: 50%;
     margin-top: -56px;
     right: 15px;
-    height: 112px;
-    width: 24px;
-    background-color: aliceblue;
+    height: 140px;
+    width: 30px;
 }
 .slider .bar ul {}
 .slider .bar li {}
@@ -116,12 +132,10 @@ section {
     height: 600px;
 }
 .news h2 {
-    height: 20%;
-    background-color: turquoise;
+    height: 10%;
 }
 .news .iconBox {
-    height: 80%;
-    background-color: thistle;
+    height: 90%;
 }
 
 .intro {
@@ -131,36 +145,278 @@ section {
     height: 100%;
     float: left;
     background-color: sandybrown;
+    border-radius: 100%;
 }
 .intro .conBox {
     width: 50%;
     height: 100%;
     float: left;
     background-color: salmon;
+    border-radius: 100%;
 }
 
-.campaign {}
+.campaign {
+    background-image: url(img/cam_bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
 .box01 {}
 .box02 {}
 .box03 {}
 .box04 {}
 
-.ques {}
-.ques .imgBox {}
-.ques .conBox{}
-.ques .more {}
+.ques {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.ques span:nth-child(1) {
+}
+.ques span:nth-child(2) {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.ques span:nth-child(3) {
+    position: absolute;
+    top: 160px;
+    left: 60px;
+}
+.ques span:nth-child(4) {
+    width: 100%;
+    left: 50%;
+    bottom: 0;
+    position: absolute;
+}
+.ques .imgBox {
+    width: 30%;
+    height: 100%;
+}
+.ques .conBox {
+    width: 70%;
+    height: 100%;
+}
+.ques .conBox ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1130px;
+    height: 610px;
+}
+.ques .conBox li {
+    width: 49.5%;
+    height: 49.5%;
+    background-color:  #45a462;
+    text-align: center;
+}
+.ques .conBox li:nth-child(1) {
+    margin-right: 1%;
+    margin-bottom: 1%
+}
+.ques .conBox li:nth-child(2) {
+    margin-bottom: 1%;
+}
+.ques .conBox li:nth-child(3) {
+    margin-right: 1%;
+}
+.ques .more {
+    position: absolute;
+    right: 40px;
+    bottom: 30px;
+}
 
-.vagen {}
+.vagen {
+    height: 800px;
+    background-color: #d2de26;
+    position: relative;
+}
 .vagen .txtBox {}
 .vagen .imgBox {}
-.vagen .more {}
+.vagen .more {
+    position: absolute;
+    right: 40px;
+    bottom: 30px;
+}
 
-footer {}
-footer p {}
-.top {}
+footer {
+    width: 100%;
+
+}
+footer p {
+    background-color: #999;
+    padding: 50px 0;
+    padding-left: 15px;
+    color: #fff;
+}
+.top {
+    bottom: 30px;
+    right: 15px;
+    position: fixed;
+    z-index: 9999;
+}
 
 
 
 
+/* 해더설정 */
+header {
+}
+.util {
+
+}
+.util_sns {
+    border: 1px solid #444545;
+    border-radius:10px ;
+    box-shadow: 0.1px 0.1px 3px;
+}
+.util_my {
+    border: 1px solid #444545;
+    border-radius:10px ;
+    box-shadow: 0.1px 0.1px 3px;
+}
+header h1 {
+}
+header h1 img {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.gnb {
+}
+.gnb ul {
+}
+.gnb li {
+    border-right: 5px solid #999;
+}
+.gnb li:nth-child(1) {
+    border-left: 5px solid #999;
+}
+.gnb li a {
+    display: block;
+    font-size: 24px;
+}
+.nav {
+}
+.menu01 {
+    opacity: 1;
+}
+.menu01 ul {
+    width: 50%;
+
+}
+.menu01 li {}
+.menu01 a {}
+.menu02 {
+    opacity: 0;
+}
+.menu02 ul {}
+.menu02 li {}
+.menu02 a {}
+.menu03 {
+    opacity: 0;
+}
+.menu03 ul {}
+.menu03 li {}
+.menu03 a {}
+.menu04 {
+    opacity: 0;
+}
+.menu04 ul {}
+.menu04 li {}
+.menu04 a {}
+.menu05 {
+    opacity: 0;
+}
+.menu05 ul {}
+.menu05 li {}
+.menu05 a {}
+
+/* 슬라이더설정 */
+.slider {
+}
+.slider .imgBox {
+}
+.slider .imgBox ul {}
+.slider .imgBox li {}
+.slider .imgBox p {}
 
 
+.slider .iconBox {
+}
+.slider .iconBox ul {
+    width: 100%;
+    height: 100%;
+}
+.slider .iconBox li {
+    width: 100%;
+    text-align: center;
+}
+.slider .iconBox img {
+    width: 100%;
+    height: 90%;
+}
+.slider .iconBox a {
+    width: 100%;
+    height: 10%;
+}
+.slider .iconBox li:nth-child(1) {
+    width: 28%;
+}
+.slider .iconBox li:nth-child(2) {
+    width: 44%;
+}
+.slider .iconBox li:nth-child(3) {
+    width: 28%;
+}
+.slider .iconBox a {}
+
+.slider .bar {
+}
+.slider .bar ul {
+    width: 100%;
+    height: 100%;
+}
+.slider .bar li {
+    width: 100%;
+    height: 32px;
+    background-image: url(img/paly_bar.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+.slider .bar li:nth-child(1) {
+    background-position: top;
+}
+.slider .bar a {}
+
+/* 뉴스 */
+.news {
+
+}
+.news h2 {
+    padding-left: 60px;
+    padding-top: 50px;
+}
+.news .iconBox {
+    width: 100%;
+    height: 80%;
+    background-image: url(img/news_line.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+.news .iconBox {
+    padding-top: 200px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 60%;
+}
+.news .iconBox img {
+    width: ;
+    height: 80%;
+}
+.news .iconBox a {
+    height: 20%;
+}
+
+.news .iconBox li:nth-child(1) {}

@@ -97,7 +97,6 @@ article strong {
 }
 article strong img {}
 article p {
-    background-color: tomato;
     width: 100%;
     height: 0;
     position: absolute;
@@ -106,9 +105,13 @@ article p {
     z-index: 1;
     opacity: 0;
     transition: all 0.8s;
+    text-align: center;
     /* p가 가지고 있는 기본 높이값 없애기*/
 }
-article p img {}
+article p img {
+    width: auto;
+    height: 100%;
+}
 article em {
     z-index: 3;
     display: inline-block;
@@ -116,7 +119,8 @@ article em {
     bottom: 50px;
     right: -300px;
     /* 변환할예정 */
-    transition: all 1s;
+    transition: all 0.5s;
+    opacity: 0;
 
 }
 article span {
@@ -163,7 +167,7 @@ article.on p {
 }
 article.on em {
     right: 20px;
-    
+    opacity: 1;
 }
 article.on span {
     right: 20px;
