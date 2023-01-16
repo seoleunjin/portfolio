@@ -17,6 +17,8 @@ header {
     width: 100%;
     height: 130px;
     display: flex;
+    flex-wrap: wrap;
+    z-index: 9999;
 }
 .util {
     width: 200px;
@@ -58,6 +60,7 @@ header h1 img {
 .gnb {
     width: 100%;
     height: 100%;
+    box-sizing: border-box;
 }
 .gnb ul {
     width: 100%;
@@ -73,12 +76,26 @@ header h1 img {
 .gnb a {
     color: #444545;
 } 
+.sub_menu {
+    width: 100%;
+    height: 120px;
+    position: relative;
+}
+.sub_menu>div {
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 
-/*  섹견 기본설정 */
+/*  섹션 기본설정 */
 section {
     width: 100%;
     height: 1080px;
     margin-bottom: 110px;
+
 }
 /* 슬라이더 기본설정 */
 .slider {
@@ -272,7 +289,6 @@ footer p {
 
 /* 해더설정 */
 header {
-    box-sizing: border-box;
 }
 .util {
 
@@ -313,6 +329,103 @@ header h1 img {
     display: block;
     font-size: 16px;
 }
+.sub_menu>div>ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu01 {
+    height: 50px;
+}
+.menu01 ul {
+    width: 90%;
+    margin-left: 4.9%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+.menu01 li {
+    padding: 0 65px;
+}
+.menu01 a {
+    display: block;
+    font-size: 14px;
+}
+
+.menu02 {
+    height: 50px;
+    }
+.menu02 ul {
+    width: 86.3%;
+    margin-left: 10.8%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+.menu02 li {
+    padding: 0 55px;
+}
+.menu02 a {
+    display: block;
+    font-size: 14px;
+}
+.menu03 {
+    height: 50px;
+}
+.menu03 ul {
+    width: 86.3%;
+    margin-left: 15.3%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+.menu03 li {
+    padding: 0 55px;
+}
+.menu03 a {
+    display: block;
+    font-size: 14px;
+}
+
+.menu04 {
+    height: 50px;
+}
+.menu04 ul {
+    width: 86.3%;
+    margin-left: 16.8%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+.menu04 li {
+    padding: 0 30px;
+}
+.menu04 a {
+    display: block;
+    font-size: 14px;
+}
+.menu05 {
+    height: 50px;
+}
+.menu05 ul {
+    width: 86.3%;
+    margin-left: 31.65%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+.menu05 li {
+    padding: 0 55px;
+}
+.menu05 a {
+    display: block;
+    font-size: 14px;
+} 
 
 /* .menu01 {
     width: 90%;
