@@ -2,14 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&display=swap');
 /* 전체설정 */
-* {margin: 0; padding: 0;}
+* {margin: 0; padding: 0; color: #fff;}
 ul {list-style: none;}
 img {vertical-align: bottom; border: 0;}
-a {text-decoration: none; color: #444545;}
+a {text-decoration: none; color: #444545; color: #fff;}
 body {font-family: 'Noto Sans KR', sans-serif;}
+em {font-style: normal; font-weight: normal;}
 
 
 /* 기본설정 */
+/* 해더 기본설정 */
 header {
     position: relative;
     width: 100%;
@@ -58,6 +60,9 @@ header h1 {
     width: 10%;
     text-align: center;
 }
+.gnb a {
+    color: #444545;
+} 
 .nav {
     width: 100%;
     height: 180px;
@@ -80,18 +85,21 @@ header h1 {
     display: block;
     font-size: 18px;
 }
+/*  섹견 기본설정 */
 section {
     width: 100%;
     height: 1080px;
-    margin-bottom: 30px;
+    margin-bottom: 110px;
 }
-
+/* 슬라이더 기본설정 */
 .slider {
     position: relative;
     background-color: violet;
+    background-image: url(img/dog.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;background-position: top center;
 }
 .slider .imgBox {
-    position: absolute;
 }
 .slider .imgBox ul {}
 .slider .imgBox li {}
@@ -128,6 +136,7 @@ section {
 .slider .bar li {}
 .slider .bar a {}
 
+/* 뉴스 기본설정 */
 .news {
     height: 600px;
 }
@@ -138,23 +147,25 @@ section {
     height: 90%;
 }
 
+/* 소개 기본설정 */
 .intro {
+    display: flex;
+    overflow: hidden;
 }
 .intro .txtBox {
-    width: 50%;
-    height: 100%;
-    float: left;
+    width: 1600px;
+    height: 1100px;
     background-color: sandybrown;
-    border-radius: 100%;
+    border-radius: 800px;
+    justify-content: space-between;
 }
 .intro .conBox {
-    width: 50%;
-    height: 100%;
-    float: left;
+    width: 2000px;
+    height: 1100px;
     background-color: salmon;
-    border-radius: 100%;
+    border-radius: 800px;
 }
-
+/* 캠페인 기본설정 */
 .campaign {
     background-image: url(img/cam_bg.png);
     background-size: cover;
@@ -165,9 +176,11 @@ section {
 .box03 {}
 .box04 {}
 
+/* 공지사항 기본설정 */
 .ques {
     position: relative;
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
     overflow: hidden;
 }
@@ -190,11 +203,11 @@ section {
     position: absolute;
 }
 .ques .imgBox {
-    width: 30%;
+    width: 40%;
     height: 100%;
 }
 .ques .conBox {
-    width: 70%;
+    width:48%;
     height: 100%;
 }
 .ques .conBox ul {
@@ -207,7 +220,6 @@ section {
     width: 49.5%;
     height: 49.5%;
     background-color:  #45a462;
-    text-align: center;
 }
 .ques .conBox li:nth-child(1) {
     margin-right: 1%;
@@ -223,8 +235,11 @@ section {
     position: absolute;
     right: 40px;
     bottom: 30px;
+    display: flex;
+    font-size: 24px;
 }
 
+/* 비건 기본설정 */
 .vagen {
     height: 800px;
     background-color: #d2de26;
@@ -236,8 +251,10 @@ section {
     position: absolute;
     right: 40px;
     bottom: 30px;
+    display: flex;
+    font-size: 24px;
 }
-
+/* 푸터 기본설정 */
 footer {
     width: 100%;
 
@@ -269,16 +286,22 @@ header {
     border-radius:10px ;
     box-shadow: 0.1px 0.1px 3px;
 }
+.util_sns i {
+    color: #444545;
+}
 .util_my {
     border: 1px solid #444545;
     border-radius:10px ;
     box-shadow: 0.1px 0.1px 3px;
 }
+.util_my li {
+    color: #444545;
+}
 header h1 {
 }
 header h1 img {
     margin-top: 15px;
-    margin-left: 15px;
+    margin-left: 80px;
 }
 .gnb {
 }
@@ -390,33 +413,264 @@ header h1 img {
 
 /* 뉴스 */
 .news {
+    box-sizing: border-box;
 
 }
 .news h2 {
     padding-left: 60px;
     padding-top: 50px;
+    color: #444545;
 }
 .news .iconBox {
-    width: 100%;
-    height: 80%;
+    width: 90%;
+    margin: 0 auto;
+    height: 60%;
+    padding-top: 200px;
+    display: flex;
+    justify-content: space-around;
     background-image: url(img/news_line.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
 }
-.news .iconBox {
-    padding-top: 200px;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    height: 60%;
+
+.news .iconBox li {
+    width: 110px;
+    height: 200px;
+    box-sizing: border-box;
 }
 .news .iconBox img {
-    width: ;
-    height: 80%;
+    
 }
 .news .iconBox a {
-    height: 20%;
+    display: block;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    color: #444545;
 }
 
-.news .iconBox li:nth-child(1) {}
+.news .iconBox li:nth-child(1) {
+}
+.news .iconBox li:nth-child(2) {
+}
+.news .iconBox li:nth-child(3) {
+}
+.news .iconBox li:nth-child(4) {
+}
+.news .iconBox li:nth-child(5) {
+}
+.news .iconBox li:nth-child(6) {
+}
+
+
+/* 소개영역 */
+.intro {
+    position: relative;
+}
+.intro .txtBox {
+    position: absolute;
+    left: -500px;
+    top: 0;
+    background-color: #699fc9;
+    text-align: left;
+    padding-top: 350px;
+    box-sizing: border-box;
+    padding-left: 550px;
+}
+.intro .txtBox h1 {
+    width: 100%;
+    font-size: 50px;
+    font-weight: 300;
+}
+.intro .txtBox  p {
+    padding-top: 73px;
+    width: 100%;
+    font-size: 40px;
+}
+.intro .conBox {
+    display: flex;
+    position: absolute;
+    right: -500px;
+    background-color: #699fc9;
+    top: 0;
+    text-align: center;
+    padding-top: 350px;
+    box-sizing: border-box;
+    padding-left: 550px;
+}
+
+.activi {
+    width: 600px;
+    height: 560px;
+    display: flex;
+    position: relative;
+    top: -50px;
+}
+.activi li {
+    position: absolute;
+}
+.activi p {
+    position: absolute;
+    top: -100px;
+}
+.activi img {}
+.activi_btn {
+    width: 300px;
+    height: 350px;
+    margin-left: 100px;
+}
+.activi_btn ul {
+    width: 900%;
+    height: 100%;
+}
+.activi_btn li {
+    width: 100%;
+    padding: 20px 0;
+    border-radius: 100px;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px;
+    margin-bottom: 10px;
+    padding-right: 50px;
+}
+.activi_btn li:nth-child(1) {
+    
+}
+.activi_btn a {
+    display: block;
+    font-size: 24px;
+    color: #699fc9;
+}
+
+
+
+/* 캠페인 설정 */
+.campaign {
+    width: 100%;
+    height: 2500px;
+ overflow: hidden;
+    vertical-align: bottom;
+    position: relative;
+}
+.box1 {
+    position: absolute;
+    width: 50%;
+    height:25%;
+    background-color: #d2de26;
+    left: 0;
+    top: 0;
+}
+.box2 {
+    position: absolute;
+    width: 50%;
+    height: 25%;
+    background-color: #d2de26;
+    right: 0;
+    top: 25%;
+}
+.box3 {
+    position: absolute;
+    width: 50%;
+    height: 25%;
+    background-color: #d2de26;
+    left: 0;
+    top: 50%;
+}
+.box4 {
+    position: absolute;
+    width: 50%;
+    height: 25%;
+    background-color: #d2de26;
+    right: 0;
+    top: 75%;
+}
+
+
+/* 공지사항 설정 */
+.ques {
+    box-sizing: border-box;
+}
+.ques span:nth-child(1) {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    background-color: #1e5f31;
+}
+.ques span:nth-child(2) {
+}
+.ques span:nth-child(3) {
+    padding-left: 200px;
+    padding-top: 60px;
+}
+.ques span:nth-child(4) {
+}
+.ques .imgBox {
+    font-size: 32px;
+}
+.ques .imgBox h1{
+    color: #444545;
+    padding-left: 300px;
+}
+.ques .imgBox h1:nth-child(1) {
+    padding-top: 90px;
+}
+.ques .imgBox h1:nth-child(2) {
+    padding-left: 400px;
+}
+.ques .conBox {
+}
+.ques .conBox ul {
+    padding-top: 110px;
+}
+.ques .conBox li {
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+.ques .conBox li h1 {
+    font-weight: normal;
+    padding-top: 50px;
+    padding-left: 60px;
+    font-size: 32px;
+}
+.ques .conBox li p {
+    width: 450px;
+    padding-top: 30px;
+    padding-left: 60px;
+    color: #163a1f;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.ques .more {
+}
+/* 비건 설정 */
+.vagen {
+    position: relative;
+}
+.vagen span:nth-child(1) {
+    position: absolute;
+    left: 0;
+    top: 250px;
+}
+.vagen span:nth-child(2) {
+    position: absolute;
+    left: 0;
+    top: 275px;
+}
+.vagen .txtBox {
+    padding-left: 200px;
+    width: 50%;
+    height: 800px;
+}
+.vagen .txtBox h1 {
+    padding-top: 140px;
+    padding-bottom: 100px;
+    font-size: 60px;
+}
+.vagen .txtBox p {
+    font-size: 32px;
+}
+.vagen .imgBox {}
+.vagen .more {
+}
