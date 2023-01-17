@@ -1,9 +1,16 @@
 @charset "UTF-8";
 
-* {margin: 0; padding: 0;}
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
 ul {list-style: none;}
-a {text-decoration: none; color: #333;}
-img {vertical-align: bottom; border: none;}
+img {border: none;
+vertical-align: bottom;}
 
 
 /*  화면크기설정 */
@@ -83,8 +90,8 @@ nav .search {background-color: #fff;
 border: solid #666 1px;
 position: relative;
 width:40px;
-border-radius: 4px;
-}
+border-radius: 4px;} 
+/* transition: all 0.8s;*/
 nav .search input {display: none;}
 nav .search a {position: absolute;
                 right: 0;
@@ -95,8 +102,8 @@ nav .search img {}
 /* 서치를 클릭했을때 값  */
 nav .search.on {width:160px;}
 nav .search input {
-    opacity: 0;
-    display: inline-block;
+  display: inline-block;
+  opacity: 0;
     width: 120px;
     margin-top: 6px;
 padding: 3px 10px;
@@ -110,77 +117,23 @@ nav .gnb>li>a {display: block;
                 padding: 10px 20px;}
 
 
-/* 서브메뉴 */
-/* 
-.sub_menu {display: none;
-  position: relative;}
-  .sub_menu>div {
-    width: 100%;
-    padding: 20px 0;
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    left: 0;
-    background-color: #000;
-  }
-
-.sub_menu #wrapper {
-    display: flex;
-}
-
-.sub1 ul {width: 20%;}
-.sub1 li {}
-.sub1 li:nth-child(1) {font-weight: bold;
-    margin-bottom: 20px;}
-
-
-
-    
-    .sub1 {
-    }
-    .sub2 {
-      background-color: rebeccapurple;
-      height: 50px;
-    }
-    .sub3 {
-      background-color: blue;
-      height: 50px;
-    }
-    .sub4 {
-      background-color: yellow;
-      height: 50px;
-    }
-    .sub5 {
-      background-color: pink;
-      height: 50px;
-    }
-    .sub6 {
-      background-color: plum;
-      height: 50px;
-    }
-    .sub7 {
-      background-color: beige;
-      height: 50px;
-    } */
-
-
-               /* 서브메뉴 */
+                /* 서브메뉴 */
 
 
        
 
 .sub_menu>div {width: 100%;
-  padding: 20px 0;
+    padding: 20px 0;
 
 
 
 }
 
 .sub_menu {
-position: relative;
+  position: relative;
 }
 .sub_menu #wrapper {
-  display: flex;
+    display: flex;
 }
 .sub_menu>div {position: absolute;
 left: 0;
@@ -194,157 +147,101 @@ width: 100%;
 .sub1 ul {width: 20%;}
 .sub1 li {}
 .sub1 li:nth-child(1) {font-weight: bold;
-  margin-bottom: 20px;}
+    margin-bottom: 20px;}
 
-  .sub2 {background-color: red;
+    .sub2 {background-color: red;
+    height: 50px;
+ }
+ .sub3 {background-color: blue;
   height: 50px;
 }
-.sub3 {background-color: blue;
-height: 50px;
-}
 .sub4 {background-color:green;
-height: 50px;
+  height: 50px;
 }
 .sub5 {background-color:lime;
-height: 50px;
+  height: 50px;
 
 }
 .sub6 {background-color:pink;
-height: 50px;
+  height: 50px;
 }
 .sub7 {background-color:peachpuff;
-height: 50px;
+  height: 50px;
 }
+
 
 
 /* 컨텐츠1번설정 */
-.con1 {
-  margin-top: 120px;
-  width: 100%;
-  height: 600px;
-  background-image: url(https://image.istarbucks.co.kr/upload/common/img/main/2023/2023_newyear_top_bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-.con1 #wrapper {
-  display: flex;
-
-}
-.con1 .luck1 {
-  width: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-left: 100px;
-  opacity: 0;
-}
-.con1 .luck1 {}
-.con1 .luck1 img {
-  max-width: 100%;
-}
-.con1 .luck1 .more {
-  margin-top: 80px;
-  border: 1px solid #444;
-  padding: 10px 5px;
-  border-radius: 5px;
-  font-size: 14px;
-}
-.con1 .img_g {
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-}
-/* position 비추천 */
-
-.con1 .img_g>div {
-  width: 30%;
-  height: 100%;
-  position: relative;
+.con1 {margin-top: 120px;
+width: 100%;
+height: 600px;
+background-image: url('https://image.istarbucks.co.kr/upload/common/img/main/2023/2023_newyear_top_bg.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;}
+.con1 #wrapper {display: flex;}
+.con1 .luck1 {width: 20%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+margin-left: 100px;
+opacity: 0;}
+.con1 .luck1  img {max-width: 100%;
 }
 
-.con1 .img_g img {
-  max-width: 100%;
+.con1 .luck1 .more { margin-top: 80px;
+                 border: 1px solid #444;
+                padding: 10px 5px;
+              border-radius: 5px;
+            font-size: 14px; }
+.con1 .img_g {width: 80%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          
+          flex-wrap: wrap;
+        }
+.con1 .img_g>div {width: 30%;
+                height: 100%;
+                position: relative;
+           
+            }
+.con1 .img_g img {max-width: 100%;
 height: auto;
-position: absolute;
-}
-/* img에 position: absolute를 해야 따로 놀지 않는다. */
+position: absolute;}
 
-.tea1 {
-  opacity: 0;
-
-}
-.tea2 {
-  opacity: 0;
-
-}
-.tea3 {
-  opacity: 0;
-
-}
-.tea1 img {
-  top: 20%;
-  left: 50%;
-}
-.tea2 img {
-  top: 30%;
-  left: 10%;
-}
-.tea3 img {
-  top: 30%;
-  left: 0%;
-}
+.tea1 {opacity: 0; }
+.tea2 {opacity: 0; 
+z-index: 10;}
+.tea3 {opacity: 0; }
+.tea1 img {top: 20%;
+left: 50%;}
+.tea2 img {top: 30%;
+  left: 10%;}
+  .tea3 img {top: 30%;
+    left: 
+    -10%;}
 
 
-/* 컨텐츠2 설정 */
-.con2 {
-  height: 300px;
-}
-/* 컨텐츠3 설정 */
-  .con3 {}
-  .con3 #wrapper {
-    position: relative;
-  }
-  .promotion_img {
-    width: 50%;
-    text-align: center;
-    padding-top: 150px;
-    box-sizing: border-box;
-    position: absolute;
-    left: -100%;
-  }
-
-  .promotion_txt {
-    width: 50%;
-    text-align: center;
-    padding-top: 150px;
-    box-sizing: border-box;
-    position: absolute;
-    right: -100%;
-  }
 
 
-/* 컨텐츠4 설정 */
-/* 컨텐츠5 설정 */
-/* 컨텐츠6 설정 */
-/* 컨텐츠7 설정 */
-/* 컨텐츠8 설정 */
-.con8 #wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.con8 .con8_img{
-  width: 50%;
-}
-.con8 .con8_txt{
-  width: 50%;
-}
-.con8 .more {}
-
-/* 컨텐츠9 설정 */
-
-
+    /* 컨텐츠2번설정 */
+    .con2 {height: 300px;
+        }
+    /* 컨텐츠3번설정 */
+    .con3 {}
+    .con3 #wrapper {position: relative;
+                }
+    .promotion_img{width: 50%;
+                text-align: center;
+                padding-top: 150px;
+              box-sizing: border-box;
+            position: absolute;
+          left: -100%;}
+    .promotion_txt {width: 50%;
+            text-align: center;
+            padding-top: 150px;
+              box-sizing: border-box;
+            position: absolute;
+          right: -100%;}
