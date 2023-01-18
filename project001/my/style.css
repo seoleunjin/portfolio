@@ -7,9 +7,19 @@
 ul {list-style: none;}
 img {vertical-align: bottom; border: 0;}
 a {text-decoration: none; color: #444545; color: #fff;}
-body {font-family: 'Noto Sans KR', sans-serif; overflow-x: hidden;}
+body {font-family: 'Noto Sans KR', sans-serif; overflow-x: hidden; position: relative;}
 em {font-style: normal; font-weight: normal; font-size: 22px;}
 
+
+
+.sc {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    color: #000;
+    width: 20px;
+    height: 20px;
+}
 /* 기본설정 */
 /* 해더 기본설정 */
 
@@ -22,26 +32,22 @@ header {
     z-index: 8888;
 }
 .util {
-    width: 200px;
+    width: 150px;
     height: auto;
     position: absolute;
     top: 0;
     right: 15px;
-    display: flex;
     top: 15px;
 }
 .util_sns {
     display: flex;
-    width: 35%;
-    justify-content: space-around;
+    justify-content: right;
     align-items: center;
-    margin-right: 20px;
     font-size: 12px;
 }
 .util_my {
     display: flex;
-    width: 65%;
-    justify-content: space-around;
+    justify-content: right;
     align-items: center;
     font-size: 12px;
 }
@@ -49,30 +55,33 @@ header {
     width: 14px;
     height: auto;
 }
+
 header h1 {
-    position: absolute;
     width: 10%;
     height: 100%;
+    margin-left: 5%;
 }
 header h1 img {
     width: auto;
-    height: 110px;
+    height: 90%;
+    margin-top: 5%;
 }
+
 .gnb {
-    width: 100%;
-    height: 100%;
+    width: 85%;
     box-sizing: border-box;
+    padding-top: 30px;
 }
 .gnb ul {
-    width: 100%;
+    width: 66.5%;
+    margin: 0 auto;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .gnb li {
-    padding: 0 60px;
-    text-align: center;
+    width: 20%;
 }
 .gnb a {
     color: #444545;
@@ -121,6 +130,7 @@ section {
 .slider .iconBox .icon li {
 }
 .slider .iconBox .icon a {
+    width: 100%;
     font-size: 10px;
 }
 
@@ -236,11 +246,6 @@ section {
     margin-right: 1%;
 }
 .ques .more {
-    position: absolute;
-    right: 40px;
-    bottom: 30px;
-    display: flex;
-    font-size: 24px;
 }
 
 /* 비건 기본설정 */
@@ -263,13 +268,10 @@ footer p {
     padding: 50px 0;
     padding-left: 15px;
     color: #fff;
+    text-align: center;
+    font-size: 10px;
 }
-.top {
-    bottom: 30px;
-    right: 15px;
-    position: fixed;
-    z-index: 9999;
-}
+.top {}
 
 
 
@@ -281,30 +283,40 @@ header {
 
 }
 .util_sns {
-    border: 1px solid #444545;
-    border-radius:10px ;
-    box-shadow: 0.1px 0.1px 3px;
+    
 }
 .util_sns i {
-    color: #444545;
+    padding: 5px;
+    margin-right: 3px;
+    border-radius:100px;
+    color: #000;
 }
+.util_sns li:nth-child(1) i {
+    color: rgb(255, 69, 0);
+}
+.util_sns li:nth-child(2) i {
+    color: rgb(221, 160, 221);
+}
+.util_sns li:nth-child(3) i {
+    color: rgb(175, 238, 238);
+}
+
 .util_my {
-    border: 1px solid #444545;
-    border-radius:10px ;
-    box-shadow: 0.1px 0.1px 3px;
+    margin-bottom: 10px;
 }
 .util_my li {
-    color: #444545;
+    padding: 5px;
+    margin-right: 3px;
+    border-radius:100px;
+    font-size: 5px;
+    color: #000;
+    border-left: 1px dashed #B0E0E6;
 }
+
 header h1 {
 }
-header h1 img {
-    margin-top: 15px;
-    margin-left: 80px;
-}
+
 .gnb {
-    padding-top: 20px;
-    margin-left: 100px;
 }
 .gnb ul {
 }
@@ -315,6 +327,7 @@ header h1 img {
 .gnb a {
     display: block;
     font-size: 16px;
+    text-align: center;
 }
 .sub_menu>div {
     background-color: rgba(255, 255, 255, 0.5);
@@ -331,6 +344,7 @@ header h1 img {
 }
 .menu01 ul {
     width: 100%;
+    margin-left: -27px;
     display: flex;
     position: absolute;
     justify-content: center;
@@ -365,7 +379,7 @@ header h1 img {
 }
 .menu03 ul {
     width: 100%;
-    margin-left: 8.2%;
+    margin-left: 11.2%;
     display: flex;
     position: absolute;
     justify-content: center;
@@ -383,7 +397,7 @@ header h1 img {
 }
 .menu04 ul {
     width: 100%;
-    margin-left: 3%;
+    margin-left: 8.5%;
     display: flex;
     position: absolute;
     justify-content: center;
@@ -400,7 +414,7 @@ header h1 img {
 }
 .menu05 ul {
     width: 100%;
-    margin-left: 24.85%;
+    margin-left: 25.9%;
     display: flex;
     position: absolute;
     justify-content: center;
@@ -482,24 +496,23 @@ header h1 img {
 
 .slider .iconBox {
 }
-.slider .iconBox ul {
-    
+.slider .iconBox .icon {
     width: 100%;
     height: 100%;
 }
-.slider .iconBox li {
+.slider .iconBox .icon li {
     width: 100%;
-    text-align: center;
     transition: all 0.5s;
 }
-.slider .iconBox li:hover {
+.slider .iconBox .icon li:hover {
     transform: scale(1.3);
 }
-.slider .iconBox img {
+.slider .iconBox .icon img {
     width: 100%;
     height: 90%;
 }
-.slider .iconBox a {
+.slider .iconBox.icon a {
+    text-align: center;
     width: 100%;
     height: 10%;
 }
@@ -640,13 +653,14 @@ header h1 img {
 }
 
 .activi {
-    width: 600px;
+    width: 510px;
     height: 600px;
     display: flex;
     position: relative;
     top: -150px;
     padding-left: 50px;
     overflow: hidden;
+    box-sizing: border-box;
 }
 .activi li {
     width: 100%;
@@ -709,7 +723,7 @@ header h1 img {
 /* 캠페인 설정 */
 .campaign {
     width: 100%;
-    height: 3120px;
+    height: 3130px;
     overflow: hidden;
     position: relative;
 }
@@ -749,6 +763,8 @@ header h1 img {
     width: 312px;
     height: 320px;
     z-index: 9999;
+    opacity: 0;
+    transition: all 0.4s;
 }
 .campaign .box02 p {
     font-size: 12px;
@@ -781,6 +797,8 @@ header h1 img {
     width: 314px;
     height: 320px;
     z-index: 9999;
+    opacity: 0;
+    transition: all 0.4s;
 }
 .campaign .box03 p {
     font-size: 12px;
@@ -814,6 +832,8 @@ header h1 img {
     width: 312px;
     height: 243px;
     z-index: 9999;
+    opacity: 0;
+    transition: all 0.4s;
 }
 .campaign .box4 img {
 }
@@ -846,6 +866,8 @@ header h1 img {
     width: 341px;
     height: 440px;
     z-index: 9999;
+    opacity: 0;
+    transition: all 0.4s;
 }
 .campaign .box05 p {
     font-size: 12px;
@@ -923,7 +945,30 @@ header h1 img {
 
 
 .ques .more {
-    animation: more 1.5s infinite linear;
+    position: absolute;
+    right: 40px;
+    bottom: 30px;
+    display: flex;
+    width: 190px;
+    height: 38px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ques .more img {
+    width: 40px;
+    height: 30px;
+    padding-right: 20px;
+    transition: all 0.5s;
+    animation: more 1s linear infinite;
+}
+.ques .more:hover img {
+    animation-play-state: paused;
+}
+.ques .more p {
+    width: 170px;
+    font-size: 15px;
 }
 /* 비건 설정 */
 .vagen {
@@ -963,46 +1008,86 @@ header h1 img {
 }
 .vagen .imgBox li {
     position: absolute;
-
 }
 .vagen .imgBox li:nth-child(1) {
     z-index: 3;
-    top: -90px;
-    left: 150px;
+    top: -250px;
+    left: 50px;
 }
-.vagen .imgBox li:nth-child(1) img {
-    width: 270px;
-    height: 250px;
-}
+/* .vagen .imgBox li:nth-child(1) img {
+    width: 100%;
+    height: 100%;
+} */
 .vagen .imgBox li:nth-child(2) {
-    z-index: 2;
-    top: -120px;
-    left: 370px;
+    z-index: 1;
+    top: -200px;
+    right: 100px;
 }
-.vagen .imgBox li:nth-child(2) img {
+/* .vagen .imgBox li:nth-child(2) img {
     width: 240px;
     height: 190px;
-}
+} */
 .vagen .imgBox li:nth-child(3) {
-    z-index: 1;
-    top: 40px;
-    left: 380px;
+    z-index: 2;
+    top: -50px;
+    right: 210px;
 }
-.vagen .imgBox li:nth-child(3) img {
+/* .vagen .imgBox li:nth-child(3) img {
     width: 180px;
     height: 160px;
-}
+} */
 .vagen .more {
     position: absolute;
     right: 40px;
     bottom: 30px;
     display: flex;
-    font-size: 24px;
-    animation: more 1.5s infinite linear;
+    width: 160px;
+    height: 38px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .vagen .more img {
-    
+    width: 40px;
+    height: 30px;
+    padding-right: 20px;
+    transition: all 0.5s;
+    animation: more 1s linear infinite;
 }
+.vagen .more:hover img {
+    animation-play-state: paused;
+}
+.vagen .more p {
+    width: 170px;
+    font-size: 15px;
+}
+/* 탑설정 */
+.top {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    bottom: 40px;
+    right: 0;
+    z-index: 9999;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+.top>div {
+
+}
+.top img {
+    position: absolute;
+    bottom:0;
+    right: 40px;
+    opacity: 1;
+}
+.top img:nth-child(1) {
+    animation: up linear 2s 0s infinite;
+}
+.top img:nth-child(2) {
+    animation: up linear 2s 1s infinite;
+}
+
 
 /* 키프레임 */
 @keyframes typing{
@@ -1015,7 +1100,25 @@ header h1 img {
 }
 
 @keyframes more {
-    0% {right: 40px;}
-    50% {right: 20px;}
-    100% {right: 40px;}
+    0% {padding-right: 5px;}
+    50% {padding-right: 0px;}
+    100%{padding-right: 5px;}
+}
+
+@keyframes up {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+        bottom: 0px;
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+        bottom:25px;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.4);
+        bottom:50px;
+    }
 }
