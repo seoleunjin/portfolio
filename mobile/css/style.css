@@ -152,6 +152,7 @@ nav li:hover {
     /* 구름 일열 정리 */
     top: 0;
     animation: ani1 110s linear infinite;
+    background-color: antiquewhite;
     /* linear 일정 속도를 유지하면서 가라 */
 
 }
@@ -160,6 +161,7 @@ nav li:hover {
     left: 0;
     top: 20px;
     animation: ani2 100s linear infinite;
+    background-color: aqua;
 }
 
 @keyframes ani1 {

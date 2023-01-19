@@ -41,6 +41,30 @@ $(document).ready(function(){
         $('html').animate({'scrollTop':0},1000)
     });
 
+    // 뉴스
+    // 마우스가 움직이면 따라 다녀라
+
+    $('.news').mousemove(function(e){
+        
+        let nht= $('.news').offset().top
+        let x = e.pageX;
+        let y = e.pageY;
+        // console.log(nht-y) y는 화면처음부터에서 지금까지의 높이 따라서, nth<y
+        $('.cursor').css({'opacity':1})
+        $('.cursor').css({'left':x-50,top:-(nht-y)-50})
+    })
+    // 마우스가 뉴스 화면을 나가면 사라져라
+    $('.news').mouseleave(function(){
+        $('.cursor').css({'opacity':0})
+    })
+    // 커서가 뉴스에 아이콘박스 li에 들어갔을때 커서가 확장되라
+    $('.news .iconBox li').mouseenter(function(){
+        $('.cursor').addClass('on')
+    })
+    $('.news .iconBox li').mouseleave(function(){
+        $('.cursor').removeClass('on')
+    })
+
     $(window).scroll(function(){
         let sc = $(this).scrollTop()
         $('.sc').text(sc)
@@ -71,6 +95,16 @@ $(document).ready(function(){
             $('.img05').stop().css({'opacity':'0'})
         }
     });
+
+    // 비건
+    $('.vagen .txtBox h1').eq(0).animate({'opacity':1},800,function(){
+    $('.vagen .imgBox li').eq(0).animate({'opacity':1},800,function(){
+        $('.vagen .imgBox li').eq(1).animate({'opacity':1},800,function(){
+            $('.vagen .imgBox li').eq(2).animate({'opacity':1},800,function(){
+            });
+        });
+    });
+});
 
 
 
