@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     $('.gnb>ul>li').mouseenter(function(){
         let i = $(this).index()
         $('.sub_menu>div').slideUp()
@@ -18,7 +19,7 @@ $(document).ready(function(){
 
     
     
-    // 사진이 한장씩 돌아가라 사진에 마우스를 올리면 멈춰라
+    // 사진이 한장씩 돌아가라
     let a = 0;
     setInterval(function(){
         a++;
@@ -64,10 +65,13 @@ $(document).ready(function(){
     $('.news .iconBox li').mouseleave(function(){
         $('.cursor').removeClass('on')
     })
-
+    let wd = $(window).width()
+    if(wd>=1500){
     $(window).scroll(function(){
+        let wd = $(window).width()
         let sc = $(this).scrollTop()
         $('.sc').text(sc)
+        if(wd>1500){
         if(sc>=1500 && sc<2600){
             $('.intro .txtBox').stop().animate({'left':'-900px'},1000)
             $('.intro .conBox').stop().animate({'right':'-900px'},1500)
@@ -94,8 +98,9 @@ $(document).ready(function(){
         if(sc>=5500){
             $('.img05').stop().css({'opacity':'0'})
         }
+        }
     });
-
+    }
     // 비건
     $('.vagen .txtBox h1').eq(0).animate({'opacity':1},800,function(){
     $('.vagen .imgBox li').eq(0).animate({'opacity':1},800,function(){
@@ -106,6 +111,39 @@ $(document).ready(function(){
     });
 });
 
+// if (wd>1024 && wd<1500){
 
+    
+//     $(window).scroll(function(){
+//         let sc = $(this).scrollTop()
+//         $('.sc').text(sc)
+//         if(sc>=1100 && sc<2150){
+//             $('.intro .txtBox').stop().animate({'left':'-1100px'},1000)
+//             $('.intro .conBox').stop().animate({'right':'-1323px'},1500)
+//         }else{
+//             $('.intro .txtBox').stop().animate({'left':'-1400px'},1000)
+//             $('.intro .conBox').stop().animate({'right':'-1800px'},1200)
+//         };
+//         if(sc>=2400 && sc<2650){
+//             $('.img02').stop().css({'opacity':'1'})
+//         }
+//         if(sc>=2650 && sc<2800){
+//             $('.img02').stop().css({'opacity':'0'})
+//             $('.img03').stop().css({'opacity':'1'})
+//         }
+//         if(sc>=2800 && sc<3100){
+            
+//             $('.img04').stop().css({'opacity':'1'})
+//             $('.img03').stop().css({'opacity':'0'})
+//         }
+//         if(sc>=3100 && sc<3400){
+//             $('.img04').stop().css({'opacity':'0'})
+//             $('.img05').stop().css({'opacity':'1'})
+//         }
+//         if(sc>=5500){
+//             $('.img05').stop().css({'opacity':'0'})
+//         }
+//     });
+// }
 
 })
