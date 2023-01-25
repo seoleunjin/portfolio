@@ -32,8 +32,7 @@ $(document).ready(function(){
     // $('.activi_btn li').click(function(){
     //     let a = $(this).index();
     //     console.log(a)
-    //     $('.activi li').eq(a-1).css({'left':'0'}).animate({'left':'-100%'});
-    //     $('.activi li').eq(a).css({'left':'100%'}).animate({'left':'0'});
+
     // });
 
     
@@ -42,7 +41,6 @@ $(document).ready(function(){
         $('html').animate({'scrollTop':0},1000)
     });
 
-    // 뉴스
     // 마우스가 움직이면 따라 다녀라
 
     $('.news').mousemove(function(e){
@@ -54,7 +52,7 @@ $(document).ready(function(){
         $('.cursor').css({'opacity':1})
         $('.cursor').css({'left':x-50,top:-(nht-y)-50})
     })
-    // 마우스가 뉴스 화면을 나가면 사라져라
+    // 마우스가 뉴스섹션을 나가면 사라져라
     $('.news').mouseleave(function(){
         $('.cursor').css({'opacity':0})
     })
@@ -65,14 +63,17 @@ $(document).ready(function(){
     $('.news .iconBox li').mouseleave(function(){
         $('.cursor').removeClass('on')
     })
-    let wd = $(window).width()
-    if(wd>=1500){
+
+
+// 윈도우의 너비에 따라 스크롤탑 값이 바뀌어라
+let wd= $(window).width();
+
+if(wd>=1500){
     $(window).scroll(function(){
-        let wd = $(window).width()
+        
         let sc = $(this).scrollTop()
         $('.sc').text(sc)
-        if(wd>1500){
-        if(sc>=1500 && sc<2600){
+        if(sc>=1500 && sc<2600 ){
             $('.intro .txtBox').stop().animate({'left':'-900px'},1000)
             $('.intro .conBox').stop().animate({'right':'-900px'},1500)
         }else{
@@ -98,52 +99,67 @@ $(document).ready(function(){
         if(sc>=5500){
             $('.img05').stop().css({'opacity':'0'})
         }
+        if(sc>=7050){
+            $('.vagen .txtBox h1').eq(0).animate({'opacity':1},800,function(){
+                $('.vagen .imgBox li').eq(0).animate({'opacity':1},600,function(){
+                    $('.vagen .imgBox li').eq(1).animate({'opacity':1},600,function(){
+                        $('.vagen .imgBox li').eq(2).animate({'opacity':1},600,function(){
+                        });
+                    });
+                });
+            });
+
         }
     });
-    }
-    // 비건
-    $('.vagen .txtBox h1').eq(0).animate({'opacity':1},800,function(){
-    $('.vagen .imgBox li').eq(0).animate({'opacity':1},800,function(){
-        $('.vagen .imgBox li').eq(1).animate({'opacity':1},800,function(){
-            $('.vagen .imgBox li').eq(2).animate({'opacity':1},800,function(){
-            });
-        });
-    });
-});
+}
 
-// if (wd>1024 && wd<1500){
-
-    
-//     $(window).scroll(function(){
-//         let sc = $(this).scrollTop()
-//         $('.sc').text(sc)
-//         if(sc>=1100 && sc<2150){
-//             $('.intro .txtBox').stop().animate({'left':'-1100px'},1000)
-//             $('.intro .conBox').stop().animate({'right':'-1323px'},1500)
-//         }else{
-//             $('.intro .txtBox').stop().animate({'left':'-1400px'},1000)
-//             $('.intro .conBox').stop().animate({'right':'-1800px'},1200)
-//         };
-//         if(sc>=2400 && sc<2650){
-//             $('.img02').stop().css({'opacity':'1'})
-//         }
-//         if(sc>=2650 && sc<2800){
-//             $('.img02').stop().css({'opacity':'0'})
-//             $('.img03').stop().css({'opacity':'1'})
-//         }
-//         if(sc>=2800 && sc<3100){
+if(wd>=1024 && wd<1499){
+    $(window).scroll(function(){
+        let wd = $(window).width()
+        let sc = $(this).scrollTop()
+        $('.sc').text(sc)
+        if(sc>=1100 && sc<2150 ){
+            $('.intro .txtBox').stop().animate({'left':'-1100px'},1000)
+            $('.intro .conBox').stop().animate({'right':'-1323px'},1500)
+        }else{
+            $('.intro .txtBox').stop().animate({'left':'-1400px'},1000)
+            $('.intro .conBox').stop().animate({'right':'-1800px'},1200)
+        };
+        if(sc>=2400 && sc<2650){
+            $('.img02').stop().css({'opacity':'1'})
+        }
+        if(sc>=2650 && sc<2800){
+            $('.img02').stop().css({'opacity':'0'})
+            $('.img03').stop().css({'opacity':'1'})
+        }
+        if(sc>=2800 && sc<3100){
             
-//             $('.img04').stop().css({'opacity':'1'})
-//             $('.img03').stop().css({'opacity':'0'})
-//         }
-//         if(sc>=3100 && sc<3400){
-//             $('.img04').stop().css({'opacity':'0'})
-//             $('.img05').stop().css({'opacity':'1'})
-//         }
-//         if(sc>=5500){
-//             $('.img05').stop().css({'opacity':'0'})
-//         }
-//     });
-// }
+            $('.img04').stop().css({'opacity':'1'})
+            $('.img03').stop().css({'opacity':'0'})
+        }
+        if(sc>=3100 && sc<3400){
+            $('.img04').stop().css({'opacity':'0'})
+            $('.img05').stop().css({'opacity':'1'})
+        }
+        if(sc>=5500){
+            $('.img05').stop().css({'opacity':'0'})
+        }
+        if(sc>=4600){
+            $('.vagen .txtBox h1').eq(0).animate({'opacity':1},800,function(){
+                $('.vagen .imgBox li').eq(0).animate({'opacity':1},600,function(){
+                    $('.vagen .imgBox li').eq(1).animate({'opacity':1},600,function(){
+                        $('.vagen .imgBox li').eq(2).animate({'opacity':1},600,function(){
+                        });
+                    });
+                });
+            });
+
+        }
+    });
+}
+
+
 
 })
+
+
