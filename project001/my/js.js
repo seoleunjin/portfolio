@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+
     $('.gnb>ul>li').mouseenter(function(){
         let i = $(this).index()
         $('.sub_menu>div').slideUp()
@@ -17,23 +18,18 @@ $(document).ready(function(){
         $(this).addClass('on');
     });
 
-    
-    
-    // 사진이 한장씩 돌아가라
-    let a = 0;
+    // 타이핑효과
+    let txt = $('.slider .txt').text();
+    let txtN = txt.split('')
+    let i = -1
+    let ti = txtN.length;
+    console.log(txt)
+    console.log(txtN)
     setInterval(function(){
-        a++;
-        if(a==4) a=0;
-        $('.intro .activi li').eq(a-1).css({'left':'0'}).animate({'left':'-100%'});
-        $('.intro .activi li').eq(a).css({'left':'100%'}).animate({'left':'0'});
-    },2500);
-    
-    // 사진이 한장씩 돌아갈때 마다 gnb가 하나씩 바뀌어라 
-    // $('.activi_btn li').click(function(){
-    //     let a = $(this).index();
-    //     console.log(a)
+        if(i<ti ) i++; 
+        $('.line').append(txtN[i])
+    },700)
 
-    // });
 
     
     // top을 누르면 페이지 상단으로 가라
@@ -51,23 +47,44 @@ $(document).ready(function(){
         // console.log(nht-y) y는 화면처음부터에서 지금까지의 높이 따라서, nth<y
         $('.cursor').css({'opacity':1})
         $('.cursor').css({'left':x-50,top:-(nht-y)-50})
-    })
+    });
     // 마우스가 뉴스섹션을 나가면 사라져라
     $('.news').mouseleave(function(){
         $('.cursor').css({'opacity':0})
-    })
+    });
+
+
     // 커서가 뉴스에 아이콘박스 li에 들어갔을때 커서가 확장되라
     $('.news .iconBox li').mouseenter(function(){
         $('.cursor').addClass('on')
-    })
+    });
     $('.news .iconBox li').mouseleave(function(){
         $('.cursor').removeClass('on')
-    })
+    });
 
 
-// 윈도우의 너비에 따라 스크롤탑 값이 바뀌어라
+        // 사진이 한장씩 돌아가라
+        let a = 0;
+        setInterval(function(){
+            a++;
+            if(a==4) a=0;
+            $('.intro .activi li').eq(a-1).css({'left':'0'}).animate({'left':'-100%'});
+            $('.intro .activi li').eq(a).css({'left':'100%'}).animate({'left':'0'});
+        },2500);
+        
+        // 사진이 한장씩 돌아갈때 마다 gnb가 하나씩 바뀌어라 
+        // $('.activi_btn li').click(function(){
+        //     let a = $(this).index();
+        //     console.log(a)
+    
+        // });
+
+
+
+
 let wd= $(window).width();
 
+// 윈도우의 너비에 따라 스크롤탑 값이 바뀌어라
 if(wd>=1500){
     $(window).scroll(function(){
         
@@ -125,26 +142,24 @@ if(wd>=1024 && wd<1499){
             $('.intro .txtBox').stop().animate({'left':'-1400px'},1000)
             $('.intro .conBox').stop().animate({'right':'-1800px'},1200)
         };
-        if(sc>=2400 && sc<2650){
+        if(sc>=2700 && sc<3000){
             $('.img02').stop().css({'opacity':'1'})
         }
-        if(sc>=2650 && sc<2800){
+        if(sc>=3000 && sc<3200){
             $('.img02').stop().css({'opacity':'0'})
             $('.img03').stop().css({'opacity':'1'})
         }
-        if(sc>=2800 && sc<3100){
+        if(sc>=3200 && sc<3400){
             
             $('.img04').stop().css({'opacity':'1'})
             $('.img03').stop().css({'opacity':'0'})
         }
-        if(sc>=3100 && sc<3400){
+        if(sc>=3400 && sc<3600){
             $('.img04').stop().css({'opacity':'0'})
             $('.img05').stop().css({'opacity':'1'})
         }
-        if(sc>=5500){
-            $('.img05').stop().css({'opacity':'0'})
-        }
-        if(sc>=4600){
+    
+        if(sc>=4800){
             $('.vagen .txtBox h1').eq(0).animate({'opacity':1},800,function(){
                 $('.vagen .imgBox li').eq(0).animate({'opacity':1},600,function(){
                     $('.vagen .imgBox li').eq(1).animate({'opacity':1},600,function(){

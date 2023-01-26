@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+* {margin: 0; padding: 0;}
+ul {list-style: none;}
+a {text-decoration: none; color: #000;}
+img {vertical-align: bottom; border: none;}
+
+
+
+header {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    height: 120px;
+    align-items: center;
+}
+header.on {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+section {
+    width: 100%;
+}
+article {
+    height: 800px;
+}
+
+article:nth-child(1) {
+    position: relative;
+    background-color: lightcoral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+article:nth-child(2) {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+article:nth-child(2) span {
+    position: absolute;
+}
+article:nth-child(2)>div {
+    width: 200px;
+    height: 600px;
+    box-shadow: 2px 2px 5px #000;
+    margin: 0 15px;
+}
+article:nth-child(2)>div:hover {
+    box-shadow: 1px 1px 2px #000;
+}
+
+
+
+
+
+article:nth-child(3) {background-color: lightgreen;}
+article:nth-child(4) {background-color: lightsalmon;}
+
+.subMenu {
+    display: none;
+}
+.skillMenu {
+    display: none;
+}
+
+header h1 {
+    width: 30%;
+    text-align: center;
+}
+
+header nav {
+    width: 70%;
+}
+header nav ul {
+    display: flex;
+    justify-content: center;
+}
+header nav li {
+    width: 20%;
+    cursor: pointer;
+}
+
+
+/* 설명박스 */
+.txt {
+    position: fixed;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.5);
+    top: 30%;
+    right: 0;
+    padding: 10px;
+}
+
+
