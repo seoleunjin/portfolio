@@ -32,13 +32,15 @@ img {border: none; vertical-align: bottom;}
 }
 
 section {
+    /* ul */
     position: fixed;
     width: 100%;
     height: 100%;
     right: 0;
     top: 0;
 }
-article {
+article { 
+    /* li */
     float: right;
     width: 12%;
     height: 100%;

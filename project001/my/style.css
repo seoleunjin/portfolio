@@ -13,9 +13,8 @@
 ul {list-style: none;}
 img {vertical-align: bottom; border: 0;}
 a {text-decoration: none; color: #444545; color: #fff;}
-body {font-family: 'GangwonEdu_OTFBoldA'; overflow-x: hidden; position: relative;}
+body { font-family: 'GangwonEdu_OTFBoldA'; overflow-x: hidden; position: relative;}
 em {font-style: normal; font-weight: normal; font-size: 22px;}
-
 
 
 .sc {
@@ -27,7 +26,11 @@ em {font-style: normal; font-weight: normal; font-size: 22px;}
     height: 20px;
 }
 /* 기본설정 */
-
+.wrap {
+    width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+}
 /* 해더 기본설정 */
 
 header {
@@ -39,8 +42,9 @@ header {
     z-index: 8888;
     box-sizing: border-box;
 }
+
 .util {
-    width: 10%;
+    width: 15%;
     height: auto;
     top: 0;
     right: 15px;
@@ -67,7 +71,7 @@ header {
 
 header h1 {
     box-sizing: border-box;
-    width: 10%;
+    width: 15%;
     height: 100%;
     padding-left: 3%;
 }
@@ -78,7 +82,7 @@ header h1 img {
 }
 
 .gnb {
-    width: 80%;
+    width: 70%;
     box-sizing: border-box;
     padding-top: 30px;
 }
@@ -121,17 +125,15 @@ section {
 /* 슬라이더 기본설정 */
 .slider {
     height: 900px;
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;background-position: top center;
 }
 
 .slider .iconBox {
     position: absolute;
     width: 170px;
     height: 60px;
-    left: 40px;
+    left: 350px;
     bottom: 40px;
+    z-index: 9999;
 }
 
 .slider .iconBox .icon {
@@ -150,7 +152,7 @@ section {
     position: absolute;
     top: 50%;
     margin-top: -40px;
-    right: 15px;
+    right: 350px;
     height: 80px;
     width: 15px;
 }
@@ -198,35 +200,23 @@ section {
     background-attachment: fixed;
 }
 
-/* 후원 기본설정 */
-.intro_2 {
-    display: none;
-}
 /* 공지사항 기본설정 */
 .ques {
+    width: 100%;
+}
+.ques .wrap {
     position: relative;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     overflow: hidden;
 }
-.ques span:nth-child(1) {
+.ques .bg01 {
 }
-.ques span:nth-child(2) {
-    width: 100%;
-    bottom: 0;
+.ques .bg02 {
     position: absolute;
-}
-.ques span:nth-child(3) {
-    position: absolute;
-    top: 160px;
+    top: 250px;
     left: 60px;
-}
-.ques span:nth-child(4) {
-    width: 100%;
-    left: 50%;
-    bottom: 0;
-    position: absolute;
 }
 .ques .imgBox {
     width: 40%;
@@ -240,7 +230,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: 550px;
+    height: 450px;
     
 }
 .ques .conBox li {
@@ -265,7 +255,6 @@ section {
 .vagen {
     height: 600px;
     background-color: #d2de26;
-    position: relative;
 }
 .vagen .txtBox {}
 .vagen .imgBox {}
@@ -377,7 +366,7 @@ header h1 {
 }
 .menu01 ul {
     width: 100%;
-    margin-left: -7.2%;
+    margin-left: -7.3%;
     display: flex;
     position: absolute;
     justify-content: left;
@@ -385,14 +374,14 @@ header h1 {
 }
 .menu05 ul {
     width: 100%;
-    margin-left: 16.5%;
+    margin-left: 14.55%;
     display: flex;
     position: absolute;
     justify-content: left;
     align-items: center;
 }
 .sub_menu li {
-    padding: 0 65px;
+    padding: 0 25px;
 }
 .sub_menu a {
     display: block;
@@ -406,21 +395,20 @@ header h1 {
 .slider {
     position: relative;
 }
-
 .slider .txt {
     z-index: 9999;
     font-size: 20px;
     position: absolute;
     top:140px;
-    left:140px;
+    left:350px;
     color: transparent;
 }
 .slider .line {
     z-index: 9999;
-    font-size: 20px;
+    font-size: 28px;
     position: absolute;
     top:140px;
-    left:140px;
+    left:350px;
     color: #fff;
     border-right: 1px solid #fff;
     animation: typing 1.3s infinite;
@@ -461,6 +449,7 @@ header h1 {
 
 
 .slider .iconBox {
+
 }
 .slider .iconBox .icon {
     width: 100%;
@@ -485,6 +474,7 @@ header h1 {
 
 
 .slider .bar {
+    z-index: 9999;
 }
 .slider .bar ul {
     width: 100%;
@@ -498,7 +488,7 @@ header h1 {
     background-size: cover;
     background-position: bottom;
 }
-.slider .bar .on {
+.slider .bar li.on {
     background-position: top;
 }
 .slider .bar a {}
@@ -506,6 +496,8 @@ header h1 {
 /* 뉴스 설정 */
 .news {
     box-sizing: border-box;
+}
+.news {
     position: relative;
 }
 .news .cursor {
@@ -528,8 +520,8 @@ header h1 {
     font-size: 24px;
     color: #444545;
     font-weight: bold;
-    /* color: #c5c01e; */
 }
+
 .news h2 {
     padding-left: 5%;
     padding-top: 50px;
@@ -557,28 +549,30 @@ header h1 {
 }
 .news .iconBox li:nth-child(1) p {
     position: absolute;
-    top: 60px;
+    top: -70px;
 }
 .news .iconBox li:nth-child(2) p {
     position: absolute;
-    top: -40px;
+    top: 40px;
 }
 .news .iconBox li:nth-child(3) p {
     position: absolute;
+    top: -10px;
 }
 .news .iconBox li:nth-child(4) p {
     position: absolute;
-    top: 50px;
+    top: 30px;
     left: 20px;
 }
 .news .iconBox li:nth-child(5) p {
     position: absolute;
-    top: 50px;
+    top: 140px;
 }
 .news .iconBox li:nth-child(6) p {
     position: absolute;
-    top: -60px;
+    top: 60px;
 }
+
 .news .iconBox img {
     width: 110px;
     height: 120px;
@@ -594,9 +588,13 @@ header h1 {
     border-radius: 100px;
     color: #444545;
     font-weight: 550;
+    transition: all 0.4s;
 }
 
-
+.news .iconBox li:hover a {
+    background-color: #d2de26;
+    color: #fff;
+} 
 
 /* 소개영역 */
 .intro {
@@ -681,28 +679,19 @@ header h1 {
     margin-bottom: 10px;
     margin-left: 50px;
     transition: all 0.5s;
-
-}
-.activi_btn a {
-    display: block;
-}
-.activi_btn li:hover{
-    margin-left: 20px;
-    border: 3px solid #36719e;
+    box-sizing: border-box;
 }
 .activi_btn li.on {
-    border: 3px solid #36719e;
+    border: 2px solid #36719e;
     margin-left: 20px;
 }
 .activi_btn a {
     display: block;
+    padding-top: 5px;
     font-size: 24px;
     color: #699fc9;
 }
-.activi_btn a:hover {
-    color: #36719e;
-}
-.activi_btn li.on a{
+.activi_btn li.on a {
     color: #36719e;
 }
 
@@ -881,55 +870,63 @@ header h1 {
 
 /* 공지사항 설정 */
 .ques {
+    background-image: url(img/ques_grac.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
     box-sizing: border-box;
 }
-.ques span:nth-child(1) {
+.ques .bg01 {
     width: 100%;
     height: 40px;
     position: absolute;
     background-color: #1e5f31;
 }
-.ques span:nth-child(2) {
+.ques .bg02 img {
+    width: 500px;
 }
-.ques span:nth-child(3) {
-    padding-left: 50px;
-    padding-top: 60px;
+.ques .bg03 {
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
-.ques span:nth-child(4) {
-}
-
 .ques .imgBox {
-    font-size: 32px;
 }
 .ques .imgBox h1{
     color: #444545;
-    padding-left: 150px;
+    padding-left: 100px;
+    font-size: 40px;
 }
 .ques .imgBox h1:nth-child(1) {
-    padding-top: 90px;
+    padding-top: 150px;
 }
 .ques .imgBox h1:nth-child(2) {
-    padding-left: 250px;
+    padding-left: 200px;
 }
 .ques .conBox {
 }
 .ques .conBox ul {
-    padding-top: 110px;
+    padding-top: 180px;
 }
 .ques .conBox li {
     border-radius: 30px;
     box-sizing: border-box;
+    box-shadow: 3px 3px 3px #444545;
+}
+.ques .conBox li:hover {
+    box-shadow: 1px 1px 1px #444545;
 }
 .ques .conBox li h1 {
     font-weight: normal;
-    padding-top: 32px;
-    padding-left: 60px;
-    font-size: 32px;
+    padding-top: 40px;
+    padding-left: 30px;
+    font-size: 24px;
 }
+
 .ques .conBox li p {
-    width: 330px;
+    width: 250px;
     padding-top: 30px;
-    padding-left: 60px;
+    padding-left: 30px;
     color: #163a1f;
     font-size: 20px;
     font-weight: bold;
@@ -961,9 +958,17 @@ header h1 {
 .ques .more p {
     width: 170px;
     font-size: 15px;
+    padding-top: 5px;
+    transition: all 0.4s;
+}
+.ques .more:hover p {
+    font-size: 16px;
+    padding-top: 5px;
+    color: yellow;
 }
 /* 비건 설정 */
-.vagen {
+.vagen .wrap {
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -973,7 +978,6 @@ header h1 {
 .vagen .txtBox {
     width: 55%;
     box-sizing: border-box;
-    padding-left: 200px;
 }
 .vagen .txtBox h1 {
     font-size: 50px;
@@ -995,23 +999,37 @@ header h1 {
 }
 .vagen .imgBox li:nth-child(1) {
     z-index: 3;
-    top: -250px;
+    top: -170px;
     left: 50px;
     opacity: 0;
 }
 
 .vagen .imgBox li:nth-child(2) {
     z-index: 1;
-    top: -200px;
-    right: 150px;
+    top: -130px;
+    right: 50px;
     opacity: 0;
 }
 
 .vagen .imgBox li:nth-child(3) {
     z-index: 2;
-    top: -50px;
-    right: 210px;
+    top: 10px;
+    right: 150px;
     opacity: 0;
+}
+.vagen .imgBox li:nth-child(1) img {
+    width: 280px;
+
+}
+
+.vagen .imgBox li:nth-child(2) img {
+    width: 250px;
+
+}
+
+.vagen .imgBox li:nth-child(3) img {
+    width: 200px;
+
 }
 
 .vagen .more {
@@ -1038,6 +1056,14 @@ header h1 {
 .vagen .more p {
     width: 170px;
     font-size: 15px;
+    padding-top: 5px;
+    transition: all 0.4s;
+}
+.vagen .more:hover p {
+    font-size: 16px;
+    padding-top: 5px;
+    color: #163a1f;
+    font-weight: bold;
 }
 /* 탑설정 */
 .top {
@@ -1114,11 +1140,12 @@ header h1 {
 
 /* ###########미디어쿼리구간########### */
 /* 1500px이상 */
-@media(min-width:1500px) {}
+
 /* 1024px이상 1499이하 */
 @media(min-width:1024px) and (max-width:1499px){
+
 section {
-    width: 100%;mf
+    width: 100%;
     height: 800px;
 }
 /* 1499 슬라이더 설정 */
@@ -1152,10 +1179,10 @@ section {
     height: 10px;
 }
 
-.slider h1 {
-    font-size: 14px;
+.slider .line {
+    font-size: 24px;
     top:50px;
-    left:200px;
+    left:50px;
 }
 
 .slider .iconBox .icon a {
@@ -1201,10 +1228,10 @@ header {
 .sub_menu ul {
 }
 .menu01 ul {
-    margin-left: -9.3%;
+    margin-left: -7.1%;
 }
 .menu05 ul {
-    margin-left: 15.9%;
+    margin-left: 13.2%;
 }
 .sub_menu li {
     padding:  0 20px;
@@ -1442,46 +1469,41 @@ header {
 /* 1499 공지사항 설정 */
 .ques {
     height: 700px;
+    background-image: none;
 }
-.ques span:nth-child(1) {
+.ques .bg01 {
     height: 20px;
 }
-.ques span:nth-child(2) {
-}
-.ques span:nth-child(3) img {
+.ques .bg02 img {
     width: 375px;
     height: 350px;
 }
-.ques span:nth-child(4) {
+.ques .bg03 {
+    opacity: 1;
+    width: 100%;
 }
-.ques span:nth-child(2) img {
-    width: 1024px;
-    height: 160px;
+.ques .bg03  img {
+    width: 100%;
+    height: 150px;
+
 }
-
-.ques span:nth-child(4) img {
-    width: 1024px;
-    height: 160px;
-}
-
-
 
 
 .ques .imgBox h1{
-    padding-left: 130px;
-    font-size: 28px;
+    padding-left: 100px;
+    font-size: 34px;
 }
 .ques .imgBox h1:nth-child(1) {
     padding-top: 120px;
 }
 .ques .imgBox h1:nth-child(2) {
-    padding-left: 230px;
+    padding-left: 200px;
 }
 .ques .conBox {
 }
 .ques .conBox ul {
     padding-top: 160px;
-    height: 330px;
+    height: 300px;
 }
 .ques .conBox li {
     border-radius: 30px;
@@ -1489,18 +1511,18 @@ header {
 }
 .ques .conBox li h1 {
     font-weight: normal;
-    padding-top: 15px;
+    padding-top: 25px;
     padding-left: 25px;
     font-size: 20px;
 }
 .ques .conBox li em {
-    font-size: 16px;
+    font-size: 18px;
 }
 .ques .conBox li p {
     width: 250px;
-    padding-top: 15px;
+    padding-top: 10px;
     padding-left: 25px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 
@@ -1614,11 +1636,13 @@ header {
     }
 }
 
-
 }
 /* 767xp이상 1023px이하 */
 @media(min-width:768px) and (max-width:1023px) {
     /* 1023 해더설정 */
+    .wrap {
+        width: 100%;
+    }
     header {
         position: relative;
         width: 100%;
@@ -1628,6 +1652,7 @@ header {
         z-index: 8888;
         box-sizing: border-box;
     }
+    
     .util {display: none;}
     header h1 {
         box-sizing: border-box;
@@ -1651,43 +1676,6 @@ header {
         background-image: url(img/toggle.png);
         background-size: cover;
     }
-    .toggle_s  {
-        opacity: 1;
-        width: 100%;
-        height: 10px;
-        position: relative;
-    }
-    .toggle_s>div {
-        width: 100%;
-        height: 100%;
-        padding: 20px 0;
-        position: absolute;
-        left: 0;
-        top: 0;
-        display: none;
-    }
-    .toggle_s form {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.1);
-    }
-    .toggle_s p {
-        position: absolute;
-        right: 140px;
-        top: 31.2px;
-        width: auto;
-        height: 19px;
-        color: #444545;
-    }
-    .toggle_s input {
-        position: absolute;
-        top: 15px;
-        right: 134px;
-        width: 500px;
-        text-align: center;
-    }
-
 
     .search {
         opacity: 1;
@@ -1704,30 +1692,49 @@ header {
         font-size: 26px;
     }
     .gnb {
-        display: none; /* 임시설정*/
+        /* 임시설정*/
         position: absolute;
         top:70px;
-        left: 0;
+        left: -100%;
         width: 300px;
         height: 300px;
         padding: 0;
-        margin-top: -25px;
+        margin-top: 0;
+        overflow: hidden;
     }
     .gnb ul {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.3);
         }
     .gnb li {
         width: 100%;
-        height: 0;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
         }
-    .gnb a {
-        padding: 5%;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #fff;
+    .gnb li:nth-child(5) {
+        border: none;
+    }
+    .gnb li:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+        border-bottom: 1px solid #fff;
     } 
-
+    .gnb a {
+        padding-top: 50px;
+        height: 100%;
+        color: #444545;
+    }
+    .gnb li:hover a {
+        color: #fff;
+    }
+    .sub_menu {
+        display: none;
+    }
 /* 1023 슬라이더 설정 */
 .slider {height: 500px;}
 
@@ -1740,7 +1747,8 @@ header {
     bottom: 0;
     padding-top: 20px;
 }
-
+.slider .iconBox .icon {
+}
 .slider .iconBox .icon li {
     height: 100px;
     text-align: center;
@@ -1763,16 +1771,16 @@ header {
     top: 50%;
     margin-top: -26px;
     right: 15px;
-    height: 52px;
+    height: 30px;
     width: 11px;
 }
 .slider .bar li {
-    height: 10px;
+    height: 9px;
 }
-.slider h1 {
+.slider .line {
     font-size: 14px;
-    top:50px;
-    left:200px;
+    top:450px;
+    left:50px;
 }
 
 .slider .iconBox .icon a {
@@ -2062,6 +2070,11 @@ header {
     right: 27px;
     letter-spacing: 3px;
     writing-mode: horizontal-tb;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.campaign .box02:hover p {
+    opacity: 1;
 }
 
 .campaign .box3 {
@@ -2095,6 +2108,11 @@ header {
     right: 27px;
     letter-spacing: 3px;
     writing-mode: horizontal-tb;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.campaign .box03:hover p {
+    opacity: 1;
 }
 .campaign .box4 {
     position: absolute;
@@ -2131,6 +2149,11 @@ header {
     right: 27px;
     letter-spacing: 3px;
     writing-mode: horizontal-tb;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.campaign .box04:hover p {
+    opacity: 1;
 }
 .campaign .box5 {
     position: absolute;
@@ -2163,6 +2186,11 @@ header {
     right: 27px;
     letter-spacing: 3px;
     writing-mode: horizontal-tb;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.campaign .box05:hover p {
+    opacity: 1;
 }
 .campaign .sub_T {
     z-index: 9999;
@@ -2172,32 +2200,33 @@ header {
     top: 0px;
     font-family: 'Kaushan Script', cursive;
 }
-/* 1499 공지사항 설정 */
+/* 1023 공지사항 설정 */
 .ques {
     height: 500px;
+    background-image: none;
 }
 
-.ques span:nth-child(1) {
+.ques .bg01 {
     height: 10px;
 }
-.ques span:nth-child(2) {
-}
-.ques span:nth-child(3) img {
-    width: 187px;
-    height: 175px;
-    background-color: wheat;
-}
-.ques span:nth-child(4) {
-}
-.ques span:nth-child(2) img {
-    width: 768px;
-    height: auto;
+.ques .bg02 {
+    top: 90px;
 }
 
-.ques span:nth-child(4) img {
-    width: 768px;
+.ques .bg02 img {
+    width: 230px;
     height: auto;
 }
+.ques .bg03 {
+    opacity: 1;
+    width: 100%;
+}
+.ques .bg03  img {
+    width: 100%;
+    height: 150px;
+
+}
+
 
 
 .ques .imgBox h1{
@@ -2213,7 +2242,7 @@ header {
 .ques .conBox {
 }
 .ques .conBox ul {
-    padding-top: 30px;
+    padding-top: 70px;
     height: 250px;
 }
 .ques .conBox li {
@@ -2240,17 +2269,18 @@ header {
 .ques .more {
     right: 20px;
     bottom: 0px;
-    width: 130px;
+    width: 110px;
     height: 38px;
 }
 .ques .more p {
     font-size: 10px;
+    padding-top: 5px;
 }
 .ques .more img {
     width: 20px;
     height: 15px;
 }
-/* 1499 비건 기본 */
+/* 1023 비건 기본 */
 .vagen {
     height: 300px;
     background-color: #d2de26;
@@ -2266,36 +2296,41 @@ header {
 }
 .vagen .txtBox h1 {
     font-size: 38px;
+    opacity: 0;
 }
 .vagen .txtBox p {
     font-size: 16px;
+    padding-top: 25px;
 }
 
 .vagen .imgBox li:nth-child(1) {
-    top: -155px;
+    top: -100px;
     left: 25px;
+    opacity: 0;
 }
 .vagen .imgBox li:nth-child(1) img {
-    width: 255px;
+    width: 170px;
     height: auto;
 }
 
 .vagen .imgBox li:nth-child(2) {
-    top: -130px;
+    top: -110px;
     right: 100px;
+    opacity: 0;
 }
 .vagen .imgBox li:nth-child(2) img {
-    width: 213px;
+    width: 150px;
     height: auto;
 }
 .vagen .imgBox li:nth-child(3) {
     top: 0;
     right: 160px;
+    opacity: 0;
 }
 .vagen .imgBox li:nth-child(3) img {
     
     height: auto;
-    width: 178px;
+    width: 120px;
 }
 
 .vagen .more {
@@ -2306,6 +2341,7 @@ header {
 }
 .vagen .more p {
     font-size: 10px;
+    padding-top: 5px;
 }
 .vagen .more img {
     width: 20px;
