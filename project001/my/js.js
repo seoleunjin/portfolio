@@ -13,15 +13,20 @@ $(document).ready(function(){
 
 
     // 슬라이더영역 ########################################################
-    // 바를 클릭 했을때 동영상이 전환되라
+    // 바를 클릭 했을때 동영상이 전환되고 play되라
     $('.bar li').click(function(){
         let i = $(this).index();
-        console.log(i)
+        let vid = $('.img_play li').eq(i).find('video').get(0) 
         $('.img_play li').stop().animate({'opacity':'0'},800);
         $('.img_play li').eq(i).stop().animate({'opacity':'1'},800);
         $('.bar li').removeClass('on')
         $(this).addClass('on')
+        vid.play()
+        vid.currentTime=0
     });
+
+
+
     // 타이핑효과
     let txt = $('.slider .txt').text();
     let txtN = txt.split('')
@@ -106,6 +111,7 @@ if(wd>=1500){
     $(window).scroll(function(){
         
         let sc = $(this).scrollTop()
+        // 1920 소개구간
         $('.sc').text(sc)
         if(sc>=1500 && sc<2600 ){
             $('.intro .txtBox').stop().animate({'left':'-900px'},1000)
@@ -114,6 +120,7 @@ if(wd>=1500){
             $('.intro .txtBox').stop().animate({'left':'-1400px'},1000)
             $('.intro .conBox').stop().animate({'right':'-1800px'},1200)
         };
+        // 1920 공지사항구간
         if(sc>=3700 && sc<3900){
             $('.img02').stop().css({'opacity':'1'})
         }
@@ -133,6 +140,16 @@ if(wd>=1500){
         if(sc>=5500){
             $('.img05').stop().css({'opacity':'0'})
         }
+        // 1920 공지사항구간
+        if(sc>=6200){
+            // 공지 섹션에 들어왔을때 h1이 순서대로 깜빡여라
+            let b = 0;
+            setInterval(function(){
+                b++;
+                $('.ques .conBox h1').eq(b-1).css({'color':'yellow'})
+            },1500)
+        }
+        // 1920 비건구간
         if(sc>=7050){
             $('.vagen .txtBox h1').eq(0).animate({'opacity':1},800,function(){
                 $('.vagen .imgBox li').eq(0).animate({'opacity':1},600,function(){
@@ -144,14 +161,7 @@ if(wd>=1500){
             });
 
         }
-        if(sc>=6200){
-            // 공지 섹션에 들어왔을때 h1이 순서대로 깜빡여라
-            let b = 0;
-            setInterval(function(){
-                b++;
-                $('.ques .conBox h1').eq(b-1).css({'color':'yellow'})
-            },3000)
-        }
+
     });
 }
 
@@ -161,7 +171,7 @@ if(wd>=1024 && wd<1499){
     $(window).scroll(function(){
         let wd = $(window).width()
         let sc = $(this).scrollTop()
-        $('.sc').text(sc)
+        // 1499 캠페인구간
         if(sc>=1100 && sc<2150 ){
             $('.intro .txtBox').stop().animate({'left':'-1100px'},1000)
             $('.intro .conBox').stop().animate({'right':'-1323px'},1500)
@@ -188,7 +198,7 @@ if(wd>=1024 && wd<1499){
         if(sc>=3400){
             $('.img05').stop().css({'opacity':'0'})
         }
-    
+        // 1499 비건구간
         if(sc>=4600){
             $('.vagen .txtBox h1').eq(0).animate({'opacity':1},800,function(){
                 $('.vagen .imgBox li').eq(0).animate({'opacity':1},600,function(){
@@ -206,12 +216,13 @@ if(wd>=1024 && wd<1499){
             setInterval(function(){
                 b++;
                 $('.ques .conBox h1').eq(b-1).css({'color':'yellow'})
-            },3000)
+            },1500)
         }
     });
 }
 
 if(wd>=768 && wd<1023){
+    // 1023 해더구간
     $('.toggle').click(function(){
         $('.gnb').animate({'left':'0'},800)
     });
@@ -219,10 +230,30 @@ if(wd>=768 && wd<1023){
         $('.gnb').animate({'left':'-100%'},2000)
     });
 
+    // 1023 캠페인구간
+    $('.campaign .box1 li').click(function(){
+        let i = $(this).index();
+        console.log(i)
+        $('.campaign article').removeClass('on')
+        $('.campaign article').eq(i+1).addClass('on')
+        $('.campaign .box1 li').removeClass('on')
+        $(this).addClass('on')
+    });
+
     $(window).scroll(function(){
         
         let sc = $(this).scrollTop()
-        $('.sc').text(sc)
+        // 1023 공지사항 구간
+        if(sc>=2100){
+            // 공지 섹션에 들어왔을때 h1이 순서대로 깜빡여라
+            let b = 0;
+            setInterval(function(){
+                b++;
+                $('.ques .conBox h1').eq(b-1).css({'color':'yellow'})
+            },1500)
+        }
+
+            // 1023 비건구간
         if(sc>=2600){
             $('.vagen .txtBox h1').eq(0).animate({'opacity':1},800,function(){
                 $('.vagen .imgBox li').eq(0).animate({'opacity':1},600,function(){
@@ -232,19 +263,13 @@ if(wd>=768 && wd<1023){
                     });
                 });
             });
-
-        }
-        if(sc>=2100){
-            // 공지 섹션에 들어왔을때 h1이 순서대로 깜빡여라
-            let b = 0;
-            setInterval(function(){
-                b++;
-                $('.ques .conBox h1').eq(b-1).css({'color':'yellow'})
-            },3000)
         }
     });
+
+
 }
     
+
 
 
 })
