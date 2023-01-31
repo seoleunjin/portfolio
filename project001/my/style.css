@@ -1655,7 +1655,7 @@ header {
 }
 
 }
-/* 767xp이상 1023px이하 */
+/* 768xp이상 1023px이하 */
 @media(min-width:768px) and (max-width:1023px) {
     /* 1023 해더설정 */
     .wrap {
@@ -2459,8 +2459,8 @@ header {
             position: absolute;
             top:70px;
             left: -100%;
-            width: 300px;
-            height: 300px;
+            width: 150px;
+            height: 200px;
             padding: 0;
             margin-top: 0;
             overflow: hidden;
@@ -2488,9 +2488,10 @@ header {
             border-bottom: 1px solid #fff;
         } 
         .gnb a {
-            padding-top: 50px;
+            padding-top: 30px;
             height: 100%;
             color: #444545;
+            font-size: 10px;
         }
         .gnb li:hover a {
             color: #fff;

@@ -221,7 +221,7 @@ if(wd>=1024 && wd<1499){
     });
 }
 
-if(wd>=768 && wd<1023){
+if(wd>=380 && wd<1023){
     // 1023 해더구간
     $('.toggle').click(function(){
         $('.gnb').animate({'left':'0'},800)
@@ -268,7 +268,29 @@ if(wd>=768 && wd<1023){
 
 
 }
-    
+
+
+// if(wd>=380 && wd<767){
+//     let sc = $(this).scrollTop()
+//     if(sc>=2100){
+//         // 공지 섹션에 들어왔을때 h1이 순서대로 깜빡여라
+//         let b = 0;
+//         setInterval(function(){
+//             b++;
+//             $('.ques .conBox h1').eq(b-1).css({'color':'yellow'})
+//         },1500)
+//     }
+//     if(sc>=2600){
+//         $('.vagen .txtBox h1').eq(0).animate({'opacity':1},800,function(){
+//             $('.vagen .imgBox li').eq(0).animate({'opacity':1},600,function(){
+//                 $('.vagen .imgBox li').eq(1).animate({'opacity':1},600,function(){
+//                     $('.vagen .imgBox li').eq(2).animate({'opacity':1},600,function(){
+//                     });
+//                 });
+//             });
+//         });
+//     }
+// }
 
 
 
