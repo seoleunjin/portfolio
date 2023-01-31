@@ -170,7 +170,7 @@ section {
 .news h2 {
     height: 10%;
     font-family: 'Comic Neue', cursive;
-    font-size: 24px;
+    font-size: 48px;
 }
 .news .iconBox {
     height: 90%;
@@ -494,7 +494,7 @@ header h1 {
 
 /* 뉴스 설정 */
 .news {
-
+    cursor: none;
     box-sizing: border-box;
 }
 .news {
@@ -516,7 +516,7 @@ header h1 {
     animation: cursor 1s infinite linear;
 }
 .news .cursor p {
-    line-height: 4;
+    line-height: 4.5;
     font-size: 24px;
     color: #444545;
     font-weight: bold;
@@ -934,6 +934,7 @@ header h1 {
 
 
 .ques .more {
+    cursor: pointer;
     position: absolute;
     right: 40px;
     bottom: 30px;
@@ -980,11 +981,11 @@ header h1 {
     box-sizing: border-box;
 }
 .vagen .txtBox h1 {
-    font-size: 50px;
+    font-size: 55px;
     opacity: 0;
 }
 .vagen .txtBox p {
-    font-size: 25px;
+    font-size: 26px;
     padding-top: 50px;
 }
 .vagen .imgBox {
@@ -1033,6 +1034,7 @@ header h1 {
 }
 
 .vagen .more {
+    cursor: pointer;
     position: absolute;
     right: 40px;
     bottom: 30px;
@@ -1814,6 +1816,7 @@ header {
     height: 600px;
 }
 .news h2 {
+    font-size: 48px;
     padding-left: 0;
     text-align: center;
     padding-top: 150px;
@@ -2408,7 +2411,9 @@ header {
             width: 100%;
         }
         header {
-            position: relative;
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 70px;
             display: flex;
@@ -2500,7 +2505,10 @@ header {
             display: none;
         }
     /* 767 슬라이더 설정 */
-    .slider {height: 250px;}
+    .slider {
+        height: 250px;
+        margin-top: 70px;
+    }
     
     .slider .iconBox {
         position: relative;
@@ -2556,7 +2564,7 @@ header {
         display: block;
         text-align: center;
     }
-    /* 320 뉴스설정 */
+    /* 767 뉴스설정 */
     .news {
         height: 500px;
     }
@@ -2564,6 +2572,7 @@ header {
         padding-left: 0;
         text-align: center;
         padding-top: 90px;
+        font-size: 32px;
     }
     .news .iconBox {
         padding-top: 50px;
@@ -3023,6 +3032,7 @@ header {
     }
     .ques .conBox li {
         width: 10%;
+        height: 55%;
         border-radius: 30px;
         box-sizing: border-box;
         margin-right: 1%;

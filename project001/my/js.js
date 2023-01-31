@@ -86,11 +86,11 @@ $(document).ready(function(){
 
     let silde = setInterval(timer,2000);
         
-        $('.into conBox').mouseenter(function(){
+        $('.activi img').mouseenter(function(){
             clearInterval(silde)
         });
 
-        $('.into conBox').mouseleave(function(){
+        $('.activi img').mouseleave(function(){
             silde = setInterval(timer,2000);
         });
 
@@ -142,12 +142,12 @@ if(wd>=1500){
         }
         // 1920 공지사항구간
         if(sc>=6200){
-            // 공지 섹션에 들어왔을때 h1이 순서대로 깜빡여라
-            let b = 0;
-            setInterval(function(){
-                b++;
-                $('.ques .conBox h1').eq(b-1).css({'color':'yellow'})
-            },1500)
+        // 공지 섹션에 들어왔을때 h1이 순서대로 깜빡여라
+        let b = 0;
+        setInterval(function(){
+            b++;
+            $('.ques .conBox h1').eq(b-1).css({'color':'yellow'})
+        },800)
         }
         // 1920 비건구간
         if(sc>=7050){
@@ -216,7 +216,7 @@ if(wd>=1024 && wd<1499){
             setInterval(function(){
                 b++;
                 $('.ques .conBox h1').eq(b-1).css({'color':'yellow'})
-            },1500)
+            },800)
         }
     });
 }
@@ -250,7 +250,7 @@ if(wd>=380 && wd<1023){
             setInterval(function(){
                 b++;
                 $('.ques .conBox h1').eq(b-1).css({'color':'yellow'})
-            },1500)
+            },800)
         }
 
             // 1023 비건구간
@@ -265,34 +265,7 @@ if(wd>=380 && wd<1023){
             });
         }
     });
-
-
 }
-
-
-// if(wd>=380 && wd<767){
-//     let sc = $(this).scrollTop()
-//     if(sc>=2100){
-//         // 공지 섹션에 들어왔을때 h1이 순서대로 깜빡여라
-//         let b = 0;
-//         setInterval(function(){
-//             b++;
-//             $('.ques .conBox h1').eq(b-1).css({'color':'yellow'})
-//         },1500)
-//     }
-//     if(sc>=2600){
-//         $('.vagen .txtBox h1').eq(0).animate({'opacity':1},800,function(){
-//             $('.vagen .imgBox li').eq(0).animate({'opacity':1},600,function(){
-//                 $('.vagen .imgBox li').eq(1).animate({'opacity':1},600,function(){
-//                     $('.vagen .imgBox li').eq(2).animate({'opacity':1},600,function(){
-//                     });
-//                 });
-//             });
-//         });
-//     }
-// }
-
-
 
 })
 
