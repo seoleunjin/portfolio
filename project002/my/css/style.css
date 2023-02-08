@@ -4,6 +4,12 @@
 ul,ol {list-style: none;}
 img {vertical-align: bottom; border: none;}
 a {text-decoration: none; color: #5F5003;}
+body {color: #5F5003;}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
+@import url('https://fonts.cdnfonts.com/css/freestyle-script');
 
 /* 우선순위 css는 덮어쓰기가 가능한 파일
     제일 상위자 - 태그네임 똑같은 이름으로 부르기
@@ -46,31 +52,16 @@ a {text-decoration: none; color: #5F5003;}
 
     /* 공간컬러설정 내용 모두 삽입시 삭제 예정*/
     footer {background-color: #999;}
-    .oil_slider article:nth-child(1) {
-        background-color: antiquewhite;
-    }
-    .oil_slider article:nth-child(2) {
-        background-color: burlywood;
-    }
-    .oil_slider article:nth-child(3) {
-        background-color: lightblue;
-    }
-    .best_product article:nth-child(1) {
-        background-color: thistle;
-    }
-    .best_product article:nth-child(2) {
-        background-color: lavenderblush;
-    }
-    .info article:nth-child(1) {
+    .info .txt {
         background-color: blueviolet;
     }
-    .info article:nth-child(2) {
+    .info .img {
         background-color: tomato;
     }
-    .skin_type article:nth-child(1) {
+    .skin_type .txt {
         background-color: thistle;
     }
-    .skin_type article:nth-child(2) {
+    .skin_type .img {
         background-color: lavenderblush;
     }
     .review_gift article {
@@ -79,17 +70,23 @@ a {text-decoration: none; color: #5F5003;}
 
 
 
-    /* 오일 슬라이더 기본설정 */
+    /* 오일 슬라이더 박스설정 */
     .oil_slider {
         position: relative;
+        overflow: hidden;
     }
     .oil_slider article {
+        overflow: hidden;
         position: absolute;
         width: 100%;
         height: 100%;
-        left: 0;
-        top: 0;
+        right: -90%;
+        top: -90%;
         z-index: -9999;
+    }
+    .oil_slider article.on {
+        right: 0;
+        top: 0;
     }
     .oil_slider #wrap {
         z-index: 9999;
@@ -103,47 +100,91 @@ a {text-decoration: none; color: #5F5003;}
     .oil_slider #wrap .img {
         width: 40%;
         height: 100%;
-        background-color: mediumvioletred;
     }
 
-    /* 베스트제품 기본설정*/
-    .best_product {}
-    .best_product article:nth-child(1) {
-        width: 100%;
-        height: 75%;
+    /* 베스트 박스설정*/
+    .best_product {
+        display: flex;
+        flex-wrap: wrap;
     }
-    .best_product article:nth-child(2) {
+    .best_product div {
+        width: 100%;
+        height: 3%;
+    }
+    .best_product .main_img {
+        width: 40%;
+        height: 72%;
+    }
+    .best_product .img {
+        width: 60%;
+        height: 72%;
+    }
+    .best_product .txt {
         width: 100%;
         height: 25%;
     }
-    /* 소개영역 기본설정 */
+    /* 소개영역 박스설정 */
     .info {
         display: flex;
+        flex-wrap: wrap;
     }
-    .info article:nth-child(1) {
-        width: 30%;
-        height: 100%;
-    }
-    .info article:nth-child(2) {
-        width: 70%;
-        height: 100%;
-    }
-    /* 피부타입 기본구간 */
-    .skin_type {}
-    .skin_type article:nth-child(1) {
+    .info div {
         width: 100%;
-        height: 25%;
+        height: 3%;
     }
-    .skin_type article:nth-child(2) {
+    .info .txt {
+        width: 30%;
+        height: 97%;
+    }
+    .info .img {
+        width: 70%;
+        height: 97%;
+    }
+    /* 피부타입 박스구간 */
+    .skin_type {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .skin_type div {
+        width: 100%;
+        height: 3%;
+    }
+    .skin_type .txt {
+        width: 100%;
+        height: 22%;
+    }
+    .skin_type .img {
         width: 100%;
         height: 75%;
     }
-    /* 리뷰 선물 기본설정 */
+    /* 리뷰 박스설정 */
+    .review_gift div {
+        width: 100%;
+        height: 3%;
+    }
     .review_gift {}
     .review_gift article {
         width: 70%;
-        height: 100%;
+        height: 97%;
         float: right;
+    }
+    /* 푸터 박스설정 */
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .info div {
+        width: 100%;
+        height: 3%;
+    }
+    .footer article:nth-child(1) {
+        width: 30%;
+        height: 97%;
+        background-color: red;
+    }
+    .footer article:nth-child(2) {
+        width: 70%;
+        height: 97%;
     }
 
 
@@ -201,29 +242,58 @@ a {text-decoration: none; color: #5F5003;}
             background-position: center center;
         }
         /* 오일 슬라이더 설정 */
+        /* 오일 슬라이더 txt설정 */
         .oil_slider .txt {
+            border-right: 1px solid #5F5003;
         }
-        .oil_slider .img {
+        .oil_slider .txt span {
+            padding-top: 10%;
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+            text-align: right;
         }
-        .oil_slider .txt h1 {
+        .oil_slider .txt span h1 {
             width: 100%;
-            height: 40%;
+            padding-top: 2%;
+            font-size: 35px;
         }
-        .oil_slider .txt h6 {
+        .oil_slider .main_txt {
+            font-size: 90px;
+        }
+        .oil_slider .txt span h6 {
             width: 100%;
-            height: 30%;
+            padding-top: 20px;
+            padding-bottom: 20%;
+        }
+        .oil_slider .txt span h6 em {
+            font-size: 20px;
+        }
+        .oil_slider .ingre_txt {
+            text-align: left;
+            width: 100%;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #5F5003;
+        }
+        .oil_slider .ingre_txt em {
+            font-size: 20px;
         }
         .oil_slider .ingredient {
-            width: 80%;
+            width: 70%;
             margin: 0 auto;
             height: 30%;
             display: flex;
             align-items: center;
         }
         .oil_slider .ingredient li {
-            width: 15%;
-            height: 28%;
-            margin-left: 1.5%;
+            width: 12%;
+            height: 20%;
+            margin-left: 4%;
+        }
+        .oil_slider .ingredient li p {
+            text-align: center;
+            padding-top: 70px;
+            font-size: 10px;
         }
         .oil_slider .ingredient li:nth-child(1) {
             background-image: url(../img/slider_ingre01.png);
@@ -261,6 +331,235 @@ a {text-decoration: none; color: #5F5003;}
             background-size: contain;
             background-position: center center;
         }
+        /* 오일 슬라이더 img설정 */
+        .oil_slider .img {
+            position: relative;
+        }
+        .oil_slider .oil {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1000px;
+            height: 80%;
+            display: flex;
+        }
+        .oil_slider .oil li {
+            width: 33.333%;
+            height: 100%;
+        }
+        .oil_slider .oil li:nth-child(1) {
+            background-image: url(../img/slider_oil01.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+        .oil_slider .oil li:nth-child(2) {
+            background-image: url(../img/slider_oil02.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+        .oil_slider .oil li:nth-child(3) {
+            background-image: url(../img/slider_oil03.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+        .oil_slider .oil li h6 {
+            width: 100%;
+            font-size: 15px;
+            text-align: center;
+            padding-top: 160%;
+        }
+        .oil_slider .oil li p {
+            width: 100%;
+            padding-top: 5%;
+            text-align: center;
+        }
+        .oil_slider .oil li p img {
+            width: 20px;
+        }
+        /* 오일 슬라이더 비디오설정 */
+        .oil_slider article:nth-child(1) video {
+            width: 100%;
+        }
+        .oil_slider article:nth-child(2) video {
+            width: 100%;
+        }
+
+        /* 베스트 설정 */
+        .best_product {
+        }
+        .best_product div {
+            position: relative;
+        }
+        .best_product div img {
+            position: absolute;
+            width: 100%;
+            height: 30px;
+            top: 0;
+            left: 0;
+        }
+        /* 베스트 메인이미지 설정 */
+        .best_product .main_img {
+            position: relative;
+        }
+        .best_product .main_img img {
+            width: 90%;
+            margin-top: 25%;
+            margin-left: 10%;
+            position: absolute;
+            opacity: 0;
+        }
+        .best_product .main_img img:nth-child(1) {
+            width: 70%;
+            margin-left: 15%;
+        }
+        .best_product .main_img img:nth-child(2) {
+            width: 80%;
+            margin-left: 15%;
+        }
+        .best_product .main_img img:nth-child(3) {
+            width: 80%;
+            margin-top: 30%;
+        }
+        .best_product .main_img img:nth-child(4) {
+            width: 55%;
+            margin-left: 25%;
+        }
+        .best_product .main_img img:nth-child(5) {
+            width: 50%;
+            margin-left: 25%;
+        }
+        .best_product .main_img img.on {
+            opacity: 1;
+        }
+        .best_product .txt {
+        }
+        /* 베스트 이미지 설정 */
+        .best_product .img ul {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100%;
+        }
+        .best_product .img li {
+        }
+        .best_product .img img {
+            
+        }
+        .best_product .img li:nth-child(1) {
+            width: 50%;
+            height: 50%;
+            background-color: #999;
+        }
+        .best_product .img li:nth-child(2) {
+            width: 50%;
+            height: 50%;
+            background-color: #888;
+        }
+        .best_product .img li:nth-child(3) {
+            width: 40%;
+            height: 50%;
+            background-color: #777;
+        }
+        .best_product .img li:nth-child(4) {
+            width: 30%;
+            height: 50%;
+            background-color: #666;
+        }
+        .best_product .img li:nth-child(5) {
+            width: 30%;
+            height: 50%;
+            background-color: #555;
+        }
+        /* 베스트 텍스트 설정 */
+        .best_product .txt {
+            position: relative;
+        }
+        .best_product .txt ul {
+            position: absolute;
+            width: 80%;
+            left: 50%;
+            margin-left: -45%;
+            display: flex;
+            opacity: 0;
+        }
+        .best_product .txt ul.on {
+            opacity: 1;
+        }
+        .best_product .txt ul li{
+            width: 50%;
+        }
+        .best_product .txt ul li.on {
+        }
+        .best_product .txt ul li h1 {
+            font-size: 30px;
+            padding: 70px 0;
+            padding-left: 30%;
+        }
+        .best_product .txt ul li h6 {
+            padding: 70px 0;
+            font-size: 18px;
+        }
+        
+        /* 소개 */
+        .info {
+        }
+        .info div {
+            position: relative;
+        }
+        .info div img {
+            position: absolute;
+            width: 100%;
+            height: 30px;
+            top: 0;
+            left: 0;
+        }
+        /* 피부타입 */
+        .skin_type {
+        }
+        .skin_type div {
+            position: relative;
+        }
+        .skin_type div img {
+            position: absolute;
+            width: 100%;
+            height: 30px;
+            top: 0;
+            left: 0;
+        }
+        /* 리뷰 */
+        .review_gift {
+        }
+        .review_gift div {
+            position: relative;
+        }
+        .review_gift div img {
+            position: absolute;
+            width: 100%;
+            height: 30px;
+            top: 0;
+            left: 0;
+        }
+        /* 푸터설정 */
+        /* 소개 */
+        footer {
+        }
+        footer div {
+            position: relative;
+        }
+        footer div img {
+            position: absolute;
+            width: 100%;
+            height: 30px;
+            top: 0;
+            left: 0;
+        }
+
+
+
+
 
 
 
