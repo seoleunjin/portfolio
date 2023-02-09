@@ -5,8 +5,7 @@ ul,ol {list-style: none;}
 img {vertical-align: bottom; border: none;}
 a {text-decoration: none; color: #5F5003;}
 body {color: #5F5003;}
-h1,h2,h3,h4,h5,h6 {
-    font-weight: normal;
+h1,h2,h3,h4,h5,h6 {font-weight: normal;
 }
 em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
 @import url('https://fonts.cdnfonts.com/css/freestyle-script');
@@ -22,8 +21,8 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
 
 
     header {
-        width: 100%;
-        height: 120px;
+        width: 6%;
+        height: 800px;
     }
     .oil_slider {
         width: 100%;
@@ -52,15 +51,7 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
 
     /* 공간컬러설정 내용 모두 삽입시 삭제 예정*/
     footer {background-color: #999;}
-    .info .txt {
-        background-color: blueviolet;
-    }
-    .info .img {
-        background-color: tomato;
-    }
-    .skin_type .txt {
-        background-color: thistle;
-    }
+    
     .skin_type .img {
         background-color: lavenderblush;
     }
@@ -94,11 +85,11 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         display: flex;
     }
     .oil_slider #wrap .txt {
-        width: 60%;
+        width: 50%;
         height: 100%;
     }
     .oil_slider #wrap .img {
-        width: 40%;
+        width: 50%;
         height: 100%;
     }
 
@@ -109,15 +100,15 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
     }
     .best_product div {
         width: 100%;
-        height: 3%;
+        height: 5%;
     }
     .best_product .main_img {
         width: 40%;
-        height: 72%;
+        height: 70%;
     }
     .best_product .img {
         width: 60%;
-        height: 72%;
+        height: 70%;
     }
     .best_product .txt {
         width: 100%;
@@ -127,18 +118,19 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
     .info {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
     .info div {
         width: 100%;
-        height: 3%;
+        height: 5%;
     }
     .info .txt {
-        width: 30%;
-        height: 97%;
+        width: 37%;
+        height: 95%;
     }
     .info .img {
-        width: 70%;
-        height: 97%;
+        width: 57%;
+        height: 95%;
     }
     /* 피부타입 박스구간 */
     .skin_type {
@@ -147,25 +139,25 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
     }
     .skin_type div {
         width: 100%;
-        height: 3%;
+        height: 5%;
     }
     .skin_type .txt {
         width: 100%;
-        height: 22%;
+        height: 25%;
     }
     .skin_type .img {
         width: 100%;
-        height: 75%;
+        height: 70%;
     }
     /* 리뷰 박스설정 */
     .review_gift div {
         width: 100%;
-        height: 3%;
+        height: 5%;
     }
     .review_gift {}
     .review_gift article {
         width: 70%;
-        height: 97%;
+        height: 95%;
         float: right;
     }
     /* 푸터 박스설정 */
@@ -175,41 +167,43 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
     }
     .info div {
         width: 100%;
-        height: 3%;
+        height: 5%;
     }
     .footer article:nth-child(1) {
         width: 30%;
-        height: 97%;
+        height: 95%;
         background-color: red;
     }
     .footer article:nth-child(2) {
         width: 70%;
-        height: 97%;
+        height: 95%;
     }
 
 
         /* 해더 설정 */
         header {
-            display: flex;
-            justify-content: space-between;
+            position: fixed;
+            z-index: 9999;
+            bottom: 0;
+            left: 0;
         }
         header h1 {
-            width: 10%;
-            height: 100%;
-            background-image: url(../img/logo.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center center;
+            width: 100%;
+            height: 10%;
+            text-align: center;
+            padding-top: 10%;
         }
         .util {
-            display: flex;
-            align-items: center;
-            width: 25%;
-            height: 100%;
+            margin-left: 5%;
+            width: 100%;
+            height: 40%;
+            position: absolute;
+            bottom: -1%;
         }
         .util li {
-            width: 20%;
-            height: 25%;
+            width: 30%;
+            margin-left: 50%;
+            height: 20%;
         }
         .util li:nth-child(1) {
             background-image: url(../img/Uicon_01.png);
@@ -242,12 +236,18 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             background-position: center center;
         }
         /* 오일 슬라이더 설정 */
+        .oil_slider {
+            background-image: url(../img/slider_bg.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
         /* 오일 슬라이더 txt설정 */
         .oil_slider .txt {
-            border-right: 1px solid #5F5003;
+            box-sizing: border-box;
         }
         .oil_slider .txt span {
-            padding-top: 10%;
+            padding-top: 30%;
             display: block;
             width: 80%;
             margin: 0 auto;
@@ -255,7 +255,6 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         }
         .oil_slider .txt span h1 {
             width: 100%;
-            padding-top: 2%;
             font-size: 35px;
         }
         .oil_slider .main_txt {
@@ -272,21 +271,20 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         .oil_slider .ingre_txt {
             text-align: left;
             width: 100%;
-            padding-bottom: 5px;
-            border-bottom: 1px solid #5F5003;
+            padding-left: 12%;
         }
         .oil_slider .ingre_txt em {
-            font-size: 20px;
+            font-size: 25px;
         }
         .oil_slider .ingredient {
             width: 70%;
             margin: 0 auto;
-            height: 30%;
+            height: 25%;
             display: flex;
             align-items: center;
         }
         .oil_slider .ingredient li {
-            width: 12%;
+            width: 13%;
             height: 20%;
             margin-left: 4%;
         }
@@ -333,18 +331,19 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         }
         /* 오일 슬라이더 img설정 */
         .oil_slider .img {
+            box-sizing: border-box;
             position: relative;
         }
         .oil_slider .oil {
             position: absolute;
             top: 0;
-            left: 0;
+            left: 20.5%;
             width: 1000px;
             height: 80%;
             display: flex;
         }
         .oil_slider .oil li {
-            width: 33.333%;
+            width: 33%;
             height: 100%;
         }
         .oil_slider .oil li:nth-child(1) {
@@ -367,9 +366,9 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         }
         .oil_slider .oil li h6 {
             width: 100%;
-            font-size: 15px;
+            font-size: 18px;
             text-align: center;
-            padding-top: 160%;
+            padding-top: 180%;
         }
         .oil_slider .oil li p {
             width: 100%;
@@ -396,7 +395,7 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         .best_product div img {
             position: absolute;
             width: 100%;
-            height: 30px;
+            height: 100px;
             top: 0;
             left: 0;
         }
@@ -444,6 +443,7 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             height: 100%;
         }
         .best_product .img li {
+            box-sizing: border-box;
         }
         .best_product .img img {
             
@@ -451,27 +451,31 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         .best_product .img li:nth-child(1) {
             width: 50%;
             height: 50%;
-            background-color: #999;
+            padding-left: 120px;
+            padding-top: 50px;
         }
         .best_product .img li:nth-child(2) {
             width: 50%;
             height: 50%;
-            background-color: #888;
+            padding-left: 70px;
+            padding-top: 100px;
         }
         .best_product .img li:nth-child(3) {
             width: 40%;
             height: 50%;
-            background-color: #777;
+            padding-left: 10px;
+            padding-top: 50px;
         }
         .best_product .img li:nth-child(4) {
             width: 30%;
             height: 50%;
-            background-color: #666;
+            padding-left: 50px;
         }
         .best_product .img li:nth-child(5) {
             width: 30%;
             height: 50%;
-            background-color: #555;
+            padding-left: 50px;
+            padding-top: 100px;
         }
         /* 베스트 텍스트 설정 */
         .best_product .txt {
@@ -505,6 +509,7 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         
         /* 소개 */
         .info {
+            position: relative;
         }
         .info div {
             position: relative;
@@ -512,10 +517,100 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         .info div img {
             position: absolute;
             width: 100%;
-            height: 30px;
+            height: 100px;
             top: 0;
             left: 0;
         }
+        /* 소개 텍스트설정*/
+        .info .txt {
+            box-sizing: border-box;
+        }
+        .info .txt h1 {
+            width: 100%;
+            font-size: 100px;
+            padding-top: 50px;
+            box-sizing: border-box;
+            height: 25%;
+        }
+        .info .txt h6 {
+            font-size: 30px;
+            width: 100%;
+            height: 15%;
+        }
+        .info .infoMenu {
+            width: 100%;
+            height: 60%;
+        }
+        .info .infoMenu li {
+            width: 100%;
+            height: 20%;
+            display: flex;
+            align-items: center;
+        }
+        .info .infoMenu p {
+            width: 100%;
+            font-size: 20px;
+            padding-left: 20%;
+            margin-left: 5%;
+            background-image: url(../img/info_cir01.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center left;
+        }
+        
+        .info .infoMenu li.on p {
+            padding: 30px;
+            padding-left: 15%;
+            background-image: url(../img/info_cir02.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center left;
+        }
+        /* 소개 이미지설정*/
+        .info .img {
+        }
+        .info .imgslid {
+            position: relative;
+            margin-left: 5%;
+            margin-top: 30%;
+            width: 90%;
+            height: 60%;
+        }
+        .info .imgslid li {
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/info_img_bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center left;
+            opacity: 0;
+        }
+        .info .imgslid li img {
+            width: 70%;
+            border-radius: 20px;
+            margin-top: 125px;
+            margin-left: 100px;
+        }
+        .info .imgslid li.on {
+            top: 0;
+            opacity: 1;
+        }
+
+        /* .info .imgslid li:nth-child(1) img {
+        }
+        .info .imgslid li:nth-child(2) img {
+        }
+        .info .imgslid li:nth-child(3) img {
+        }
+        .info .imgslid li:nth-child(4) img {
+        } */
+
+
+
+
         /* 피부타입 */
         .skin_type {
         }
@@ -525,9 +620,92 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         .skin_type div img {
             position: absolute;
             width: 100%;
-            height: 30px;
+            height: 100px;
             top: 0;
             left: 0;
+        }
+        /* 피부타입 택스트 설정*/
+        .skin_type .txt {
+            margin-top: 1%;
+        }
+        .skin_type .txt h1 {
+            font-size: 25px;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .skin_type .txt h1 em {
+            font-size: 30px;
+            padding-right: 1%;
+        }
+        .skin_type .txt h6 {
+            margin-top: 1%;
+            padding: 5px;
+            text-align: center;
+            margin-left: 5%;
+            width: 90%;
+            font-size: 18px;
+            background-color: #fff;
+        }
+        /* 피부타입 이미지 설정*/
+        .skin_type .img {
+            position: relative;
+        }
+        .skin_type .img h1 {
+            font-size: 30px;
+            width: 25%;
+            padding-top: 15%;
+        }
+        .skin_type .skinImg {
+            position: absolute;
+            top: 50%;
+            margin-top: -150px;
+            left: 35%;
+            height: 300px;
+            width: 1200px;
+            display: flex;
+            justify-content: center;
+        }
+        .skin_type .skinImg li {
+            width: 18%;
+            height: 100%;
+            margin-right: 1%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center left;
+        }
+        .skin_type .skinImg h1 {
+            text-align: center;
+            width: 100%;
+            font-size: 15px;
+        }
+        .skin_type .skinImg h6 {
+            margin-top: 5%;
+            text-align: center;
+            font-size: 10px;
+            margin-left: 25%;
+            background-image: url(../img/type_won.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center left;
+        }
+        .skin_type .skinImg img {
+            width: auto;
+            height: 80%;
+            padding-left: 60px;
+            margin-bottom: 30px;
+        }
+
+        .skin_type .skinImg li:nth-child(5) img {
+            width: 50%;
+            height: auto;
+            padding-left: 50px;
+            padding-top: 150px;
+        }
+        .skin_type .skinImg li:nth-child(2) img {
+            padding-left: 70px;
+        }
+        .skin_type .skinImg li:nth-child(4) img {
+            padding-left: 70px;
         }
         /* 리뷰 */
         .review_gift {
@@ -538,7 +716,7 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         .review_gift div img {
             position: absolute;
             width: 100%;
-            height: 30px;
+            height: 100px;
             top: 0;
             left: 0;
         }
@@ -552,7 +730,7 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         footer div img {
             position: absolute;
             width: 100%;
-            height: 30px;
+            height: 100px;
             top: 0;
             left: 0;
         }
