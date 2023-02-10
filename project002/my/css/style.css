@@ -4,8 +4,8 @@
 ul,ol {list-style: none;}
 img {vertical-align: bottom; border: none;}
 a {text-decoration: none; color: #5F5003;}
-body {color: #5F5003;}
-h1,h2,h3,h4,h5,h6 {font-weight: normal;
+body {color: #5F5003; position: relative; }
+h1,h2,h3,h4,h5,h6,b {font-weight: normal;
 }
 em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
 @import url('https://fonts.cdnfonts.com/css/freestyle-script');
@@ -44,23 +44,22 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         width: 100%;
         height: 800px;
     }
-    footer {
+
+
+    /* 골드라인 설정 */
+    .line {
+        position: relative;
+        width: 100%;
+        height: 5%;
+        margin-bottom: 1%;
+    }
+    .line img {
+        position: absolute;
         width: 100%;
         height: 100px;
+        top: 0;
+        left: 0;
     }
-
-    /* 공간컬러설정 내용 모두 삽입시 삭제 예정*/
-    footer {background-color: #999;}
-    
-    .skin_type .img {
-        background-color: lavenderblush;
-    }
-    .review_gift article {
-        background-color: antiquewhite;
-    }
-
-
-
     /* 오일 슬라이더 박스설정 */
     .oil_slider {
         position: relative;
@@ -71,8 +70,8 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         position: absolute;
         width: 100%;
         height: 100%;
-        right: -90%;
-        top: -90%;
+        right: -99%;
+        top: -98%;
         z-index: -9999;
     }
     .oil_slider article.on {
@@ -120,10 +119,7 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         flex-wrap: wrap;
         justify-content: center;
     }
-    .info div {
-        width: 100%;
-        height: 5%;
-    }
+
     .info .txt {
         width: 37%;
         height: 95%;
@@ -137,10 +133,6 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         display: flex;
         flex-wrap: wrap;
     }
-    .skin_type div {
-        width: 100%;
-        height: 5%;
-    }
     .skin_type .txt {
         width: 100%;
         height: 25%;
@@ -150,36 +142,80 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         height: 70%;
     }
     /* 리뷰 박스설정 */
+    .review_gift {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     .review_gift div {
         width: 100%;
         height: 5%;
     }
-    .review_gift {}
-    .review_gift article {
-        width: 70%;
-        height: 95%;
-        float: right;
-    }
-    /* 푸터 박스설정 */
-    .footer {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .info div {
-        width: 100%;
-        height: 5%;
-    }
-    .footer article:nth-child(1) {
+    .review_gift .txt {
         width: 30%;
         height: 95%;
-        background-color: red;
     }
-    .footer article:nth-child(2) {
+    .review_gift .img {
         width: 70%;
         height: 95%;
     }
 
 
+        /* 픽스 설정 */
+        .fixed01 {
+            width: 400px;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            top: 1%;
+            right: -270px;
+            z-index: 10;
+            transition: all 0.5s;
+        }
+        .fixed01:hover {
+            right: 0;
+        }
+        .fixed01:hover p {
+            background-image: url(../img/fixed_starF.png);
+        } 
+        .fixed01 p {
+            background-image: url(../img/fixed_star.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center left;
+            padding-left: 30px;
+            font-size: 15px;
+        }
+        
+        .fixed01 img {
+            padding-left: 5%;
+        }
+        .fixed02 {
+            width: 370px;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            top: 3%;
+            right: -240px;
+            z-index: 10;
+            transition: all 0.5s;
+        }
+        .fixed02:hover {
+            right: 0;
+        }
+        .fixed02:hover p {
+            background-image: url(../img/fixed_starF.png);
+        } 
+        .fixed02 p {
+            background-image: url(../img/fixed_star.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center left;
+            padding-left: 30px;
+        }
+        .fixed02 img {
+            padding-left: 5%;
+        }
         /* 해더 설정 */
         header {
             position: fixed;
@@ -188,13 +224,17 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             left: 0;
         }
         header h1 {
-            width: 100%;
+            width: 80%;
             height: 10%;
             text-align: center;
-            padding-top: 10%;
+            margin-top: 10%;
+            margin-left: 20%;
+            background-image: url(../img/logo.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
         }
         .util {
-            margin-left: 5%;
             width: 100%;
             height: 40%;
             position: absolute;
@@ -202,7 +242,7 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         }
         .util li {
             width: 30%;
-            margin-left: 50%;
+            margin-left: 65%;
             height: 20%;
         }
         .util li:nth-child(1) {
@@ -389,16 +429,6 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         /* 베스트 설정 */
         .best_product {
         }
-        .best_product div {
-            position: relative;
-        }
-        .best_product div img {
-            position: absolute;
-            width: 100%;
-            height: 100px;
-            top: 0;
-            left: 0;
-        }
         /* 베스트 메인이미지 설정 */
         .best_product .main_img {
             position: relative;
@@ -492,10 +522,8 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         .best_product .txt ul.on {
             opacity: 1;
         }
-        .best_product .txt ul li{
+        .best_product .txt ul li {
             width: 50%;
-        }
-        .best_product .txt ul li.on {
         }
         .best_product .txt ul li h1 {
             font-size: 30px;
@@ -510,16 +538,6 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         /* 소개 */
         .info {
             position: relative;
-        }
-        .info div {
-            position: relative;
-        }
-        .info div img {
-            position: absolute;
-            width: 100%;
-            height: 100px;
-            top: 0;
-            left: 0;
         }
         /* 소개 텍스트설정*/
         .info .txt {
@@ -613,20 +631,14 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
 
         /* 피부타입 */
         .skin_type {
-        }
-        .skin_type div {
             position: relative;
         }
-        .skin_type div img {
-            position: absolute;
-            width: 100%;
-            height: 100px;
-            top: 0;
-            left: 0;
-        }
-        /* 피부타입 택스트 설정*/
+        /* 피부타입 텍스트 설정*/
         .skin_type .txt {
-            margin-top: 1%;
+            background-image: url(../img/type_txt_bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center left;
         }
         .skin_type .txt h1 {
             font-size: 25px;
@@ -651,91 +663,285 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             position: relative;
         }
         .skin_type .img h1 {
-            font-size: 30px;
-            width: 25%;
-            padding-top: 15%;
+            font-size: 25px;
+            line-height: 80px;
+            width: 30%;
+            height: 100%;
+            padding-top: 10%;
+            background-color: #fff;
+            padding-left: 5%;
+            box-sizing: border-box;
         }
         .skin_type .skinImg {
             position: absolute;
-            top: 50%;
-            margin-top: -150px;
+            top: 0;
             left: 35%;
-            height: 300px;
-            width: 1200px;
+            height: 550px;
+            width: 1300px;
             display: flex;
             justify-content: center;
         }
         .skin_type .skinImg li {
-            width: 18%;
+            width: 20%;
             height: 100%;
-            margin-right: 1%;
+            margin-right: 2%;
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center left;
+            position: relative;
         }
-        .skin_type .skinImg h1 {
-            text-align: center;
-            width: 100%;
-            font-size: 15px;
+        .skin_type .skinImg>li:nth-child(1) {
+            background-image: url(../img/type_dry_01.png);
         }
-        .skin_type .skinImg h6 {
-            margin-top: 5%;
-            text-align: center;
-            font-size: 10px;
-            margin-left: 25%;
-            background-image: url(../img/type_won.png);
+        .skin_type .skinImg>li:nth-child(2) {
+            background-image: url(../img/type_dry_02.png);
+        }
+        .skin_type .skinImg>li:nth-child(3) {
+            background-image: url(../img/type_dry_03.png);
+        }
+        .skin_type .skinImg>li:nth-child(4) {
+            background-image: url(../img/type_dry_04.png);
+        }
+        .skin_type .skinImg>li:nth-child(5) {
+            background-image: url(../img/type_dry_05.png);
+        }
+        .skin_type .typeIcon {
+            left: 10%;
+            width: 80%;
+            height: 20px;
+            display: flex;
+            position: absolute;
+            top: 58%;
+            opacity: 1;
+        }
+        .skin_type .typeIcon li {
+            width: 20%;
+            margin-right: 5%;
+        }
+        .skin_type .typeIcon li:nth-child(1) {
+            background-image: url(../img/typeIcon01.png);
             background-repeat: no-repeat;
             background-size: contain;
-            background-position: center left;
+            background-position: center center;
+            margin-left: 5%;
         }
-        .skin_type .skinImg img {
-            width: auto;
-            height: 80%;
-            padding-left: 60px;
-            margin-bottom: 30px;
+        .skin_type .typeIcon li:nth-child(2) {
+            background-image: url(../img/typeIcon02.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+        .skin_type .typeIcon li:nth-child(3) {
+            background-image: url(../img/typeIcon03.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+        .skin_type .typeIcon li:nth-child(4) {
+            background-image: url(../img/typeIcon04.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+        /* 피부타입 토글 설정*/
+        .skin_type span {
+            position: absolute;
+            bottom: 13%;
+            left: 5%;
+            z-index: 1;
+        }
+        .skin_type span:nth-child(2) {
+            left: 8%;
+        }
+        .skin_type span:nth-child(3) {
+            bottom: 5%;
+        }
+        .skin_type span:nth-child(3) img {
+            width: 30%;
+            height: 4px;
         }
 
-        .skin_type .skinImg li:nth-child(5) img {
-            width: 50%;
-            height: auto;
-            padding-left: 50px;
-            padding-top: 150px;
-        }
-        .skin_type .skinImg li:nth-child(2) img {
-            padding-left: 70px;
-        }
-        .skin_type .skinImg li:nth-child(4) img {
-            padding-left: 70px;
-        }
         /* 리뷰 */
         .review_gift {
-        }
-        .review_gift div {
             position: relative;
         }
-        .review_gift div img {
+        .review_gift .txt {
+            background-color: black;
+        }
+        .review_gift h2 {
+            width: 200px;
             position: absolute;
+            top: 30%;
+            left: 7%;
+            display: flex;
+            font-size: 35px;
+        }
+        .review_gift em {
+            width: 85%;
+            color: #fff;
+        }
+        .review_gift a {
+            width: 15%;
+            background-image: url(../img/review_instaW.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+        /* 리뷰 텍스트 설정 */
+        .review_gift .line img {
+            width: 205%;
+        }
+        .review_gift .txt {
+            
+        }
+        .review_gift .txt video {
             width: 100%;
-            height: 100px;
+            height: 100%;
+        }
+        /* 리뷰 텍스트 이미지 설정 */
+        .review_gift .img {
+            margin-top: 1%;
+            display: flex;
+            position: relative;
+        }
+        .review_gift .scroll {
+            position: absolute;
             top: 0;
             left: 0;
+            width: 250%;
+            height: 100%;
+            display: flex;
+        }
+        .review_gift .imginsta {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            margin-left: 5%;
+            align-items: flex-start;
+        }
+        .review_gift .imginsta li {
+            width: 33%;
+            height: 500px;/* 임시설정 */
+            margin: 0 2%;
+            box-sizing: border-box;
+            margin-top: 3%;
+        }
+        .review_gift .imginsta li:nth-child(1) {
+            background-image: url(../img/review_img01.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+        .review_gift .imginsta li:nth-child(2) {
+            background-image: url(../img/review_img02.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            margin-top: 10%;
+        }
+        .review_gift .imginsta li:nth-child(3) {
+            background-image: url(../img/review_img03.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+        .review_gift footer {
+            width: 20%;
+            height: 100%;
         }
         /* 푸터설정 */
-        /* 소개 */
         footer {
+            background-image: url(../img/intro_bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            font-size: 10px;
         }
-        footer div {
-            position: relative;
+        /* 푸터 텍스트 설정 */
+        footer .Ftxt {
+            width: 90%;
+            margin: 0 auto;
+            height: 40%;
+            margin-top: 50px;
         }
-        footer div img {
-            position: absolute;
+        footer .Ftxt li {
+            height: 12%;
+        }
+        footer .Ftxt li:nth-child(3) p {
+            line-height: 2;
+        }
+        footer .Ftxt li:nth-child(3) h6 {
+            padding-left: 10%;
+        }
+        footer .Ftxt li:nth-child(4) {
+            margin-top: 20px;
+        }
+        footer .Ftxt li:nth-child(5) span {
             width: 100%;
-            height: 100px;
-            top: 0;
-            left: 0;
+            height: 50%;
+            display: flex;
+        }
+        footer .Ftxt li:nth-child(5) h6 {
+            padding-left: 35px;
+        }
+        footer .Ftxt li:nth-child(5) span:nth-child(1) {
+            background-image: url(../img/phone.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center left;
+            margin-bottom: 10%;
+        }
+        footer .Ftxt li:nth-child(5) span:nth-child(2) {
+            background-image: url(../img/Clock.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center left;
         }
 
-
+        footer h1 {
+            width: 100%;
+            height: 30%;
+            background-image: url(../img/logo.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+        footer .sns {
+            width: 20%;
+            margin: 0 auto;
+            height: 10%;
+            display: flex;
+            align-items: center;
+        }
+        footer .sns li {
+            margin-left: 10px;
+        }
+        footer .sns li:nth-child(1) {
+            width: 35%;
+        }
+        footer .sns li:nth-child(2) {
+            width: 20%;
+        }
+        footer .sns li:nth-child(3) {
+            width: 40%;
+            margin-right: 10px;
+        }
+        footer .sns img {
+            width: 100%;
+        }
+        footer .commu {
+            width: 90%;
+            margin: 0 auto;
+            height: 10%;
+            display: flex;
+        }
+        footer .commu li {
+            width: 25%;
+        }
+        footer .commu h6 {
+            text-align: center;
+            font-size: 6px;
+        }
 
 
 

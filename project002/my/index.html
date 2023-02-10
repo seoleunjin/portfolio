@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>project002_nuxe</title>
+    <!-- scrollout -->
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <!-- 외부스타일시트연결 -->
     <link rel="stylesheet" href="css/style.css">
     <!-- 스크립트CDN -->
@@ -13,8 +15,10 @@
     <script src="js/js.js"></script>
 </head>
 <body>
+    <span class="fixed01"><p>방금 본 제품</p><img src="img/fixed_recen.png" alt=""></span>
+    <span class="fixed02"><p>실시간 순위</p><img src="img/fixed_rank.png" alt=""></span>
         <header>
-            <h1>logo</h1>
+            <h1></h1>
             <ul class="util">
                 <li></li>
                 <li></li>
@@ -63,8 +67,8 @@
         </section>
     <div id="wrap">
         <!-- 베스트 -->
-        <section class="best_product">
-            <div><img src="img/Gold_line.png" alt=""></div>
+        <section class="best_product"data-scroll>
+            <div class="line"><img src="img/Gold_line.png" alt=""></div>
             <article class="main_img">
                 <img class="on" src="img/best_01.png" alt="">
                 <img  src="img/best_02.png" alt="">
@@ -110,8 +114,8 @@
             </article>
         </section>
         <!-- 소개 -->
-        <section class="info">
-            <div><img src="img/Gold_line.png" alt=""></div>
+        <section class="info"data-scroll>
+            <div class="line"><img src="img/Gold_line.png" alt=""></div>
             <article class="txt">
                 <h1><em>NUXE's NOW</em></h>
                 <h6>Nuxe는 nature 과 <br> luxery의 이상적 만남</h6>
@@ -132,53 +136,141 @@
             </article>
         </section>
         <!-- 피부타입 -->
-        <section class="skin_type">
-            <div><img src="img/Gold_line.png" alt=""></div>
+        <section class="skin_type"data-scroll>
+            <span><img src="img/type_left.png" alt=""></span>
+            <span><img src="img/type_right.png" alt=""></span>
+            <span><img src="img/type_line.png" alt=""></span>
+            <div class="line"><img src="img/Gold_line.png" alt=""></div>
             <article class="txt">
                 <h1><em>Cosmetics type</em>나의 피부는?</h1>
-                <h6>건성 <span></span> 피부에 맞는 제품들을 추천해드려요!</h6>
+                <h6>건성 피부에 맞는 제품들을 추천해드려요!</h6>
             </article>
             <article class="img">
                 <h1>건성 피부엔 <br> 이런 제품들이 있어요</h1>
                 <ul class="skinImg">
                     <li>
-                        <img src="img/type_dry_06.png" alt="">
-                        <h1>안티에이징 <br> 더 유니버셜 농축액 30ml</h1>
-                        <h6>110,000</h6>
+                        <ol class="typeIcon">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ol>
                     </li>
                     <li>
-                        <img src="img/type_dry_02.png" alt="">
-                        <h1>젠틀페리스 <br> 클렌저 200ml </h1>
-                        <h6>22,000</h6>
+                        <ol class="typeIcon">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ol>
                     </li>
                     <li>
-                        <img src="img/type_dry_03.png" alt="">
-                        <h1>얼티밋 <br> 나이트 리커버리 오일 30ml</h1>
-                        <h6>60,000</h6>
+                        <ol class="typeIcon">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ol>
                     </li>
                     <li>
-                        <img src="img/type_dry_04.png" alt="">
-                        <h1>하이드레이팅 <br> 미셀라 워터 베리 로즈</h1>
-                        <h6>25,000</h6>
+                        <ol class="typeIcon">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ol>
                     </li>
                     <li>
-                        <img src="img/type_dry_05.png" alt="">
-                        <h1>울트라 <br> 너리싱 립밤 15g</h1>
-                        <h6>20,000</h6>
+                        <ol class="typeIcon">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ol>
                     </li>
                 </ul>
             </article>
         </section>
         <!-- 리뷰 -->
-        <section class="review_gift">
-            <div><img src="img/Gold_line.png" alt=""></div>
-            <article></article>
+        <section class="review_gift"data-scroll>
+            <h2><em>Review & giftss</em><a href="#"></a></h2>
+            <div class="line"><img src="img/Gold_line.png" alt=""></div>
+            <article class="txt">
+                <video autoplay loop="loop" muted>
+                    <source src="img/birthday.mp4">
+                </video>
+            </article>
+            <article class="img">
+                <div class="scroll">
+                    <ul class="imginsta">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <footer>
+                        <ul class="Ftxt">
+                            <li>
+                                <p>대표 : 박희원</p>
+                            </li>
+                            <li>
+                                <p>사업자 : 214-86-333536</p>
+                            </li>
+                            <li>
+                                <p>주소 : 서울특별시  강남구 영동대로 86길 12 <br>       
+                                    <h6>동남유화빌딩 2층 눅스코리아</h6></p>
+                            </li>
+                            <li>
+                                <p>contact</p>
+                            </li>
+                            <li>
+                                <span>
+                                    <h6>고객문의 : 080-400-0852</h6>
+                                </span>
+                                <span>
+                                    <h6>운영시간 : 09:00 ~ 18:00 <h5>점심시간 : 12:00 ~ 13:00</h5></h6>
+                                </span>
+                            </li>
+                        </ul>
+                        <h1></h1>
+                        <ol class="sns">
+                            <li><a href="#"><img src="img/footer_insta.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/footer_face.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/footer_youtube.png" alt=""></a></li>
+                        </ol>
+                        <ul class="commu">
+                            <li>
+                                <h6>공지사항</h6>
+                            </li>
+                            <li>
+                                <h6>이용약관</h6>
+                            </li>
+                            <li>
+                                <h6>전자공고</h6>
+                            </li>
+                            <li>
+                                <h6>개인정보 <br> 처리방침</h6>
+                            </li>
+                        </ul>
+                    </footer>
+                </div>
+            </article>
         </section>
-        <footer>
-            <div><img src="img/Gold_line.png" alt=""></div>
-            <article></article>
-            <article></article>
-        </footer>
+
     </div>
+    <style>
+    [data-scroll] {
+        opacity: 0;
+    transition: opacity 1.5s;
+    }
+    [data-scroll="in"] {
+      opacity: 1;
+    }
+    [data-scroll="out"] {
+      opacity: 0;
+    }
+    </style>
+    <script>
+        ScrollOut();
+    </script>
 </body>
 </html>
