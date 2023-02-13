@@ -15,8 +15,7 @@
     <script src="js/js.js"></script>
 </head>
 <body>
-    <span class="fixed01"><p>방금 본 제품</p><img src="img/fixed_recen.png" alt=""></span>
-    <span class="fixed02"><p>실시간 순위</p><img src="img/fixed_rank.png" alt=""></span>
+    
         <header>
             <h1></h1>
             <ul class="util">
@@ -28,6 +27,11 @@
             </ul>
         </header>
         <section class="oil_slider">
+            <ul class="right">
+                <li class="on"><img src="img/fixed_oil01.png" alt=""></li>
+                <li><img src="img/fixed_oil02.png" alt=""></li>
+                <li><img src="img/fixed_oil03.png" alt=""></li>
+            </ul>
             <article class="on">
                 <video autoplay loop="loop" muted>
                     <source src="img/slider_video01.mp4">
@@ -58,14 +62,14 @@
                 </div>
                 <div class="img">
                     <ul class="oil">
-                        <li><h6>멀티 드라이 오일</h6><p><img src="img/heart.png" alt=""></p></li>
-                        <li><h6>프로랄 드라이 오일</h6><p><img src="img/heart.png" alt=""></p></li>
-                        <li><h6>리치 드라이 오일</h6><p><img src="img/heart.png" alt=""></p></li>
+                        <li><h6>멀티 드라이 오일</h6><p></p></li>
+                        <li><h6>프로랄 드라이 오일</h6><p></p></li>
+                        <li><h6>리치 드라이 오일</h6><p></p></li>
                     </ul>
                 </div>
             </div>
         </section>
-    <div id="wrap">
+    <div id="wrap1">
         <!-- 베스트 -->
         <section class="best_product"data-scroll>
             <div class="line"><img src="img/Gold_line.png" alt=""></div>
@@ -255,8 +259,148 @@
                 </div>
             </article>
         </section>
+        <!-- 픽스 -->
+        <section class="fixed">
+            <div  class="page">
+                <span class="pageImg"><img src="img/fixed_page.png" alt=""></span>
+                <ul>
+                    <li class="on"><a href="#">oil slide</a></li>
+                    <li><a href="#">best product</a></li>
+                    <li><a href="#">skin  type</a></li>
+                    <li><a href="#">gifts & review</a></li>
+                </ul>
+            </div>
+            <span class="fixed01"><p>방금 본 제품</p><img src="img/fixed_recen.png" alt=""></span>
+            <span class="fixed02"><p>실시간 순위</p><img src="img/fixed_rank.png" alt=""></span>
+        </section>
+        <!-- 메뉴 -->
+    <section class="menu">
+        <div class="img">
+            <img src="img/menu_flower.png" alt="">
+        </div>
+        <ul class="txt">
+            <li>
+                <img class="x" src="img/X.png" alt="">
+                <h1>ABOUT NUXE <span><img src="img/menu_line.png" alt=""></span></h1>
+                <ol class="subMenu">
+                    <li><a href="#">Value</a></li>
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Research</a></li>
+                    <li><a href="#">Partnership</a></li>
+                </ol>
+            </li>
+            <li>
+                <h1>BEST <span><img src="img/menu_line.png" alt=""></span></h1>
+                <ol class="subMenu">
+                    <li><a href="#">Huile Prodigieuse</a></li>
+                    <li><a href="#">Ultra-nourishing Lip Balm</a></li>
+                    <li><a href="#">Super Serum</a></li>
+                </ol>
+            </li>
+            <li>
+                <h1>PRODUCT <span><img src="img/menu_line.png" alt=""></span></h1>
+                <ol class="subMenu">
+                    <li><a href="#">Body</a></li>
+                    <li><a href="#">Hair</a></li>
+                    <li><a href="#">Make up</a></li>
+                </ol>
+            </li>
+            <li>
+                <h1>GIFTS <span><img src="img/menu_line.png" alt=""></span></h1>
+                <ol class="subMenu">
+                    <li><a href="#">Best gift</a></li>
+                    <li><a href="#">30.won</a></li>
+                    <li><a href="#">50.won</a></li>
+                    <li><a href="#">70.won</a></li>
+                    <li><a href="#">100.won</a></li>
+                </ol>
+            </li>
+        </ul>
+    </section>
+    <!-- 제품상세페이지 -->
+    <section class="product">
+        <img class="x" src="img/X.png" alt="">
+        <article class="img">
+            <ol class="mainImg">
+                <li class="on"><img src="img/slider_oil01.png" alt=""></li>
+                <li><img src="img/product_pageoil.png" alt=""></li>
+                <li><img src="img/product_pageface.png" alt=""></li>
+            </ol>
+            <ul class="productImg">
+                <li class="on"></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </article>
+        <article class="txt">
+            <ul class="title">
+                <li><h6>월 프로디 쥬스 멀티 드라이 오일</h6></li>
+                <li><em>Huile Prodigieuse</em></li>
+                <li><p>#오랜지속</p><p>#멑티</p></li>
+                <li><img src="img/product_type.png" alt=""></li>
+            </ul>
+            <ol class="price">
+                <li><span></span> <h6>품절제품 제외</h6></li>
+                <li><h6>피치오일100ml</h6></li>
+                <li><h6>합계 : 49,000원</h6></li>
+                <li><p>장바구니</p><p>바로구매</p></li>
+            </ol>
+            <p class="producttxt">관련상품</p>
+            <ul class="relevant">
+                <li><img src="img/product_rel.png" alt=""></li>
+                <li><h5>젠틀페리스 클렌저 200ml </h5><h6>22,000원</h6></li>
+            </ul>
+        </article>
+    </section>
+    <section class="commu">
+        <article>
+            <h1>Community</h1>
+            <ul class="coMenu">
+                <li class="on">
+                    <p>NOTICE</p>
+                </li>
+                <li>
+                    <p>FAQ</p>
+                </li>
+                <li>
+                    <p>REVIEW</p>
+                </li>
+                <li>
+                    <p>1 : 1 CS</p>
+                </li>
+            </ul>
+            <ol class="notice">
+                <li>
+                    <h4>329.</h4><p> 눅스 개인정보처리 방침 일부가 변경됩니다.</p><img src="img/commu_plus.png" alt="">
+                </li>
+                <li>
+                    <h4>328.</h4><p> 눅스 사칭 계정 주의</p><img src="img/commu_plus.png" alt="">
+                </li>
+                <li>
+                    <h4>327.</h4><p> 소비자 가격 인상 안내</p><img src="img/commu_plus.png" alt="">
+                </li>
+                <li>
+                    <h4>326.</h4><p> 모바일 앱 서비스 종료 안내</p><img src="img/commu_plus.png" alt="">
+                </li>
+                <li>
+                    <h4>325.</h4><p> 과거 구매내역 확인 안내</p><img src="img/commu_plus.png" alt="">
+                </li>
+                <li>
+                    <h4>324.</h4><p>  리뷰 적립 포인트 정책 변경 안내 </p><img src="img/commu_plus.png" alt="">
+                </li>
+                <li>
+                    <h4>323.</h4><p>  이용약관 변경됩니다.</p><img src="img/commu_plus.png" alt="">
+                </li>
+            </ol>
+        </article>
+    </section>
 
     </div>
+    <!-- <h1 class="scroll">00</h1>
+    <h2 class="ulW"> h2div사이즈:<span>00</span></h2>
+    <h3 class="ulL"> h3div left값<span>00</span></h3>
+    <h4 class="po"> h4div 위치값<span>00</span></h4> -->
+
     <style>
     [data-scroll] {
         opacity: 0;
@@ -268,6 +412,22 @@
     [data-scroll="out"] {
       opacity: 0;
     }
+    .scroll {font-size: 30px;
+            position: fixed;
+            left: 200px;
+        top: 50px;}
+        .ulW {font-size: 30px;
+            position: fixed;
+            right: 50px;
+        top: 50px;}
+        .ulL {font-size: 30px;
+            position: fixed;
+            right: 50px;
+        top: 150px;}
+        .po {font-size: 30px;
+            position: fixed;
+            right: 50px;
+        top: 100px;}
     </style>
     <script>
         ScrollOut();

@@ -4,11 +4,17 @@
 ul,ol {list-style: none;}
 img {vertical-align: bottom; border: none;}
 a {text-decoration: none; color: #5F5003;}
-body {color: #5F5003; position: relative; }
+body {color: #5F5003; position: relative; font-family: 'S-CoreDream-3Light';}
 h1,h2,h3,h4,h5,h6,b {font-weight: normal;
 }
 em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
 @import url('https://fonts.cdnfonts.com/css/freestyle-script');
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* 우선순위 css는 덮어쓰기가 가능한 파일
     제일 상위자 - 태그네임 똑같은 이름으로 부르기
@@ -41,6 +47,10 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         height: 800px;
     }
     .review_gift {
+        width: 100%;
+        height: 800px;
+    }
+    .menu {
         width: 100%;
         height: 800px;
     }
@@ -162,6 +172,37 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
 
 
         /* 픽스 설정 */
+        .page {
+            position: fixed;
+            top: 10%;
+            left: 18%;
+            width: 250px;
+            height: 150px;
+            display: flex;
+            z-index: 10;
+        }
+        .page .pageImg {
+            position: relative;
+            width: 50%;
+        }
+        .page .pageImg img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(0deg);
+            animation: page 13s infinite;
+        }
+
+        .page ul {
+            width: 50%;
+            height: 100%;
+        }
+        .page li:hover a {
+            color: #FDA085;
+        }
+        .page li.on a {
+            color: #FDA085;
+        }
         .fixed01 {
             width: 400px;
             position: absolute;
@@ -215,6 +256,17 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         }
         .fixed02 img {
             padding-left: 5%;
+        }
+
+        /* 픽스 키프레임 */
+        @keyframes page {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
         /* 해더 설정 */
         header {
@@ -277,12 +329,26 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         }
         /* 오일 슬라이더 설정 */
         .oil_slider {
+            position: relative;
             background-image: url(../img/slider_bg.png);
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center center;
         }
-        /* 오일 슬라이더 txt설정 */
+        /* 오일 슬라이더 오른쪽 설정 */
+        .oil_slider .right {
+            position: absolute;
+            top: 60%;
+            left: 53%;
+        }
+        .oil_slider .right li {
+            position: absolute;
+            opacity: 0;
+        }
+        .oil_slider .right li.on {
+            opacity: 1;
+        }
+        /* 오일 슬라이더 텍스트 설정 */
         .oil_slider .txt {
             box-sizing: border-box;
         }
@@ -369,7 +435,7 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             background-size: contain;
             background-position: center center;
         }
-        /* 오일 슬라이더 img설정 */
+        /* 오일 슬라이더 이미지설정 */
         .oil_slider .img {
             box-sizing: border-box;
             position: relative;
@@ -412,12 +478,18 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         }
         .oil_slider .oil li p {
             width: 100%;
+            margin-top: 20px;
             padding-top: 5%;
             text-align: center;
+            background-image: url(../img/heart.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
         }
-        .oil_slider .oil li p img {
-            width: 20px;
+        .oil_slider .oil li p:hover {
+            background-image: url(../img/heartF.png);
         }
+
         /* 오일 슬라이더 비디오설정 */
         .oil_slider article:nth-child(1) video {
             width: 100%;
@@ -434,31 +506,31 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             position: relative;
         }
         .best_product .main_img img {
-            width: 90%;
-            margin-top: 25%;
+            width: 600px;
+            margin-top: 40%;
             margin-left: 10%;
             position: absolute;
             opacity: 0;
         }
         .best_product .main_img img:nth-child(1) {
-            width: 70%;
-            margin-left: 15%;
+            margin-left: 0;
         }
         .best_product .main_img img:nth-child(2) {
-            width: 80%;
-            margin-left: 15%;
+            width: 500px;
+            margin-top: 30%;
         }
         .best_product .main_img img:nth-child(3) {
-            width: 80%;
+            width: 450px;
             margin-top: 30%;
         }
         .best_product .main_img img:nth-child(4) {
-            width: 55%;
-            margin-left: 25%;
+            width: 400px;
+            margin-top: 25%;
+            margin-left: 30%;
         }
         .best_product .main_img img:nth-child(5) {
-            width: 50%;
-            margin-left: 25%;
+            width: 400px;
+            margin-left: 15%;
         }
         .best_product .main_img img.on {
             opacity: 1;
@@ -476,25 +548,25 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             box-sizing: border-box;
         }
         .best_product .img img {
+            width: 280px;
             
         }
         .best_product .img li:nth-child(1) {
             width: 50%;
             height: 50%;
-            padding-left: 120px;
-            padding-top: 50px;
+            padding-top: 70px;
         }
         .best_product .img li:nth-child(2) {
             width: 50%;
             height: 50%;
             padding-left: 70px;
-            padding-top: 100px;
+            padding-top: 60px;
         }
         .best_product .img li:nth-child(3) {
             width: 40%;
             height: 50%;
             padding-left: 10px;
-            padding-top: 50px;
+            padding-top: 120px;
         }
         .best_product .img li:nth-child(4) {
             width: 30%;
@@ -504,8 +576,10 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         .best_product .img li:nth-child(5) {
             width: 30%;
             height: 50%;
-            padding-left: 50px;
-            padding-top: 100px;
+            padding-top: 150px;
+        }
+        .best_product .img li:nth-child(1) img {
+            width: 400px;
         }
         /* 베스트 텍스트 설정 */
         .best_product .txt {
@@ -712,11 +786,16 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             display: flex;
             position: absolute;
             top: 58%;
+            opacity: 0;
+            transition: all 0.5s;
+        }
+        .skin_type .skinImg li:hover .typeIcon {
             opacity: 1;
         }
         .skin_type .typeIcon li {
             width: 20%;
             margin-right: 5%;
+            
         }
         .skin_type .typeIcon li:nth-child(1) {
             background-image: url(../img/typeIcon01.png);
@@ -792,11 +871,14 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             width: 205%;
         }
         .review_gift .txt {
-            
+            overflow: hidden;
+            position: relative;
         }
         .review_gift .txt video {
-            width: 100%;
-            height: 100%;
+            width: 1200px;
+            position: absolute;
+            top: 15%;
+            left: -35%;
         }
         /* 리뷰 텍스트 이미지 설정 */
         .review_gift .img {
@@ -943,6 +1025,400 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             font-size: 6px;
         }
 
+        /* 취소구간 */
+        .x {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            left: 3.8%;
+            bottom: 3.8%;
+            z-index: 9999;
+        }
+        /* 메뉴 */
+        .menu {
+            opacity: 0;
+            z-index: -99;
+            display: none;
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        
+        .menu  {
+            background-color: #fff;
+        }
+        .menu .img {
+            width: 50%;
+            background-image: url(../img/menu_bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .menu .img img {
+            padding: 200px;
+        }
+        .menu .txt {
+            width: 40%;
+            margin: 0 auto;
+            height: 100%;
+            padding-top: 8%;
+        }
+        .menu .txt>li {
+            width: 100%;
+        
+        }
+        .menu .txt h1 {
+            text-align: left;
+            padding: 30px 0;
+        }
+        .menu .txt h1 span {
+            position: relative;
+            overflow: hidden;
+            display: block;
+            height: 5px;
+        }
+        .menu .txt li:nth-child(1) h1 span {
+            width: 150px;
+        }
+        .menu .txt li:nth-child(2) h1 span {
+            width: 55px;
+        }
+        .menu .txt li:nth-child(3) h1 span {
+            width: 110px;
+        }
+        .menu .txt li:nth-child(4) h1 span {
+            width: 60px;
+        }
+        .menu .txt h1 img {
+            position: absolute;
+            width: 50px;
+            height: 4px;
+
+        }
+        .menu .txt li:nth-child(1) span img {
+            animation: menuline2 3s infinite;
+            left: -50%;
+            top: 0;
+        }
+        .menu .txt li:nth-child(2) span img {
+            animation: menuline1 4s infinite;
+            width: 20px;
+            left: -90%;
+            top: 0;
+
+        }
+        .menu .txt li:nth-child(3) span img {
+            animation: menuline2 2.5s infinite;
+            left: -50%;
+            top: 0;
+        }
+        .menu .txt li:nth-child(4) span img {
+            animation: menuline1 2.5s infinite;
+            width: 20px;
+            left: -90%;
+            top: 0;
+            
+        }
+        .menu .txt .subMenu {
+            width: 100%;
+            display: flex;
+            justify-content: left;
+        }
+        .menu .txt .subMenu li {
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .menu .txt .subMenu a {
+            padding-left: 20px;
+            border-left: 1px solid #5F5003;
+        }
+        .menu .txt .subMenu li:hover a {
+            border-left: 2px solid #FDA085;
+        }
+        /* 메뉴 키프레임 */
+        @keyframes menuline1 {
+            0% {
+                left: -90%;
+                width: 20px;
+            }
+            50% {
+                left: 0;
+                width: 50px;
+            }
+            100% {
+                left: 100%;
+                width: 20px;
+            }
+        }
+        @keyframes menuline2 {
+            0% {
+                left: -50%;
+                width: 30px;
+            }
+            50% {
+                left: 0;
+                width: 70px;
+            }
+            100% {
+                left: 100%;
+                width: 30px;
+            }
+        }
+        /* 상품 상세페이지 */
+        .product {
+            opacity: 0;
+            z-index: -99;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: #fff;
+            display: flex;
+        }
+        .product .img {
+            width: 50%;
+            height: 100%;
+            position: relative;
+            background-image: url(../img/intro_bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .product .mainImg li {
+            position: absolute;
+            width: 500px;
+            height: 700px;
+            left: 50%;
+            top: 50%;
+            margin-top: -250px;
+            margin-left: -250px;
+            opacity: 0;
+        }
+        .product .mainImg li.on {
+            opacity: 1;
+        }
+        .product .mainImg img {
+            width: 100%;
+        }
+        
+        .product .productImg {
+            position: absolute;
+            right: 8%;
+            top: 5%;
+            width: 50px;
+            height: 150px;
+        }
+        .product .productImg li {
+            height: 33%;
+            margin-bottom: 1%;
+            filter: grayscale(100%);
+        }
+        .product .productImg li.on {
+            border: 1px solid #5F5003;
+            filter: none;
+        }
+        .product .productImg li:nth-child(1) {
+            background-image: url(../img/slider_oil01.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .product .productImg li:nth-child(2) {
+            background-image: url(../img/product_pageoil.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .product .productImg li:nth-child(3) {
+            background-image: url(../img/product_pageface.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .product .txt {
+            width: 50%;
+            height: 100%;
+        }
+        .product .title {
+            height: 40%;
+            width: 100%;
+        }
+        .product .title li {
+            padding: 5px 0;
+        }
+        .product .title {
+            width: 100%;
+            height: 35%;
+            margin-left: 5%;
+            margin-top: 5%;
+        }
+        .product .title h6 {
+            font-size: 32px;
+            
+        }
+        .product .title em {
+            font-size: 32px;
+            width: 100%;
+        }
+        .product .title li:nth-child(3) {
+            display: flex;
+        }
+        .product .title p {
+            padding: 10px;
+            margin-right: 10px;
+            border-radius: 100px;
+            background-image: url(../img/intro_bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .product .title img {}
+        .product .price {
+            height: 40%;
+            width: 100%;
+        }
+        .product .price li {
+            display: flex;
+            justify-content: right;
+            margin: 10px 0;
+            margin-right: 5%;
+        }
+        .product .price li h6 {
+            font-size: 15px;
+        }
+        .product .price li span {
+            width: 20px;
+            margin-right: 10px;
+            height: 20px;
+            border: 1px solid #5F5003;
+        }
+        .product .price li span:hover {
+            background-color: #5F5003;
+            border: 1px solid #5F5003;
+        }
+
+        .product .price li:nth-child(2) h6 {
+            padding: 5px;
+            font-size: 15px;
+            padding-right: 10px;
+            padding-left: 500px;
+            border: 1px solid #5F5003;
+            border-radius: 3px;
+            margin-top: 20px;
+        }
+        .product .price li:nth-child(3) h6 {
+            margin: 30px 0;
+        }
+        .product .price li p {
+            font-size: 18px;
+            padding: 15px;
+            margin-left: 10px;
+            border-radius: 10px;
+            background-image: url(../img/intro_bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .product .price li p:hover {
+            border: 1px solid #FDA085;
+            color: #FDA085;
+        }
+        
+        .product .producttxt {
+            padding-bottom: 10px;
+            border-bottom: 3px dotted #5F5003;
+        }
+        .product .relevant {
+            width: 100%;
+            height: 20%;
+            display: flex;
+        }
+        .product .relevant li {
+            width: 50%;
+        }
+        .product .relevant li:nth-child(2) {
+            background-image: url(../img/intro_bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            text-align: center;
+        }
+        .product .relevant li img {
+            padding-top: 20px;
+        }
+        .product .relevant li h6 {
+            padding-top: 10px;
+        }
+        .product .relevant li h5 {
+            padding-top: 50px;
+        }
+        
+
+        /* 공지사항 설정 */
+        .commu {
+            background-image: url(../img/commu_bg.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            background-color: #fff;
+            z-index: -9;
+            opacity: 0;
+        }
+        .commu article {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .commu h1 {
+            padding: 70px 0;
+            font-size: 40px;
+            text-align: center;
+        }
+        .commu .coMenu {
+            width: 50%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+        .commu .coMenu li{
+            width: 25%;
+            margin: 20px 0 ;
+        }
+        .commu .coMenu p{
+            text-align: center;
+        }
+        .commu .coMenu li.on p{
+            color: #FDA085;
+        }
+        .commu .notice {
+            margin-top: 50px;
+            height: 500px;
+        }
+        .commu .notice li {
+            display: flex;
+            align-items: center;
+            height: 14%;
+            border-bottom: 1px solid #5F5003;
+        }
+        .commu .notice h4 {
+            width: 10%;
+        }
+        .commu .notice p {
+            width: 88%;
+        }
+        .commu .notice li:hover p {
+            display: flex;
+            color: #FDA085;
+        }
+
+
 
 
 
@@ -950,7 +1426,7 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
     /* 미디어 쿼리 구간 ########################################*/
     /* 14440px 이상일때 */
     @media(min-width:1440px){
-        #wrap {
+        #wrap, #wrap1 {
             width: 1280px;
             margin: 0 auto;
         }
