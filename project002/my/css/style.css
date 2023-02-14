@@ -4,7 +4,7 @@
 ul,ol {list-style: none;}
 img {vertical-align: bottom; border: none;}
 a {text-decoration: none; color: #5F5003;}
-body {color: #5F5003; position: relative; font-family: 'S-CoreDream-3Light';}
+body {color: #5F5003; position: relative; font-family: 'S-CoreDream-3Light'; overflow-x: hidden;}
 h1,h2,h3,h4,h5,h6,b {font-weight: normal;
 }
 em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
@@ -153,6 +153,7 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
     }
     /* 리뷰 박스설정 */
     .review_gift {
+        width: 3000px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -162,11 +163,11 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         height: 5%;
     }
     .review_gift .txt {
-        width: 30%;
+        width: 20%;
         height: 95%;
     }
     .review_gift .img {
-        width: 70%;
+        width: 80%;
         height: 95%;
     }
 
@@ -268,6 +269,18 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
                 transform: rotate(360deg);
             }
         }
+        /* 가로스크롤 */
+        #wrap1 {
+            width: 100%;
+            position: relative;
+            left: 0;
+            top:0
+            }
+        
+        #wrap1.on {
+            position: fixed;
+            top:-300% ;
+            left: 0;}
         /* 해더 설정 */
         header {
             position: fixed;
@@ -845,6 +858,7 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             position: relative;
         }
         .review_gift .txt {
+            position: relative;
             background-color: black;
         }
         .review_gift h2 {
@@ -868,7 +882,7 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         }
         /* 리뷰 텍스트 설정 */
         .review_gift .line img {
-            width: 205%;
+            width: 100%;
         }
         .review_gift .txt {
             overflow: hidden;
@@ -878,7 +892,7 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             width: 1200px;
             position: absolute;
             top: 15%;
-            left: -35%;
+            left: -5%;
         }
         /* 리뷰 텍스트 이미지 설정 */
         .review_gift .img {
@@ -890,15 +904,14 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             position: absolute;
             top: 0;
             left: 0;
-            width: 250%;
+            width: 100%;
             height: 100%;
             display: flex;
         }
         .review_gift .imginsta {
-            width: 100%;
+            width: 85%;
             height: 100%;
             display: flex;
-            margin-left: 5%;
             align-items: flex-start;
         }
         .review_gift .imginsta li {
@@ -927,24 +940,25 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             background-size: contain;
             background-position: center center;
         }
+        
+        /* 푸터설정 */
         .review_gift footer {
-            width: 20%;
+            width: 15%;
             height: 100%;
         }
-        /* 푸터설정 */
         footer {
             background-image: url(../img/intro_bg.jpg);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center center;
-            font-size: 10px;
         }
         /* 푸터 텍스트 설정 */
         footer .Ftxt {
-            width: 90%;
+            width: 80%;
             margin: 0 auto;
             height: 40%;
             margin-top: 50px;
+            font-size: 12px;
         }
         footer .Ftxt li {
             height: 12%;
@@ -1417,6 +1431,8 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             display: flex;
             color: #FDA085;
         }
+
+        
 
 
 

@@ -1,11 +1,13 @@
 $(document).ready(function(){
-    let of = $('.review_gift .img ').offset().top;
+    let of = $('.review_gift .img').offset().top;
     let ht = $(window).height();
         $('.oil_slider').height(ht);
         $('.menu').height(ht);
         $('header').height(ht);
         $('product').height(ht);
         $('.commu').height(ht);
+        $('.skin_type').height(ht);
+        $('.best_product').height(ht);
     $(window).resize(function(){
         let ht = $(window).height();
         $('.oil_slider').height(ht);
@@ -13,34 +15,35 @@ $(document).ready(function(){
         $('.menu').height(ht);
         $('product').height(ht);
         $('.commu').height(ht);
+        $('.skin_type').height(ht);
+        $('.best_product').height(ht);
     })
 
-    // $(window).scroll(function(e){
-    //     e.preventDefault()
-    //     let ht = $(window).height()
-    //     let sc= $(this).scrollTop();
-    //     let wd = $('.review_gift .scroll').width();
+    $(window).scroll(function(e){
+        e.preventDefault()
+        let ht = $(window).height()
+        let sc= $(this).scrollTop();
+        let wd = $('.review_gift .scroll').width();
+
 
 
         
-    //     $('.scroll').text(sc);
-    //     $('.ulW>span').text(wd)
-    //     $('h4>span').text(of)
+        $('.ulL>span').text(sc);
+        $('.ulW>span').text(wd)
+        $('h4>span').text(of)
 
-    //     // $('body').height((ht*4)+wd);
+        $('body').height((ht*4)+wd);
 
-    //     if(sc>=of){
-
-    //     $('.review_gift .scroll').css({'left':3748-sc})
+        if(sc>=of){
+        $('#wrap1').addClass('on');
+        $('.review_gift .scroll').css({'left':(of+550)-sc})
         
-    //     }
-    //     if(sc<3748){
+        }
+        if(sc<of){
+        $('#wrap1').removeClass('on');
+        }
 
-
-
-    //     }
-
-    // })
+    })
 
 
 })

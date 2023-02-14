@@ -1,0 +1,171 @@
+@charset 'utf-8';
+
+/* 전체설정 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+ol,
+ul {
+    list-style: none;
+}
+img {
+    border: none;
+    vertical-align: bottom;
+}
+body {}
+
+.hotdeal {
+}
+.sub {
+    overflow-x: hidden;
+    height: 3000px;
+}
+
+.sub .box02 {
+    position: fixed;
+    right: -100%;
+    top: 3%;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all 0.5s;
+}
+.sub .box02.on {
+    right: 0;
+}
+.sub  .box02 h3 {
+    width: 100%;
+    text-align: center;
+}
+.sub  .box02 form {
+    padding: 20px;
+    text-align: center;
+    height: 28%;
+    margin-top: 50px;
+}
+.sub  .box02 input {}
+.sub  .box02 .number {
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: none;
+}
+.sub  .box02 .bto {
+    width: 150px;
+    height: 40px;
+    border: none;
+    font-size: 18px;
+    background-color: black;
+    color: #fff;
+}
+.sub  .box02 .txt {
+    padding: 20px 10px;
+    margin-bottom: 50px;
+    font-size: 14px;
+}
+.sub .label {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+.sub .review {
+    padding: 20px 10px;
+}
+.sub .review li {
+    margin-bottom: 10px;
+}
+.sub .review i {
+    color: #fff;
+    font-size: 14px;
+}
+
+.btn {
+    position: fixed;
+    width: 120px;
+    height: 150px;
+    z-index: 999;
+    right: 0;
+    top: 50%;
+    margin-top: -75px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.btn.on {
+    right: 250px;
+}
+.sub .button02 {
+    width: 150px;
+    height: 30px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+}
+
+.btn span {
+    height: 100%;
+    position: absolute;
+    font-size: 80px;
+    text-align: center;
+    width: 100%;
+    line-height: 1.6;
+    color: aliceblue;
+    opacity: 0.8;
+    animation: ani 0.5s linear alternate infinite;
+    display: none;
+    cursor: pointer;
+}
+.btn span.on {
+    display: block;
+}
+.btn span:hover {
+    animation-play-state: paused;
+}
+@keyframes ani {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+        color: #000;
+    }
+}
+
+/* 공지사항  */
+.notice {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+}
+.notice .txtBox {
+    width: 800px;
+    height: 500px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -400px;
+}
+.close {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+}

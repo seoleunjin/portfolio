@@ -26,6 +26,20 @@
                 <li></li>
             </ul>
         </header>
+        <!-- 픽스 -->
+        <section class="fixed">
+            <div  class="page">
+                <span class="pageImg"><img src="img/fixed_page.png" alt=""></span>
+                <ul>
+                    <li class="on"><a href="#">oil slide</a></li>
+                    <li><a href="#">best product</a></li>
+                    <li><a href="#">skin  type</a></li>
+                    <li><a href="#">gifts & review</a></li>
+                </ul>
+            </div>
+            <span class="fixed01"><p>방금 본 제품</p><img src="img/fixed_recen.png" alt=""></span>
+            <span class="fixed02"><p>실시간 순위</p><img src="img/fixed_rank.png" alt=""></span>
+        </section>
         <section class="oil_slider">
             <ul class="right">
                 <li class="on"><img src="img/fixed_oil01.png" alt=""></li>
@@ -196,10 +210,10 @@
             </article>
         </section>
         <!-- 리뷰 -->
-        <section class="review_gift"data-scroll>
-            <h2><em>Review & giftss</em><a href="#"></a></h2>
+        <section class="review_gift">
             <div class="line"><img src="img/Gold_line.png" alt=""></div>
             <article class="txt">
+                <h2><em>Review & giftss</em><a href="#"></a></h2>
                 <video autoplay loop="loop" muted>
                     <source src="img/birthday.mp4">
                 </video>
@@ -259,20 +273,7 @@
                 </div>
             </article>
         </section>
-        <!-- 픽스 -->
-        <section class="fixed">
-            <div  class="page">
-                <span class="pageImg"><img src="img/fixed_page.png" alt=""></span>
-                <ul>
-                    <li class="on"><a href="#">oil slide</a></li>
-                    <li><a href="#">best product</a></li>
-                    <li><a href="#">skin  type</a></li>
-                    <li><a href="#">gifts & review</a></li>
-                </ul>
-            </div>
-            <span class="fixed01"><p>방금 본 제품</p><img src="img/fixed_recen.png" alt=""></span>
-            <span class="fixed02"><p>실시간 순위</p><img src="img/fixed_rank.png" alt=""></span>
-        </section>
+        
         <!-- 메뉴 -->
     <section class="menu">
         <div class="img">
@@ -396,10 +397,6 @@
     </section>
 
     </div>
-    <!-- <h1 class="scroll">00</h1>
-    <h2 class="ulW"> h2div사이즈:<span>00</span></h2>
-    <h3 class="ulL"> h3div left값<span>00</span></h3>
-    <h4 class="po"> h4div 위치값<span>00</span></h4> -->
 
     <style>
     [data-scroll] {
@@ -412,22 +409,6 @@
     [data-scroll="out"] {
       opacity: 0;
     }
-    .scroll {font-size: 30px;
-            position: fixed;
-            left: 200px;
-        top: 50px;}
-        .ulW {font-size: 30px;
-            position: fixed;
-            right: 50px;
-        top: 50px;}
-        .ulL {font-size: 30px;
-            position: fixed;
-            right: 50px;
-        top: 150px;}
-        .po {font-size: 30px;
-            position: fixed;
-            right: 50px;
-        top: 100px;}
     </style>
     <script>
         ScrollOut();
