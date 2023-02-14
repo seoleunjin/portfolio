@@ -170,6 +170,9 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         width: 80%;
         height: 95%;
     }
+    .review_gift footer {
+        width: 15%;
+    }
 
 
         /* 픽스 설정 */
@@ -913,39 +916,41 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             height: 100%;
             display: flex;
             align-items: flex-start;
+            position: relative;
         }
         .review_gift .imginsta li {
-            width: 33%;
-            height: 500px;/* 임시설정 */
-            margin: 0 2%;
+            position: absolute;
+            width: 40%;
+            height: 600px;
             box-sizing: border-box;
-            margin-top: 3%;
+            top: 0;
+            top: 3%;
         }
         .review_gift .imginsta li:nth-child(1) {
             background-image: url(../img/review_img01.png);
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center center;
+            left: -10%;
         }
         .review_gift .imginsta li:nth-child(2) {
             background-image: url(../img/review_img02.png);
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center center;
-            margin-top: 10%;
+            left: 20%;
+            top: 13%;
         }
         .review_gift .imginsta li:nth-child(3) {
             background-image: url(../img/review_img03.png);
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center center;
+            left: 50%;
         }
         
         /* 푸터설정 */
-        .review_gift footer {
-            width: 15%;
-            height: 100%;
-        }
+        
         footer {
             background-image: url(../img/intro_bg.jpg);
             background-repeat: no-repeat;
@@ -953,12 +958,14 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             background-position: center center;
         }
         /* 푸터 텍스트 설정 */
+        footer p,h6,h5 {
+            font-size: 10px;
+        }
         footer .Ftxt {
-            width: 80%;
+            width: 90%;
             margin: 0 auto;
             height: 40%;
             margin-top: 50px;
-            font-size: 12px;
         }
         footer .Ftxt li {
             height: 12%;
@@ -977,6 +984,9 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             height: 50%;
             display: flex;
         }
+        footer .Ftxt li:nth-child(5) span h5 {
+            margin-left: 10px;
+            }
         footer .Ftxt li:nth-child(5) h6 {
             padding-left: 35px;
         }
@@ -994,13 +1004,9 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             background-position: center left;
         }
 
-        footer h1 {
-            width: 100%;
-            height: 30%;
-            background-image: url(../img/logo.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center center;
+        footer img {
+            width: 50%;
+            margin-left: 20%;
         }
         footer .sns {
             width: 20%;
@@ -1022,21 +1028,22 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             width: 40%;
             margin-right: 10px;
         }
+        
         footer .sns img {
             width: 100%;
         }
-        footer .commu {
-            width: 90%;
+        footer .notice {
+            width: 70%;
             margin: 0 auto;
             height: 10%;
             display: flex;
+            align-items: center;
         }
-        footer .commu li {
+        footer .notice li {
             width: 25%;
         }
-        footer .commu h6 {
+        footer .notice h6 {
             text-align: center;
-            font-size: 6px;
         }
 
         /* 취소구간 */

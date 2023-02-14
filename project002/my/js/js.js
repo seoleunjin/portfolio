@@ -8,6 +8,7 @@ $(document).ready(function(){
         $('.commu').height(ht);
         $('.skin_type').height(ht);
         $('.best_product').height(ht);
+        $('.review_gift').height(ht);
     $(window).resize(function(){
         let ht = $(window).height();
         $('.oil_slider').height(ht);
@@ -17,6 +18,7 @@ $(document).ready(function(){
         $('.commu').height(ht);
         $('.skin_type').height(ht);
         $('.best_product').height(ht);
+        $('.review_gift').height(ht);
     })
 
     $(window).scroll(function(e){
