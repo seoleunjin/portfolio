@@ -22,16 +22,46 @@ $(document).ready(function(){
             $('.review_gift').height(ht);
         })
 
+    // 메뉴
+    $('.util li:nth-child(5)').click(function(){
+        $('.menu').css({'display':'block'})
+    })
+    $('.x').click(function(){
+        $('.menu').css({'display':'none'})
+    })
+    // 문의사항
+    $('.util li:nth-child(4)').click(function(){
+        $('.commu').css({'display':'block'})
+    })
+    $('.x').click(function(){
+        $('.commu').css({'display':'none'})
+    })
+    // 제품
+    $('.oil li').click(function(){
+        $('.product').css({'display':'block'})
+    })
+    $('.x').click(function(){
+        $('.product').css({'display':'none'})
+    })
+
     // 슬라이더
-    // let b = 0;
-    // $('.left').click(function(){
-    //     b++;
-    //     var wid = $('.oil_slider .oil li').width();
-    //     if (b == 3) b = 0;
-    //     console.log(b)
-    //     let widM = wid * b;
-    //     $('.oil_slider .oil').stop().animate({'left': 'widM'}, 800)
-    // });
+    let b = 0;
+    $('.left').click(function(){
+        b++;
+        var wid = $('.oil li').width();
+        if (b == 3) b = 0;
+        console.log(b)
+        let widM = wid * b;
+        $('.oil').stop().animate({'left': -widM}, 800)
+    });
+    $('.right').click(function(){
+        b--;
+        var wid = $('.oil li').width();
+        if (b == 3) b = 0;
+        console.log(b)
+        let widM = wid * b;
+        $('.oil').stop().animate({'left': -widM}, 800)
+    });
 
     // 베스트 .best_product .img 클릭했을때 .main_img와 .txt 가 변해라
     $('.best_product .img ul li').click(function(){
@@ -43,6 +73,26 @@ $(document).ready(function(){
         $('.best_product .txt ul').removeClass('on')
         $('.best_product .txt ul').eq(i).addClass('on').css({'transition':'1s'})
     })
+    // 슬라이더
+    let c = 0;
+    $('.type_left').click(function(){
+        c++;
+        var wid = $('.skin_type .skinImg li').width();
+        if (c == 6) c = 0;
+        console.log(c)
+        let widM = wid * c;
+        $('.skin_type .skinImg').stop().animate({'left': -(widM)}, 800)
+        $('.skin_type .lose_line').stop().animate({'width': (widM+300)}, 800)
+    });
+    $('.type_right').click(function(){
+        c--;
+        var wid = $('.skin_type .skinImg li').width();
+        if (c == -1) c = 0;
+        console.log(c)
+        let widM = wid * c;
+        $('.skin_type .skinImg').stop().animate({'left': -(widM)}, 800)
+        $('.skin_type .lose_line').stop().animate({'width': (widM+300)}, 800)
+    });
 
 
     // 페이지 메뉴를 클릭했을때 각 섹션 화면으로 이동해라
@@ -62,7 +112,7 @@ $(document).ready(function(){
         let wd = $('.review_gift .scroll').width();
         let i = $('.pageMenu li').index();
 
-
+        // 리뷰섹션
         $('body').height((ht*4)+wd);
 
         if(sc>=of){
@@ -73,6 +123,12 @@ $(document).ready(function(){
         if(sc<of){
         $('#wrap1').removeClass('on');
         }
+        // 장바구니
+        let d = 0;
+        $('.skinImg li').click(function(){
+            d++;
+            $('.util li:nth-child(3) a span').text(d)
+        })
 
         
 

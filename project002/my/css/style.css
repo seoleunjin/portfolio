@@ -90,11 +90,11 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         display: flex;
     }
     .oil_slider #wrap .txt {
-        width: 50%;
-        height: 100%;
+        width: 59.5%;
+        height: 94%;
     }
     .oil_slider #wrap .img {
-        width: 50%;
+        width: 40%;
         height: 100%;
     }
 
@@ -175,7 +175,7 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         .page {
             position: fixed;
             top: 10%;
-            left: 18%;
+            left: 10%;
             width: 250px;
             height: 150px;
             display: flex;
@@ -308,8 +308,9 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         }
         .util li {
             width: 30%;
-            margin-left: 65%;
+            margin-left: 55%;
             height: 20%;
+            cursor: pointer;
         }
         .util li:nth-child(1) {
             background-image: url(../img/Uicon_01.png);
@@ -328,6 +329,19 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center center;
+            position: relative;
+        
+        }
+        .util li:nth-child(3) span {
+            position: absolute;
+            right: -20%;
+            color: #fff;
+            top: 20%;
+            width: 23px;
+            height: 23px;
+            border-radius: 10px;
+            text-align: center;
+            background-color: #FA574E;
         }
         .util li:nth-child(4) {
             background-image: url(../img/Uicon_04.png);
@@ -337,6 +351,36 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         }
         .util li:nth-child(5) {
             background-image: url(../img/Uicon_05.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+        .util li:hover:nth-child(1) {
+            background-image: url(../img/UiconH_01.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+        .util li:hover:nth-child(2) {
+            background-image: url(../img/UiconH_02.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+        .util li:hover:nth-child(3) {
+            background-image: url(../img/UiconH_03.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+        .util li:hover:nth-child(4) {
+            background-image: url(../img/UiconH_04.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+        .util li:hover:nth-child(5) {
+            background-image: url(../img/UiconH_05.png);
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center center;
@@ -354,14 +398,14 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             width: 30px;
             position: absolute;
             bottom: 10%;
-            right: 3%;
+            right: 5%;
             z-index: 999;
         }
         .oil_slider .left {
             width: 30px;
             position: absolute;
             bottom: 10%;
-            right: 6%;
+            right: 8%;
             z-index: 999;
         }
 
@@ -456,13 +500,15 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         .oil_slider .img {
             box-sizing: border-box;
             position: relative;
+            overflow: hidden;
         }
         .oil_slider .oil {
             position: absolute;
-            top: 0;
-            left: 20.5%;
+            top: 50%;
+            margin-top: -300px;
+            left: 0%;
             width: 1000px;
-            height: 80%;
+            height: 500px;
             display: flex;
         }
         .oil_slider .oil li {
@@ -491,7 +537,7 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             width: 100%;
             font-size: 18px;
             text-align: center;
-            padding-top: 180%;
+            padding-top: 150%;
         }
         .oil_slider .oil li p {
             width: 100%;
@@ -530,21 +576,21 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         .best_product .main_img img:nth-child(2) {
             width: 500px;
             top: 25%;
-            left: 20%;
         }
         .best_product .main_img img:nth-child(3) {
             width: 500px;
-            top: 20%;
+            top: 25%;
+            left: 30%;
         }
         .best_product .main_img img:nth-child(4) {
             width: 400px;
-            left: 30%;
-            top: 20%;
+            left: 40%;
+            top: 25%;
         }
         .best_product .main_img img:nth-child(5) {
             width: 400px;
-            left: 10%;
-            top: 25%;
+            left: 15%;
+            top: 30%;
         }
         .best_product .main_img img.on {
             opacity: 1;
@@ -559,9 +605,12 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             height: 100%;
         }
         .best_product .img li {
+            width: 30%;
+            height: 300px;
             cursor: pointer;
             box-sizing: border-box;
             filter: grayscale(100%);
+            z-index: 9;
         }
         .best_product .img li.on {
             filter: none;
@@ -637,6 +686,17 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         .info {
             position: relative;
         }
+        .cir02 {
+            z-index: -99;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 56%;
+            border-radius: 100px;
+            opacity: 0.8;
+            left: 0;
+            background-color: #FDA085;
+        }
         /* 소개 텍스트설정*/
         .info .txt {
             box-sizing: border-box;
@@ -663,25 +723,16 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             display: flex;
             align-items: center;
         }
+        .info .infoMenu img {
+            width: 15px;
+        }
         .info .infoMenu p {
             width: 100%;
             font-size: 20px;
-            padding-left: 20%;
-            margin-left: 5%;
-            background-image: url(../img/info_cir01.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center left;
+            padding-left: 5%;
         }
         
-        .info .infoMenu li.on p {
-            padding: 30px;
-            padding-left: 15%;
-            background-image: url(../img/info_cir02.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center left;
-        }
+        
         /* 소개 이미지설정*/
         .info .img {
         }
@@ -758,7 +809,7 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         }
         /* 피부타입 이미지 설정*/
         .skin_type .img {
-            position: relative;
+            display: flex;
         }
         .skin_type .img h1 {
             font-size: 25px;
@@ -766,26 +817,33 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             width: 30%;
             height: 100%;
             padding-top: 10%;
-            background-color: #fff;
             padding-left: 5%;
             box-sizing: border-box;
         }
+        .skin_type .trail {
+            width: 70%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
         .skin_type .skinImg {
             position: absolute;
-            top: 0;
-            left: 35%;
-            height: 550px;
-            width: 1300px;
+            top: 50%;
+            margin-top: -250px;
+            left: 0;
+            height: 360px;
+            width: 1500px;
             display: flex;
             justify-content: center;
         }
         .skin_type .skinImg li {
+            z-index: 9;
             width: 20%;
             height: 100%;
-            margin-right: 2%;
+            margin-right: 10px;
             background-repeat: no-repeat;
             background-size: contain;
-            background-position: center left;
+            background-position: center center;
             position: relative;
         }
         .skin_type .skinImg>li:nth-child(1) {
@@ -812,14 +870,13 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             top: 58%;
             opacity: 0;
             transition: all 0.5s;
+            z-index: 999;
         }
         .skin_type .skinImg li:hover .typeIcon {
             opacity: 1;
         }
         .skin_type .typeIcon li {
-            width: 20%;
-            margin-right: 5%;
-            
+            width: 25%;
         }
         .skin_type .typeIcon li:nth-child(1) {
             background-image: url(../img/typeIcon01.png);
@@ -847,22 +904,31 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             background-position: center center;
         }
         /* 피부타입 토글 설정*/
-        .skin_type span {
+        .skin_type .lose_line {
+            width: 300px;
+            height: 5px;
+            background-color: #FDA085;
             position: absolute;
             bottom: 13%;
             left: 5%;
             z-index: 1;
         }
-        .skin_type span:nth-child(2) {
+        .skin_type .type_left {
+            position: absolute;
+            bottom: 13%;
+            left: 5%;
+            z-index: 1;
+            bottom: 15%;
+        }
+        .skin_type .type_right {
+            position: absolute;
+            bottom: 13%;
+            left: 5%;
+            z-index: 1;
             left: 8%;
+            bottom: 15%;
         }
-        .skin_type span:nth-child(3) {
-            bottom: 5%;
-        }
-        .skin_type span:nth-child(3) img {
-            width: 30%;
-            height: 4px;
-        }
+        
 
         /* 리뷰 */
         .review_gift {
@@ -1062,26 +1128,26 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             position: absolute;
             width: 30px;
             height: 30px;
-            left: 3.8%;
-            bottom: 3.8%;
+            left: 2%;
+            bottom: 4%;
             z-index: 9999;
         }
         /* 메뉴 */
         .menu {
-            opacity: 0;
-            z-index: -99;
             display: none;
-            display: flex;
+            z-index: 9999;
             position: fixed;
             top: 0;
             left: 0;
         }
+
         
         .menu  {
             background-color: #fff;
         }
         .menu .img {
             width: 50%;
+            float: left;
             background-image: url(../img/menu_bg.png);
             background-repeat: no-repeat;
             background-size: cover;
@@ -1091,6 +1157,7 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             padding: 200px;
         }
         .menu .txt {
+            float: right;
             width: 40%;
             margin: 0 auto;
             height: 100%;
@@ -1129,24 +1196,24 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
 
         }
         .menu .txt li:nth-child(1) span img {
-            animation: menuline2 3s infinite;
+            animation: menuline2 3s infinite linear;
             left: -50%;
             top: 0;
         }
         .menu .txt li:nth-child(2) span img {
-            animation: menuline1 4s infinite;
+            animation: menuline1 3.5s infinite linear;
             width: 20px;
             left: -90%;
             top: 0;
 
         }
         .menu .txt li:nth-child(3) span img {
-            animation: menuline2 2.5s infinite;
+            animation: menuline2 2.5s infinite linear;
             left: -50%;
             top: 0;
         }
         .menu .txt li:nth-child(4) span img {
-            animation: menuline1 2.5s infinite;
+            animation: menuline1 2.5s infinite linear;
             width: 20px;
             left: -90%;
             top: 0;
@@ -1167,6 +1234,7 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         }
         .menu .txt .subMenu li:hover a {
             border-left: 2px solid #FDA085;
+            color: #FDA085;
         }
         /* 메뉴 키프레임 */
         @keyframes menuline1 {
@@ -1199,17 +1267,17 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         }
         /* 상품 상세페이지 */
         .product {
-            opacity: 0;
-            z-index: -99;
+            display: none;
             position: fixed;
             width: 100%;
             height: 100%;
             left: 0;
             top: 0;
             background-color: #fff;
-            display: flex;
+            z-index: 9999;
         }
         .product .img {
+            float: left;
             width: 50%;
             height: 100%;
             position: relative;
@@ -1271,6 +1339,7 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             background-position: center center;
         }
         .product .txt {
+            float: left;
             width: 50%;
             height: 100%;
         }
@@ -1300,12 +1369,10 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         }
         .product .title p {
             padding: 10px;
+            text-align: center;
             margin-right: 10px;
             border-radius: 100px;
-            background-image: url(../img/intro_bg.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;
+            background-color: #fde6ca;
         }
         .product .title img {}
         .product .price {
@@ -1349,14 +1416,14 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             padding: 15px;
             margin-left: 10px;
             border-radius: 10px;
-            background-image: url(../img/intro_bg.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;
+            background-color: #fde6ca;
+            box-sizing: border-box;
+            transition: all 0.5s;
         }
         .product .price li p:hover {
             border: 1px solid #FDA085;
             color: #FDA085;
+            box-sizing: border-box;
         }
         
         .product .producttxt {
@@ -1371,6 +1438,9 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         .product .relevant li {
             width: 50%;
         }
+        .product .txt p {
+            padding-left: 20px;
+        }
         .product .relevant li:nth-child(2) {
             background-image: url(../img/intro_bg.jpg);
             background-repeat: no-repeat;
@@ -1380,17 +1450,21 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         }
         .product .relevant li img {
             padding-top: 20px;
+            padding-left: 50px;
         }
         .product .relevant li h6 {
             padding-top: 10px;
+            font-size: 12px;
         }
         .product .relevant li h5 {
+            font-size: 15px;
             padding-top: 50px;
         }
         
 
         /* 공지사항 설정 */
         .commu {
+            z-index: 9999;
             background-image: url(../img/commu_bg.png);
             background-repeat: no-repeat;
             background-size: contain;
@@ -1401,8 +1475,7 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             left: 0;
             top: 0;
             background-color: #fff;
-            z-index: -9;
-            opacity: 0;
+            display: none;
         }
         .commu article {
             width: 80%;
@@ -1424,10 +1497,17 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             margin: 20px 0 ;
         }
         .commu .coMenu p{
+            padding-bottom: 10px;
+            width: 65px;
             text-align: center;
         }
         .commu .coMenu li.on p{
             color: #FDA085;
+            border-bottom: 1px solid #FDA085;
+        }
+        .commu .coMenu li:hover p{
+            color: #FDA085;
+            border-bottom: 1px solid #FDA085;
         }
         .commu .notice {
             margin-top: 50px;
