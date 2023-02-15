@@ -688,14 +688,42 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         }
         .cir02 {
             z-index: -99;
-            width: 100px;
-            height: 100px;
+            width: 20px;
+            height: 20px;
             position: absolute;
-            top: 56%;
+            top: 50%;
             border-radius: 100px;
             opacity: 0.8;
-            left: 0;
+            left: 2.8%;
+            opacity: 1;
+            animation: cirMo 2s infinite linear;
             background-color: #FDA085;
+        }
+        @keyframes cirMo {
+            0% {
+                top: 65%;
+                width: 20px;
+                height: 20px;
+                opacity: 0;
+            }
+            40% {
+                top: 51.5%;
+                width: 200px;
+                height: 100px;
+                opacity: 1;
+            }
+            65.5% {
+                top: 51.5%;
+                width: 200px;
+                height: 100px;
+                opacity: 1;
+            }
+            100% {
+                top: 45%;
+                width: 20px;
+                height: 20px;
+                opacity: 0;
+            }
         }
         /* 소개 텍스트설정*/
         .info .txt {
@@ -714,15 +742,33 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             height: 15%;
         }
         .info .infoMenu {
+            position: relative;
             width: 100%;
-            height: 60%;
+            height: 350px;
+            overflow: hidden;
         }
         .info .infoMenu li {
+            position: absolute;
             width: 100%;
             height: 20%;
             display: flex;
             align-items: center;
+            left: 0;
         }
+        .info .infoMenu li:nth-child(1) {
+            top: 0;
+        }
+        .info .infoMenu li:nth-child(2) {
+            top: 25%;
+        }
+        .info .infoMenu li:nth-child(3) {
+            top: 50%;
+        }
+        .info .infoMenu li:nth-child(4) {
+            top: 75%;
+        }
+
+
         .info .infoMenu img {
             width: 15px;
         }

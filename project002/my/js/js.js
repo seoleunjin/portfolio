@@ -44,7 +44,7 @@ $(document).ready(function(){
         $('.product').css({'display':'none'})
     })
 
-    // 슬라이더
+    // 오일 슬라이더 트레일러
     let b = 0;
     $('.left').click(function(){
         b++;
@@ -63,6 +63,7 @@ $(document).ready(function(){
         $('.oil').stop().animate({'left': -widM}, 800)
     });
 
+
     // 베스트 .best_product .img 클릭했을때 .main_img와 .txt 가 변해라
     $('.best_product .img ul li').click(function(){
         let i = $(this).index();
@@ -73,7 +74,46 @@ $(document).ready(function(){
         $('.best_product .txt ul').removeClass('on')
         $('.best_product .txt ul').eq(i).addClass('on').css({'transition':'1s'})
     })
-    // 슬라이더
+    // 인포 무한 슬라이드
+    let e =0;
+    setInterval(function(){
+        $('.infoMenu li').eq(e).css({'top':'0'}).animate({'top':'-25%'},2000)
+        $('.infoMenu li').eq(e).css({'top':'-25%'}).animate({'top':'100%'},0.01)
+        $('.infoMenu li').eq(e).css({'top':'100%'}).animate({'top':'80%'},0.01)
+        $('.infoMenu li').eq(e).css({'top':'75%'}).animate({'top':'50%'},2000)
+        $('.infoMenu li').eq(e).css({'top':'50%'}).animate({'top':'25%'},2000)
+        $('.infoMenu li').eq(e).css({'top':'25%'}).animate({'top':'0%'},2150)
+        
+    },2000, 'linear')
+    setInterval(function(){
+        $('.infoMenu li').eq(e+1).css({'top':'25%'}).animate({'top':'0'},2150)
+        $('.infoMenu li').eq(e+1).css({'top':'0'}).animate({'top':'-25%'},2000)
+        $('.infoMenu li').eq(e+1).css({'top':'-25%'}).animate({'top':'100%'},0.01)
+        $('.infoMenu li').eq(e+1).css({'top':'100%'}).animate({'top':'80%'},0.01)
+        $('.infoMenu li').eq(e+1).css({'top':'75%'}).animate({'top':'50%'},2000)
+        $('.infoMenu li').eq(e+1).css({'top':'50%'}).animate({'top':'25%'},2000)
+        
+    },2000,'linear')
+    setInterval(function(){
+        $('.infoMenu li').eq(e+2).css({'top':'50%'}).animate({'top':'25%'},2000)
+        $('.infoMenu li').eq(e+2).css({'top':'25%'}).animate({'top':'0%'},2150)
+        $('.infoMenu li').eq(e+2).css({'top':'0%'}).animate({'top':'-25%'},2000)
+        $('.infoMenu li').eq(e+2).css({'top':'-25%'}).animate({'top':'100%'},0.01)
+        $('.infoMenu li').eq(e+2).css({'top':'100%'}).animate({'top':'80%'},0.01)
+        $('.infoMenu li').eq(e+2).css({'top':'75%'}).animate({'top':'50%'},2000)
+        
+    },2000,'linear')
+    setInterval(function(){
+        $('.infoMenu li').eq(e+3).css({'top':'75%'}).animate({'top':'50%'},2000)
+        $('.infoMenu li').eq(e+3).css({'top':'50%'}).animate({'top':'25%'},2000)
+        $('.infoMenu li').eq(e+3).css({'top':'25%'}).animate({'top':'0%'},2150)
+        $('.infoMenu li').eq(e+3).css({'top':'0%'}).animate({'top':'-25%'},2000)
+        $('.infoMenu li').eq(e+3).css({'top':'-25%'}).animate({'top':'100%'},0.01)
+        $('.infoMenu li').eq(e+3).css({'top':'100%'}).animate({'top':'80%'},0.01)
+        
+    },2000,'linear')
+    
+    // 스킨 타입 슬라이더 트레일러
     let c = 0;
     $('.type_left').click(function(){
         c++;
