@@ -75,44 +75,51 @@ $(document).ready(function(){
         $('.best_product .txt ul').eq(i).addClass('on').css({'transition':'1s'})
     })
     // 인포 무한 슬라이드
+    // 텍스트구간
+    setInterval(function(){
+        $('.infoMenu li').eq(0).css({'top':'0'}).animate({'top':'-25%'},2000)
+        $('.infoMenu li').eq(0).css({'top':'-25%'}).animate({'top':'100%'},0.01)
+        $('.infoMenu li').eq(0).css({'top':'100%'}).animate({'top':'80%'},0.01)
+        $('.infoMenu li').eq(0).css({'top':'75%'}).animate({'top':'50%'},2000)
+        $('.infoMenu li').eq(0).css({'top':'50%'}).animate({'top':'25%'},2000)
+        $('.infoMenu li').eq(0).css({'top':'25%'}).animate({'top':'0%'},2000)
+        $('.infoMenu li').eq(1).css({'top':'25%'}).animate({'top':'0'},2000)
+        $('.infoMenu li').eq(1).css({'top':'0'}).animate({'top':'-25%'},2000)
+        $('.infoMenu li').eq(1).css({'top':'-25%'}).animate({'top':'100%'},0.01)
+        $('.infoMenu li').eq(1).css({'top':'100%'}).animate({'top':'80%'},0.01)
+        $('.infoMenu li').eq(1).css({'top':'75%'}).animate({'top':'50%'},2000)
+        $('.infoMenu li').eq(1).css({'top':'50%'}).animate({'top':'25%'},2000)
+        $('.infoMenu li').eq(2).css({'top':'50%'}).animate({'top':'25%'},2000)
+        $('.infoMenu li').eq(2).css({'top':'25%'}).animate({'top':'0%'},2000)
+        $('.infoMenu li').eq(2).css({'top':'0%'}).animate({'top':'-25%'},2000)
+        $('.infoMenu li').eq(2).css({'top':'-25%'}).animate({'top':'100%'},0.01)
+        $('.infoMenu li').eq(2).css({'top':'100%'}).animate({'top':'80%'},0.01)
+        $('.infoMenu li').eq(2).css({'top':'75%'}).animate({'top':'50%'},2000)
+        $('.infoMenu li').eq(3).css({'top':'75%'}).animate({'top':'50%'},2000)
+        $('.infoMenu li').eq(3).css({'top':'50%'}).animate({'top':'25%'},2000)
+        $('.infoMenu li').eq(3).css({'top':'25%'}).animate({'top':'0%'},2000)
+        $('.infoMenu li').eq(3).css({'top':'0%'}).animate({'top':'-25%'},2000)
+        $('.infoMenu li').eq(3).css({'top':'-25%'}).animate({'top':'100%'},0.01)
+        $('.infoMenu li').eq(3).css({'top':'100%'}).animate({'top':'80%'},0.01)
+    },2000, 'linear')
+    
+    // 이미지구간
     let e =0;
     setInterval(function(){
-        $('.infoMenu li').eq(e).css({'top':'0'}).animate({'top':'-25%'},2000)
-        $('.infoMenu li').eq(e).css({'top':'-25%'}).animate({'top':'100%'},0.01)
-        $('.infoMenu li').eq(e).css({'top':'100%'}).animate({'top':'80%'},0.01)
-        $('.infoMenu li').eq(e).css({'top':'75%'}).animate({'top':'50%'},2000)
-        $('.infoMenu li').eq(e).css({'top':'50%'}).animate({'top':'25%'},2000)
-        $('.infoMenu li').eq(e).css({'top':'25%'}).animate({'top':'0%'},2150)
+        if(e==4) e=0;
+        e++;
         
-    },2000, 'linear')
-    setInterval(function(){
-        $('.infoMenu li').eq(e+1).css({'top':'25%'}).animate({'top':'0'},2150)
-        $('.infoMenu li').eq(e+1).css({'top':'0'}).animate({'top':'-25%'},2000)
-        $('.infoMenu li').eq(e+1).css({'top':'-25%'}).animate({'top':'100%'},0.01)
-        $('.infoMenu li').eq(e+1).css({'top':'100%'}).animate({'top':'80%'},0.01)
-        $('.infoMenu li').eq(e+1).css({'top':'75%'}).animate({'top':'50%'},2000)
-        $('.infoMenu li').eq(e+1).css({'top':'50%'}).animate({'top':'25%'},2000)
-        
-    },2000,'linear')
-    setInterval(function(){
-        $('.infoMenu li').eq(e+2).css({'top':'50%'}).animate({'top':'25%'},2000)
-        $('.infoMenu li').eq(e+2).css({'top':'25%'}).animate({'top':'0%'},2150)
-        $('.infoMenu li').eq(e+2).css({'top':'0%'}).animate({'top':'-25%'},2000)
-        $('.infoMenu li').eq(e+2).css({'top':'-25%'}).animate({'top':'100%'},0.01)
-        $('.infoMenu li').eq(e+2).css({'top':'100%'}).animate({'top':'80%'},0.01)
-        $('.infoMenu li').eq(e+2).css({'top':'75%'}).animate({'top':'50%'},2000)
-        
-    },2000,'linear')
-    setInterval(function(){
-        $('.infoMenu li').eq(e+3).css({'top':'75%'}).animate({'top':'50%'},2000)
-        $('.infoMenu li').eq(e+3).css({'top':'50%'}).animate({'top':'25%'},2000)
-        $('.infoMenu li').eq(e+3).css({'top':'25%'}).animate({'top':'0%'},2150)
-        $('.infoMenu li').eq(e+3).css({'top':'0%'}).animate({'top':'-25%'},2000)
-        $('.infoMenu li').eq(e+3).css({'top':'-25%'}).animate({'top':'100%'},0.01)
-        $('.infoMenu li').eq(e+3).css({'top':'100%'}).animate({'top':'80%'},0.01)
-        
-    },2000,'linear')
-    
+        $('.info .imgslid li').eq(e-1).css({'top':'0','left':'0'}).animate({'top':'-100%','left':'0'})
+        $('.info .imgslid li').eq(e).css({'top':'-100%','left':'100%'}).animate({'top':'-100%','left':'100%'})
+        $('.info .imgslid li').eq(e+1).css({'top':'-100%','left':'100%'}).animate({'top':'0','left':'100%'})
+        $('.info .imgslid li').eq(e+2).css({'top':'0%','left':'100%'}).animate({'top':'0','left':'0'})
+    },2000)
+    // setInterval(function(){
+    //     $('.info .imgslid li').eq(1).css({'top':'0','left':'0'}).animate({'top':'0','left':'0'},2000)
+    //     $('.info .imgslid li').eq(1).css({'top':'-100%','left':'-100%'}).animate({'top':'0','left':'-100%'},2000)
+    //     $('.info .imgslid li').eq(1).css({'top':'0','left':'-100%'}).animate({'top':'-100%','left':'0'},2000)
+    //     $('.info .imgslid li').eq(1).css({'top':'-100%','left':'0'}).animate({'top':'0','left':'0'},2000)
+    // },2000, 'linear')
     // 스킨 타입 슬라이더 트레일러
     let c = 0;
     $('.type_left').click(function(){

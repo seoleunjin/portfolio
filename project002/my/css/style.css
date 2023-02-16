@@ -688,42 +688,15 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         }
         .cir02 {
             z-index: -99;
-            width: 20px;
-            height: 20px;
+            width: 200px;
+            height: 100px;
             position: absolute;
-            top: 50%;
+            top: 51.8%;
             border-radius: 100px;
             opacity: 0.8;
             left: 2.8%;
             opacity: 1;
-            animation: cirMo 2s infinite linear;
             background-color: #FDA085;
-        }
-        @keyframes cirMo {
-            0% {
-                top: 65%;
-                width: 20px;
-                height: 20px;
-                opacity: 0;
-            }
-            40% {
-                top: 51.5%;
-                width: 200px;
-                height: 100px;
-                opacity: 1;
-            }
-            65.5% {
-                top: 51.5%;
-                width: 200px;
-                height: 100px;
-                opacity: 1;
-            }
-            100% {
-                top: 45%;
-                width: 20px;
-                height: 20px;
-                opacity: 0;
-            }
         }
         /* 소개 텍스트설정*/
         .info .txt {
@@ -795,31 +768,33 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url(../img/info_img_bg.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center left;
-            opacity: 0;
-        }
-        .info .imgslid li img {
-            width: 70%;
-            border-radius: 20px;
-            margin-top: 125px;
-            margin-left: 100px;
-        }
-        .info .imgslid li.on {
-            top: 0;
-            opacity: 1;
         }
 
-        /* .info .imgslid li:nth-child(1) img {
+        .info .imgslid li:nth-child(1)  {
+            background-image: url(../img/info_img01.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
         }
-        .info .imgslid li:nth-child(2) img {
+        .info .imgslid li:nth-child(2)  {
+            background-image: url(../img/info_img02.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
         }
-        .info .imgslid li:nth-child(3) img {
+        .info .imgslid li:nth-child(3)  {
+            background-image: url(../img/info_img03.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            
         }
-        .info .imgslid li:nth-child(4) img {
-        } */
+        .info .imgslid li:nth-child(4)  {
+            background-image: url(../img/info_img04.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
 
 
 
