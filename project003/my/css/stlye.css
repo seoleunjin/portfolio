@@ -1,0 +1,79 @@
+@charset "UTF-8";
+* {padding: 0; margin: 0;}
+img {border: 0; vertical-align: bottom;}
+ul, ol {list-style: none;}
+a {text-decoration: none; color: #000;}
+body {width: 100%; font-family: 'DM Serif Display', serif; }
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Libre+Barcode+128+Text&display=swap');
+
+
+section {
+    background-color: aliceblue;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(../img/main_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    
+}
+.wrap {
+    width: 70.5%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.seed {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -100px;
+    margin-top: -85px;
+}
+
+.logo {
+    position: absolute;
+    bottom: 5%;
+    right: 2%;
+}
+
+
+.menu {
+    width: 200px;
+    height: 150px;
+    position: absolute;
+    left: 10%;
+    bottom: 20%;
+}
+.menu li {
+    height: 33%;
+}
+.menu a {
+    font-size: 30px;
+    font-weight: bold;
+    transition: all 0.8s;
+    padding-bottom: 10px;
+}
+.menu a:hover {
+    border-bottom: 2px solid #FF6D28;
+    color: #FF6D28;
+}
+p {
+    position: absolute;
+    font-family: 'Libre Barcode 128 Text', cursive;
+    left: 10%;
+    bottom: 10%;
+    font-size: 50px;
+}
+span {
+    opacity: 0.7;
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 300px;
+    height: 300px;
+    border-radius: 100px 150px 130px 170px;
+    background-color: #FF6D28;
+}
