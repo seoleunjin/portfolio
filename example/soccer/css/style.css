@@ -178,7 +178,6 @@ article img {
     margin-left: -10px;
     animation:  ani 3s linear  /*가속이 늘어나지 않게*/
     infinite;
-
     pointer-events: none;/* 관통해라 */
 }
 

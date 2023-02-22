@@ -1,0 +1,106 @@
+@charset "UTF-8";
+* {padding: 0; margin: 0;}
+img {border: 0; vertical-align: bottom;}
+ul, ol {list-style: none;}
+a {text-decoration: none; color: #000;}
+body {width: 100%; font-family: 'DM Serif Display', serif; }
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap');
+
+/* root 방식 - 전처리기법  */
+:root {
+    --main-color01: #FF6D28;
+    --main-color02: #00F5FF;
+    --main-font: 'DM Serif Display';
+}
+
+
+body {
+    width: 100%;
+    height: 2800px;
+}
+section {
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+}
+div {
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+div h2 {
+    font-size: 200px;
+    color: #999;
+    font-weight: bold;
+    position: absolute;
+    left: 7%;
+    top: -25%;
+}
+.bg01 {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    top: 0;
+}
+.bg02 {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    left: 0;
+    top: 0;
+}
+article {
+    width: 100%;
+    position: relative;
+}
+article img {
+    position: absolute;
+}
+.ImgBox01 {
+    height: 700px;
+}
+.ImgBox01 img:nth-child(1) {
+    width: 32%;
+    top: 0;
+    left: 7%;
+    z-index: 1;
+}
+.ImgBox01 img:nth-child(2) {
+    width: 50%;
+    bottom: 0;
+    right: 15%;
+}
+.ImgBox02 {
+    height: 1050px;
+}
+.ImgBox02 img:nth-child(1) {
+    width: 25%;
+    top: 20%;
+    left: 20%;
+}
+.ImgBox02 img:nth-child(2) {
+    width: 35%;
+    top: -8%;
+    right: 3%;
+}
+.ImgBox02 img:nth-child(3) {
+    width: 35%;
+    bottom: -10%;
+    left: 33%;
+}
+.ImgBox03 {
+    height: 700px;
+}
+.ImgBox03 img:nth-child(1) {
+    width: 32%;
+    bottom: -10%;
+    left: 5%;
+}
+.ImgBox03 img:nth-child(2) {
+    width: 55%;
+    right: 0;
+    top: 18%;
+}
