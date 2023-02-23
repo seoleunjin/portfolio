@@ -24,7 +24,7 @@ section .h1 {
 
 body {
     width: 100%;
-    height: 22000px;
+    height: 18000px;
     background-color: #000;
     overflow-x: hidden;
 }
@@ -35,7 +35,7 @@ section {
     height: 70%;
     left: 10%;
     top: 15%;
-    perspective: 2300px;
+    perspective: 2000px;
 }
 
 section article {
@@ -45,7 +45,7 @@ section article {
     top: 50%;
     margin-top: -350px;
     width: 100%;
-    opacity: 1;
+    opacity: 0;
     z-index: 8;
     transition: all 0.5s;
 }
@@ -54,54 +54,291 @@ section article.on {
     z-index: 9;
 }
 
+
 section article:nth-child(1) {
     transform: translateZ(0);
     background-color: #000;
 }
 
 section article:nth-child(2) {
-    transform: translateZ(-2500px);
-    background-color: lightblue;
+    transform: translateZ(-2000px);
 }
 
 section article:nth-child(3) {
-    transform: translateZ(-5000px);
-    background-color: lightcoral;
+    transform: translateZ(-4000px);
 }
 
 section article:nth-child(4) {
-    transform: translateZ(-7500px);
-    background-color: aquamarine;
+    transform: translateZ(-6000px);
 }
-
 section article:nth-child(5) {
-    transform: translateZ(-10000px);
-    background-color: sandybrown;
-}
-section article:nth-child(6) {
-    transform: translateZ(-12500);
-    background-color: powderblue;
+    transform: translateZ(-8000px);
 }
 
-section article:nth-child(7) {
-    transform: translateZ(-15000px);
+section article:nth-child(6) {
+    transform: translateZ(-10000px);
     background-color: mistyrose;
 }
 
-section article:nth-child(8) {
-    transform: translateZ(-17500px);
+section article:nth-child(7) {
+    transform: translateZ(-12000px);
     background-color: lightyellow;
 }
 
+section article:nth-child(8) {
+    transform: translateZ(-14000px);
+    background-color: lightgreen;
+}
 section article:nth-child(9) {
-    transform: translateZ(-20000px);
+    transform: translateZ(-16000px);
     background-color: lightgreen;
 }
 
-.epi01 {}
-.epi01 video {
-    width: 800px;
+/* 이미지 기본설정 */
+article div {
+    position: relative;
+}
+article div img {
     position: absolute;
-    left: 500px;
+}
+/* epi01 설정  */
+.epi01 {
+    text-align: center;
+    position: relative;
+}
+.epi01 video {
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    width: 50%;
+    left: 50%;
+    top: 50%;
+
+}
+/* epi02 설정  */
+.epi02 {
+    display: flex;
+}
+.epi02Box01 {
+    width: 40%;
+    margin-left: 7%;
+}
+.epi02Box02 {
+    width: 40%;
+    margin-right: 10%;
+}
+.epi02Ing01 {
+    width: 680px;
     top: 0;
 }
+.epi02Ing02 {
+    width: 500px;
+    bottom: 15.3%;
+    left: -7.2%;
+}
+.epi02Ing03 {
+    width: 450px;
+    right: -30%;
+    top: 3%;
+    z-index: 1;
+}
+.epi02Ing04 {
+    width: 280px;
+    right: -20%;
+    top: 7%;
+    z-index: 1;
+}
+.epi02Ing05 {
+    width: 300px;
+    bottom: -5%;
+    left: -7%;
+}
+.epi02Ing06 {
+    width: 680px;
+    bottom: 0;
+}
+.epi02Ing07 {
+    width: 700px;
+    right: -18.2%;
+    top: -22.5%;
+}
+.epi02Ing08 {
+    width: 400px;
+    right: 45%;
+    bottom: 7%;
+}
+.epi02Ing09 {
+    width: 300px;
+    right: 53%;
+    bottom: 15%;
+}
+
+/* epi03 설정  */
+.epi03 {
+    display: flex;
+}
+
+.epi03Box01 {
+    width: 23%;
+    margin-left: 7%;
+
+}
+.epi03Box02 {
+    width: 60%;
+    margin-right: 10%;
+}
+.epi03Ing01 {
+    width: 350px;
+    bottom: -5%;
+    left: 0;
+}
+.epi03Ing02 {
+    width: 700px;
+    right: 0;
+}
+.epi03Ing03 {
+    width: 600px;
+    right: -3.1%;
+    top: -3.2%;
+}
+.epi03Ing04 {
+    width: 600px;
+    right: -5%;
+    bottom: -10%;
+}
+.epi03Ing05 {
+    width: 350px;
+    right: -15%;
+    top: -10%;
+}
+.epi03Ing06 {
+    width: 150px;
+    right: -3.5%;
+    top: 1%;
+}
+
+/* epi04 설정  */
+.epi04 {
+    display: flex;
+}
+.epi04Box01 {
+    width: 40%;
+    margin-left: 7%;
+
+}
+.epi04Box02 {
+    width: 40%;
+    margin-right: 10%;
+}
+.epi04Ing01 {
+    width: 650px;
+    left: 0;
+    bottom: -5%;
+    z-index: 1;
+}
+.epi04Ing02 {
+    width: 700px;
+    z-index: 2;
+    bottom: -10%;
+    left: 15%;
+}
+.epi04Ing03 {
+    width: 400px;
+    right: -45%;
+    top: -10%;
+    z-index: 2;
+}
+.epi04Ing04 {
+    width: 300px;
+    right: -35%;
+    top: -2%;
+    z-index: 2;
+}
+.epi04Ing05 {
+    width: 500px;
+    left: 0;
+    top: 0;
+}
+.epi04Ing06 {
+    width: 480px;
+    bottom: 20%;
+    right: 18%;
+}
+.epi04Ing07 {
+    width: 400px;
+    bottom: -2%;
+    left: -10%;
+    z-index: 2;
+}
+.epi04Ing08 {
+    width: 230px;
+    bottom: 3%;
+    left: 12%;
+    z-index: 2;
+}
+
+/* epi05 설정  */
+.epi05 {
+}
+.epi05Box01 {
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+}
+.epi05Ing01 {
+    width: 350px;
+    right: 0;
+    bottom: 0;
+}
+.epi05Ing02 {
+    right: 33%;
+    width: 350px;
+    bottom: 0;
+}
+.epi05Ing03 {
+    width: 400px;
+    bottom: 0;
+    left: 0;
+}
+.epi05Ing04 {
+    width: 1220px;
+    bottom: 0;
+    z-index: -1;
+}
+
+/* epi06 설정  */
+.epi06 {
+    display: flex;
+}
+.epi06Box01 {
+    width: 53%;
+    margin-left: 7%;
+}
+.epi06Box02 {
+    width: 40%;
+    margin-right: 10%;
+}
+.epi06Ing01 {
+    width: 400px;
+    left: 20%;
+}
+.epi06Ing02 {
+    width: 780px;
+    bottom: 0;
+}
+.epi06Ing03 {
+    width: 660px;
+    bottom: -3%;
+}
+.epi06Ing04 {}
+.epi06Ing05 {}
+.epi06Ing06 {
+    width: 500px;
+    left: -7%;
+}
+.epi06Ing07 {
+    width: 460px;
+    top: 6.8%;
+}
+.epi06Ing08 {}
+.epi06Ing09 {}

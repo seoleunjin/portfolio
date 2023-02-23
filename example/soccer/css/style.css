@@ -116,6 +116,7 @@ section article {
 
 section article:nth-child(1) {
     transform: translateZ(0);
+    background-color: #3dbdfa;
 }
 
 section article:nth-child(2) {
