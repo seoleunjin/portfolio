@@ -36,6 +36,34 @@ body {width: 100%; font-family: 'DM Serif Display', serif; overflow: hidden }
             background-color: red;
             color: #fff;
         }
+        .book {
+            top: -5%;
+            left: 40%;
+            z-index: 9999;
+            position: fixed;
+            width: 170px;
+            height: 250px;
+            background-image: url(../img/gallery_bookM.png);
+            background-repeat: no-repeat;
+            background-size: 200px;
+        }
+        .book li {
+            width: 50%;
+            height: 9%;
+            margin: 0 auto;
+        }
+        .book li:nth-child(1) {
+            margin-top: 41px;
+        }
+        .book a {
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .book li:hover a {
+            color: #DBE20A;
+        }
 
         #wrap {
             margin-top: 2.5%;
@@ -97,7 +125,6 @@ body {width: 100%; font-family: 'DM Serif Display', serif; overflow: hidden }
             transform-origin: right top;
         }
         #wrap > article:nth-child(5) {
-            background-color: #ccc;
             z-index: 3;
         }
         #wrap > article:nth-child(6) {
@@ -113,15 +140,14 @@ body {width: 100%; font-family: 'DM Serif Display', serif; overflow: hidden }
         .box6 h1 {
             box-sizing: border-box;
             width: 100%;
-            height: 30%;
-            padding-top: 50px;
-            padding-left: 50px;
+            height: 20%;
             font-size: var(--main-font);
-            font-weight: bold;
+            padding-left: 50px;
+            padding-top: 25px;
         }
         .box6 h2 {
             box-sizing: border-box;
-            padding-top: 150px;
+            padding-top: 130px;
             width: 100%;
             height: 60%;
             text-align: center;
@@ -344,9 +370,14 @@ body {width: 100%; font-family: 'DM Serif Display', serif; overflow: hidden }
         .img31-01 p {
             text-align: right;
             position: absolute;
-            bottom: 30%;
+            bottom: 20%;
             left: 9%;
-            font: 50px;
+            50: 
+            height: 8%;50px
+            right;
+            position: :nth-child(1) {
+                margin-top: 50px;
+            };
             font-size: 23px;
         }
         .img31-02 {
@@ -388,6 +419,7 @@ body {width: 100%; font-family: 'DM Serif Display', serif; overflow: hidden }
         .box4 {
             flex-wrap: wrap;
             position: relative;
+            overflow: hidden;
         }
         .box4 h1 {
             font-weight: bold;
@@ -403,7 +435,7 @@ body {width: 100%; font-family: 'DM Serif Display', serif; overflow: hidden }
             flex-wrap: wrap;
             width: 90%;
             margin: 0 auto;
-            height: 80%;
+            height: 75%;
         }
         .img32-01 li {
             position: absolute;
@@ -442,7 +474,7 @@ body {width: 100%; font-family: 'DM Serif Display', serif; overflow: hidden }
             height: 265px;
         }
         .img32-01 li:nth-child(6) {
-            bottom: 0;
+            bottom: -0.5%;
             left: 24.2%;
             width: 250px;
             height: 311px;
@@ -465,45 +497,101 @@ body {width: 100%; font-family: 'DM Serif Display', serif; overflow: hidden }
             width: 363px;
             height: 232px;
         }
+        .img32-01 li:nth-child(10) {
+            position: absolute;
+            z-index: -1;
+            right: -20%;
+            top: -20%;
+            width: 200px;
+            height: 200px;
+            background-color: #F03402;
+            border-radius: 100%;
+        }
+        .img32-01 li:nth-child(11) {
+            position: absolute;
+            z-index: -1;
+            left: -10%;
+            bottom: -20%;
+            width: 300px;
+            height: 300px;
+            background-color: #F03402;
+            border-radius: 100%;
+        }
+        .img32-01 li:nth-child(12) {
+            position: absolute;
+            z-index: -1;
+            left: 25%;
+            top: -22%;
+            width: 80px;
+            height: 80px;
+            background-color: #F03402;
+            border-radius: 100%;
+        }
+        .img32-01 li:nth-child(13) {
+            position: absolute;
+            left: 55%;
+            top: 48%;
+            width: 100px;
+            height: 100px;
+            background-color: #F03402;
+            border-radius: 100%;
+        }
         /* box5 설정 */
         .box5 {
             display: flex;
             flex-wrap: wrap;
         }
         .box5 h1 {
-            text-align: center;
+            text-align: right;
+            padding: 30px;
+            margin-left: 230px;
+            background-color: #A34F4F;
+            color: #fff;
             font-size: 60px;
-            width: 100%;
-            padding-top: 200px;
         }
-        .box5 .img4 {
+        .box5 .img5 {
             position: relative;
             width: 50%;
             height: 70%;
         }
-        .box5 .img4 img {
-            margin: 80px;
-            width: 300px;
-            height: 500px;
+        .box5 .img5 img {
+            margin: 70px;
+            width: 279px;
+            height: 397px;
             background-color: #fff;
         }
-        .box5 .img4 p {
+        .box5 .img5 p {
+            width: 320px;
+            text-align: center;
+            padding: 20px;
             position: absolute;
-            left: 18%;
-            top: 5%;
+            left: 0%;
+            bottom: 0;
             font-size: 30px;
+            background-color: #A34F4F;
+            color: #fff;
+            font-weight: bold;
         }
-        .box5 .txt4 {
+        .box5 .txt5 {
             width: 50%;
             height: 70%;
+            position: relative;
         }
-        .box5 .txt4 p {
+        .box5 .txt5 p {
             width: 100%;
-            font-size: 25px;
-            padding-top: 200px;
+            font-size: 18px;
+            padding-top: 220px;
+            color: #2D7592;
+            font-weight: bold;
         }
-        .box5 .txt4 h2 {
+        .box5 .txt5 h2 {
             width: 100%;
-            font-size: 40px;
-            padding-top: 50px;
+            font-size: 26px;
+            padding-top: 60px;
+            color: #2D7592;
+        }
+        .box5 .txt5 img {
+            position: absolute;
+            top: -20%;
+            left: -50%;
         }
