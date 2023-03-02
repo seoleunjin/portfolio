@@ -120,7 +120,7 @@ if(wd>=1500){
             $('.intro .txtBox').stop().animate({'left':'-1400px'},1000)
             $('.intro .conBox').stop().animate({'right':'-1800px'},1200)
         };
-        // 1920 공지사항구간
+        // 1920 캠페인구간
         if(sc>=3700 && sc<3900){
             $('.img02').stop().css({'opacity':'1'})
         }
