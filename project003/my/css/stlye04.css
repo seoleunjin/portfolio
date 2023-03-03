@@ -98,7 +98,6 @@ body {width: 100%; font-family: 'DM Serif Display', serif; overflow: hidden }
             backface-visibility: hidden;
             border: 3px solid #DBE20A;
             box-sizing: border-box;
-
         }
         #wrap > article:nth-child(2) {
             background-color: #F29F8D;
