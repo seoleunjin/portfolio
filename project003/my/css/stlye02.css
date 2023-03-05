@@ -16,12 +16,18 @@ body {width: 100%; font-family: 'DM Serif Display', serif; }
 
 body {
     width: 100%;
-    height: 2800px;
+    height: 2839px;
+    background-image: linear-gradient(120deg, #fccb90 50%, #d57eeb 100%);
 }
 section {
     width: 70%;
+    height: 2839px;
     margin: 0 auto;
     position: relative;
+    background-color: #fff;
+    border: 1px solid #FF6D28;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 div {
     width: 100%;
@@ -42,6 +48,7 @@ div h2 {
     z-index: 999;
     left: 0;
     top: 0;
+    width: 1200px;
 }
 .bg02 {
     width: 100%;
@@ -49,8 +56,23 @@ div h2 {
     z-index: 999;
     left: 0;
     top: 0;
+    width: 1200px;
+}
+.bg03 {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    right: 0;
+    bottom: 0;
+    width: 1200px;
+}
+.bg04 {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
     left: 0;
-    top: 0;
+    bottom: 0;
+    width: 1200px;
 }
 article {
     width: 100%;
