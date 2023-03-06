@@ -756,6 +756,7 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
         .info .img {
         }
         .info .imgslid {
+            overflow: hidden;
             position: relative;
             margin-left: 5%;
             margin-top: 30%;

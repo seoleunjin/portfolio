@@ -18,7 +18,7 @@ body {width: 100%; color: #fff; font-family: 'LeferiPoint-WhiteObliqueA'; cursor
 }
 
 .back {
-    z-index: 99;
+    z-index: 9;
     cursor: pointer;
     position: fixed;
     top: 5%;
@@ -100,24 +100,32 @@ article:hover h2 {
     left: 10%;
 }
 div {
-    z-index: 15;
+    z-index: 99;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+    height: 3750px;
     background-color: var(--main-color);
     display: none;
 }
 div p {
-    position: absolute;
-    top: 5%;
-    right: 5%;
+    position: fixed;
+    top: 3%;
+    right: 3%;
     font-size: 50px;
+    transition: all 0.5s;
+}
+div p:hover {
+    color: var(--sub02-font);
 }
 div img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -500px;
     background-color: #fff;
     width: 1000px;
-    height: 800px;
 }
 div.on {
     display: block;

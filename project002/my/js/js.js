@@ -108,11 +108,8 @@ $(document).ready(function(){
     setInterval(function(){
         if(e==4) e=0;
         e++;
-        
-        $('.info .imgslid li').eq(e-1).css({'top':'0','left':'0'}).animate({'top':'-100%','left':'0'})
-        $('.info .imgslid li').eq(e).css({'top':'-100%','left':'100%'}).animate({'top':'-100%','left':'100%'})
-        $('.info .imgslid li').eq(e+1).css({'top':'-100%','left':'100%'}).animate({'top':'0','left':'100%'})
-        $('.info .imgslid li').eq(e+2).css({'top':'0%','left':'100%'}).animate({'top':'0','left':'0'})
+        $('.info .imgslid li').eq(e-1).css({'top':'0'}).animate({'top':'-100%'})
+        $('.info .imgslid li').eq(e).css({'top':'100%'}).animate({'top':'0'})
     },2000)
     // setInterval(function(){
     //     $('.info .imgslid li').eq(1).css({'top':'0','left':'0'}).animate({'top':'0','left':'0'},2000)

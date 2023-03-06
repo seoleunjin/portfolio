@@ -1,11 +1,9 @@
 $(document).ready(function () {
     let wh = $(window).height()
     $('section').height(wh)
-    $('div').height(wh)
     $(window).resize(function () {
         let wh = $(window).height()
         $('section').height(wh)
-        $('div').height(wh)
     });
     $(window).mousemove(function (e) {
         let x = e.pageX;

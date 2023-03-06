@@ -557,6 +557,7 @@ body {width: 100%; font-family: 'DM Serif Display', serif; overflow: hidden }
             box-sizing: border-box;
         }
         .box5 h3 {
+            z-index: 9;
             position: absolute;
             right: 5%;
             color: #A34F4F;
@@ -564,6 +565,7 @@ body {width: 100%; font-family: 'DM Serif Display', serif; overflow: hidden }
             font-size: var(--Num-font);
         }
         .box5 h1 {
+            z-index: 9;
             padding: 32px;
             margin-left: 235px;
             background-color: #A34F4F;
@@ -612,7 +614,9 @@ body {width: 100%; font-family: 'DM Serif Display', serif; overflow: hidden }
             color: #2D7592;
         }
         .box5 .txt5 img {
+            width: 600px;
+            z-index: -9;
             position: absolute;
             top: -20%;
-            left: -50%;
+            left: -45%;
         }

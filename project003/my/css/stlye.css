@@ -18,7 +18,8 @@ section {
     background-size: contain;
 }
 .wrap {
-    width: 70.5%;
+    overflow: hidden;
+    width: 68%;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -88,7 +89,7 @@ p {
     z-index: 99;
     position: absolute;
     top: -10%;
-    left: -10%;
+    left: -8%;
     width: 350px;
     height: 350px;
     border-radius: 100% 70% 80% 70%;
