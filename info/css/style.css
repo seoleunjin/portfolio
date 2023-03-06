@@ -243,15 +243,16 @@ article {
 .desing:hover {
     border: 5px solid var(--sub02-font);
 }
-.desing:hover p {
+.desing:hover a {
     cursor: pointer;
     color: var(--sub02-font);
     text-shadow: -4px 4px 5px #fff;
 }
-.desing p {
+.desing a {
+    margin-left: 35%;
     text-align: center;
     font-size: 60px;
-    line-height: 7.5;
+    line-height: 8;
     text-shadow: -4px 4px 5px var(--sub02-font);
     transition: all 0.8s;
 }
@@ -270,15 +271,16 @@ article {
 .pub:hover {
     border: 5px solid var(--sub02-font);
 }
-.pub p {
+.pub a {
+    margin-left: 11%;
     cursor: pointer;
     text-align: center;
     font-size: 60px;
-    line-height: 7;
+    line-height: 8;
     text-shadow: 4px -4px 5px var(--sub02-font);
     transition: all 0.8s;
 }
-.pub:hover p {
+.pub:hover a {
     color: var(--sub02-font);
     text-shadow: -4px 4px 5px #fff;
 }
