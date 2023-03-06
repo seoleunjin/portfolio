@@ -1,0 +1,132 @@
+@charset "UTF-8";
+* {padding: 0; margin: 0;}
+img {border: 0; vertical-align: bottom;}
+ul, ol {list-style: none;}
+a {text-decoration: none; color: #fff;}
+body {width: 100%; color: #fff; font-family: 'LeferiPoint-WhiteObliqueA'; cursor: none;}
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+@font-face {
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+:root {
+    --main-color:#FDCBC0;
+    --sub01-font : #8857F2;
+    --sub02-font : #F20FE3;
+}
+
+
+#wrap {
+    position: relative;
+    background-image: url(../img/web_bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+article {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+article h1 {
+    font-size: 50px;
+    text-align: center;
+    line-height: 6;
+    color: var(--sub02-font);
+    z-index: 9;
+    transition: all 0.01s;
+}
+article h2 {
+    text-align: center;
+    line-height: 5;
+    width: 300px;
+    position: absolute;
+    font-size: 50px;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: 9;
+}
+article:hover h1 {
+    opacity: 0;
+}
+article:hover h2 {
+    opacity: 1;
+}
+.pro01 {
+    margin-left: 10%;
+}
+.pro01 h2 {
+    top: 35%;
+    left: 30%;
+}
+
+.pro02 {
+}
+.pro02 h1 {
+    line-height: normal;
+    padding-top: 90px;
+    padding-bottom: 100px;
+}
+.pro02 h2 {
+    line-height: normal;
+    padding-top: 60px;
+    top: 25%;
+    left: 0%;
+}
+
+.pro03 {
+    margin-right: 10%;
+}
+.pro03 h2 {
+    top: 35%;
+    left: 10%;
+}
+div {
+    z-index: 15;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-color);
+    display: none;
+}
+div p {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 50px;
+}
+div img {
+    background-color: #fff;
+    width: 1000px;
+    height: 800px;
+}
+div.on {
+    display: block;
+}
+
+.point {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: -15px;
+    margin-left: -15px;
+    background-color: var(--sub02-font);
+    border-radius: 100%;
+    transition: all 0.3s;
+}
+.point.on {
+    width: 300px;
+    height: 300px;
+    margin-top: -150px;
+    margin-left: -150px;
+}

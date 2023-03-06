@@ -1,0 +1,112 @@
+@charset "UTF-8";
+* {padding: 0; margin: 0;}
+img {border: 0; vertical-align: bottom;}
+ul, ol {list-style: none;}
+a {text-decoration: none; color: #fff;}
+body {width: 100%; color: #fff; font-family: 'LeferiPoint-WhiteObliqueA';}
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+@font-face {
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+:root {
+    --main-color:#FDCBC0;
+    --sub01-font : #8857F2;
+    --sub02-font : #F20FE3;
+}
+
+
+#wrap {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    perspective: 4800px;
+    background-image: url(../img/web_bg.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+article {
+    width: 550px;
+    height: 800px;
+    top: 50%;
+    margin-top: -400px;
+    position: absolute;
+    transition: all 1s;
+    left: 1300px;
+}
+#wrap > article:nth-child(1) {
+    background-color: var(--main-color);
+    transform: rotateY(0deg);
+    transform-origin: left top;
+    z-index: 10;
+}
+#wrap > article:nth-child(2) {
+    transform-origin: right top;
+    background-color: var(--main-color);
+    z-index: 5;
+    transform: rotateY(0deg);
+}
+#wrap > article:nth-child(3) {
+    background-color: red;
+    transform: rotateY(0deg);
+    transform-origin: left top;
+    background-color: var(--main-color);
+}
+article {
+    text-align: center;
+    border: 3px solid #fff;
+}
+article h5 {
+    font-size: 50px;
+    line-height: 2;
+    margin-top: 60px;
+} 
+article h1 {
+    font-size: 40px;
+    line-height: 3;
+    border-bottom: 2px solid #fff;
+}
+article ul:hover a {
+    color: var(--sub02-font);
+}
+article img {
+    margin-top: 50px;
+    display: block;
+    margin-left: 22%;
+    width: 300px;
+    height: 250px;
+    border-radius: 100%;
+    background-color: #fff;
+}
+article a {
+    display: block;
+    line-height: 5;
+    font-size: 20px;
+    transition: all 0.8s;
+    font-weight: bold;
+}
+article p {
+    line-height: 3;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.open {
+    font-size: 150px;
+    transform: rotate(-90deg);
+    font-weight: normal;
+    position: fixed;
+    left: -2%;
+    top: 50%;
+    margin-top: -75px;
+    z-index: -9;
+    transition: all 0.8s;
+}
+.open:hover {
+    color: var(--sub02-font);
+}
