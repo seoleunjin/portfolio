@@ -107,6 +107,6 @@ $(document).ready(function(){
     })
 
     $('#wrap3 .close').click(function(){
-        $('div').css({'display':'none'})
+        $('#wrap3 div').css({'display':'none'})
     });
 })
