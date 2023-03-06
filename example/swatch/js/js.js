@@ -103,13 +103,13 @@ $(document).ready(function(){
         // 클릭 했을떄 나의 순번 찾기
         let i = $(this).index();
         // 순번
-        let ht = $(window).height();
+        let ht = $(window).width();
         // 클릭했을때 나에게 클래스 on값을 붙여라.
         $('#gnb li').removeClass('on')
         $(this).addClass('on')
 
 
-        $('html, body').animate({'scrollTop':ht*i},1400,'easeOutBounce');
+        $('html, body').animate({'scrollTop':ht*i+1},1400,'easeOutBounce');
         // 와부스크립트언어는 ''를 쓴다.
         // 윈도우를 사용하면 안된다 (한정적공간이기때문) scrollTop은 css로 못함
     });

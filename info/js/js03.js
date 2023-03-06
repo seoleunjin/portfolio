@@ -1,15 +1,17 @@
 $(document).ready(function () {
     let wh = $(window).height()
     $('section').height(wh)
+    $('div').height(wh)
     $(window).resize(function () {
         let wh = $(window).height()
         $('section').height(wh)
+        $('div').height(wh)
     });
     $(window).mousemove(function (e) {
-        // 숫자를 찾아내라. 좌표값 X의 좌표와 Y의 좌표를 찾아라.
         let x = e.pageX;
         let y = e.pageY;
-        $('.point').css({'left': x-150, 'top': y-150})
+        $('.point').css({'left': x, 'top': y})
+        $('article h2').css({'top':15+y/30,'left':15+x/30})
     });
 
 
@@ -20,6 +22,20 @@ $(document).ready(function () {
 
     $('article').mouseleave(function () {
         $('.point').removeClass('on')
+    })
+
+    $('.pro01').click(function(){
+        $('.img01').css({'display':'block','cursor':'pointer'})
+    })
+    $('.pro02').click(function(){
+        $('.img02').css({'display':'block','cursor':'pointer'})
+    })
+    $('.pro03').click(function(){
+        $('.img03').css({'display':'block','cursor':'pointer'})
+    })
+
+    $('.close').click(function(){
+        $('div').css({'display':'none'})
     })
 
 })

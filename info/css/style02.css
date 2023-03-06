@@ -3,8 +3,14 @@
 img {border: 0; vertical-align: bottom;}
 ul, ol {list-style: none;}
 a {text-decoration: none; color: #fff;}
-body {width: 100%; color: #fff;}
+body {width: 100%; color: #fff; font-family: 'LeferiPoint-WhiteObliqueA';}
 @import url(https://fonts.googleapis.com/css?family=Varela+Round);
+@font-face {
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 :root {
     --main-color:#FDCBC0;
     --sub01-font : #8857F2;
