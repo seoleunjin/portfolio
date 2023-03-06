@@ -17,7 +17,18 @@ body {width: 100%; color: #fff; font-family: 'LeferiPoint-WhiteObliqueA'; cursor
     --sub02-font : #F20FE3;
 }
 
-
+.back {
+    z-index: 99;
+    cursor: pointer;
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    font-size: 50px;
+    transition: all 0.8s;
+}
+.back:hover {
+    color: var(--sub02-font);
+}
 #wrap {
     position: relative;
     background-image: url(../img/web_bg.png);

@@ -3,7 +3,7 @@
 img {border: 0; vertical-align: bottom;}
 ul, ol {list-style: none;}
 a {text-decoration: none; color: #000;}
-body {width: 100%; font-family: 'DM Serif Display', serif; }
+body {width: 100%; font-family: 'DM Serif Display', serif; position: relative; }
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap');
 
 /* root 방식 - 전처리기법  */
@@ -13,7 +13,22 @@ body {width: 100%; font-family: 'DM Serif Display', serif; }
     --main-font: 'DM Serif Display';
 }
 
-
+.menu {
+    display: flex;
+    position: absolute;
+    top: 3.5%;
+    left: 58%;
+    font-size: 30px;
+    z-index: 9999;
+}
+.menu a {
+    margin-left: 10px;
+    color: #999;
+    transition: all 0.5s;
+}
+.menu a:hover {
+    color: #FF6D28;
+}
 body {
     width: 100%;
     height: 2839px;
@@ -45,7 +60,7 @@ div h2 {
 .bg01 {
     width: 100%;
     position: absolute;
-    z-index: 999;
+    z-index: 2;
     left: 0;
     top: 0;
     width: 1200px;
@@ -53,7 +68,7 @@ div h2 {
 .bg02 {
     width: 100%;
     position: absolute;
-    z-index: 999;
+    z-index: 2;
     left: 0;
     top: 0;
     width: 1200px;
@@ -61,7 +76,7 @@ div h2 {
 .bg03 {
     width: 100%;
     position: absolute;
-    z-index: 999;
+    z-index: 2;
     right: 0;
     bottom: 0;
     width: 1200px;
@@ -69,7 +84,7 @@ div h2 {
 .bg04 {
     width: 100%;
     position: absolute;
-    z-index: 999;
+    z-index: 2;
     left: 0;
     bottom: 0;
     width: 1200px;

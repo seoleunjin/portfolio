@@ -30,4 +30,7 @@ $(document).ready(function(){
                 .css({'transform': 'rotateY(-30deg)'});
         }
     })
+    $('.back').click(function(){
+        window.history.back();
+    })
 })

@@ -2,10 +2,10 @@
 * {padding: 0; margin: 0;}
 img {border: 0; vertical-align: bottom;}
 ul, ol {list-style: none;}
-a {text-decoration: none; color: #000;}
-body {width: 100%; font-family: 'DM Serif Display', serif; }
+a {text-decoration: none; color: #666;}
+body {width: 100%; font-family: 'DM Serif Display', serif; color: #333 }
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Extended+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap');
 
 section {
     background-color: aliceblue;
@@ -16,7 +16,6 @@ section {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
-    
 }
 .wrap {
     width: 70.5%;
@@ -31,6 +30,7 @@ section {
     margin-left: -100px;
     margin-top: -85px;
 }
+.seed:hover {}
 
 .logo {
     position: absolute;
@@ -41,7 +41,7 @@ section {
 
 .menu {
     width: 200px;
-    height: 150px;
+    height: 180px;
     position: absolute;
     left: 10%;
     bottom: 20%;
@@ -50,30 +50,68 @@ section {
     height: 33%;
 }
 .menu a {
+    position: relative;
     font-size: 30px;
     font-weight: bold;
-    transition: all 0.8s;
+    transition: all 0.5s;
     padding-bottom: 10px;
+    z-index: 9999;
+}
+.menu span {
+    opacity: 0.5;
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    left: -20px;
+    top: -6px;
+    z-index: -99;
+    transform: skewX(10deg);
+    background-color: #FF6D28;
+    transition: all 0.5s;
 }
 .menu a:hover {
-    border-bottom: 2px solid #FF6D28;
-    color: #FF6D28;
+    color: #fff;
+}
+.menu a:hover span {
+    width: 125%;
 }
 p {
+    font-family: 'Libre Barcode 128 Text';
     position: absolute;
     left: 10%;
     bottom: 10%;
     font-size: 50px;
-    font-family: 'Libre Barcode 39 Extended Text', cursive;
 
 }
-span {
-    opacity: 0.7;
+.sun01 {
+    opacity: 0.5;
+    z-index: 99;
     position: absolute;
     top: -10%;
     left: -10%;
-    width: 300px;
-    height: 300px;
-    border-radius: 100px 150px 130px 170px;
+    width: 350px;
+    height: 350px;
+    border-radius: 100% 70% 80% 70%;
     background-color: #FF6D28;
+    animation: ani 10s linear infinite;
+}
+.sun02 {
+    opacity: 0.3;
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 450px;
+    height: 450px;
+    border-radius: 70% 100% 80% 70%;
+    background-color: #FF6D28;
+    animation: ani 10s linear infinite;
+}
+
+@keyframes ani {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

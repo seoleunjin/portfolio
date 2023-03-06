@@ -36,6 +36,10 @@ $(document).ready(function () {
 
     $('.close').click(function(){
         $('div').css({'display':'none'})
+    });
+
+    $('.back').click(function(){
+        window.history.back();
     })
 
 })

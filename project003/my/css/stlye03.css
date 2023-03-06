@@ -13,15 +13,6 @@ body {width: 100%; font-family: 'DM Serif Display', serif; }
     --main-font: 'DM Serif Display';
 }
 
-section .h1 {
-    position: fixed;
-    left: 0;
-    top: 0;
-    color: #00F5FF;
-    z-index: 999;
-}
-
-
 body {
     width: 100%;
     height: 22000px;
@@ -53,7 +44,6 @@ section article.on {
     opacity: 1;
     z-index: 9;
 }
-
 
 section article:nth-child(1) {
     transform: translateZ(0);
@@ -90,48 +80,30 @@ section article:nth-child(9) {
     transform: translateZ(-20000px);
 }
 
-/* 홈설정 */
-section h2 {
-    position: fixed;
-    top: 0;
-    right: 0;
-    color: #fff;
-    z-index: 999;
-    font-size: 32px;
-    font-weight: bold;
-    transition: all 0.5s;
-}
-section h2:hover {
-    color: #FF6D28;
-}
+
 /* 메뉴설정 */
 .menu {
     width: 300px;
     height: 150px;
     position: fixed;
-    bottom: 0;
-    left: 0;
+    bottom: -5%;
+    left: -10%;
     color: #fff;
     z-index: 999;
+    font-weight: normal;
 }
 .menu li {
-    height: 40px;
+    height: 80px;
 }
-.menu h3 {
-}
-.menu h3>a {
-    font-size: 32px;
-    padding-bottom: 30px;
-    font-weight: bold;
-}
+
 .menu li:hover a {
-    color: #FF6D28;
+    color: #00F5FF;
 }
 .menu a {
     transition: all 0.5s;
     display: block;
     color: #fff;
-    font-size: 25px;
+    font-size: 50px;
     font-weight: bold;
 }
 

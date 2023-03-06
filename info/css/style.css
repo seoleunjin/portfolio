@@ -116,12 +116,15 @@ article {
     animation: move linear 2000ms infinite;  
 }
 .menu li.on p {
+    animation: move linear 2000ms infinite;  
     color: #fff;
 }
 .menu li.on h1 {
+    animation: move linear 2000ms infinite;  
     color: #fff;
 }
 .menu li.on i {
+    animation: move linear 2000ms infinite;  
     color: #fff;
 }
 .menu li.on2 {

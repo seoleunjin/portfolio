@@ -17,7 +17,17 @@ body {width: 100%; color: #fff; font-family: 'LeferiPoint-WhiteObliqueA';}
     --sub02-font : #F20FE3;
 }
 
-
+.back {
+    cursor: pointer;
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    font-size: 50px;
+    transition: all 0.8s;
+}
+.back:hover {
+    color: var(--sub02-font);
+}
 #wrap {
     width: 100%;
     position: fixed;
@@ -97,6 +107,7 @@ article p {
 }
 
 .open {
+    cursor: pointer;
     font-size: 150px;
     transform: rotate(-90deg);
     font-weight: normal;
