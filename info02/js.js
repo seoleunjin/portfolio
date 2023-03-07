@@ -39,6 +39,7 @@ $(document).ready(function(){
             $('.menu li>p').css({'background-color': '#666','-webkit-background-clip':'text', '-moz-background-clip': 'text' , 'color':'transparent','text-shadow':'rgba(255, 255, 255, 0.5)0px 3px 3px'})
         }
     });
+    
 
     $('.menu li').click(function(){
         let i = $(this).index();
@@ -98,6 +99,7 @@ $(document).ready(function(){
 
     $('#wrap3 .pro01').click(function(){
         $('.img01').css({'display':'block','cursor':'pointer'})
+        
     })
     $('#wrap3 .pro02').click(function(){
         $('.img02').css({'display':'block','cursor':'pointer'})
@@ -109,4 +111,5 @@ $(document).ready(function(){
     $('#wrap3 .close').click(function(){
         $('#wrap3 div').css({'display':'none'})
     });
+    
 })
