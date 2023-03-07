@@ -75,10 +75,10 @@ $(document).ready(function(){
         $('#wrap3').css({'display':'none'})
     })
     $('.desing p').click(function(){
-        $('#wrap2').css({'display':'block'})
+        $('#wrap3').css({'display':'block'})
     })
     $('.pub p').click(function(){
-        $('#wrap3').css({'display':'block','display':'flex'})
+        $('#wrap2').css({'display':'block','display':'flex'})
     })
 
     $(window).mousemove(function (e) {
