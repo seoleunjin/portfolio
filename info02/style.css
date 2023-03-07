@@ -216,7 +216,7 @@ body {width: 100%; color: #fff; font-family: 'LeferiPoint-WhiteObliqueA'; overfl
 
 /* 웹설정 */
 .web {
-    background-image: url(../img/web_bg.png);
+    background-image: url(img/web_bg.png);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
@@ -395,7 +395,7 @@ body {width: 100%; color: #fff; font-family: 'LeferiPoint-WhiteObliqueA'; overfl
     left: 0;
     top: 0;
     perspective: 4800px;
-    background-image: url(../img/web_bg.png);
+    background-image: url(img/web_bg.png);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
@@ -483,7 +483,7 @@ body {width: 100%; color: #fff; font-family: 'LeferiPoint-WhiteObliqueA'; overfl
     position: fixed;
     left: 0;
     top: 0;
-    background-image: url(../img/web_bg.png);
+    background-image: url(img/web_bg.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
