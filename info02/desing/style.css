@@ -1,23 +1,29 @@
 @charset "UTF-8";
+* {padding: 0; margin: 0;}
+img {border: 0; vertical-align: bottom;}
+ul, ol {list-style: none;}
+a {text-decoration: none; color: #fff;}
+body {width: 100%; color: #fff; font-family: 'LeferiPoint-WhiteObliqueA'; overflow: hidden;}
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+@font-face {
+    font-family: 'LeferiPoint-WhiteObliqueA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-WhiteObliqueA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
+:root {
+    --main-color:#FDCBC0;
+    --sub01-font : #8857F2;
+    --sub02-font : #F20FE3;
 
-/* 전체설정 */
-*{margin: 0; padding: 0;}
-ul {list-style: none;}
-a {text-decoration: none; color: #000;}
-img {border: none; vertical-align: bottom;}
+}
 
-
-/* 기본설정 */
-/* wrap설정 */
 #wrap {
     position: absolute;
     width: 100%;
-    height: 2000px;
-    background-image: url(../img/bg.jpg);
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: cover;
+    height: 800px;
+    background-color: var(--main-color);
 }
 
 
@@ -30,6 +36,12 @@ img {border: none; vertical-align: bottom;}
     top: 50%;
     text-align: center;
 }
+.logoBox strong {
+    line-height: 5;
+}
+.logoBox span {
+    display: block;
+}
 
 section {
     position: absolute;
@@ -40,19 +52,15 @@ section {
 }
 article { 
     float: right;
-    width: 12%;
+    width: 15%;
     height: 100%;
     position: relative;
-    background-image: url(../img/divider.png);
-    background-repeat: no-repeat;
-    background-position: left center ;
-    overflow: hidden;
 }
 article h2 {
     position: absolute;
     top: 295px;
     left: 20px;
-    border-left: 3px solid #555;
+    border-left: 3px solid var(--sub01-font);
     padding-left: 15px;
     color: #666;
     z-index: 3;
@@ -95,6 +103,7 @@ article p {
 }
 article:hover h2 {
     color: #fff;
+    border-left: 3px solid #fff;
 }
 article:hover div {
     height: 80px;
