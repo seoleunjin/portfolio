@@ -72,44 +72,9 @@ $(document).ready(function(){
     })
     $('.back').click(function(){
         $('#wrap2').css({'display':'none'})
-        $('#wrap3').css({'display':'none'})
-    })
-    $('.desing p').click(function(){
-        $('#wrap3').css({'display':'block','display':'flex'})
     })
     $('.pub p').click(function(){
         $('#wrap2').css({'display':'block'})
     })
 
-    $(window).mousemove(function (e) {
-        let x = e.pageX;
-        let y = e.pageY;
-        $('.point').css({'left': x, 'top': y})
-    });
-
-
-    $('#wrap3 article').mouseenter(function () {
-        $('#wrap3 .point').addClass('on')
-    })
-
-
-    $('#wrap3 article').mouseleave(function () {
-        $('#wrap3 .point').removeClass('on')
-    })
-
-    $('#wrap3 .pro01').click(function(){
-        $('.img01').css({'display':'block','cursor':'pointer'})
-        
-    })
-    $('#wrap3 .pro02').click(function(){
-        $('.img02').css({'display':'block','cursor':'pointer'})
-    })
-    $('#wrap3 .pro03').click(function(){
-        $('.img03').css({'display':'block','cursor':'pointer'})
-    })
-
-    $('#wrap3 .close').click(function(){
-        $('#wrap3 div').css({'display':'none'})
-    });
-    
 })

@@ -3,7 +3,7 @@
 img {border: 0; vertical-align: bottom;}
 ul, ol {list-style: none;}
 a {text-decoration: none; color: #fff;}
-body {width: 100%; color: #fff; font-family: 'LeferiPoint-WhiteObliqueA'; overflow: hidden;}
+body {width: 100%; color: #fff; font-family: 'LeferiPoint-WhiteObliqueA'; color: var(--sub02-font);}
 @import url(https://fonts.googleapis.com/css?family=Varela+Round);
 @font-face {
     font-family: 'LeferiPoint-WhiteObliqueA';
@@ -22,27 +22,42 @@ body {width: 100%; color: #fff; font-family: 'LeferiPoint-WhiteObliqueA'; overfl
 #wrap {
     position: absolute;
     width: 100%;
-    height: 800px;
+    height: 3900px;
     background-color: var(--main-color);
 }
 
 
 .logoBox {
-    width: 300px;
-    height: 240px;
-    margin-top: -200px;
+    width: 350px;
+    height: 100%;
     position: fixed;
     left: 0;
-    top: 50%;
+    top: 0;
     text-align: center;
 }
 .logoBox strong {
+    display: block;
     line-height: 5;
+    font-size: 25px;
+    margin-top: 270px;
 }
 .logoBox span {
     display: block;
+    font-weight: bold;
 }
-
+.back {
+    cursor: pointer;
+    position: fixed;
+    z-index: 999;
+    bottom: 5%;
+    left: 6%;
+    font-size: 30px;
+    font-weight: bold;
+    transition: all 0.8s;
+}
+.back:hover {
+    color: #fff;
+}
 section {
     position: absolute;
     width: 100%;
@@ -55,14 +70,16 @@ article {
     width: 15%;
     height: 100%;
     position: relative;
+    border-left: 3px solid var(--sub02-font);
+    overflow: hidden;
 }
 article h2 {
     position: absolute;
-    top: 295px;
+    top: 287px;
     left: 20px;
-    border-left: 3px solid var(--sub01-font);
+    border-left: 3px solid var(--sub02-font);
     padding-left: 15px;
-    color: #666;
+    color: #fff;
     z-index: 3;
     transition: all 0.8s;
 }
@@ -72,33 +89,37 @@ article div {
     height: 0;
     top: 300px;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--sub02-font);
     z-index: 2;
     transition: all 1s;
 }
-article video {
+article img {
     position: absolute;
-    height: 100%;
-    width: auto;
-    z-index: 1;
+    top: 8.6%;
+    height: auto;
+    width: 960px;
+    z-index: 9;
     opacity: 0;
+    right: 1000px;
 }
 article h3 {
     position: absolute;
-    bottom: 210px;
-    right: -320px;
+    top: 70px;
+    right: -1000px;
     padding-right: 15px;
-    color: #fff;
+    font-weight: normal;
     z-index: 4;
+    font-size: 20px;
 }
 article p {
     position: absolute;
-    width: 300px;
-    right: -320px;
-    bottom: 50px;
+    width: 470px;
+    right: -470px;
+    top: 120px;
     height: 150px;
     padding-right: 10px;
     z-index: 5;
+    line-height: 1.8;
     text-align: right;
 }
 article:hover h2 {

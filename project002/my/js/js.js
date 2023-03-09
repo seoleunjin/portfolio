@@ -26,25 +26,21 @@ $(document).ready(function(){
     $('.util li:nth-child(5)').click(function(){
         $('.menu').css({'display':'block'})
     })
-    $('.x').click(function(){
+    $('.X').click(function(){
         $('.menu').css({'display':'none'})
+        $('.commu').css({'display':'none'})
+        $('.product').css({'display':'none'})
     })
     // 문의사항
     $('.util li:nth-child(4)').click(function(){
         $('.commu').css({'display':'block'})
     })
-    $('.x').click(function(){
-        $('.commu').css({'display':'none'})
-    })
     // 제품
     $('.oil li').click(function(){
         $('.product').css({'display':'block'})
     })
-    $('.x').click(function(){
-        $('.product').css({'display':'none'})
-    })
 
-    // 오일 슬라이더 트레일러
+    // 오일 슬라이더 트레일러 버튼 클릭 시 움직여라
     let b = 0;
     $('.left').click(function(){
         b++;
@@ -56,8 +52,10 @@ $(document).ready(function(){
     });
     $('.right').click(function(){
         b--;
+        console.log(b)
         var wid = $('.oil li').width();
-        if (b == 3) b = 0;
+        if ( b == 3) b = 0;
+        if ( b == -1) b = 0;
         console.log(b)
         let widM = wid * b;
         $('.oil').stop().animate({'left': -widM}, 800)
@@ -74,50 +72,6 @@ $(document).ready(function(){
         $('.best_product .txt ul').removeClass('on')
         $('.best_product .txt ul').eq(i).addClass('on').css({'transition':'1s'})
     })
-    // 인포 무한 슬라이드
-    // 텍스트구간
-    setInterval(function(){
-        $('.infoMenu li').eq(0).css({'top':'0'}).animate({'top':'-25%'},2000)
-        $('.infoMenu li').eq(0).css({'top':'-25%'}).animate({'top':'100%'},0.01)
-        $('.infoMenu li').eq(0).css({'top':'100%'}).animate({'top':'80%'},0.01)
-        $('.infoMenu li').eq(0).css({'top':'75%'}).animate({'top':'50%'},2000)
-        $('.infoMenu li').eq(0).css({'top':'50%'}).animate({'top':'25%'},2000)
-        $('.infoMenu li').eq(0).css({'top':'25%'}).animate({'top':'0%'},2000)
-        $('.infoMenu li').eq(1).css({'top':'25%'}).animate({'top':'0'},2000)
-        $('.infoMenu li').eq(1).css({'top':'0'}).animate({'top':'-25%'},2000)
-        $('.infoMenu li').eq(1).css({'top':'-25%'}).animate({'top':'100%'},0.01)
-        $('.infoMenu li').eq(1).css({'top':'100%'}).animate({'top':'80%'},0.01)
-        $('.infoMenu li').eq(1).css({'top':'75%'}).animate({'top':'50%'},2000)
-        $('.infoMenu li').eq(1).css({'top':'50%'}).animate({'top':'25%'},2000)
-        $('.infoMenu li').eq(2).css({'top':'50%'}).animate({'top':'25%'},2000)
-        $('.infoMenu li').eq(2).css({'top':'25%'}).animate({'top':'0%'},2000)
-        $('.infoMenu li').eq(2).css({'top':'0%'}).animate({'top':'-25%'},2000)
-        $('.infoMenu li').eq(2).css({'top':'-25%'}).animate({'top':'100%'},0.01)
-        $('.infoMenu li').eq(2).css({'top':'100%'}).animate({'top':'80%'},0.01)
-        $('.infoMenu li').eq(2).css({'top':'75%'}).animate({'top':'50%'},2000)
-        $('.infoMenu li').eq(3).css({'top':'75%'}).animate({'top':'50%'},2000)
-        $('.infoMenu li').eq(3).css({'top':'50%'}).animate({'top':'25%'},2000)
-        $('.infoMenu li').eq(3).css({'top':'25%'}).animate({'top':'0%'},2000)
-        $('.infoMenu li').eq(3).css({'top':'0%'}).animate({'top':'-25%'},2000)
-        $('.infoMenu li').eq(3).css({'top':'-25%'}).animate({'top':'100%'},0.01)
-        $('.infoMenu li').eq(3).css({'top':'100%'}).animate({'top':'80%'},0.01)
-    },2000, 'linear')
-    
-    // 이미지구간
-    let e =0;
-    setInterval(function(){
-        if(e==4) e=0;
-        e++;
-        $('.info .imgslid li').eq(e-1).css({'top':'0'}).animate({'top':'-100%'})
-        $('.info .imgslid li').eq(e).css({'top':'100%'}).animate({'top':'0'})
-    },2000)
-    // setInterval(function(){
-    //     $('.info .imgslid li').eq(1).css({'top':'0','left':'0'}).animate({'top':'0','left':'0'},2000)
-    //     $('.info .imgslid li').eq(1).css({'top':'-100%','left':'-100%'}).animate({'top':'0','left':'-100%'},2000)
-    //     $('.info .imgslid li').eq(1).css({'top':'0','left':'-100%'}).animate({'top':'-100%','left':'0'},2000)
-    //     $('.info .imgslid li').eq(1).css({'top':'-100%','left':'0'}).animate({'top':'0','left':'0'},2000)
-    // },2000, 'linear')
-    // 스킨 타입 슬라이더 트레일러
     let c = 0;
     $('.type_left').click(function(){
         c++;
@@ -139,15 +93,9 @@ $(document).ready(function(){
     });
 
 
-    // 페이지 메뉴를 클릭했을때 각 섹션 화면으로 이동해라
-    $('.pageMenu li').click(function(){
-        let i = $(this).index();
-        
-        $('.pageMenu li').removeClass('on')
-        $(this).addClass('on')
-        $('html, body').animate({'scrollTop':ht*i},1400);
-    })
+    // 리뷰섹션 설정
 
+    //해당 섹션의 스크롤 탑 값을 찾아서 가로스크롤으로 설정
 
     $(window).scroll(function(e){
         e.preventDefault()
@@ -156,8 +104,7 @@ $(document).ready(function(){
         let wd = $('.review_gift .scroll').width();
         let i = $('.pageMenu li').index();
 
-        // 리뷰섹션
-        $('body').height((ht*4)+wd);
+        $('body').height((ht*3)+wd);
 
         if(sc>=of){
         $('#wrap1').addClass('on');
@@ -167,15 +114,26 @@ $(document).ready(function(){
         if(sc<of){
         $('#wrap1').removeClass('on');
         }
-        // 장바구니
+        
+        // 페이지 메뉴를 클릭했을때 각 섹션 화면으로 이동해고 스크롤 값에 따라 해당섹션에 page li도 호버 값 유지
+        $('.pageMenu li').click(function(){
+            let i = $(this).index();
+            $('.pageMenu li').removeClass('on')
+            $(this).addClass('on')
+            $('html, body').animate({'scrollTop':ht*i},1400);
+        })
+        for(var a=0; a<4; a++){
+            if(sc>=a*ht && sc<(a+1)*ht){
+                    $('.page li').removeClass('on')
+                    $('.page li').eq(a).addClass('on')
+                };
+        }
+        // skin_type의 제품 클릭 시 장바구니 담긴 숫자가 늘어나라
         let d = 0;
         $('.skinImg li').click(function(){
             d++;
             $('.util li:nth-child(3) a span').text(d)
         })
-
-        
-
     })
 
 
