@@ -82,6 +82,7 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
     .oil_slider #wrap .txt {
         width: 59.5%;
         height: 94%;
+        z-index: -99;
     }
     .oil_slider #wrap .img {
         width: 40%;

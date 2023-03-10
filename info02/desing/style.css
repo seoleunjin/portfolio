@@ -45,6 +45,35 @@ body {width: 100%; color: #fff; font-family: 'LeferiPoint-WhiteObliqueA'; color:
     display: block;
     font-weight: bold;
 }
+.txt {
+    position: relative;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    overflow: hidden;
+}
+.txt li {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+}
+.txt li.on {
+    top: 0;
+    left: 0;
+}
+.txt li p {
+    margin-top: 15%;
+    margin-left: 10%;
+    width: 80%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    line-height: 2;
+}
 .back {
     cursor: pointer;
     position: fixed;
@@ -111,17 +140,7 @@ article h3 {
     z-index: 4;
     font-size: 20px;
 }
-article p {
-    position: absolute;
-    width: 470px;
-    right: -470px;
-    top: 120px;
-    height: 150px;
-    padding-right: 10px;
-    z-index: 5;
-    line-height: 1.8;
-    text-align: right;
-}
+
 article:hover h2 {
     color: #fff;
     border-left: 3px solid #fff;
