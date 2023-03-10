@@ -127,14 +127,12 @@ $(document).ready(function(){
                 $('.page li').removeClass('on')
                 $('.page li').eq(a).addClass('on')
             };
-        
+        }
         $('.pageMenu li').click(function(){
             let i = $(this).index();
-            $('.pageMenu li').removeClass('on')
-            $(this).addClass('on')
+            console.log(i)
             $('html, body').css({'scrollTop':ht*i},1400);
         })
-        }
         // skin_type의 제품 클릭 시 장바구니 담긴 숫자가 늘어나라
         let d = 0;
         $('.skinImg li').click(function(){
