@@ -3,6 +3,9 @@ $(document).ready(function(){
     let aWd= $('article').width();
     let i = -1;
     let wh = $(window).height();
+    $('.home').height(wh)
+    $('.web').height(wh)
+    $('.info').height(wh)
     $('#wrap1').height(wh)
     $('#wrap2').height(wh)
     $('#wrap3').height(wh)
@@ -10,6 +13,9 @@ $(document).ready(function(){
     $('body').height(a*(aWd+3));
     $('html,body').scrollTop(0)
     $(window).resize(function(){
+    $('.home').height(wh)
+    $('.web').height(wh)
+    $('.info').height(wh)
     $('#wrap3').height(wh)
     $('#wrap2').height(wh)
     $('#wrap1').height(wh)
