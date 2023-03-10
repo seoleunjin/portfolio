@@ -41,7 +41,7 @@ $(document).ready(function () {
                         $('#wrap>article').eq(i+2).css({'transform': 'rotateY(0deg)', 'z-index':11});
                         $('#wrap>article').eq(i+3).css({'transform': 'rotateY(-180deg)', 'z-index':5})
                         $('.book').css({
-                            'top':'-5%' , 'left':'50%' ,'transition':'0.5s'
+                            'top':'-5%' , 'left':'45%' ,'transition':'0.5s'
                         })
                     }
                     if(i==-1){
@@ -54,8 +54,9 @@ $(document).ready(function () {
                         .eq(i+2)
                         .css({'transform': 'rotateY(-180deg)'})
                         $('.book').css({
-                        'top':'-5%' , 'left':'45%' ,'transition':'0.5s'
-                    })
+                            'top':'-5%' , 'left':'40%' ,'transition':'0.5s'
+                        })
+                        
                     }
                 })
             })
