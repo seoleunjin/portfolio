@@ -116,17 +116,24 @@ $(document).ready(function(){
         }
         
         // 페이지 메뉴를 클릭했을때 각 섹션 화면으로 이동해고 스크롤 값에 따라 해당섹션에 page li도 호버 값 유지
+        
+        for(var a=0; a<4; a++){
+            if(sc<=ht){
+                $('.page').css({'top':'10%','left':'10%'})
+            }else{
+                $('.page').css({'top':'20%','left':'0'})
+            }
+            if(sc>=a*ht && sc<(a+1)*ht){
+                $('.page li').removeClass('on')
+                $('.page li').eq(a).addClass('on')
+            };
+        
         $('.pageMenu li').click(function(){
             let i = $(this).index();
             $('.pageMenu li').removeClass('on')
             $(this).addClass('on')
-            $('html, body').animate({'scrollTop':ht*i},1400);
+            $('html, body').css({'scrollTop':ht*i},1400);
         })
-        for(var a=0; a<4; a++){
-            if(sc>=a*ht && sc<(a+1)*ht){
-                    $('.page li').removeClass('on')
-                    $('.page li').eq(a).addClass('on')
-                };
         }
         // skin_type의 제품 클릭 시 장바구니 담긴 숫자가 늘어나라
         let d = 0;

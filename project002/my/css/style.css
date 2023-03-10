@@ -5,8 +5,7 @@ ul,ol {list-style: none;}
 img {vertical-align: bottom; border: none;}
 a {text-decoration: none; color: #5F5003;}
 body {color: #5F5003; position: relative; font-family: 'S-CoreDream-3Light'; overflow-x: hidden;}
-h1,h2,h3,h4,h5,h6,b {font-weight: normal;
-}
+h1,h2,h3,h4,h5,h6,b {font-weight: normal;}
 em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
 @import url('https://fonts.cdnfonts.com/css/freestyle-script');
 @font-face {
@@ -190,6 +189,9 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             height: 100%;
             margin-left: 30px;
         }
+        .page li {
+            height: 20%;
+        }
         .page li:hover a {
             color: #FDA085;
         }
@@ -284,8 +286,8 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             width: 80%;
             height: 10%;
             text-align: center;
-            margin-top: 10%;
-            margin-left: 20%;
+            margin-top: 20%;
+            margin-left: 25%;
             background-image: url(../img/logo.png);
             background-repeat: no-repeat;
             background-size: contain;
@@ -815,6 +817,7 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             z-index: 1;
         }
         .skin_type .type_left {
+            cursor: pointer;
             position: absolute;
             bottom: 13%;
             left: 5%;
@@ -822,6 +825,7 @@ em {font-style: normal; font-family: 'Freestyle Script', sans-serif; }
             bottom: 15%;
         }
         .skin_type .type_right {
+            cursor: pointer;
             position: absolute;
             bottom: 13%;
             left: 5%;

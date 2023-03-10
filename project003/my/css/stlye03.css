@@ -114,9 +114,11 @@ article div {
 }
 article div img {
     position: absolute;
+    opacity: 0;
 }
 article div svg {
     position: absolute;
+    opacity: 0;
 }
 /* epi01 설정  */
 .epi01 {
@@ -145,11 +147,13 @@ article div svg {
 .epi02Ing01 {
     width: 680px;
     top: 0;
+    opacity: 0;
 }
 .epi02Ing02 {
     width: 500px;
     bottom: 15.3%;
     left: -7.2%;
+    opacity: 0;
 }
 .epi02Ing03 {
     width: 450px;
@@ -276,7 +280,7 @@ article div svg {
 }
 .epi04Box02 {
     width: 40%;
-    margin-right: 10%;
+    margin-right: 15%;
 }
 .epi04Ing01 {
     width: 650px;
@@ -288,7 +292,7 @@ article div svg {
     width: 700px;
     z-index: 2;
     bottom: -10%;
-    left: 15%;
+    left: 0%;
 }
 .epi04Ing03 {
     width: 400px;
@@ -310,7 +314,7 @@ article div svg {
 .epi04Ing06 {
     width: 480px;
     bottom: 20%;
-    right: 18%;
+    right: 3%;
 }
 .epi04Ing07 {
     width: 400px;
