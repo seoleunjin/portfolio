@@ -16,10 +16,10 @@ section {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
+    
 }
 .wrap {
-    overflow: hidden;
-    width: 70.8%;
+    width: 70.85%;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
