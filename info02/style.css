@@ -243,12 +243,12 @@ body {width: 100%; color: #fff; font-family: 'LeferiPoint-WhiteObliqueA'; overfl
 .desing:hover {
     border: 5px solid var(--sub02-font);
 }
-.desing:hover p {
+.desing:hover a {
     cursor: pointer;
-    color: var(--sub02-font);
     text-shadow: -4px 4px 5px #fff;
 }
-.desing p {
+.desing a {
+    padding-left: 33%;
     text-align: center;
     font-size: 60px;
     line-height: 8;
@@ -270,7 +270,8 @@ body {width: 100%; color: #fff; font-family: 'LeferiPoint-WhiteObliqueA'; overfl
 .pub:hover {
     border: 5px solid var(--sub02-font);
 }
-.pub p {
+.pub a {
+    padding-left: 12%;
     cursor: pointer;
     text-align: center;
     font-size: 60px;
@@ -278,8 +279,7 @@ body {width: 100%; color: #fff; font-family: 'LeferiPoint-WhiteObliqueA'; overfl
     text-shadow: 4px -4px 5px var(--sub02-font);
     transition: all 0.8s;
 }
-.pub:hover p {
-    color: var(--sub02-font);
+.pub:hover a {
     text-shadow: -4px 4px 5px #fff;
 }
 /* 인포설정 */
