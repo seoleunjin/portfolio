@@ -1,19 +1,33 @@
 $(document).ready(function(){
+    // let wh = $(window).height();
+    // $('#wrap').height(wh)
+    // $('html,body').scrollTop(0)
+    // $(window).resize(function(){
+    // $('#wrap').height(wh)
+    // });
     $('article').mouseenter(function(){
-        let i = $('aeticle').index()
-        console.log(i)
-        $('.txt li').eq(i).addClass('on')
         $(this).stop().animate({'width':'50%'},1000)
-        $(this).find('img').animate({'opacity':1,'right':0},800)
-        $(this).find('h3').animate({'right':'50px'},800)
-        $(this).find('p').animate({'right':'50px'},1000)
+        $(this).find('span').animate({'opacity':1,'right':0},600)
+        $(this).find('h2').animate({'top':'22px'},100)
+        $(this).find('div').animate({'top':'0px'},100)
     });
-    $('article').mouseleave(function(){
+    $('.pro01').mouseenter(function(){
         $('.txt li').removeClass('on')
+        $('.txt li').eq(0).addClass('on')
+    })
+    $('.pro02').mouseenter(function(){
+        $('.txt li').removeClass('on')
+        $('.txt li').eq(1).addClass('on')
+    })
+    $('.pro03').mouseenter(function(){
+        $('.txt li').removeClass('on')
+        $('.txt li').eq(2).addClass('on')
+    })
+    $('article').mouseleave(function(){
         $('article').stop().animate({'width':'15%'},1000)
-        $(this).find('img').animate({'opacity':0,'right':'1000px'},800)
-        $(this).find('h3').animate({'right':'-470px'},800)
-        $(this).find('p').animate({'right':'-500px'},700)
+        $(this).find('span').animate({'opacity':0,'right':'1000px'},300)
+        $(this).find('h2').animate({'top':'287px'},100)
+        $(this).find('div').animate({'top':'300px'},100)
     });
     $('.back').click(function(){
         history.back();	
