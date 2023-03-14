@@ -21,10 +21,9 @@ body {width: 100%; color: #fff; font-family: 'YUniverse-B'; color: var(--sub02-f
 #wrap {
     position: absolute;
     width: 100%;
-    height: 3900px;
     background-image: url(img/bg.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 
@@ -46,8 +45,15 @@ body {width: 100%; color: #fff; font-family: 'YUniverse-B'; color: var(--sub02-f
     display: block;
     font-weight: bold;
 }
+.logoBox p {
+    margin-top: 50px;
+}
+.logoBox img {
+    margin-top: 50px;
+    width: 200px;
+}
 .txt {
-    margin-top: 200px;
+    margin-top: 30px;
     position: relative;
     width: 100%;
     height: 25%;
@@ -130,12 +136,12 @@ article div {
     transition: all 1s;
 }
 article span {
+    overflow: scroll;
     background-color: #A92242;
     display: block;
     position: absolute;
-    top: 2%;
+    top: 7.5%;
     width: 960px;
-    height: 500px;
     z-index: 9;
     opacity: 0;
     right: 1000px;

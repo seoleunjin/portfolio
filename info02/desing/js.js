@@ -1,10 +1,11 @@
 $(document).ready(function(){
-    // let wh = $(window).height();
-    // $('#wrap').height(wh)
-    // $('html,body').scrollTop(0)
-    // $(window).resize(function(){
-    // $('#wrap').height(wh)
-    // });
+    let wh = $(window).height();
+    $('#wrap').height(wh)
+    $('article span').height(wh)
+    $(window).resize(function(){
+    $('#wrap').height(wh)
+    $('article span').height(wh)
+    });
     $('article').mouseenter(function(){
         $(this).stop().animate({'width':'50%'},1000)
         $(this).find('span').animate({'opacity':1,'right':0},600)
