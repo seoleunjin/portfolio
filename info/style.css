@@ -52,12 +52,14 @@ body {width: 100%; font-family: 'YUniverse-B'; position: relative; }
     transform: rotate3d(-360deg);
 }
 
+
 .gnb li.on a {
     transition: all 0.8s;
-}
-.gnb li.on a {
     font-size: 30px;
-    color: #fff;
+    color: var(--main-fontColor);
+}
+.gnb li:hover a {
+    color: var(--main-fontColor);
 }
 /* .box1 설정 */
 .box1 {

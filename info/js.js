@@ -33,6 +33,12 @@ $(document).ready(function(){
         }else{
             $('.pro3').removeClass('on1')
         }
+        for(var a=0; a<4; a++){
+            if(sc>=a*wh && sc<(a+1)*ht){
+                $('.gnb li').removeClass('on')
+                $('.gnb li').eq(a).addClass('on')
+            };
+        }
     });
     $('.gnb li').click(function(){
         let i = $(this).index();
