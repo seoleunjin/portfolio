@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="wrap">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+        <div class="box4">box4</div>
+    </div>
+
+    <h1>btn</h1>
+
+
+    <style>
+        * {margin: 0;
+        padding: 0;}
+
+        h1 {position: fixed;
+        right: 0;
+    top: 50%;
+z-index: 999;
+width: 100px;
+height: 100px;
+margin-top: -50px;
+background-color: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+
+}
+h1:hover{background-color: red;
+color: #fff;}
+
+        #wrap {width: 100%;
+                height: 100%;
+                position: fixed;
+            background-color: yellow;
+        left: 0;
+    top: 0;
+perspective: 4800px;}
+
+    
+    #wrap>div {width: 50%;
+                height: 100%;
+                display: flex;
+            justify-content: center;
+        align-items: center;
+    font-size:120px;
+color: red;position: absolute;
+transition: all 2s;
+/* backface-visibility: hidden; */
+left: 50%;
+}
+#wrap>div:nth-child(1) {background-color: #333;
+                   left: 50%;
+                transform:rotateY(0deg) ;
+            transform-origin:left top;
+           
+            z-index: 10;
+            backface-visibility: hidden;
+           
+        }
+                #wrap>div:nth-child(2) {background-color: #666;
+                    left: 0;
+                    z-index: 5;
+                    transform:rotateY(180deg) ;
+                    transform-origin:right top;
+                  
+               }
+                #wrap>div:nth-child(3) { background-color: #ccc;
+                    z-index: 3;
+               }
+                #wrap>div:nth-child(4) {background-color: #aaa;
+                    z-index: 1;
+            }        
+                
+                
+              
+    </style>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+
+            let i=-1
+$('h1').click(function(){
+i++;
+console.log(i)
+
+$('#wrap>div').eq(0).css({'transform':'rotateY(-180deg)'});
+$('#wrap>div').eq(1).css({'transform':'rotateY(0deg)'})
+
+
+
+
+})
+        })
+    </script>
+</body>
+</html>

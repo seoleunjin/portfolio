@@ -1,0 +1,64 @@
+@charset "UTF-8";
+* {padding: 0; margin: 0;}
+img {border: 0; vertical-align: bottom;}
+ul, ol {list-style: none;}
+a {text-decoration: none; color: #000;}
+body {width: 100%; color: #fff;}
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+:root {
+    --main-color:#FDCBC0;
+    --sub01-font : #8857F2;
+    --sub02-font : #F20FE3;
+}
+
+
+#wrap {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    perspective: 4800px;
+    background-image: url(../img/web_bg.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+#wrap > article {
+    width: 550px;
+    height: 800px;
+    top: 50%;
+    margin-top: -400px;
+    position: absolute;
+    transition: all 1s;
+    left: 1300px;
+}
+#wrap > article:nth-child(1) {
+    background-color: red;
+    transform: rotateY(0deg);
+    transform-origin: left top;
+    z-index: 10;
+}
+/* #wrap > article:nth-child(1) {
+    backface-visibility: visible;
+    transform: rotateY(-30deg);
+} */
+#wrap > article:nth-child(2) {
+    transform-origin: right top;
+    background-color: #F29F8D;
+    z-index: 5;
+    transform: rotateY(0deg);
+}
+#wrap > article:nth-child(3) {
+    background-color: red;
+    transform: rotateY(0deg);
+    transform-origin: left top;
+    background-color: #DBE20A;
+}
+
+.open {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -9;
+}
