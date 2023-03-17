@@ -4,6 +4,7 @@ $(document).ready(function(){
     $(window).resize(function(){
     $('section').height(wh)
     });
+    let sc = $(this).scrollTop();
     $(window).scroll(function(){
         let sc = $(this).scrollTop();
         $('.logo').text(sc);
@@ -34,7 +35,7 @@ $(document).ready(function(){
             $('.pro3').removeClass('on1')
         }
         for(var a=0; a<4; a++){
-            if(sc>=a*wh && sc<(a+1)*ht){
+            if(sc>=a*wh && sc<(a+1)*wh){
                 $('.gnb li').removeClass('on')
                 $('.gnb li').eq(a).addClass('on')
             };

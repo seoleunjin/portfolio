@@ -41,24 +41,16 @@ body {width: 100%; font-family: 'YUniverse-B'; position: relative; }
     transition: all 0.8s;
     perspective: 1000px;
 }
-.gnb li strong {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    left: -30%;
-    transform: rotate3d(30deg);
-}
-.gnb li:hover strong {
-    transform: rotate3d(-360deg);
-}
 
-
-.gnb li.on a {
+.gnb li a {
     transition: all 0.8s;
-    font-size: 30px;
+}
+.gnb li.on a {
+    font-size: 22px;
     color: var(--main-fontColor);
 }
 .gnb li:hover a {
+    font-size: 22px;
     color: var(--main-fontColor);
 }
 /* .box1 설정 */
