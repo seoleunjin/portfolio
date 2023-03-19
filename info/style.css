@@ -72,6 +72,15 @@ body {width: 100%; font-family: 'YUniverse-B'; position: relative; }
     margin-left: -133px;
     margin-top: -86px;
 }
+.box1 h2 {
+    z-index: 99;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+}
+.box1 h3 {
+    float: right;
+}
 .box1 img {
     position: absolute;
     margin-left: -300px;
@@ -176,34 +185,77 @@ body {width: 100%; font-family: 'YUniverse-B'; position: relative; }
     position: relative;
     perspective: 500px;
     margin-top: 50px;
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
     border-radius: 100%;
     background-color: var(--main-color);
     transition: all 0.8s;
 }
 .box3 div img {
     position: absolute;
-    left: 50%;
+    left: 80%;
     margin-left: -100px;
-    top: -50px;
+    top: -70px;
     width: 200px;
-    transform: rotateY(30deg);
+    transform: rotateY(20deg);
     transition: all 0.8s;
+    animation: bouncy 1.2s linear infinite ;
 }
-/* .box3 div:hover img {
+.box3 div:hover img {
+    left: 50%;
     transform: rotateY(-180deg);
-} */
+    animation: none;
+}
+.box3 div:hover a {
+    color: var(--main-fontColor);
+}
+@keyframes bouncy {
+    0% {top: -70px;}
+    50% {top: -80px;}
+    100% {top: -70px;}
+}
+.box3 div span {
+    opacity: 0;
+    width: 330px;
+    position: absolute;
+    text-align: center;
+    top: 10%;
+    left: 120%;
+}
+.box3 div span.on {
+    opacity: 1;
+}
+.box3 div span h2 {
+    padding-bottom: 25px;
+    font-size: 30px;
+}
+.box3 div span h2 strong {
+    font-size: 15px;
+}
+.box3 div span p {
+    padding-bottom: 15px;
+}
+.box3 div span a {
+    transition: all 0.8s;
+    font-size: 20px;
+    font-weight: bold;
+}
 .pro1 {
     margin-left: 15%;
 }
+.pro1 span {
+}
 .pro2 {
+}
+.pro2 span {
 }
 .pro2.on {
     margin-top: 300px;
 }
 .pro3 {
-    margin-right: 15%;
+    margin-right: 25%;
+}
+.pro3 span {
 }
 .pro3.on {
     margin-top: 300px;

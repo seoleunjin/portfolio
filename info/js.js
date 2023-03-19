@@ -25,14 +25,24 @@ $(document).ready(function(){
         if(sc>(wh*2-200) && sc<wh*3){
             $('.pro2').addClass('on')
             $('.pro3').addClass('on')
+            $('.pro1 span').addClass('on')
+
         }else{
             $('.pro2').removeClass('on')
             $('.pro3').removeClass('on')
+            $('.pro1 span').removeClass('on')
         }
-        if(sc>2000 && sc<wh*3){
+        if(sc>1900 && sc<wh*3){
             $('.pro3').addClass('on1')
+            $('.pro2 span').addClass('on')
         }else{
             $('.pro3').removeClass('on1')
+            $('.pro2 span').removeClass('on')
+        }
+        if(sc>2100 && sc<wh*3){
+            $('.pro3 span').addClass('on')
+        }else{
+            $('.pro3 span').removeClass('on')
         }
         for(var a=0; a<4; a++){
             if(sc>=a*wh && sc<(a+1)*wh){
