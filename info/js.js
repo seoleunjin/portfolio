@@ -1,20 +1,22 @@
 $(document).ready(function(){
     let wh = $(window).height();
     $('section').height(wh)
+    $('.info').height(wh)
     $(window).resize(function(){
     $('section').height(wh)
+    $('.info').height(wh)
     });
     let sc = $(this).scrollTop();
     $(window).scroll(function(){
         let sc = $(this).scrollTop();
-        $('.logo').text(sc);
-        
         if(sc>823 && sc<wh*2){
             $('.cir').addClass('on').css({'transition':'0.8s'})
+            $('.cir p').css({'opacity':1})
             $('.box1 span').css({'background-color':'#A92242','transition':'0.5s'})
         }else{
             $('.cir').removeClass('on')
             $('.box1 span').css({'background-color':'#000','transition':'0.5s'})
+            $('.cir p').css({'opacity':0})
         }
         
         if(sc>1100 && sc<wh*4){
@@ -39,7 +41,7 @@ $(document).ready(function(){
             $('.pro3').removeClass('on1')
             $('.pro2 span').removeClass('on')
         }
-        if(sc>2100 && sc<wh*3){
+        if(sc>2000 && sc<wh*3){
             $('.pro3 span').addClass('on')
         }else{
             $('.pro3 span').removeClass('on')
@@ -61,8 +63,14 @@ $(document).ready(function(){
         $('.box4 ol li').eq(i).addClass('on')
         $('.box4 ul li').removeClass('on')
         $('.box4 ul li').eq(i).addClass('on')
+        $('.box4 ol').scrollTop(0)
+    });
+    $('.cir p em').click(function(){
+        $('.info').css({'display':'flex'})
     })
-    
+    $('.close').click(function(){
+        $('.info').css({'display':'none'})
+    })
 
     
 });

@@ -76,9 +76,12 @@ body {width: 100%; font-family: 'YUniverse-B'; position: relative; }
     z-index: 99;
     position: fixed;
     bottom: 5%;
-    right: 5%;
+    right: 3%;
 }
 .box1 h3 {
+    position: fixed;
+    top: 5%;
+    right: 3%;
     float: right;
 }
 .box1 img {
@@ -110,6 +113,7 @@ body {width: 100%; font-family: 'YUniverse-B'; position: relative; }
     margin-left: -1.5PX;
 }
 .cir {
+    overflow: hidden;
     width: 500px;
     height: 500px;
     background-color: #fff;
@@ -120,7 +124,36 @@ body {width: 100%; font-family: 'YUniverse-B'; position: relative; }
     margin-top: -250px;
     position: fixed;
     animation: cir 2s linear;
+    text-align: center;
 }
+
+
+.cir p {
+    width: 500px;
+    opacity: 0;
+    margin-top: 30%;
+    font-size: 20px;
+    line-height: 3;
+    cursor: pointer;
+    font-size: 20px;
+}
+.cir p strong {
+    line-height: 2;
+    font-size: 50px;
+}
+.cir p em {
+    font-style: normal;
+    line-height: 3;
+    font-style: normal;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.8s;
+}
+.cir p em:hover {
+    color: #fff;
+    background-color: var(--main-fontColor);
+} 
 /* box1 온값 */
 .cir.on {
     background-image: linear-gradient(to right top, var(--main-color) 50%, #a9f1df 100%);
@@ -173,9 +206,24 @@ body {width: 100%; font-family: 'YUniverse-B'; position: relative; }
 }
 /* box2 설정 */
 .box2 {
+    box-sizing: border-box;
+    display: flex;
     width: 100%;
     background-color: #fff;
+    background-image: url(img/prof_txt.png);
+    background-repeat: no-repeat;
+    background-position: right 30% top 10%;
+    background-size: 450px;
 }
+
+.box2 img {
+    z-index: 999;
+    width: 500px;
+    height: 530px; 
+    margin-left: 23%;
+    margin-top: 12%;
+}
+
 /* box3 설정 */
 .box3 {
     display: flex;
@@ -317,4 +365,138 @@ body {width: 100%; font-family: 'YUniverse-B'; position: relative; }
 .box4 ol li img {
     width: 100%;
     opacity: 1;
+}
+
+/* 인포설정 */
+.info {
+    position: relative;
+    z-index: 99999;
+    display: flex;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.cont {
+    width: 40%;
+    height: 100%;
+    background-image: linear-gradient(to right bottom, #A9F1DF 20%, var(--main-color) 60%);
+    border-left: 5px solid #fff;
+}
+.cont h2 {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 70px;
+    margin-left: 50px;
+    background-color: var(--main-fontColor);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(255, 255, 255, 0.8) 0px 5px 5px; 
+}
+.cont h2 b {
+    font-weight: normal;
+    font-size: 35px;
+}
+.cont img {
+    width: 500px;
+    margin: 10% 20%;
+}
+.cont p {
+    font-weight: bold;
+    line-height: 2;
+    font-size: 20px;
+    margin-left: 50px;
+    color: var(--main-fontColor);
+}
+.skill {
+    width: 60%;
+    height: 100%;
+    position: relative;
+    display: flex;
+}
+.skill img:nth-child(1) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+
+}
+.skill img:nth-child(2) {
+    position: absolute;
+    left: 27%;
+    top: 8%;
+}
+.skill .close {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 50px;
+    color: var(--main-color);
+    transition: all 0.8s;
+    cursor: pointer;
+}
+.skill .close:hover {
+    color: var(--main-fontColor);
+}
+.title {
+    box-sizing: border-box;
+    width: 45%;
+    height: 60%;
+    margin-top: 65px;
+    z-index: 9;
+    color: var(--main-fontColor);
+    text-align: center;
+}
+.title li {
+    height: 25%;
+    font-size: 20px;
+    font-weight: bold;
+}
+.title li:nth-child(3) {
+    margin-top: 12px;
+}
+.title li:nth-child(4) {
+    margin-top: 100px;
+}
+.txt {
+    padding-right: 300px;
+    width: 55%;
+    height: 75%;
+    z-index: 9;
+    color: var(--main-fontColor);
+    margin-top: 107px;
+    margin-left: 50px;
+}
+.txt li {
+    font-size: 20px;
+    box-sizing: border-box;
+    height: 7.5%;
+    border-bottom: 1.9px solid #5E6D8C;
+    margin-bottom: 1%;
+    line-height: 3;
+    padding-left: 15px;
+}
+.percent {
+    font-size: 16px;
+    position: absolute;
+    top: 100px;
+    right: 5%;
+    width: 30%;
+    height: 76.3%;
+    z-index: 9;
+    color: var(--main-fontColor);
+}
+.percent li {
+    font-size: 20px;
+    line-height: 3.1;
+    height: 7.55%;
+    margin-bottom: 1%;
+}
+.percent li i {
+    font-size: 30px;
+    padding: 0 9%;
 }
