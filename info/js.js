@@ -9,11 +9,11 @@ $(document).ready(function(){
     let sc = $(this).scrollTop();
     $(window).scroll(function(){
         let sc = $(this).scrollTop();
-        if(sc>wh-300 && sc<wh*2){
+        if(sc>wh-350 && sc<wh*2){
             $('.cir').addClass('on').css({'transition':'0.8s','display':'block'})
             $('.cir p').css({'opacity':1,'transition':'0.8s'})
         }else{
-            $('.cir').removeClass('on')
+            $('.cir').removeClass('on').css({'transition':'0.8s'})
             $('.cir p').css({'opacity':0,'transition':'0.8s'})
         }
         if(sc>wh+200 && sc<wh*4){
@@ -44,7 +44,7 @@ $(document).ready(function(){
             $('.pro3').removeClass('on1')
             $('.pro2 span').removeClass('on')
         }
-        if(sc>wh*2+200 && sc<wh*3){
+        if(sc>wh*2+100 && sc<wh*3){
             $('.pro3 span').addClass('on')
         }else{
             $('.pro3 span').removeClass('on')
