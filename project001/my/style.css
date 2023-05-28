@@ -2404,7 +2404,7 @@ header {
 
 
 
-/* 600px이상 767px이하 */
+/* 375px이상 767px이하 */
 @media(min-width:375px) and (max-width:767px){
         /* 767 해더설정 */
         .wrap {
