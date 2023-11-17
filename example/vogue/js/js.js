@@ -12,7 +12,7 @@ $(document).ready(function(){
     //     $('section>div:nth-child(3)').addClass('on');
     //     $('nav').removeClass('on');
     //     $('section').removeClass('on');
-    //     $('.btnMenu').fadeIn()
+    //     $('.section10_btnMenu').fadeIn()
     
     // })
     
@@ -24,7 +24,7 @@ $(document).ready(function(){
     //         $('section>div:nth-child(1)').addClass('on');
     //         $('nav').removeClass('on');
     //         $('section').removeClass('on');
-    //         $('.btnMenu').fadeIn()
+    //         $('.section10_btnMenu').fadeIn()
     //     })
     
     //     $('#gnb li:nth-child(2)').click(function(){
@@ -35,7 +35,7 @@ $(document).ready(function(){
     //             $('section>div:nth-child(2)').addClass('on');
     //             $('nav').removeClass('on');
     //             $('section').removeClass('on');
-    //             $('.btnMenu').fadeIn()
+    //             $('.section10_btnMenu').fadeIn()
     
     
             
@@ -47,12 +47,12 @@ $(document).ready(function(){
             $('section>div').eq(i).addClass('on');
             $('nav').removeClass('on');
             $('section').removeClass('on');
-            $('.btnMenu').fadeIn()
+            $('.section10_btnMenu').fadeIn()
         })
         // btn 을 클릭했을때 nav 가 왼쪽 기준으로 오른쪽이 열리고
         // section은 오른쪽을 기준으로 왼쪽이 열린다.
     
-        $('.btnMenu').click(function(){
+        $('.section10_btnMenu').click(function(){
     
             // $('nav').css({'transform':'rotateY(15deg)'});
             // $('section').css({'transform':'rotateY(-10deg)'});

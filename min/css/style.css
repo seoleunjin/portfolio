@@ -688,7 +688,7 @@ transition: all 1.5s;}
 }
 
 /* btn_top ------------------------------------------------------------------------------------------- */
-.btn_top {
+.section10_btn_top {
   width: 20px;
   height: 20px;
   position: fixed;
@@ -704,7 +704,7 @@ transition: all 1.5s;}
   transform-origin: center;
 }
 
-.btn_top p {
+.section10_btn_top p {
   font-size: 20px;
   font-weight: bold;
   color: #581125;
@@ -1261,7 +1261,7 @@ margin-left: -220px;
   transform: translateY(-30px);
 }
 
-.btn {
+.section10_btn {
   position: absolute;
   bottom: 50px;
   right: 50px;
@@ -1270,23 +1270,23 @@ margin-left: -220px;
   align-items: center;
 }
 
-.btn p {
+.section10_btn p {
   width: 50px;
   height: 50px;
   background-color: #600524;
   cursor: pointer;
 }
 
-.btn .left {
+.section10_btn .left {
   margin-right: 10px;
 }
-.btn .left i {
+.section10_btn .left i {
   font-size: 40px;
   transform: rotate(-90deg);
   line-height: 1.3;
   color: #EFDCCE;
 }
-.btn .right {
+.section10_btn .right {
   font-size: 40px;
   transform: rotate(90deg);
   line-height: 1.3;
@@ -1322,7 +1322,7 @@ margin-right: auto;
   padding-top: 30px;
 }
 
-.slider {
+.section10_slider {
   position: absolute;
   left: 10%;
   top: 25%;
@@ -1332,7 +1332,7 @@ margin-right: auto;
   cursor: grabbing;
 }
 
-.slider_inner {
+.section10_slider_inner {
   position: absolute;
   top: 0;
   left: 0;
@@ -1344,13 +1344,13 @@ margin-right: auto;
   pointer-events: none;
 }
 
-.slider_item {
+.section10_slider_item {
   height: auto;
   background-color: black;
   border-radius: 20px;
 }
 
-.slider_item .ei{
+.section10_slider_item .ei{
   background-color: red;
   width: 100%;
   height: auto;
@@ -1358,18 +1358,18 @@ margin-right: auto;
   overflow: hidden;
 }
 
-.slider_item .ei img {
+.section10_slider_item .ei img {
 width: 100%;
 overflow: hidden;
 }
 
-.slider_item .ei .img_box001 {
+.section10_slider_item .ei .img_box001 {
   width: 100%;
   height: auto;
   border-radius: 20px 20px 0 0 ;
 }
 
-.slider_item p{
+.section10_slider_item p{
   background-color: #600524;
   width: 100%;
   height: auto;
@@ -1379,7 +1379,7 @@ overflow: hidden;
 
 }
 
-.slider_item p em {
+.section10_slider_item p em {
   display: block;
   text-align: center;
   padding-top: 10px;

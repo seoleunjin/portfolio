@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!--폰트 어썸-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- 슬릭 슬라이드 만들 때 꼭 필요한 링크 -->
+    <!--slick slider 필요 태그 st-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css">
+    <!-- slick Carousel CDN -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js"></script>
+    <style>
+        /*  폰트 스타일*/
+/*  상단 슬라이드 , 팝업창  */
+@font-face {
+  font-family: "Humanbumsuk";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*  축제 콕콕, 오늘의 축제소식, 억새축제소식    */
+@font-face {
+  font-family: "omyu_pretty";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 노멀라이징 */
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+li {
+  list-style: none;
+}
+
+/* 라이브러리 */
+.cell {
+  float: left;
+}
+
+.cell-r {
+  float: right;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+  
+}
+
+/* 스타일 */
+body {
+  background-color: aqua;
+}
+
+/* 배너 메뉴 툴 */
+.wrap-box {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  background-color: #f5f5f5;
+}
+
+/* 상단 슬라이드 */
+
+/* 슬라이드 컨테이너 스타일 */
+.slick-wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* 각 슬라이드 아이템 스타일 */
+.slick-content {
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+
+.slick-wrap .slick-content .img {
+  width: 320px;
+  height: 450px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  transition: 0.8s;
+}
+
+
+
+
+
+
+/* 글자 */
+
+
+
+/* 센터 모드 활성화 */
+.slick-slider {
+  text-align: center;
+}
+
+/* 슬라이드 간의 간격 설정 (원하는 값으로 조절) */
+.slick-slide {
+  margin: 0 10px; /* 좌우 여백 조절 */
+}
+
+.slick-slide {
+  transition: opacity 0.5s ease-in-out; /* 부드러운 투명도 전환을 위한 CSS3 트랜지션 설정 */
+}
+
+/* 현재 활성화된 슬라이드는 투명도 1 (원래 크게 나타남) */
+.slick-slide.slick-center {
+  opacity: 1;
+  border-radius: 15px;
+}
+
+/* 양 끝쪽 슬라이드는 투명도를 낮춤 (작게 나타남) */
+.slick-content {
+  opacity: 0.3; /* 원하는 투명도 값으로 조정 */
+}
+
+/* 각 슬라이더 이미지 svg로 할 것 */
+.slick-wrap .slick-content .img-1 {
+  background-image: url("https://cdn.imweb.me/upload/S20220427e48f64788b4ca/8cb23a9d39903.png"); background-size: contain;
+}
+
+.slick-wrap .slick-content .img-2 {
+  background-image: url("https://cdn.imweb.me/upload/S20220427e48f64788b4ca/17e436a239e80.png"); background-size: contain;
+}
+
+.slick-wrap .slick-content .img-3 {
+  background-image: url("https://cdn.imweb.me/upload/S20220427e48f64788b4ca/6c99d697e5304.png");background-size: contain;
+}
+
+
+
+
+
+
+
+/* 상단 슬라이드 끝 */
+
+
+    </style>
+    <script>
+        
+
+
+
+// 슬릭 슬라이더 옵션추가
+$(document).ready(function () {
+  $(".slick-wrap").slick({
+    autoplay: true, // 자동 슬라이드
+    autoplaySpeed: 2000, // 자동슬라이드 넘어가지는 속도 (ms)
+    draggable: true, // 드래그로 슬라이드변경 허용 여부
+    fade: false, // fade in , fade out 활성화
+    infinite: true, // 무한이 옆으로 흐르게 만드는 슬라이드
+    initialSlide: 0, // 처음에 활성화 될 슬라이드 번호 (인덱스 번호로)
+    pauseOnHover: true, //마우스가 올라갔을 때 이동 여부
+    cssEase: "linear", // transition-timing-function 적용하기 큐빅배지어도가능
+    speed: 300, //슬라이드가 넘어가지는 속도 (ms)
+    centerMode: true, // 센터 모드 활성화
+    centerPadding: "50px", // 중앙 슬라이드와 주변 슬라이드 사이의 간격 (원하는 값으로 조정)
+    draggable: true, //드래그 가능 여부
+    slidesToShow: 1 // 동시에 보여질 슬라이드 수 (롯데렌터카와 동일하게 조정)
+  });
+});
+// 슬릭 슬라이더 끝
+
+// 이미지 호버 js
+$(".hover").mouseleave(function () {
+  $(this).removeClass("hover");
+});
+// 이미지 호버 끝
+
+
+
+    </script>
+</head>
+    
+    
+<body>
+
+
+
+
+<div class="wrap-box">
+  <!-- 상단바 -->
+  <!--     슬라이드 시작 -->
+
+  <div class="slick-wrap">
+    <!--    이미지 1  -->
+    <div class="slick-content ">
+        <div class="img img-1"></div>
+      
+    </div>
+    <!--    이미지 2  -->
+    <div class="slick-content ">
+        <div class="img img-2"></div>
+      
+    </div>
+
+    <!--   이미지 3  -->
+    <div class="slick-content ">
+        <div class="img img-3"></div>
+    </div>
+
+
+  </div>
+
+
+
+</div>
+
+
+
+</body>
+</html>

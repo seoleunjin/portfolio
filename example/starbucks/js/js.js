@@ -27,14 +27,14 @@ $(document).ready(function(){
     $('.gnb li').mouseenter(function(){
         let i = $(this).index()
         console.log(i)
-        $('.sub_menu>div').slideUp()
-        $('.sub'+(i+1)).slideDown()
+        $('.sub_menu>div').section10_slideUp()
+        $('.sub'+(i+1)).section10_slideDown()
        
 
     });
     $('header').mouseleave(function(){
        
-        $('.sub_menu>div').slideUp()
+        $('.sub_menu>div').section10_slideUp()
       
        
 

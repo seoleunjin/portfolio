@@ -14777,7 +14777,7 @@ var widgetsSelectmenu = $.widget( "ui.selectmenu", [ $.ui.formResetMixin, {
 //>>css.theme: ../../themes/base/theme.css
 
 
-var widgetsSlider = $.widget( "ui.slider", $.ui.mouse, {
+var widgetsSlider = $.widget( "ui.section10_slider", $.ui.mouse, {
 	version: "1.13.2",
 	widgetEventPrefix: "slide",
 

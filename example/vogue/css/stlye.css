@@ -31,7 +31,7 @@ body {
 
 
 /* 메뉴버튼 */
-.btnMenu {
+.section10_btnMenu {
     position: fixed;
     color: #fff;
     font-size: 40px;
@@ -39,7 +39,7 @@ body {
     top: 40px;
     z-index: 3;
 }
-.btnMenu i {
+.section10_btnMenu i {
 
 }
 
@@ -311,7 +311,7 @@ section>div.on>p {
 /* 버튼 애니메이션 */
 
 
-.btnMenu {
+.section10_btnMenu {
     transform: scale(1);
         color: #fff;
         animation: ani 0.5s infinite alternate;

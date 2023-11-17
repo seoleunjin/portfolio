@@ -47,18 +47,18 @@ let hot = $('header').offset().Top;
 
 // 첫번째 btn span을 클릭했을때 .box02 , 나의부모인 btn에 on 을 붙인다.
 
-$('.btn span').eq(0).click(function(){
+$('.section10_btn span').eq(0).click(function(){
     $('.sub .box02').addClass('on');
     $(this).parents().addClass('on');
     $(this).removeClass('on')
-    $('.btn span').eq(1).addClass('on')
+    $('.section10_btn span').eq(1).addClass('on')
 })
 
-$('.btn span').eq(1).click(function(){
+$('.section10_btn span').eq(1).click(function(){
     $('.sub .box02').removeClass('on');
     $(this).parents().removeClass('on');
     $(this).removeClass('on')
-    $('.btn span').eq(0).addClass('on')
+    $('.section10_btn span').eq(0).addClass('on')
 })
 
 $('.bto').click(function(){
@@ -79,9 +79,9 @@ $('.util li').eq(0).click(function(e){
     $('.notice').fadeIn()
     $('body').css({'overflow' : 'hidden'})
     $('.sub .box02').removeClass('on');
-    $('.btn').parents().removeClass('on');
-    $('.btn span').eq(1).removeClass('on')
-    $('.btn span').eq(0).addClass('on')
+    $('.section10_btn').parents().removeClass('on');
+    $('.section10_btn span').eq(1).removeClass('on')
+    $('.section10_btn span').eq(0).addClass('on')
 
 
 })

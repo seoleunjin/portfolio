@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<Head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,56 +13,59 @@
         margin: 0; padding: 0;
     }
     ul {list-style: none;}
-    .wrap {position: relative;}
-    .slide {
-        width: 100%;
-        height: 500px;
+    #section10 {position: relative; background-color: #f5f5f5;}
+    .section10_slide {
+        width: 390px;
+        height: 600px;
         overflow: hidden;
         position: relative;
     }
-    .slide ul {
-        width: auto;
+    .section10_slide ul {
+        width: 100%;
+        margin: 0 auto;
         height: 500px;
         display: flex;
+        background-color: aqua;
 
     }
-    .slide li {
-        width: 100%;
+    .section10_slide li {
+        width: 90%;
         height: 500px;
         background-position: center top;
         background-repeat: no-repeat;
         position: absolute;
-        left: 100%;
+        left: 85%;
         min-width: 100px;
     }
-    .slide li:nth-child(1) {
-        background-image: url(img/0.png);
+    .section10_slide li:nth-child(1) {
+        background-image: url(https://cdn.imweb.me/upload/S20220427e48f64788b4ca/8cb23a9d39903.png);
         left: 0;
     }
-    .slide li:nth-child(2) {
-        background-image: url(img/1.png);
+    .section10_slide li:nth-child(2) {
+        background-image: url(https://cdn.imweb.me/upload/S20220427e48f64788b4ca/17e436a239e80.png);
     }
-    .slide li:nth-child(3) {
-        background-image: url(img/2.png);
+    .section10_slide li:nth-child(3) {
+        background-image: url(https://cdn.imweb.me/upload/S20220427e48f64788b4ca/6c99d697e5304.png);
     }
-    .btn {
+    .section10_btn {
         left: 50%;
-        bottom: 80px;
+        bottom: 50px;
+        margin-left: -62px;
         z-index: 9999;
         position: absolute;
     }
-    .btn ul {
+    .section10_btn ul {
         display: flex;
     }
-    .btn li {
-        background-image: url(img/btnVisual.png);
+    .section10_btn li {
+        background-image: url(https://cdn.imweb.me/upload/S20220427e48f64788b4ca/19a3851be3220.png);
         background-position: 0 -16px;
         width: 14px;
-        height: 15.5px;
+        height: 14px;
         margin: 0 5px;
         background-size: cover;
     }
-    .btn li.on {
+    .section10_btn li.on {
         background-position: 0 0;
     }
 
@@ -74,11 +77,12 @@
 <script>
     $(document).ready(function(){
         // btn을 클릭했을때 슬라이드 li가 이동해라
-        $('.btn li').click(function(){
+        $('.section10_btn li').click(function(){
             let i = $(this).index();
-            $('.slide li').eq(i-1).css({'left':0}).stop().animate({'left':'-100%'})
-            $('.slide li').eq(i).css({'left':'100%'}).stop().animate({'left':0})
-            $('.btn li').removeClass('on')
+            $('.section10_slide li').eq(i-1).css({'left':0}).stop().animate({'left':'-100%'})
+            $('.section10_slide li').eq(i).css({'left':'85%'}).stop().animate({'left':0})
+            $('.section10_slide li').eq(i+1).css({'left':'100%'}).stop().animate({'left':'85%'})
+            $('.section10_btn li').removeClass('on')
             $(this).addClass('on')
         });
 
@@ -92,16 +96,16 @@
         function timer(){
             a++;
             if(a==3) a=0;
-            $('.btn li').eq(a).trigger('click')
+            $('.section10_btn li').eq(a).trigger('click')
         };
 
         let silde = setInterval(timer,2000);
         
-        $('.wrap').mouseenter(function(){
+        $('#section10').mouseenter(function(){
             clearInterval(silde)
         });
 
-        $('.wrap').mouseleave(function(){
+        $('#section10').mouseleave(function(){
             silde = setInterval(timer,2000);
         });
         
@@ -118,12 +122,12 @@
         body {
             position: relative;
         }
-        .slide {
+        .section10_slide {
             width: 1920px;
             height: 500px;
             background-color: yellow;
         }
-        .slide ul {
+        .section10_slide ul {
             width: 100%;
             height: 100%;
             list-style: none;
@@ -131,42 +135,42 @@
             position: relative;
             overflow: hidden;
         } 
-        .slide li {
+        .section10_slide li {
             width: 100%;
             height: 100%;
             position: absolute;
             left: -100%;
         }
-        .slide li:nth-child(1) {
+        .section10_slide li:nth-child(1) {
             background-image: url(img/0.png);
             background-size: cover;
             background-repeat: no-repeat;
             left: 0;
         }
-        .slide li:nth-child(2) {
+        .section10_slide li:nth-child(2) {
             background-image: url(img/1.png);
             background-size: cover;
             background-repeat: no-repeat;
         }
-        .slide li:nth-child(3) {
+        .section10_slide li:nth-child(3) {
             background-image: url(img/2.png);
             background-size: cover;
             background-repeat: no-repeat;
         }
 
-        .btn {
+        .section10_btn {
             position: absolute;
             top: 350px;
             left: 955px;
             width: 100px;
             height: 16px;
         }
-        .btn ul {
+        .section10_btn ul {
             list-style: none;
             display: flex;
             justify-content: space-around;
         }
-        .btn li {
+        .section10_btn li {
             box-sizing: border-box;
             padding-left: 10px;
             width: 14px;
@@ -176,13 +180,13 @@
             background-size: cover;
             background-position: bottom;
         }
-        .btn li:nth-child(1) {
+        .section10_btn li:nth-child(1) {
             background-position: top;
         }
-        .btn li:nth-child(2).on1 {
+        .section10_btn li:nth-child(2).on1 {
             background-position: top;
         }
-        .btn li:nth-child(3).on2 {
+        .section10_btn li:nth-child(3).on2 {
             background-position: top;
         }
 
@@ -203,17 +207,17 @@
         
     })
 </script> -->
-</head>
+</Head>
 <body>
-    <div class="wrap">
-        <div class="slide">
+    <div id="section10">
+        <div class="section10_slide">
             <ul>
                 <li></li>
                 <li></li>
                 <li></li>
             </ul>
         </div>
-        <div class="btn">
+        <div class="section10_btn">
             <ul>
                 <li class="on"></li>
                 <li></li>

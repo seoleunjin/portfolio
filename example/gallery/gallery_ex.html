@@ -110,8 +110,8 @@
                 // $('.box_img p').stop().hide();
                 // $('.box_img p').eq(i).stop().show();
 
-                // $('.box_img p').stop().slideUp();
-                // $('.box_img p').eq(i).slideDown();
+                // $('.box_img p').stop().section10_slideUp();
+                // $('.box_img p').eq(i).section10_slideDown();
                 $('.box_img p').css({'display':'none'})
                 $('.box_img p').eq(i).css({'display':'block'})
             });
@@ -130,7 +130,7 @@ $('.container ul').css({'left':-121.7*tt+"px"})
 $('.box_img p').css({'display':'none'});
 $('.box_img p').eq(tt).css({'display':'block'})
 if(tt==14){
-   $('.popUp').slideDown()
+   $('.popUp').section10_slideDown()
 
 
 }
@@ -141,7 +141,7 @@ if(tt==14){
 })
 //right 를 클릭했을때,일정값 만큼씩,ul 이 움직여라.
 $('.right').click(function(){
-    $('.popUp').slideUp()
+    $('.popUp').section10_slideUp()
    if(tt>0) tt--;
     console.log(tt);
     $('.container ul').css({'left':-121.7*tt+"px"})

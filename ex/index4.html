@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>라인버튼</title>
+    </head>
+    <style>
+
+        *,
+        *:after,
+        *:before {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body,
+        html {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizelegibility;
+            font-size: 62.5%;
+        }
+
+        button {
+            padding: 1.4rem 3rem;
+            display: inline-block;
+            position: relative;
+            background: none;
+            border: none;
+            color: #2a2a2a;
+            font-size: 30px;
+            cursor: pointer;
+            margin: 20px 30px;
+            background: #fff;
+        }
+
+        button {
+            &:after,
+            &:before {
+                display: block;
+                content: "";
+                position: absolute;
+                background: rgb(92, 236, 14);
+                z-index: -1;
+            }
+        }
+
+        /* .button--three {
+  &:before {
+    top: -0.1rem; bottom: 100%; left: 0; right: 100%;
+    transition: bottom .3s .8s, left .5s .11s, right .5s 1.1s;
+  }
+  &:after {
+    top: 100%; bottom: -0.1rem; left: 100%; right: 0;
+    transition: top .3s 0s, left .5s .3s, right .5s .3s;
+  }
+  &:hover {
+    &:before {
+      top: -0.1rem; bottom: 0; left: 0; right: -0.1rem;
+      transition: left .5s 0s, right .5s 0s, bottom .3s .5s;
+    }
+    &:after {
+      top: 0; bottom: -0.1rem; left: -0.1rem; right: 0;
+      transition: left .5s .8s, right .5s .8s, top .3s 1.3s;
+    }
+  }
+}  */
+        /* .button--three {
+  &:before {
+    bottom: -0.1rem; top: 100%; right: 0; left:  100%;
+    transition: top .3s .8s, right .5s .11s, left .5s 1.1s;
+  }
+  &:after {
+    bottom: 100%; top: -0.1rem; right: 100%; left: 0;
+    transition: bottom .3s 0s, right .5s .3s, left .5s .3s;
+  }
+  &:hover {
+    &:before {
+    bottom: -0.1rem; top: 0; right: 0; left: -0.1rem;
+      transition: right .5s 0s, left .5s 0s, top .3s .5s;
+    }
+    &:after {
+        bottom: 0; top: -0.1rem; right: -0.1rem; left: 0;
+      transition: right .5s .8s, left .5s .8s, bottom .3s 1.3s;
+    }
+  }
+}  */
+/* .section14_textBox2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 500px;
+}
+
+.text {
+  font-size: 10vw;
+  letter-spacing: -.01em;
+  line-height: 100%;
+  margin: 0;
+
+  width: 100%;
+  color: rgb(182, 182, 182, 0.2);
+  background: linear-gradient(to right, #720c2b, #720c2b) no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 0%;
+  transition: background-size cubic-bezier(.1,.5,.5,1) 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+} */
+
+        .button--three2 {
+            &:before {
+                top: -0.1rem;
+                bottom: 0;
+                left: 100%;
+                right: 0;
+                transition: top 0.3s 0.8s, right 0.5s 0.11s, left 0.5s 1.1s;
+                /* 트랜지션 속성 수정 */
+            }
+            &:after {
+                top: 100%;
+                bottom: -0.1rem;
+                left: 0;
+                right: 100%;
+                transition: bottom 0.3s 0s, right 0.5s 0.3s, left 0.5s 0.3s;
+                /* 트랜지션 속성 수정 */
+            }
+            &:hover {
+                &:before {
+                    top: -0.1rem;
+                    bottom: 0;
+                    left: 0;
+                    right: -0.1rem;
+                    transition: right 0.5s 0s, left 0.5s 0s, top 0.3s 0.5s;
+                    /* 트랜지션 속성 수정 */
+                }
+                &:after {
+                    top: 0;
+                    bottom: -0.1rem;
+                    left: -0.1rem;
+                    right: 0;
+                    transition: right 0.5s 0.8s, left 0.5s 0.8s, bottom 0.3s 1.3s;
+                    /* 트랜지션 속성 수정 */
+                }
+            }
+        }
+    </style>
+    <body>
+        <!-- 섹션14-->
+                <!-- <div class="section14_textBox2">
+            <p><h1 class="text">출산 후 보강 처방과 다이어트</h1>jj</p>
+        </div> -->
+        <div
+            id="section14_textBox"
+            style="display: flex; flex-wrap: wrap; width: 355px; line-height: 38px;  letter-spacing: -0.5px; font-size: 30px;">
+            <p
+                style="width: 30%; padding: 0; margin: 0; padding-top: 14px; color: #9b9898; ">임신 후</p>
+            <span
+                style=" border:solid 2px #9b9898;  border-radius: 8px; position: relative;  padding: 10px; font-weight: bold;">체중이 늘었다<img
+                style="position: absolute; top: -11.5px; right: -14.5px;"
+                src="https://cdn.imweb.me/upload/S20220427e48f64788b4ca/dd50bf2a196b5.png"
+                class="fr-fin fr-dib"></span>
+            <p style="width: 100%; color: #9b9898;">한꺼번에 불어난 살들...</p>
+            <span
+                style=" border:solid 2px #9b9898;  border-radius: 8px; position: relative;  padding: 10px; font-weight: bold;">어떻게 다이어트를<img
+                style="position: absolute; top: -11.5px; right: -14.5px;"
+                src="https://cdn.imweb.me/upload/S20220427e48f64788b4ca/dd50bf2a196b5.png"
+                class="fr-fin fr-dib"></span>
+            <p style="width: 100%; color: #9b9898;">해야 할 지 고민이다</p>
+        </div>
+
+        <div
+            id="section14_imgBox1"
+            style="position: relative; width:310px; margin-right: 20px; margin-bottom: 60px; ">
+            <p
+                style=" border-radius: 18px; font-size: 14px; letter-spacing: -0.24px; line-height: 25px; color: #2a2a2a; border: solid 2px #eed9d8; text-align: right; padding: 20px 40px 20px 40px;">출산하고 시간이 좀 지났는데도 지금
+                <br>다이어트가 가능한가요?</p><img
+                    style="position: absolute; bottom: -30px; right: -30px;"
+                    src="https://cdn.imweb.me/upload/S20220427e48f64788b4ca/82abd2e8cb51c.png"
+                    class="fr-fin fr-dib">
+        </div>
+        <div
+            id="section14_imgBox2"
+            style="position: relative; width:310px; margin-left: 20px; margin-bottom: 60px;">
+            <p
+                style=" border-radius: 18px; font-size: 14px; letter-spacing: -0.24px; line-height: 25px; color: #2a2a2a; border: solid 2px #720c2b; text-align: left; padding: 20px 40px 20px 40px;">다이어트 시작 기간은 최소 출산 후,<br>
+                3개월 ~ 2년 사이에 실시하여 이전<br>
+                아름다웠던 모습을 되찾는 것을<br>
+                권장해 드리고 있습니다</p><img
+                    style="position: absolute; bottom: -30px; left: -30px;"
+                    src="https://cdn.imweb.me/upload/S20220427e48f64788b4ca/1d0ee59c59d15.png"
+                    class="fr-fin fr-dib">
+        </div>
+        <div
+            id="section14_imgBox3"
+            style="position: relative; width:310px; margin-right: 20px; margin-bottom: 60px;">
+            <p
+                style=" border-radius: 18px; font-size: 14px; letter-spacing: -0.24px; line-height: 25px; color: #2a2a2a; border: solid 2px #eed9d8; text-align: right; padding: 20px 40px 20px 40px;">모유 수유하고 있는 다이어트 진행해도 괜찮을까요?</p><img
+                style="position: absolute; bottom: -30px; right: -30px;"
+                src="https://cdn.imweb.me/upload/S20220427e48f64788b4ca/6029d668c1451.png"
+                class="fr-fin fr-dib">
+        </div>
+        <div
+            id="section14_imgBox4"
+            style="position: relative; width:310px; margin-left: 20px; margin-bottom: 60px;">
+            <p
+                style=" border-radius: 18px; font-size: 14px; letter-spacing: -0.24px; line-height: 25px; color: #2a2a2a; border: solid 2px #720c2b; text-align: left; padding: 20px 40px 20px 40px;">모유는 단유하고 시작하는게<br>
+                좋습니다.<img
+                    style="position: absolute; bottom: -30px; left: -30px;"
+                    src="https://cdn.imweb.me/upload/S20220427e48f64788b4ca/1d0ee59c59d15.png"
+                    class="fr-fin fr-dib">
+        </div>
+        <div p style="margin-bottom:15px; display: flex; height: 140px;">
+            <ul style="list-style: none; padding: o; margin: 0; justify-content: space-around; height: 100%;">
+                <li style="font-size: 18px; letter-spacing: -0.24px; line-height: 23px;">진료안내</li>
+                <li style="letter-spacing: -0.5px; font-size: 30px; line-height: 42px;">02-2065-1075</li>
+                <li style="font-size: 18px; letter-spacing: -0.24px; line-height: 23px;">포유맘케어와 상담하세요.</li>
+                <li style="font-size: 14px; letter-spacing: -0.24px; line-height: 25px;">평생의 건강을 좌우할 산후조리 한약</li>
+            </ul>
+            <img src="https://cdn.imweb.me/upload/S20220427e48f64788b4ca/f64952ac5a7e6.png" class="fr-fin fr-dib">
+        </div>
+        <div id="section6" style="width: 315px; height: 200px; background-color: #eed9d8; border-radius: 18px;">
+            <div class="section6_Img" style="position: relative; height: 80%; ">
+                <img id="section6_Img01" style=" position: absolute; top: 55%; left: 50%; margin-left: -50px; margin-top: -50px;" src="https://cdn.imweb.me/upload/S20220427e48f64788b4ca/7b7b4e5c3fccb.png" class="fr-fin fr-dib">
+                <img id="section6_Img02" style="position: absolute; top: 55%; left: 50%; margin-left: -50px; margin-top: -50px;" src="https://cdn.imweb.me/upload/S20220427e48f64788b4ca/fa2570030e0dd.png" class="fr-fin fr-dib">
+                <img id="section6_Img03" style="position: absolute; top: 55%; left: 50%; margin-left: -50px; margin-top: -50px;" src="https://cdn.imweb.me/upload/S20220427e48f64788b4ca/3baf44256e671.png" class="fr-fin fr-dib">
+                <img id="section6_Img04" style="position: absolute; top: 55%; left: 50%; margin-left: -50px; margin-top: -50px;" src="https://cdn.imweb.me/upload/S20220427e48f64788b4ca/4a53f9bcf4a25.png" class="fr-fin fr-dib"></div>
+            <div class="section6_Txt" style="position: relative; height: 20%;">
+        
+                <p class="section6_Txt01" style="font-size: 18px; letter-spacing: -0.24px; line-height: 23px; color: rgb(42, 42, 42); position: absolute; top: 0; left: 50%; margin-left: -33px;">산후 회복</p>
+        
+                <p class="section6_Txt02" style="font-size: 18px; letter-spacing: -0.24px; line-height: 23px; color: rgb(42, 42, 42); position: absolute; top: 0; left: 48%; margin-left: -33px;">노폐물 배출</p>
+        
+                <p class="section6_Txt03" style="font-size: 18px; letter-spacing: -0.24px; line-height: 23px; color: rgb(42, 42, 42); position: absolute; top: 0; left: 50%; margin-left: -33px;">관절 강화</p>
+        
+                <p class="section6_Txt04" style="font-size: 18px; letter-spacing: -0.24px; line-height: 23px; color: rgb(42, 42, 42); position: absolute; top: 0; left: 50%; margin-left: -33px;">체력 보강</p>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+
+            const textElements = gsap.utils.toArray('.text');
+
+            textElements.forEach(text => {
+            gsap.to(text, {
+                backgroundSize: '100%',
+                ease: 'none',
+                scrollTrigger: {
+                trigger: text,
+                start: 'center 80%',
+                end: 'center 20%',
+                scrub: true,
+                },
+            });
+            });
+            // 버튼 요소 선택
+            // const button = document.querySelector('.button--three');
+
+            // 버튼에 마우스 오버 이벤트 처리 button.addEventListener('mouseover', () => {
+            // gsap.to(button, {     duration: 0.5,     css: {       '&:before': {
+            // top: '-0.1rem',         bottom: '0',         left: '0',         right:
+            // '-0.1rem',       },       '&:after': {         top: '0',         bottom:
+            // '-0.1rem',         left: '-0.1rem',         right: '0',       },     },   });
+            // });  버튼에 마우스 아웃 이벤트 처리 button.addEventListener('mouseout', () => {
+            // gsap.to(button, {     duration: 0.5,     css: {       '&:before': {
+            // top: '-0.1rem',         bottom: '100%',         left: '0',         right:
+            // '100%',       },       '&:after': {         top: '100%',         bottom:
+            // '-0.1rem',         left: '100%',         right: '0',       },     },   });
+            // });
+        </script>
+    </body>
+</html>

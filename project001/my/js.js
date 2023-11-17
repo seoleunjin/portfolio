@@ -3,11 +3,11 @@ $(document).ready(function(){
     // 해더영역 ########################################################
     $('.gnb>ul>li').mouseenter(function(){
         let i = $(this).index()
-        $('.sub_menu>div').slideUp()
-        $('.menu0'+(i+1)).slideDown()
+        $('.sub_menu>div').section10_slideUp()
+        $('.menu0'+(i+1)).section10_slideDown()
     });
     $('header').mouseleave(function(){
-        $('.sub_menu>div').slideUp()
+        $('.sub_menu>div').section10_slideUp()
     });
 
 
@@ -28,7 +28,7 @@ $(document).ready(function(){
 
 
     // 타이핑효과
-    let txt = $('.slider .txt').text();
+    let txt = $('.section10_slider .txt').text();
     let txtN = txt.split('')
     let i = -1
     let ti = txtN.length;

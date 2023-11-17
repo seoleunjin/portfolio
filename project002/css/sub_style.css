@@ -91,7 +91,7 @@ body {}
     font-size: 14px;
 }
 
-.btn {
+.section10_btn {
     position: fixed;
     width: 120px;
     height: 150px;
@@ -101,7 +101,7 @@ body {}
     margin-top: -75px;
     background-color: rgba(0, 0, 0, 0.3);
 }
-.btn.on {
+.section10_btn.on {
     right: 250px;
 }
 .sub .button02 {
@@ -112,7 +112,7 @@ body {}
     border: none;
 }
 
-.btn span {
+.section10_btn span {
     height: 100%;
     position: absolute;
     font-size: 80px;
@@ -125,10 +125,10 @@ body {}
     display: none;
     cursor: pointer;
 }
-.btn span.on {
+.section10_btn span.on {
     display: block;
 }
-.btn span:hover {
+.section10_btn span:hover {
     animation-play-state: paused;
 }
 @keyframes ani {

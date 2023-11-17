@@ -337,8 +337,8 @@ window.addEventListener('scroll', be2)
 
 // event ---------------------------------------------------------
 
-let slider = document.querySelector(".slider")
-let innerSlider = document.querySelector(".slider_inner")
+let slider = document.querySelector(".section10_slider")
+let innerSlider = document.querySelector(".section10_slider_inner")
 let pressed = false
 let startx
 let x
@@ -392,30 +392,30 @@ function checkboundary() {
     //     let sc= $(this).scrollTop();
 
     //     if(sc>=700){
-    //         $('.btn_top').css({'opacity':1})
+    //         $('.section10_btn_top').css({'opacity':1})
     //     }
 
     //     if(sc<700){
-    //         $('.btn_top').css({'opacity':0})
+    //         $('.section10_btn_top').css({'opacity':0})
     //     }
 
     // })
 
     // TOP 버튼 누르면 맨 위로 가기
-        // $('.btn_top').click(function(){
+        // $('.section10_btn_top').click(function(){
         //     $('html,body').animate({scrollTop:0},1000)
         // })
 
         // $(function() {
         //     $(window).scroll(function() {
         //         if ($(this).scrollTop() >= 700) {
-        //             $('.btn_top').fadeIn();
+        //             $('.section10_btn_top').fadeIn();
         //         } else {
-        //             $('.btn_top').fadeOut();
+        //             $('.section10_btn_top').fadeOut();
         //         }
         //     });
             
-        //     $(".btn_top").click(function() {
+        //     $(".section10_btn_top").click(function() {
         //         $('html, body').animate({
         //             scrollTop : 0
         //         }, 1000);

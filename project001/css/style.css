@@ -17,7 +17,7 @@ header {
 nav {}
 
 
-.slide {
+.section10_slide {
     width: 100%;
     height: 600px;
     background-color: aquamarine;
@@ -77,24 +77,24 @@ header nav {
 }
 
 /* 슬라이드설정 */
-.slide {
+.section10_slide {
     margin-top: 120px;
     
 }
-.slide .wrap {
+.section10_slide .wrap {
     display: flex;
     align-items: center;
 }
-.slide .txtBox {
+.section10_slide .txtBox {
     width: 600px;
     height: 400px;
     background-color: palevioletred;
     margin-left: 100px;
 
 }
-.slide em {}
-.slide h2 {}
-.slide p {}
+.section10_slide em {}
+.section10_slide h2 {}
+.section10_slide p {}
 
 /* 릴레이션설정 */
 .relation {
@@ -160,21 +160,21 @@ header nav {
 }
 
 /* 좌우버튼설정 갤러리용 리뷰 공통사항*/
-.btn {
+.section10_btn {
     position: absolute;
     bottom: 50px;
     right: 50px;
     display: flex;
 }
-.btn p {
+.section10_btn p {
     width: 50px;
     height: 50px;
     background-color: blue;
 }
-.btn .left {
+.section10_btn .left {
     margin-right: 5px;
 }
-.btn .right {}
+.section10_btn .right {}
 
 /* 인포섹션설정 */
 .infosection {}
@@ -306,7 +306,7 @@ header nav {
 /* 1280px이하일때  */
 @media(max-width:1280px){
 
-    .slide .txtBox {
+    .section10_slide .txtBox {
         width: 400px;
         height: 300px;
         background-color: palevioletred;
@@ -347,15 +347,15 @@ header nav {
     background-color: yellow;
 }
 /* 슬라이드설정 */
-.slide {
+.section10_slide {
     margin-top: 180px;
 }
-.slide .wrap {
+.section10_slide .wrap {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.slide .txtBox {
+.section10_slide .txtBox {
     width: 60%;
     margin-left: 0;
 }
@@ -427,15 +427,15 @@ header nav {
     background-color: yellow;
 }
 /* 슬라이드설정 */
-.slide {
+.section10_slide {
     margin-top: 180px;
 }
-.slide .wrap {
+.section10_slide .wrap {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.slide .txtBox {
+.section10_slide .txtBox {
     width: 60%;
     margin-left: 0;
 }
@@ -549,15 +549,15 @@ header nav {
     background-color: yellow;
 }
 /* 슬라이드설정 */
-.slide {
+.section10_slide {
     margin-top: 180px;
 }
-.slide .wrap {
+.section10_slide .wrap {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.slide .txtBox {
+.section10_slide .txtBox {
     width: 80%;
     margin-left: 0;
 }
@@ -652,20 +652,20 @@ header nav {
 }
 
 /* 좌우버튼설정 갤러리용 리뷰 공통사항*/
-.btn {
+.section10_btn {
     right: 50%;
     margin-right: -52.5px;
     display: flex;
 }
-.btn p {
+.section10_btn p {
     width: 50px;
     height: 50px;
     background-color: blue;
 }
-.btn .left {
+.section10_btn .left {
     margin-right: 5px;
 }
-.btn .right {}
+.section10_btn .right {}
 
 }
 
@@ -691,15 +691,15 @@ header nav {
         background-color: yellow;
     }
     /* 슬라이드설정 */
-    .slide {
+    .section10_slide {
         margin-top: 180px;
     }
-    .slide .wrap {
+    .section10_slide .wrap {
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    .slide .txtBox {
+    .section10_slide .txtBox {
         width: 80%;
         margin-left: 0;
     }
@@ -794,20 +794,20 @@ header nav {
     }
     
     /* 좌우버튼설정 갤러리용 리뷰 공통사항*/
-    .btn {
+    .section10_btn {
         right: 50%;
         margin-right: -52.5px;
         display: flex;
     }
-    .btn p {
+    .section10_btn p {
         width: 50px;
         height: 50px;
         background-color: blue;
     }
-    .btn .left {
+    .section10_btn .left {
         margin-right: 5px;
     }
-    .btn .right {}
+    .section10_btn .right {}
     
     }
 
