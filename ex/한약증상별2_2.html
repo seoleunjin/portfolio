@@ -17,38 +17,54 @@
 <body>
 
 <h2>증상 선택</h2>
-
-<label>
-  <input type="checkbox" id="data1" onchange="updatePrescriptions()"> data1
-</label>
-
-<label>
-  <input type="checkbox" id="data2" onchange="updatePrescriptions()"> data2
-</label>
-
 <div id="result"></div>
 
+<label>
+    <input type="checkbox" id="symptomCough" onchange="updatePrescriptions()"> data1
+</label>
+  
+<label>
+    <input type="checkbox" id="symptomRunnynose" onchange="updatePrescriptions()"> data2
+</label>
+  
+<div id="prescriptions">
+</div>
+
 <script>
-  function updatePrescriptions() {
     let data1 = "hb23, hb29, hb42, hb51, hb55, hb22";
     let data2 = "hb2, hb23, hb29, hb55, hb36, hb42";
 
-    var data1Checked = document.getElementById('data1').checked;
-    var data2Checked = document.getElementById('data2').checked;
-
-    // 데이터를 쉼표로 분리하고 Set 객체를 사용하여 중복된 요소만 추출
+    // 초기 상태에서 두 데이터의 교집합을 보여줌
     let set1 = new Set(data1.split(', '));
     let set2 = new Set(data2.split(', '));
-
-    // 두 Set에 공통으로 존재하는 요소를 구하고 배열로 변환
-    let intersectionArray = [...set1].filter(value => data2Checked ? set2.has(value) : false);
-
+    let intersectionArray = [...set1].filter(value => set2.has(value));
     let resultElement = document.getElementById('result');
     resultElement.textContent = intersectionArray.join(', ');
-  }
 
-  // 초기 로딩 시 호출
-  updatePrescriptions();
+    function updatePrescriptions() {
+        // 체크박스 상태 확인
+        let symptomCoughChecked = document.getElementById('symptomCough').checked;
+        let symptomRunnynoseChecked = document.getElementById('symptomRunnynose').checked;
+
+        // 데이터를 필터링하여 중복된 값 추출
+        let filteredData = [];
+
+        if (symptomCoughChecked) {
+            filteredData.push(...data1.split(', '));
+        }
+
+        if (symptomRunnynoseChecked) {
+            filteredData.push(...data2.split(', '));
+        }
+
+        // 중복된 값 추출
+        let setFilteredData = new Set(filteredData);
+        let prescriptionsArray = [...setFilteredData];
+
+        // 결과를 HTML 문서에 삽입
+        let prescriptionsElement = document.getElementById('prescriptions');
+        prescriptionsElement.textContent = prescriptionsArray.join(', ');
+    }
 </script>
 
 </body>
