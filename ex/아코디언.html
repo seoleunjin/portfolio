@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+
+    </head>
+    <body>
+        <div id="menu">
+            <h3 style="margin:0;outline:solid 1px red;">
+                <a>Menu 1</a>
+            </h3>
+            <div style="outline:solid 1px blue;">
+                <div>
+                    <a>Sub menu 1-1</a>
+                </div>
+                <div>
+                    <a>Sub menu 1-2</a>
+                </div>
+            </div>
+            <h3 style="margin:0;outline:solid 1px red;">
+                <a>Menu 2</a>
+            </h3>
+            <div style="outline:solid 1px blue;">
+                <div>
+                    <a>Sub menu 2-1</a>
+                </div>
+                <div>
+                    <a>Sub menu 2-2</a>
+                </div>
+            </div>
+            <h3 style="margin:0;outline:solid 1px red;">
+                <a>Menu 3</a>
+            </h3>
+            <div style="outline:solid 1px blue;">
+                <div>
+                    <a>Sub menu 3-1</a>
+                </div>
+                <div>
+                    <a>Sub menu 3-2</a>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">//<![CDATA[(function($, undefined){    $.fn.multiOpenMenu = function(options) {        // 메뉴가 될 엘리먼트가 없는지 체크합니다.        if(this.length === 0) {            return this;        }        // 기본값 설정 : active는 처음에 열려 있을 메뉴 입니다.        var settings = $.extend({            active: 0        }, options);        // 초기 메뉴를 생성합니다.        var headers = this.find(">h3");        $.each(headers, function(i, opt) {            if(i != settings.active) {                $(this).next().hide();            }        });        // 메뉴를 클릭했을때 서브 메뉴를 보여주는 이벤트를 만듭니다.        headers.on('click', function() {            var menuArea = $(this).next();            var isOpen = menuArea.is(":visible");            // 열린 상태에 따라 이벤트를 반전해서 발생시킨다.            menuArea[isOpen ? 'slideUp' : 'slideDown']().trigger(isOpen ? 'hide' : 'show');            // 이벤트 버블링을 멈춘다.            return false;        });        return this;    };}(jQuery));// 메뉴를 생성합니다.$(function(){    $("#menu").multiOpenMenu();});//]]></script>
+
+    </body>
+</html>

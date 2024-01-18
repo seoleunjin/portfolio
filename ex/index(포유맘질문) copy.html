@@ -11,16 +11,11 @@ body {
 }
 
 
-#wrapper {
-  background-color: #f5ebeb;
-  width: 390px;
-  padding: 0 45px;
-}
 
 /* Accordion Container */
 .container {
    position: relative;
-   width: 300px;
+   width: 100%;
    padding: 0;
    margin: 0;
 }
@@ -52,71 +47,28 @@ body {
    border-radius: 18px;
    overflow: hidden;
 }
-.accordionTitle {
-   padding: 20px; 
+.intro_btn {
    position: relative;
    margin: 0;
-   font-size: 18px;
-   font-weight: bold;
-   color: #52616b;
    transition: ease-in-out 0.2s all;
    cursor: pointer;
-   font-size: 18px;
-   letter-spacing: -0.01em;
-   line-height: 25.6px;
 }
 
-.accordionTitle:hover {
-   padding-left: 25px;
-} 
+
 
 /* Accordion Item line */
-.accordionTitle:before,
-.accordionTitle:after {
+.intro_btn:before,
+.intro_btn:after {
    content:'';
    position: absolute;
-   height: 2px;
-   border-radius: 50px;
    transition: ease-in-out 0.6s all;
    bottom: 0;
    left: 0;
-   display: flex;
-   justify-content: center;
-   align-items: center;
 }
 
-/* 상자 밑 라인 전 */
-.accordionTitle:before {
-   width: 100%;
-   background-color: #f5ebeb;
-}
-.accordionTitle:after {
-   background-image: linear-gradient(90deg, #720c2b, #f5ebeb);
-   width: 0%;
-}
 
-.accordionTitle:hover::after {
-   width: 100%;
-}
 
-/* Accordion Item line - Active */
-.accordionTitleActive:after {
-   content:'';
-   position: absolute;
-   height: 2px;
-   border-radius: 50px;
-   transition: ease-in-out 0.6s all;
-   bottom: 0;
-   left: 0;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-/* 상자 밑 라인 후 */
-.accordionTitleActive:after {
-   background-image: linear-gradient(90deg, #720c2b, #f5ebeb);
-   width: 100%;
-}
+
 
 
 /* Accordion Item Icon  */
@@ -149,11 +101,7 @@ body {
    width: 20px;
    height: 2px;
 }
-/* 플러스 후 */
-.accordionTitle:hover .accIcon:before,
-.accordionTitle:hover .accIcon:after {
-   background-color: #720c2b;
-}
+
 
 .accIcon.anime.accIcon:before {
    transform: rotate(90deg);
@@ -188,14 +136,11 @@ body {
   </style>
 </head>
 <body>
- <section id="wrapper">
-   <div style="width: 100%; background-image: url(https://cdn.imweb.me/upload/S20220427e48f64788b4ca/07a1967f3c749.png); background-repeat: no-repeat; background-position: bottom right;">
-   <p style="padding-top: 95px; padding-bottom: 45px; line-height: 33.6px; color: rgb(114, 12, 43); font-size: 28px; letter-spacing: -0.7px; font-weight: bold; margin: 0;">산후조리 한약의<br>오해와 진실</p>
-   </div>
+
  <div class="container">
     <ul class="accordion">
-       <li style="margin-bottom: 8px;" class="item">
-          <p class="accordionTitle">Q&nbsp;&nbsp;모유수유 할 때는<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;한약을 먹으면 안된다?<span class="accIcon"></span></p>
+       <li class="item">
+          <p class="intro_btn"><span class="accIcon"></span></p>
           <div class="section5_text"> 임한약성분이 모유를 통해 전달되는 것은 아주 미량
             으로 영향이 거의 없습니다. <br>
             <br>
@@ -203,23 +148,16 @@ body {
             한약은 아이와 임산부도 복용이 가능한 약재를
             사용하므로 안심하고 복용하실 수 있습니다. </div>
        </li>
-       <li class="item">
-          <p class="accordionTitle">Q&nbsp;&nbsp;산후조리 한약 먹으면<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;살이 찐다?<span class="accIcon"></span></p>
-          <div class="section5_text">산후 한약은 체내 노폐물, 어혈, 오로, 불필요한 수분
-            등의 배출을 돕는 치료 약으로써, 출산 후 붓기와 체중
-             감소에 효과적이므로 다이어트에 도움이 됩니다.
-            </div>
-       </li>
     </ul>
  </div>
- </section>
+
   
 </body>
 
 
 <script>
   // variables
-var accordionBtn = document.querySelectorAll('.accordionTitle');
+var accordionBtn = document.querySelectorAll('.intro_btn');
 var allsection5_texts = document.querySelectorAll('.section5_text');
 var accIcon = document.querySelectorAll('.accIcon');
 
@@ -237,11 +175,9 @@ function toggleAccordion(el) {
    if (targetsection5_text.contains('show')) {
        targetsection5_text.remove('show');
        targetAccIcon.classList.remove('anime');
-       target.classList.remove('accordionTitleActive');
    } 
    else {
       accordionBtn.forEach(function (el) {
-         el.classList.remove('accordionTitleActive');
          
          allsection5_texts.forEach(function (el) {
             el.classList.remove('show');
@@ -254,7 +190,6 @@ function toggleAccordion(el) {
       })
       
          targetsection5_text.add('show');
-         target.classList.add('accordionTitleActive');
          targetAccIcon.classList.add('anime');
    }  
 }

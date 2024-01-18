@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #section1M {
+          width:100%;
+        }
+      .tabM {
+        width: 100%;
+        margin: 0 auto;
+        text-align:center;
+        border: none;
+        padding: 0;
+        margin-bottom: 36px;
+      }
+      /* 기본 탭 스타일 */
+      .button_txtM {
+        display: inline-block;
+        width: 20%;
+        padding: 0;
+        font-size: 12px;
+        letter-spacing: -0.025em;
+        font-weight: bold;
+        margin: 0;
+        margin-top: 5px;
+        padding: 7px 0;
+        border-radius: 9px;
+        border: 2px solid #F6F6F6;
+      }
+  
+      .tabM span {
+      }
+      /* 활성 탭 스타일 */
+      .tabM span.active .button_txtM {
+        color: #000;
+        background-color: #F6F6F6;
+      }
+      
+      /* 탭 콘텐츠 스타일 */
+      .tabMcontentM {
+        padding: 0; 
+        border: none; 
+      }
+      
+      /* 탭 콘텐츠 iframe 영역 크기 */
+        #section1M_wrap {
+        width:100%;
+        height: 392px;
+        }
+      .fit_iframeM {
+        width: 100%; 
+        border: none;
+        height: 392px;
+      } 
+      .imgB {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 9px;
+      }
+      </style>
+      <!-- <style>
+        #section1M {
+          width:100%;
+        }
+      .tabM {
+        width: 100%;
+        margin: 0 auto;
+        border: none;
+        padding: 0;
+        margin-bottom: 36px;
+        text-align: center;
+      }
+      /* 기본 탭 스타일 */
+      .button_txtM {
+        display: inline-block;
+        width: 20%;
+        padding: 0;
+        font-size: 12px;
+        letter-spacing: -0.025em;
+        font-weight: bold;
+        margin-bottom: 18px;
+        text-align: center;
+      }
+  
+
+
+      .tabM span:nth-child(6) {
+        margin-right: 42.5%;
+      }
+      /* 탭 콘텐츠 스타일 */
+      .tabMcontentM {
+        padding: 0; 
+        border: none; 
+      }
+      
+      /* 탭 콘텐츠 iframe 영역 크기 */
+        #section1M_wrap {
+        width:100%;
+        height: 392px;
+        }
+      .fit_iframeM {
+        width: 100%; 
+        border: none;
+        height: 392px;
+      } 
+      .imgB {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 9px;
+      }
+      </style> -->
+      <!-- <style>
+        #section1M {
+          width:100%;
+        }
+      .tabM {
+        width: 100%;
+        margin: 0 auto;
+        border: none;
+        padding: 0;
+        margin-bottom: 36px;
+        text-align: center;
+      }
+      /* 기본 탭 스타일 */
+      .button_txtM {
+        display: inline-block;
+        width: 20%;
+        padding: 0;
+        font-size: 12px;
+        letter-spacing: -0.025em;
+        font-weight: bold;
+        margin-bottom: 18px;
+        text-align: center;
+      }
+  
+
+
+      .tabM span:nth-child(5) {
+        margin-right: 63%;
+      }
+      /* 탭 콘텐츠 스타일 */
+      .tabMcontentM {
+        padding: 0; 
+        border: none;
+        width: 100%;
+      }
+      .tabMcontentM img {
+        width: 100vw;
+        height: 100vh;
+      }
+      /* 탭 콘텐츠 iframe 영역 크기 */
+        #section1M_wrap {
+        width:100%;
+        height: 392px;
+        }
+      .fit_iframeM {
+        width: 100%; 
+        border: none;
+        height: 392px;
+      } 
+      .imgB {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 9px;
+      } -->
+      </style>
+</head>
+<body>
+    <section id="section1M">
+        <div class="tabM">
+          <span class="tabMlinksM" onclick="customtabMOpen(event, 'tabM1')" id="defaultOpenM"><p class="button_txtM"><img class="imgB" src="https://cdn.imweb.me/upload/S202311221b3657b539ce7/62e5549555e8d.png" class="fr-fin fr-dib">척추ᆞ관절</p></span>
+          <span class="tabMlinksM" onclick="customtabMOpen(event, 'tabM2')"><p class="button_txtM"><img class="imgB" src="https://cdn.imweb.me/upload/S202311221b3657b539ce7/e6e41fdbeddb3.png" class="fr-fin fr-dib">휜다리</p></span>
+          <span class="tabMlinksM" onclick="customtabMOpen(event, 'tabM3')"><p class="button_txtM"><img class="imgB" src="https://cdn.imweb.me/upload/S202311221b3657b539ce7/f585b7462841e.png" class="fr-fin fr-dib">족부</p></span>
+          <span class="tabMlinksM" onclick="customtabMOpen(event, 'tabM4')"><p class="button_txtM"><img class="imgB" src="https://cdn.imweb.me/upload/S202311221b3657b539ce7/4fa3123fce81d.png" class="fr-fin fr-dib">안면비대칭</p></span>
+          <span class="tabMlinksM" onclick="customtabMOpen(event, 'tabM5')"><p class="button_txtM"><img class="imgB" src="https://cdn.imweb.me/upload/S202311221b3657b539ce7/d2f28ee67bb8e.png" class="fr-fin fr-dib">비만</p></span>
+          <span class="tabMlinksM" onclick="customtabMOpen(event, 'tabM6')"><p class="button_txtM"><img class="imgB" src="https://cdn.imweb.me/upload/S202311221b3657b539ce7/08b3c928a20d8.png" class="fr-fin fr-dib">중ᆞ장년</p></span>
+          <span class="tabMlinksM" onclick="customtabMOpen(event, 'tabM7')"><p class="button_txtM"><img class="imgB" src="https://cdn.imweb.me/upload/S202311221b3657b539ce7/23da313fdf8a9.png" class="fr-fin fr-dib">손상 후</p></span>
+          <span class="tabMlinksM" onclick="customtabMOpen(event, 'tabM8')"><p class="button_txtM"><img class="imgB" src="https://cdn.imweb.me/upload/S202311221b3657b539ce7/61fb2c01349ef.png" class="fr-fin fr-dib">여성ᆞ소아</p></span>
+        </div>
+        
+        <div id="section1M_wrap">
+        <div id="tabM1" class="tabMcontentM">
+          <iframe class="fit_iframeM" src="https://www.unjeongchae.com/tab1"></iframe>
+        </div>
+        
+        <div id="tabM2" class="tabMcontentM">
+          <iframe class="fit_iframeM" src="https://www.unjeongchae.com/tab2"></iframe>
+        </div>
+        
+        <div id="tabM3" class="tabMcontentM">
+          <iframe class="fit_iframeM" src="https://www.unjeongchae.com/tab3"></iframe>
+        </div>
+        
+        <div id="tabM4" class="tabMcontentM">
+          <iframe class="fit_iframeM" src="https://www.unjeongchae.com/36"></iframe>
+        </div>
+        
+        <div id="tabM5" class="tabMcontentM">
+          <iframe class="fit_iframeM" src="https://www.unjeongchae.com/tab5"></iframe>
+        </div>
+        
+        <div id="tabM6" class="tabMcontentM">
+          <iframe class="fit_iframeM" src="https://www.unjeongchae.com/tab6"></iframe>
+        </div>
+        
+        <div id="tabM7" class="tabMcontentM">
+          <iframe class="fit_iframeM" src="https://www.unjeongchae.com/tab7"></iframe>
+        </div>
+        
+        <div id="tabM8" class="tabMcontentM">
+          <iframe class="fit_iframeM" src="https://www.unjeongchae.com/tab8"></iframe>
+        </div>
+          </div>
+    </section>
+    
+            <script>
+                function customtabMOpen(evt, tabMName) {
+                  var i, tabMcontentM, tabMlinksM;
+                  tabMcontentM = document.getElementsByClassName("tabMcontentM");
+                  for (i = 0; i < tabMcontentM.length; i++) {
+                    tabMcontentM[i].style.display = "none";
+                  }
+                  tabMlinksM = document.getElementsByClassName("tabMlinksM");
+                  for (i = 0; i < tabMlinksM.length; i++) {
+                    tabMlinksM[i].className = tabMlinksM[i].className.replace(" active", "");
+                  }
+                  document.getElementById(tabMName).style.display = "block";
+                  evt.currentTarget.className += " active";
+                }
+                  document.getElementById("defaultOpenM").click();
+            </script>
+            <!-- <section id="section1M">
+              <div class="tabM">
+                <span class="tabMlinksM" onclick="customtabMOpen(event, 'tabM1')" id="defaultOpenM"><p class="button_txtM"><img class="imgB" src="https://cdn.imweb.me/upload/S202311221b3657b539ce7/7dd04e6f85d30.png" class="fr-fin fr-dib">목</p></span>
+                <span class="tabMlinksM" onclick="customtabMOpen(event, 'tabM2')"><p class="button_txtM"><img class="imgB" src="https://cdn.imweb.me/upload/S202311221b3657b539ce7/d9b54c57802a4.png" class="fr-fin fr-dib">허리</p></span>
+                <span class="tabMlinksM" onclick="customtabMOpen(event, 'tabM3')"><p class="button_txtM"><img class="imgB" src="https://cdn.imweb.me/upload/S202311221b3657b539ce7/8091fccb3a317.png" class="fr-fin fr-dib">어깨</p></span>
+                <span class="tabMlinksM" onclick="customtabMOpen(event, 'tabM4')"><p class="button_txtM"><img class="imgB" src="https://cdn.imweb.me/upload/S202311221b3657b539ce7/9b152e7620432.png" class="fr-fin fr-dib">팔</p></span>
+                <span class="tabMlinksM" onclick="customtabMOpen(event, 'tabM5')"><p class="button_txtM"><img class="imgB" src="https://cdn.imweb.me/upload/S202311221b3657b539ce7/365cfbfb85883.png" class="fr-fin fr-dib">무릎</p></span>
+                <span class="tabMlinksM" onclick="customtabMOpen(event, 'tabM6')"><p class="button_txtM"><img class="imgB" src="https://cdn.imweb.me/upload/S202311221b3657b539ce7/367a666f57e05.png" class="fr-fin fr-dib">발목ᆞ발</p></span>
+              </div>
+              
+              <div id="section1M_wrap">
+              <div id="tabM1" class="tabMcontentM">
+                <iframe class="fit_iframeM" src="https://www.unjeongchae.com/37"></iframe>
+              </div>
+              
+              <div id="tabM2" class="tabMcontentM">
+                <iframe class="fit_iframeM" src="https://www.unjeongchae.com/38"></iframe>
+              </div>
+              
+              <div id="tabM3" class="tabMcontentM">
+                <iframe class="fit_iframeM" src="https://www.unjeongchae.com/39"></iframe>
+              </div>
+              
+              <div id="tabM4" class="tabMcontentM">
+                <iframe class="fit_iframeM" src="https://www.unjeongchae.com/40"></iframe>
+              </div>
+              
+              <div id="tabM5" class="tabMcontentM">
+                <iframe class="fit_iframeM" src="https://www.unjeongchae.com/41"></iframe>
+              </div>
+              
+              <div id="tabM6" class="tabMcontentM">
+                <iframe class="fit_iframeM" src="https://www.unjeongchae.com/42"></iframe>
+              </div>
+                </div>
+          </section>
+          
+                  <script>
+                      function customtabMOpen(evt, tabMName) {
+                        var i, tabMcontentM, tabMlinksM;
+                        tabMcontentM = document.getElementsByClassName("tabMcontentM");
+                        for (i = 0; i < tabMcontentM.length; i++) {
+                          tabMcontentM[i].style.display = "none";
+                        }
+                        tabMlinksM = document.getElementsByClassName("tabMlinksM");
+                        for (i = 0; i < tabMlinksM.length; i++) {
+                          tabMlinksM[i].className = tabMlinksM[i].className.replace(" active", "");
+                        }
+                        document.getElementById(tabMName).style.display = "block";
+                        evt.currentTarget.className += " active";
+                      }
+                        document.getElementById("defaultOpenM").click();
+                  </script> -->
+                  <!-- <section id="section1M">
+                    <div class="tabM">
+                      <span class="tabMlinksM" onclick="customtabMOpen(event, 'tabM1')" id="defaultOpenM"><p class="button_txtM"><img class="imgB" src="https://cdn.imweb.me/upload/S202311221b3657b539ce7/4225fd53220f1.png" class="fr-fin fr-dib">자율신경</p></span>
+                      <span class="tabMlinksM" onclick="customtabMOpen(event, 'tabM2')"><p class="button_txtM"><img class="imgB" src="https://cdn.imweb.me/upload/S202311221b3657b539ce7/1bbf72fc2f2ad.png" class="fr-fin fr-dib">허리</p></span>
+                      <span class="tabMlinksM" onclick="customtabMOpen(event, 'tabM3')"><p class="button_txtM"><img class="imgB" src="https://cdn.imweb.me/upload/S202311221b3657b539ce7/2ee45762f702f.png" class="fr-fin fr-dib">어깨</p></span>
+                      <span class="tabMlinksM" onclick="customtabMOpen(event, 'tabM4')"><p class="button_txtM"><img class="imgB" src="https://cdn.imweb.me/upload/S202311221b3657b539ce7/9b152e7620432.png" class="fr-fin fr-dib">팔</p></span>
+                      <span class="tabMlinksM" onclick="customtabMOpen(event, 'tabM5')"><p class="button_txtM"><img class="imgB" src="https://cdn.imweb.me/upload/S202311221b3657b539ce7/6963178604c2b.png" class="fr-fin fr-dib">무릎</p></span>
+                    </div>
+                    
+                    <div id="section1M_wrap">
+                    <div id="tabM1" class="tabMcontentM">
+                      <iframe class="fit_iframeM" src="https://www.unjeongchae.com/82"></iframe>
+                    </div>
+                    
+                    <div id="tabM2" class="tabMcontentM">
+                      <iframe class="fit_iframeM" src="https://www.unjeongchae.com/51"></iframe>
+                    </div>
+                    
+                    <div id="tabM3" class="tabMcontentM">
+                      <iframe class="fit_iframeM" src="https://www.unjeongchae.com/52"></iframe>
+                    </div>
+                    
+                    <div id="tabM4" class="tabMcontentM">
+                      <iframe class="fit_iframeM" src="https://www.unjeongchae.com/53"></iframe>
+                    </div>
+                    
+                    <div id="tabM5" class="tabMcontentM">
+                      <iframe class="fit_iframeM" src="https://www.unjeongchae.com/54"></iframe>
+                    </div>
+                      </div>
+                </section>
+                
+                        <script>
+                            function customtabMOpen(evt, tabMName) {
+                              var i, tabMcontentM, tabMlinksM;
+                              tabMcontentM = document.getElementsByClassName("tabMcontentM");
+                              for (i = 0; i < tabMcontentM.length; i++) {
+                                tabMcontentM[i].style.display = "none";
+                              }
+                              tabMlinksM = document.getElementsByClassName("tabMlinksM");
+                              for (i = 0; i < tabMlinksM.length; i++) {
+                                tabMlinksM[i].className = tabMlinksM[i].className.replace(" active", "");
+                              }
+                              document.getElementById(tabMName).style.display = "block";
+                              evt.currentTarget.className += " active";
+                            }
+                              document.getElementById("defaultOpenM").click();
+                        </script> -->
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 목록</title>
+    <style>
+        #product-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .product-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            width: calc(25% - 20px); /* 4개의 열을 표시하도록 설정 */
+            box-sizing: border-box;
+        }
+        .product-item:hover {
+            color: red;
+        }
+
+        .product-image {
+            filter: grayscale(1);
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="product-container"></div>
+    <button id="load-more-btn" onclick="loadMoreProducts()">더보기</button>
+
+    <script>
+        let products = [];  // 가상의 상품 데이터 배열
+        let currentEndIndex = 12; // 현재 상품 목록의 끝 인덱스
+
+        // 전체 상품 목록 생성
+        for (let i = 1; i <= 100; i++) {
+            products.push({
+                name: `상품 ${i}`,
+                image: `https://via.placeholder.com/150?text=Product${i}`, // 임의의 이미지 경로
+            });
+        }
+
+        function renderProducts(start, end) {
+            const productContainer = document.getElementById('product-container');
+
+            for (let i = start; i < end; i++) {
+                const productItem = document.createElement('div');
+                productItem.className = 'product-item';
+
+                const productName = document.createElement('p');
+                productName.textContent = products[i].name;
+
+                const productImage = document.createElement('img');
+                productImage.className = 'product-image';
+                productImage.src = products[i].image;
+                productImage.alt = products[i].name;
+
+                productItem.appendChild(productImage);
+                productItem.appendChild(productName);
+
+                productContainer.appendChild(productItem);
+            }
+        }
+
+        function loadMoreProducts() {
+            const productContainer = document.getElementById('product-container');
+
+            if (currentEndIndex < products.length) {
+                // 더 보여줄 상품이 남아있을 경우
+                const newEndIndex = Math.min(currentEndIndex + 12, products.length);
+                renderProducts(currentEndIndex, newEndIndex);
+                currentEndIndex = newEndIndex;
+            } else {
+                // 더 이상 보여줄 상품이 없을 경우
+                alert('더 이상 상품이 없습니다.');
+            }
+        }
+
+        // 초기 상품 목록 렌더링
+        renderProducts(0, currentEndIndex);
+    </script>
+
+</body>
+</html>
