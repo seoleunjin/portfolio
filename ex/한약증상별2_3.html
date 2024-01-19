@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>증상 선택</title>
+  <style>
+    /* 스타일링을 위한 간단한 CSS */
+    label {
+      margin-right: 15px;
+    }
+    #prescriptions {
+      margin-top: 15px;
+    }
+    .prescription-link {
+      color: #5C6373;
+      text-decoration: none;
+      padding: 14px 16px;
+      margin: 8px;
+      background-color: #fff;
+      border-radius: 9px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+<h2>증상 선택</h2>
+
+<label>
+  <input type="checkbox" id="symptomCough" onchange="updatePrescriptions()"> 기침
+</label>
+
+<label>
+  <input type="checkbox" id="symptomRunnynose" onchange="updatePrescriptions()"> 콧물
+</label>
+
+<label>
+  <input type="checkbox" id="symptomBodyache" onchange="updatePrescriptions()"> 몸살
+</label>
+
+<label>
+  <input type="checkbox" id="symptomChills" onchange="updatePrescriptions()"> 오한
+</label>
+
+<label>
+  <input type="checkbox" id="symptomFever" onchange="updatePrescriptions()"> 발열
+</label>
+
+<div id="prescriptions">
+  <!-- 여기에 중복된 한약들이 표시됩니다. -->
+</div>
+
+<script>
+  var hb = {
+    hb2: { name: "갈근탕", link: "https://haniuibang.imweb.me" },
+    hb4: { name: "구미강활탕", link: "#" },
+    hb22: { name: "불환금정기산", link: "#" },
+    hb23: { name: "삼소음", link: "#" },
+    hb29: { name: "소청룡탕", link: "#" },
+    hb36: { name: "연교패독산", link: "#" },
+    hb38: { name: "오적산", link: "#" },
+    hb42: { name: "인삼패독산", link: "#" },
+    hb47: { name: "청서익기탕", link: "#" },
+    hb51: { name: "행소탕", link: "#" },
+    hb55: { name: "형개연교탕", link: "#" },
+  };
+
+  var 증상 = {
+    기침: ["hb23", "hb29", "hb42", "hb51", "hb55", "hb22"],
+    콧물: ["hb2", "hb23", "hb29", "hb55", "hb36", "hb42"],
+    몸살: ["hb2", "hb4", "hb29", "hb42"],
+    오한: ["hb2", "hb22", "hb42"],
+    발열: ["hb2", "hb23", "hb36", "hb42", "hb47"],
+  };
+
+  function updatePrescriptions() {
+    var prescriptionsElement = document.getElementById('prescriptions');
+    prescriptionsElement.innerHTML = ''; // 기존 목록 초기화
+
+    var selectedSymptoms = getSelectedSymptoms();
+
+    var selectedPrescriptions = getSelectedPrescriptions(selectedSymptoms);
+
+    displayPrescriptions(selectedPrescriptions);
+  }
+
+  function getSelectedSymptoms() {
+    var selectedSymptoms = [];
+
+    var symptomCough = document.getElementById('symptomCough').checked;
+    var symptomRunnynose = document.getElementById('symptomRunnynose').checked;
+    var symptomBodyache = document.getElementById('symptomBodyache').checked;
+    var symptomChills = document.getElementById('symptomChills').checked;
+    var symptomFever = document.getElementById('symptomFever').checked;
+
+    if (symptomCough) selectedSymptoms.push('기침');
+    if (symptomRunnynose) selectedSymptoms.push('콧물');
+    if (symptomBodyache) selectedSymptoms.push('몸살');
+    if (symptomChills) selectedSymptoms.push('오한');
+    if (symptomFever) selectedSymptoms.push('발열');
+
+    return selectedSymptoms;
+  }
+
+  function getSelectedPrescriptions(selectedSymptoms) {
+    var selectedPrescriptions = [];
+
+    selectedSymptoms.forEach(function (symptom) {
+      selectedPrescriptions = selectedPrescriptions.concat(증상[symptom].map(prescription => hb[prescription]));
+    });
+
+    return selectedPrescriptions;
+  }
+
+  function displayPrescriptions(prescriptions) {
+    var prescriptionsElement = document.getElementById('prescriptions');
+    prescriptions.forEach(function (prescription) {
+      var newPrescriptionElement = document.createElement('span');
+      var prescriptionLink = document.createElement('a');
+
+      // 기본적으로 링크의 텍스트와 주소를 설정합니다.
+      prescriptionLink.textContent = prescription.name;
+      prescriptionLink.href = prescription.link;
+      prescriptionLink.className = "prescription-link";
+
+      // 링크의 추가 속성을 설정합니다.
+      prescriptionLink.style.display = "inline-block";
+
+      // checkbox를 클릭할 때 링크를 열도록 이벤트 리스너 추가
+      prescriptionLink.addEventListener('click', function (event) {
+        event.preventDefault(); // 기본 동작(링크 열기)을 취소
+        window.location.href = prescription.link; // 현재 창에서 열기
+      });
+
+      newPrescriptionElement.appendChild(prescriptionLink);
+      prescriptionsElement.appendChild(newPrescriptionElement);
+    });
+  }
+</script>
+
+</body>
+</html>
