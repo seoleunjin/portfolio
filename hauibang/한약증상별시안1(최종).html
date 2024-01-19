@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>증상 선택(시안최종)</title>
+  <style>
+    /* 스타일링을 위한 간단한 CSS */
+    label {
+      margin-right: 15px;
+    }
+    #prescriptions {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>증상 선택</h2>
+
+<label >
+  <input type="checkbox" id="symptom1" onchange="updatePrescriptions()"> 감기몸살
+</label>
+
+<label>
+  <input type="checkbox" id="symptom2" onchange="updatePrescriptions()"> 두통
+</label>
+
+<label>
+  <input type="checkbox" id="symptom3" onchange="updatePrescriptions()"> 설사
+</label>
+
+<label>
+  <input type="checkbox" id="symptom4" onchange="updatePrescriptions()"> 오한발열(땀이없음)
+</label>
+  
+<label>
+  <input type="checkbox" id="symptom5" onchange="updatePrescriptions()"> 뒷목땡김
+</label>
+
+<label>
+  <input type="checkbox" id="symptom6" onchange="updatePrescriptions()"> 몸살
+</label>
+
+<label>
+  <input type="checkbox" id="symptom7" onchange="updatePrescriptions()"> 구토
+</label>
+
+<label>
+  <input type="checkbox" id="symptom8" onchange="updatePrescriptions()"> 오한과 발열의 교대
+</label>
+
+<label>
+  <input type="checkbox" id="symptom9" onchange="updatePrescriptions()"> 기침
+</label>
+
+<label>
+  <input type="checkbox" id="symptom10" onchange="updatePrescriptions()"> 맑은콧물
+</label>
+  
+<div id="prescriptions">
+  <!-- 여기에 중복된 한약들이 표시됩니다. -->
+</div>
+
+<script>
+  var hb = {
+    hb2: { name: "갈근탕", link: "https://haniuibang.imweb.me/33" },
+    hb4: { name: "구미강활탕", link: "#" },
+    hb22: { name: "불환금정기산", link: "#" },
+    hb23: { name: "삼소음", link: "#" },
+    hb29: { name: "소청룡탕", link: "#" },
+    hb36: { name: "연교패독산", link: "#" },
+    hb38: { name: "오적산", link: "#" },
+    hb42: { name: "인삼패독산", link: "#" },
+    hb47: { name: "청서익기탕", link: "#" },
+    hb51: { name: "행소탕", link: "#" },
+    hb55: { name: "형개연교탕", link: "#" },
+  };
+
+  var 증상 = {
+    감기몸살: ["hb2"],
+    두통: ["hb2", "hb42", "hb38"],
+    설사: ["hb2", "hb22", "hb29", "hb47"],
+    오한발열: ["hb2"],
+    뒷목땡김: ["hb2"],
+    몸살: ["hb4", "hb29", "hb42"],
+    구토: ["hb22", "hb29", "hb38"],
+    오한발열교대: ["hb22"],
+    기침: ["hb22", "hb23", "hb29", "hb42"],
+    맑은콧물: ["hb29"],
+  };
+
+  var selectedPrescriptions = [];
+
+  function updatePrescriptions() {
+    var prescriptionsElement = document.getElementById('prescriptions');
+    prescriptionsElement.innerHTML = ''; // 기존 목록 초기화
+
+    var symptom1 = document.getElementById('symptom1').checked;
+    var symptom2 = document.getElementById('symptom2').checked;
+    var symptom3 = document.getElementById('symptom3').checked;
+    var symptom4 = document.getElementById('symptom4').checked;
+    var symptom5 = document.getElementById('symptom5').checked;
+    var symptom6 = document.getElementById('symptom6').checked;
+    var symptom7 = document.getElementById('symptom7').checked;
+    var symptom8 = document.getElementById('symptom8').checked;
+    var symptom9 = document.getElementById('symptom9').checked;
+    var symptom10 = document.getElementById('symptom10').checked;
+
+    selectedPrescriptions = []; // 선택된 약 초기화
+
+    if (symptom1) {
+      addPrescription(증상.감기몸살);
+    }
+
+    if (symptom2) {
+      addPrescription(증상.두통);
+    }
+
+    if (symptom3) {
+      addPrescription(증상.설사);
+    }
+    if (symptom4) {
+      addPrescription(증상.오한발열);
+    }
+    if (symptom5) {
+      addPrescription(증상.뒷목땡김);
+    }
+
+    if (symptom6) {
+      addPrescription(증상.몸살);
+    }
+
+    if (symptom7) {
+      addPrescription(증상.구토);
+    }
+
+    if (symptom8) {
+      addPrescription(증상.오한발열교대);
+    }
+
+    if (symptom9) {
+      addPrescription(증상.기침);
+    }
+    
+    if (symptom10) {
+      addPrescription(증상.맑은콧물);
+    }
+
+    displayPrescriptions();
+  }
+
+  function addPrescription(prescriptions) {
+        var prescriptionsIntersection = []; // 교집합 약 목록
+        // 모든 선택된 증상의 약을 가져와서 교집합을 계산
+        prescriptions.forEach(function(prescription) {
+            if (selectedPrescriptions.length === 0 || selectedPrescriptions.includes(hb[prescription])) {
+                prescriptionsIntersection.push(hb[prescription]);
+            }
+        });
+        // 선택된 약 목록을 갱신
+        selectedPrescriptions = prescriptionsIntersection;
+    }
+
+  function displayPrescriptions() {
+    var prescriptionsElement = document.getElementById('prescriptions');
+    selectedPrescriptions.forEach(function (prescription) {
+      var newPrescriptionElement = document.createElement('span');
+      var prescriptionLink = document.createElement('a');
+
+      // 기본적으로 링크의 텍스트와 주소를 설정합니다.
+      prescriptionLink.textContent = prescription.name;
+      prescriptionLink.href = prescription.link;
+      
+      // 링크의 추가 속성을 설정합니다.
+      // prescriptionLink.target = "_blank";  새 창에서 열도록 설정
+      prescriptionLink.style.color = "#5C6373"; // 링크의 텍스트 색상을 변경
+      prescriptionLink.style.textDecorationLine = "none"; // 링크의 텍스트 색상을 변경
+      prescriptionLink.style.paddingTop = "14px"; // 여백 설정
+      prescriptionLink.style.paddingBottom = "14px";
+      prescriptionLink.style.paddingLeft = "16px";
+      prescriptionLink.style.paddingRight = "16px";
+      prescriptionLink.style.margin = "8px";
+      prescriptionLink.style.backgroundColor = "#fff";
+      prescriptionLink.style.borderRadius  = "9px";
+      
+      // display 속성을 사용하여 inline-block으로 설정
+      prescriptionLink.style.display = "inline-block";
+
+      // checkbox를 클릭할 때 링크를 열도록 이벤트 리스너 추가
+    prescriptionLink.addEventListener('click', function (event) {
+      event.preventDefault(); // 기본 동작(링크 열기)을 취소
+      window.location.href = prescription.link; // 현재 창에서 열기
+    });
+
+      newPrescriptionElement.appendChild(prescriptionLink);
+      prescriptionsElement.appendChild(newPrescriptionElement);
+    });
+  }
+</script>
+
+</body>
+</html>

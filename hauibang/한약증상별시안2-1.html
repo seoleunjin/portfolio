@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>증상 선택2(시안최종)</title>
+  <style>
+    /* 스타일링을 위한 간단한 CSS */
+    label {
+      margin-right: 15px;
+    }
+    #prescriptions {
+      margin-top: 15px;
+    }
+
+    .wrap p {
+      margin-right: 28px;
+      display: inline-block;
+    }
+  </style>
+  <!-- jQuery를 포함합니다. -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+<!-- 감기상태 -->
+<div class="wrap" id="section1">
+    <p>감기상태</p>
+    <label>
+      <input type="radio" name="symptom1" value="Choice1"> 초기 감기
+    </label>
+    <label>
+      <input type="radio" name="symptom1" value="Choice2"> 중기 감기
+    </label>
+    <label>
+        <input type="radio" name="symptom1" value="Choice3"> 말기 감기
+    </label>
+</div>
+
+<!-- 기침 -->
+<div class="wrap" id="section2">
+    <p>기침</p>
+    <label>
+      <input type="radio" name="symptom2" value="Choice1"> 예
+    </label>
+    <label>
+      <input type="radio" name="symptom2" value="Choice2"> 아니요
+    </label>
+</div>
+
+<button id="showPrescriptions">클릭</button>
+
+<div id="prescriptions">
+  <!-- 여기에 중복된 한약들이 표시됩니다. -->
+</div>
+
+<script>
+  var hb = {
+    hb2: { name: "갈근탕", link: "https://haniuibang.imweb.me/33" },
+    hb4: { name: "구미강활탕", link: "#" },
+    hb22: { name: "불환금정기산", link: "#" },
+    hb23: { name: "삼소음", link: "#" },
+    hb29: { name: "소청룡탕", link: "#" },
+    hb36: { name: "연교패독산", link: "#" },
+    hb38: { name: "오적산", link: "#" },
+    hb42: { name: "인삼패독산", link: "#" },
+    hb47: { name: "청서익기탕", link: "#" },
+    hb51: { name: "행소탕", link: "#" },
+    hb55: { name: "형개연교탕", link: "#" },
+  };
+
+  var 증상 = {
+    초기감기: ["hb2"],
+    중기감기: ["hb22"],
+    말기감기: ["hb23"],
+    기침예: ["hb4", "hb2"],
+    기침아니오: [],
+  };
+
+  var selectedPrescriptions = [];
+
+  $(document).ready(function () {
+    // 라디오 버튼의 변경 이벤트에 대한 핸들러를 등록합니다.
+    $('input[type="radio"]').on('change', function() {
+      updatePrescriptions();
+    });
+
+    // 버튼 클릭 이벤트에 대한 핸들러를 등록합니다.
+    $('#showPrescriptions').on('click', function() {
+      if (validateSelection()) {
+        showSelectedPrescriptions();
+      } else {
+        alert('선택사항을 모두 완료해주세요.');
+      }
+    });
+  });
+
+  function updatePrescriptions() {
+    var prescriptionsElement = $('#prescriptions');
+    prescriptionsElement.html(''); // 기존 목록 초기화
+
+    var symptom1Value = $('input[name="symptom1"]:checked').val();
+    var symptom2Value = $('input[name="symptom2"]:checked').val();
+
+    selectedPrescriptions = []; // 선택된 약 초기화
+
+    if (symptom1Value === "Choice1") {
+      addPrescription(증상.초기감기);
+    }
+
+    if (symptom1Value === "Choice2") {
+      addPrescription(증상.중기감기);
+    }
+
+    if (symptom1Value === "Choice3") {
+      addPrescription(증상.말기감기);
+    }
+
+    if (symptom2Value === "Choice1") {
+      addPrescription(증상.기침예);
+    }
+  }
+
+  function addPrescription(prescriptions) {
+    var prescriptionsIntersection = []; // 교집합 약 목록
+    // 모든 선택된 증상의 약을 가져와서 교집합을 계산
+    prescriptions.forEach(function(prescription) {
+      if (selectedPrescriptions.length === 0 || !selectedPrescriptions.includes(hb[prescription])) {
+        prescriptionsIntersection.push(hb[prescription]);
+      }
+    });
+    // 선택된 약 목록을 갱신
+    selectedPrescriptions = prescriptionsIntersection;
+  }
+
+  function showSelectedPrescriptions() {
+    var prescriptionsElement = $('#prescriptions');
+    prescriptionsElement.html(''); // 기존 목록 초기화
+
+    selectedPrescriptions.forEach(function (prescription) {
+      var newPrescriptionElement = $('<span>');
+      var prescriptionLink = $('<a>');
+
+      // 링크의 텍스트와 주소를 설정합니다.
+      prescriptionLink.text(prescription.name);
+      prescriptionLink.attr('href', prescription.link);
+
+      // 링크의 스타일을 설정합니다.
+      prescriptionLink.css({
+        color: '#5C6373',
+        textDecorationLine: 'Choice2ne',
+        paddingTop: '14px',
+        paddingBottom: '14px',
+        paddingLeft: '16px',
+        paddingRight: '16px',
+        margin: '8px',
+        backgroundColor: '#fff',
+        borderRadius: '9px',
+        display: 'inline-block',
+      });
+
+      // 링크를 클릭할 때의 이벤트 리스너를 추가합니다.
+      prescriptionLink.on('click', function (event) {
+        event.preventDefault(); // 기본 동작(링크 열기)을 취소
+        window.location.href = prescription.link; // 현재 창에서 열기
+      });
+
+      newPrescriptionElement.append(prescriptionLink);
+      prescriptionsElement.append(newPrescriptionElement);
+    });
+  }
+
+  function validateSelection() {
+    // 선택된 증상이 모두 있는지 확인
+    var symptom1Value = $('input[name="symptom1"]:checked').val();
+    var symptom2Value = $('input[name="symptom2"]:checked').val();
+
+    return symptom1Value && symptom2Value;
+  }
+</script>
+</body>
+</html>

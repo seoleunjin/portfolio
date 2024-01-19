@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +11,7 @@
     }
     #prescriptions {
       margin-top: 15px;
+      
     }
   </style>
 </head>
@@ -19,43 +20,23 @@
 <h2>증상 선택</h2>
 
 <label >
-  <input type="checkbox" id="symptom1" onchange="updatePrescriptions()"> 감기몸살
+  <input type="checkbox" id="symptomCough" onchange="updatePrescriptions()"> 기침
 </label>
 
 <label>
-  <input type="checkbox" id="symptom2" onchange="updatePrescriptions()"> 두통
+  <input type="checkbox" id="symptomRunnynose" onchange="updatePrescriptions()"> 콧물
 </label>
 
 <label>
-  <input type="checkbox" id="symptom3" onchange="updatePrescriptions()"> 설사
+  <input type="checkbox" id="symptomBodyache" onchange="updatePrescriptions()"> 몸살
 </label>
 
 <label>
-  <input type="checkbox" id="symptom4" onchange="updatePrescriptions()"> 오한발열(땀이없음)
+  <input type="checkbox" id="symptomChills" onchange="updatePrescriptions()"> 오한
 </label>
   
 <label>
-  <input type="checkbox" id="symptom5" onchange="updatePrescriptions()"> 뒷목땡김
-</label>
-
-<label>
-  <input type="checkbox" id="symptom6" onchange="updatePrescriptions()"> 몸살
-</label>
-
-<label>
-  <input type="checkbox" id="symptom7" onchange="updatePrescriptions()"> 구토
-</label>
-
-<label>
-  <input type="checkbox" id="symptom8" onchange="updatePrescriptions()"> 오한과 발열의 교대
-</label>
-
-<label>
-  <input type="checkbox" id="symptom9" onchange="updatePrescriptions()"> 기침
-</label>
-
-<label>
-  <input type="checkbox" id="symptom10" onchange="updatePrescriptions()"> 맑은콧물
+  <input type="checkbox" id="symptomFever" onchange="updatePrescriptions()"> 발열
 </label>
   
 <div id="prescriptions">
@@ -64,7 +45,7 @@
 
 <script>
   var hb = {
-    hb2: { name: "갈근탕", link: "https://haniuibang.imweb.me/33" },
+    hb2: { name: "갈근탕", link: "https://haniuibang.imweb.me" },
     hb4: { name: "구미강활탕", link: "#" },
     hb22: { name: "불환금정기산", link: "#" },
     hb23: { name: "삼소음", link: "#" },
@@ -78,16 +59,11 @@
   };
 
   var 증상 = {
-    감기몸살: ["hb2"],
-    두통: ["hb2", "hb42", "hb38"],
-    설사: ["hb2", "hb22", "hb29", "hb47"],
-    오한발열: ["hb2"],
-    뒷목땡김: ["hb2"],
-    몸살: ["hb4", "hb29", "hb42"],
-    구토: ["hb22", "hb29", "hb38"],
-    오한발열교대: ["hb22"],
-    기침: ["hb22", "hb23", "hb29", "hb42"],
-    맑은콧물: ["hb29"],
+    기침: ["hb23", "hb29", "hb42", "hb51", "hb55", "hb22"],
+    콧물: ["hb2", "hb23", "hb29", "hb55", "hb36", "hb42"],
+    몸살: ["hb2", "hb4", "hb29", "hb42"],
+    오한: ["hb2", "hb22", "hb42"],
+    발열: ["hb2", "hb23", "hb36", "hb42", "hb47"],
   };
 
   var selectedPrescriptions = [];
@@ -96,71 +72,42 @@
     var prescriptionsElement = document.getElementById('prescriptions');
     prescriptionsElement.innerHTML = ''; // 기존 목록 초기화
 
-    var symptom1 = document.getElementById('symptom1').checked;
-    var symptom2 = document.getElementById('symptom2').checked;
-    var symptom3 = document.getElementById('symptom3').checked;
-    var symptom4 = document.getElementById('symptom4').checked;
-    var symptom5 = document.getElementById('symptom5').checked;
-    var symptom6 = document.getElementById('symptom6').checked;
-    var symptom7 = document.getElementById('symptom7').checked;
-    var symptom8 = document.getElementById('symptom8').checked;
-    var symptom9 = document.getElementById('symptom9').checked;
-    var symptom10 = document.getElementById('symptom10').checked;
+    var symptomCough = document.getElementById('symptomCough').checked;
+    var symptomRunnynose = document.getElementById('symptomRunnynose').checked;
+    var symptomBodyache = document.getElementById('symptomBodyache').checked;
+    var symptomChills = document.getElementById('symptomChills').checked;
+    var symptomFever = document.getElementById('symptomFever').checked;
 
     selectedPrescriptions = []; // 선택된 약 초기화
 
-    if (symptom1) {
-      addPrescription(증상.감기몸살);
-    }
-
-    if (symptom2) {
-      addPrescription(증상.두통);
-    }
-
-    if (symptom3) {
-      addPrescription(증상.설사);
-    }
-    if (symptom4) {
-      addPrescription(증상.오한발열);
-    }
-    if (symptom5) {
-      addPrescription(증상.뒷목땡김);
-    }
-
-    if (symptom6) {
-      addPrescription(증상.몸살);
-    }
-
-    if (symptom7) {
-      addPrescription(증상.구토);
-    }
-
-    if (symptom8) {
-      addPrescription(증상.오한발열교대);
-    }
-
-    if (symptom9) {
+    if (symptomCough) {
       addPrescription(증상.기침);
     }
-    
-    if (symptom10) {
-      addPrescription(증상.맑은콧물);
+
+    if (symptomRunnynose) {
+      addPrescription(증상.콧물);
+    }
+
+    if (symptomBodyache) {
+      addPrescription(증상.몸살);
+    }
+    if (symptomChills) {
+      addPrescription(증상.오한);
+    }
+    if (symptomFever) {
+      addPrescription(증상.발열);
     }
 
     displayPrescriptions();
   }
 
   function addPrescription(prescriptions) {
-        var prescriptionsIntersection = []; // 교집합 약 목록
-        // 모든 선택된 증상의 약을 가져와서 교집합을 계산
-        prescriptions.forEach(function(prescription) {
-            if (selectedPrescriptions.length === 0 || selectedPrescriptions.includes(hb[prescription])) {
-                prescriptionsIntersection.push(hb[prescription]);
-            }
-        });
-        // 선택된 약 목록을 갱신
-        selectedPrescriptions = prescriptionsIntersection;
-    }
+    prescriptions.forEach(function (prescription) {
+      if (!selectedPrescriptions.includes(hb[prescription])) {
+        selectedPrescriptions.push(hb[prescription]);
+      }
+    });
+  }
 
   function displayPrescriptions() {
     var prescriptionsElement = document.getElementById('prescriptions');
@@ -183,6 +130,7 @@
       prescriptionLink.style.margin = "8px";
       prescriptionLink.style.backgroundColor = "#fff";
       prescriptionLink.style.borderRadius  = "9px";
+      
       
       // display 속성을 사용하여 inline-block으로 설정
       prescriptionLink.style.display = "inline-block";
