@@ -35,13 +35,13 @@
               var typewriter = new Typewriter(text, {
                   loop: true
               });
-  
+             
               typewriter.typeString('Welcome to Godino world')
                   .pauseFor(2000)
-                  .deleteAll()
+                  .deleteAll() //Welcome to Godino world 글씨 모두 지운다
                   .typeString('타입 라이터 효과')
                   .pauseFor(2000)
-                  .deleteChars(2)
+                  .deleteChars(2) //두글자만 지움
                   .typeString('<strong>Effect!</strong>')
                   .pauseFor(2500)
                   .start();
@@ -52,7 +52,7 @@
   
   <body>
       <div id="main">
-          <h1>포유맘케어<span id="typeStyle"></span></h1>
+          <h1><span id="typeStyle"></span></h1>
       </div>
   </body>
   

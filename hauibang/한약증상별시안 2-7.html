@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>증상 선택(스크립트 오류 개선)</title>
+  <style>
+    /* 스타일링을 위한 간단한 CSS */
+    label {
+      margin-right: 15px;
+    }
+    #prescriptions {
+      margin-top: 15px;
+    }
+
+    .wrap p {
+      margin-top: 42px;
+    }
+
+    #hanibtn {
+      margin-top: 28px;
+    }
+  </style>
+  <script type="text/javascript">
+    var hb = {
+      hb02: { name: "갈근탕", link: "https://haniuibang.imweb.me/33" },
+      hb04: { name: "구미강활탕", link: "#" },
+      hb22: { name: "불환금정기산", link: "#" },
+      hb23: { name: "삼소음", link: "#" },
+      hb29: { name: "소청룡탕", link: "#" },
+      hb36: { name: "연교패독산", link: "#" },
+      hb38: { name: "오적산", link: "#" },
+      hb42: { name: "인삼패독산", link: "#" },
+      hb47: { name: "청서익기탕", link: "#" },
+      hb51: { name: "행소탕", link: "#" },
+      hb55: { name: "형개연교탕", link: "#" },
+    };
+
+    var 증상 = {
+      // 감기상태
+      초기감기: ["hb02", "hb04", "hb23", "hb38", "hb42", "hb47", "hb51", "hb55"],
+      중기감기: ["hb29"],
+      후기감기: ["hb22", "hb36"],
+      // 기침
+      마른기침: ["hb22"],
+      가래기침: ["hb51"],
+      기침없음: ["hb02", "hb04", "hb23", "hb29", "hb36", "hb38", "hb42", "hb47", "hb55"],
+      // 발열
+      오한동반: ["hb02", "hb04", "hb22", "hb29"],
+      발열: ["hb23", "hb42"],
+      발열없음: ["hb36", "hb38", "hb47", "hb51", "hb55"],
+      // 땀
+      땀예: ["hb02", "hb04"],
+      땀아니요: ["hb22", "hb23", "hb29", "hb36", "hb38", "hb42", "hb47", "hb51", "hb55"],
+      // 두통
+      두통예: ["hb02", "hb04", "hb23", "hb42"],
+      두통아니요: ["hb22", "hb29", "hb36", "hb38", "hb47", "hb51", "hb55"],
+      // 코막힘
+      코막힘예: ["hb23", "hb38", "hb42", "hb55"],
+      코막힘아니요: ["hb02", "hb04", "hb22", "hb29", "hb36", "hb47", "hb51"],
+      // 콧물
+      누런콧물: ["hb02", "hb23"],
+      맑은콧물: ["hb29"],
+      콧물없음: [ "hb04", "hb22", "hb36", "hb38", "hb42", "hb47", "hb51", "hb55"],
+      // 인후통
+      인후통있다: ["hb02", "hb04", "hb23", "hb29", "hb38", "hb42", "hb47" ],
+      인후통없다: ["hb22", "hb36", "hb55"],
+    };
+
+    var selectedPrescriptions = [];
+
+    function updatePrescriptions() {
+      var prescriptionsElement = document.getElementById('prescriptions');
+      prescriptionsElement.innerHTML = ''; // 기존 배열 목록 초기화
+
+      // 감기상태
+      var symptom1 = document.getElementById('symptom1').checked;
+      var symptom2 = document.getElementById('symptom2').checked;
+      var symptom3 = document.getElementById('symptom3').checked;
+      // 기침
+      var symptom4 = document.getElementById('symptom4').checked;
+      var symptom5 = document.getElementById('symptom5').checked;
+      var symptom6 = document.getElementById('symptom6').checked;
+      // 발열
+      var symptom7 = document.getElementById('symptom7').checked;
+      var symptom8 = document.getElementById('symptom8').checked;
+      var symptom9 = document.getElementById('symptom9').checked;
+      // 땀
+      var symptom10 = document.getElementById('symptom10').checked;
+      var symptom11 = document.getElementById('symptom11').checked;
+      // 두통
+      var symptom12 = document.getElementById('symptom12').checked;
+      var symptom13 = document.getElementById('symptom13').checked;
+      // 코막힘
+      var symptom14 = document.getElementById('symptom14').checked;
+      var symptom15 = document.getElementById('symptom15').checked;
+      // 콧물
+      var symptom16 = document.getElementById('symptom16').checked;
+      var symptom17 = document.getElementById('symptom17').checked;
+      var symptom18 = document.getElementById('symptom18').checked;
+      // 인후통
+      var symptom19 = document.getElementById('symptom19').checked;
+      var symptom20 = document.getElementById('symptom20').checked;
+
+      selectedPrescriptions = []; // 선택된 약 초기화
+    
+
+      // 감기상태
+      if (!symptom1 && !symptom2 && !symptom3) {
+        showNoSelectionAlert("적어도 하나의 증상");
+        return;
+      } else {
+        hideNoSelectionMessage("적어도 하나의 증상");
+        if (symptom1) {
+          addPrescription(증상.초기감기, 1);
+        } else if (symptom2) {
+          addPrescription(증상.중기감기, 1);
+        } else if (symptom3) {
+          addPrescription(증상.후기감기, 1);
+        }
+      }
+
+      // 기침
+      if (!symptom4 && !symptom5 && !symptom6) {
+        showNoSelectionAlert("적어도 하나의 증상");
+        return;
+      } else {
+        hideNoSelectionMessage("적어도 하나의 증상");
+        if (symptom4) {
+          addPrescription(증상.마른기침, 2);
+        } else if (symptom5) {
+          addPrescription(증상.가래기침, 2);
+        } else if (symptom6) {
+          addPrescription(증상.기침없음, 2);
+        }
+      }
+
+      // 발열
+      if (!symptom7 && !symptom8 && !symptom9) {
+        showNoSelectionAlert("적어도 하나의 증상");
+        return;
+      } else {
+        hideNoSelectionMessage("적어도 하나의 증상");
+        if (symptom7) {
+          addPrescription(증상.오한동반, 3);
+        } else if (symptom8) {
+          addPrescription(증상.발열, 3);
+        } else if (symptom9) {
+          addPrescription(증상.발열없음, 3);
+        }
+      }
+
+      // 땀
+      if (!symptom10 && !symptom11) {
+        showNoSelectionAlert("적어도 하나의 증상");
+        return;
+      } else {
+        hideNoSelectionMessage("적어도 하나의 증상");
+        if (symptom10) {
+          addPrescription(증상.땀예, 4);
+        } else if (symptom11) {
+          addPrescription(증상.땀아니요, 4);
+        }
+      }
+
+      // 두통
+      if (!symptom12 && !symptom13) {
+        showNoSelectionAlert("적어도 하나의 증상");
+        return;
+      } else {
+        hideNoSelectionMessage("적어도 하나의 증상");
+        if (symptom12) {
+          addPrescription(증상.두통예, 5);
+        } else if (symptom13) {
+          addPrescription(증상.두통아니요, 5);
+        }
+      }
+
+      // 코막힘
+      if (!symptom14 && !symptom15) {
+        showNoSelectionAlert("적어도 하나의 증상");
+        return;
+      } else {
+        hideNoSelectionMessage("적어도 하나의 증상");
+        if (symptom14) {
+          addPrescription(증상.코막힘예, 6);
+        } else if (symptom15) {
+          addPrescription(증상.코막힘아니요, 6);
+        }
+      }
+
+      // 콧물
+      if (!symptom16 && !symptom17 && !symptom18) {
+        showNoSelectionAlert("적어도 하나의 증상");
+        return;
+      } else {
+        hideNoSelectionMessage("적어도 하나의 증상");
+        if (symptom16) {
+          addPrescription(증상.누런콧물, 7);
+        } else if (symptom17) {
+          addPrescription(증상.맑은콧물, 7);
+        } else if (symptom18) {
+          addPrescription(증상.콧물없음, 7);
+        }
+      }
+
+      // 인후통
+      if (!symptom19 && !symptom20) {
+        showNoSelectionAlert("적어도 하나의 증상");
+        return;
+      } else {
+        hideNoSelectionMessage("적어도 하나의 증상");
+        if (symptom19) {
+          addPrescription(증상.인후통있다, 8);
+        } else if (symptom20) {
+          addPrescription(증상.인후통없다, 8);
+      }
+
+      displayPrescriptions();
+    }
+}
+
+    function addPrescription(prescriptions, rdoNo) {
+      var prescriptionsIntersection = []; // 교집합 약 목록
+      // 모든 선택된 증상의 약을 가져와서 교집합을 계산
+      prescriptions.forEach(function (prescription) {
+        if (rdoNo === 1 || selectedPrescriptions.includes(hb[prescription])) {
+          prescriptionsIntersection.push(hb[prescription]);
+        }
+      });
+      // 선택된 약 목록을 갱신
+      selectedPrescriptions = prescriptionsIntersection;
+    }
+
+    function displayPrescriptions() {
+      var prescriptionsElement = document.getElementById('prescriptions');
+      selectedPrescriptions.forEach(function (prescription) {
+        var newPrescriptionElement = document.createElement('span');
+        var prescriptionLink = document.createElement('a');
+
+        // 기본적으로 링크의 텍스트와 주소를 설정합니다.
+        prescriptionLink.textContent = prescription.name;
+        prescriptionLink.href = prescription.link;
+
+        // 링크의 추가 속성을 설정합니다.
+        // prescriptionLink.target = "_blank";  새 창에서 열도록 설정
+        prescriptionLink.style.color = "#5C6373"; // 링크의 텍스트 색상을 변경
+        prescriptionLink.style.textDecorationLine = "none"; // 링크의 텍스트 색상을 변경
+        prescriptionLink.style.paddingTop = "14px"; // 여백 설정
+        prescriptionLink.style.paddingBottom = "14px";
+        prescriptionLink.style.paddingLeft = "16px";
+        prescriptionLink.style.paddingRight = "16px";
+        prescriptionLink.style.margin = "8px";
+        prescriptionLink.style.backgroundColor = "#fff";
+        prescriptionLink.style.borderRadius = "9px";
+
+        // display 속성을 사용하여 inline-block으로 설정
+        prescriptionLink.style.display = "inline-block";
+
+        // checkbox를 클릭할 때 링크를 열도록 이벤트 리스너 추가
+        prescriptionLink.addEventListener('click', function (event) {
+          event.preventDefault(); // 기본 동작(링크 열기)을 취소
+          window.location.href = prescription.link; // 현재 창에서 열기
+        });
+
+        newPrescriptionElement.appendChild(prescriptionLink);
+        prescriptionsElement.appendChild(newPrescriptionElement);
+      });
+    }
+
+    function showNoSelectionAlert(section) {
+      alert("적어도 하나의 증상을 선택하시길 바랍니다.");
+    }
+
+    function hideNoSelectionMessage(section) {
+      // You can implement hiding messages if needed
+    }
+  </script>
+</head>
+<body>
+<!-- 감기 상태 -->
+<div class="wrap" id="section1">
+  <p>감기상태</p>
+  <label>
+    <input type="radio" name="symptom1" id="symptom1"> 초기감기
+  </label>
+  <label>
+    <input type="radio" name="symptom1" id="symptom2"> 중기감기
+  </label>
+  <label>
+    <input type="radio" name="symptom1" id="symptom3"> 후기감기
+  </label>
+</div>
+
+<!-- 기침 -->
+<div class="wrap" id="section2">
+  <p>기침</p>
+  <label>
+    <input type="radio" name="symptom2" id="symptom4"> 마른기침
+  </label>
+  <label>
+    <input type="radio" name="symptom2" id="symptom5"> 가래기침
+  </label>
+  <label>
+    <input type="radio" name="symptom2" id="symptom6"> 기침없음
+  </label>
+</div>
+
+<!-- 발열 -->
+<div class="wrap" id="section3">
+  <p>발열</p>
+  <label>
+    <input type="radio" name="symptom3" id="symptom7"> 오한동반
+  </label>
+  <label>
+    <input type="radio" name="symptom3" id="symptom8"> 발열
+  </label>
+  <label>
+    <input type="radio" name="symptom3" id="symptom9"> 발열없음
+  </label>
+</div>
+
+<!-- 땀 -->
+<div class="wrap" id="section4">
+  <p>땀</p>
+  <label>
+    <input type="radio" name="symptom4" id="symptom10"> O
+  </label>
+  <label>
+    <input type="radio" name="symptom4" id="symptom11"> X
+  </label>
+</div>
+
+<!-- 두통 -->
+<div class="wrap" id="section5">
+  <p>두통</p>
+  <label>
+    <input type="radio" name="symptom5" id="symptom12"> O
+  </label>
+  <label>
+    <input type="radio" name="symptom5" id="symptom13"> X
+  </label>
+</div>
+
+<!-- 코막힘 -->
+<div class="wrap" id="section6">
+    <p>코막힘</p>
+    <label>
+      <input type="radio" name="symptom6" id="symptom14"> O
+    </label>
+    <label>
+      <input type="radio" name="symptom6" id="symptom15"> X
+    </label>
+  </div>
+
+<!-- 콧물 -->
+<div class="wrap" id="section7">
+    <p>콧물</p>
+    <label>
+      <input type="radio" name="symptom7" id="symptom16"> 누런콧물
+    </label>
+    <label>
+      <input type="radio" name="symptom7" id="symptom17"> 맑은콧물
+    </label>
+    <label>
+      <input type="radio" name="symptom7" id="symptom18"> 콧물없음
+    </label>
+  </div>
+
+<!-- 인후통 -->
+<div class="wrap" id="section8">
+    <p>인후통</p>
+    <label>
+      <input type="radio" name="symptom8" id="symptom19"> O
+    </label>
+    <label>
+      <input type="radio" name="symptom8" id="symptom20"> X
+    </label>
+  </div>
+
+<!-- 결과 보기 버튼 -->
+<button id="hanibtn" onclick="updatePrescriptions()">결과 보기</button>
+
+<!-- 선택된 약 보여주는 부분 -->
+<div id="prescriptions">
+  <!-- 여기에 중복된 한약들이 표시됩니다. -->
+</div>
+
+</body>
+</html>
