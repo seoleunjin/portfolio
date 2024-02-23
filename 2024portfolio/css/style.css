@@ -1,0 +1,471 @@
+
+/* 변수설정 */
+:root {
+    /* color */
+    --color-main: #030303;
+    --color-point: #CD6E1C;
+    --color-bg: #EBE9DD;
+}
+/* 기본 전체 설정 */
+
+html {
+    /* 16px * 62.5% = 10px = 1rem */
+    font-size: 62.5%;
+    letter-spacing: -0.025rem;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 58%;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 55.125%;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    color: inherit;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+img {
+    border: none;
+    vertical-align: bottom;
+}
+
+li,
+ul {
+    list-style: none;
+}
+
+button {
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+}
+
+/* 폰트 설정 */
+
+/* 해더 메인 본문 텍스트 */
+.mainTxt {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-point);
+}
+/* 48px 포인트 대 타이틀 */
+.BTxt {
+    font-size: 4.8rem;
+}
+.MTxt {
+    font-size: 2.8rem;
+}
+.Txt {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin-top: 1.8rem;
+}
+/* 18px 본문 텍스트 */
+
+
+/* 기본 레이아웃 설정 */
+
+html {
+    background-color: var(--color-bg);
+    font-family: 'Pretendard';
+    font-weight: 400;
+}
+
+body {
+    color: var(--color-main);
+    position: relative;
+}
+
+#full-page {}
+
+.section {}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* 해더기본설정 */
+header {
+    display: block;
+}
+
+#header {
+    width: 100%;
+    height: 7.2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    z-index: 99999;
+    background-color: var(--color-bg);
+}
+
+#header .headerWrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+}
+header .headerWrap p {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-point);
+}
+
+header ul {
+    height: 100%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+header ul li {
+    height: 100%;
+}
+
+/* s0 */
+.s0 {
+    background-image: url("/2024portfolio/img/main_bg.png");
+    background-position: bottom center;
+    background-size: cover;
+}
+
+.s0 .wrapper h2 {
+    font-size: 12.6rem;
+    line-height: 18rem;
+}
+
+.s0 .wrapper p {
+    padding-bottom: 36rem;
+}
+
+/* s1 */
+.s1 .wrapper {}
+
+.personalTag,
+.s1 .wrapper .imgBox {
+    width: 39%;
+    float: left;
+}
+.s1 .wrapper .imgBox img {
+    width: 82%;
+    float: left;
+    margin-top: 1.8rem;
+    border-radius: 0.8rem;
+}
+.s1 .wrapper .txtBox {
+    text-align: left;
+    width: 51%;
+    float: right;
+}
+
+.s1 .wrapper .txtBox h2 {
+    color: var(--color-point);
+}
+
+.s1 .wrapper .txtBox h3 {
+    color: var(--color-point);
+    margin-top: 2.8rem;
+}
+.personalTag {}
+.personalTag span {
+    float: left;
+    padding: 1.6rem 1.8rem;
+    border: 0.1rem solid var(--color-point);
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    color: var(--color-point);
+    border-radius: 200rem;
+}
+
+/* s2 */
+.s2 .wrapper h2 {
+    font-size: 4.8rem;
+    margin-bottom: 4.8rem;
+}
+
+.TechImg {
+    display: flex;
+    justify-content: center;
+}
+.TechImg li {
+    width: 7.2%;
+    margin: 0 1rem;
+}
+.TechImg li img {
+    width: 100%;
+}
+.DevelopTech {
+    margin-bottom: 7.2rem;
+}
+.TechImg li {
+}
+/* s3 */
+.swiper-container .BTxt {
+    margin-bottom: 7.2rem;
+    text-align: left;
+}
+.s3 .wrapper {
+    position: relative;
+}
+.swiper-slide {
+    background-color: var(--color-bg);
+}
+.slideImg {
+    width: 50%;
+    float: left;
+    background-color: #CD6E1C;
+}
+
+.slideTxt {
+    width: 40%;
+    float: right;
+    text-align: left;
+    margin-bottom: 7.2rem;
+}
+
+.slideTxt table {
+    margin-top: 2.8rem;
+}
+.slideTxt table td:nth-child(odd) {
+    font-weight: 600;
+    padding-right: 1rem;
+}
+.slideTxt button {
+    margin-top: 2.8rem;
+    background-color: var(--color-bg);
+    padding: 1.6rem 1.8rem;
+    border-radius: 0.8rem;
+    margin-right: 1rem;
+    background-color: rgba(205, 110, 28, 0.25);
+    transition: all 0.3s;
+}
+.slideTxt button a {
+    color: var(--color-point);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.slideTxt button:hover {
+    background-color: rgba(205, 110, 28, 1);
+}
+.slideTxt button:hover a {
+    color: #fff;
+}
+.slideTxt p {
+    color: #676767;
+}
+.slideTxt .Txt a {
+    font-size: 1.4rem;
+    color: #676767;
+}
+
+.slideTxt .Txt a:hover {
+    color: var(--color-main);
+    transition: all 0.3s;
+}
+/* 슬라이드 버튼 */
+.swiper-button-next,.swiper-button-prev {
+}
+
+/* s4 */
+
+.s4 .BTxt {
+    margin-top: 14.4rem;
+    text-align: left;
+}
+
+.s4 h3 {
+    text-align: left;
+    font-size: 2.8rem;
+    margin-top: 7.2rem;
+    margin-bottom: 2.8rem;
+}
+
+.DesignGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.DesignGallery li {
+    width: 24%;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border-radius: 0.8rem;
+    position: relative;
+    transition: all 0.8s;
+}
+
+.DesignGallery li img {
+    width: 100%;
+}
+
+.DesignGallery li div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(3px);
+}
+
+.DesignGallery li div h4 {
+    font-size: 1.6rem;
+    background-color:var(--color-point);
+    color: #fff;
+    padding: 1.6rem 1.8rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+}
+.DesignGallery li:hover div {
+    display: flex;
+}
+
+
+/* DesignClick */
+.DesignClick {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: 99999;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.DesignClick.on {
+    display: flex;
+}
+
+.DesignClick .DesignImg {
+    display: none;
+    width: 60rem;
+    height: 60rem;
+    background-color: #676767;
+    position: relative;
+}
+
+.DesignClick .DesignImg img {
+    position: absolute;
+    width: 100%;
+    display: none;
+}
+.DesignClick .SnsZoom {
+}
+.DesignClick .SnsZoom.on {
+    display: block;
+}
+.DesignClick .SnsZoom img.on {
+    display: block;
+}
+.DesignClick .DetailZoom {
+    overflow-y: scroll; 
+}
+.DesignClick .DetailZoom.on {
+    display: block;
+    scrollTop:0;
+}
+.DesignClick .DetailZoom img.on {
+    display: block;
+}
+.DesignClick .CardZoom {
+    overflow-y: scroll; 
+}
+.DesignClick .CardZoom.on {
+    display: block;
+}
+.DesignClick .CardZoom img.on {
+    display: block;
+}
+
+/* 디자인 자세히 보기 */
+.Close {
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: -1.6rem 0 0 -1.6rem;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background .2s ease;
+    transition-delay: .15s;
+  }
+  
+  
+  
+  .Close svg circle {
+    stroke-width: 2;
+    stroke: white;
+    fill: none;
+    stroke-dasharray: 95;
+    stroke-dashoffset: 285;
+    transition: all .6s ease;
+    stroke-linecap: round;
+  }
+  
+  .Close svg #plus {
+    transform-origin: 50% 50%;
+    transition: all .8s ease;
+  }
+  .Close svg #plus {
+    transform: rotate(45deg);
+}
+  .Close svg #plus path {
+    stroke-width: 2;
+    stroke: white;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  
+  .Close:hover svg circle {
+    stroke-dasharray: 95;
+    stroke-dashoffset: 190;
+  }
+  
+  .Close.toggle:hover {
+    background: rgba(255, 255, 255, 0.06);
+  }
+  
