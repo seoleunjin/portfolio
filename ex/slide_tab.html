@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery 추가 -->
+    <style>
+        /* 탭메뉴 
+        .tab_wrap {max-width: 800px;margin: 50px auto 0;padding: 0 15px;}
+        .tab_wrap .tit_list {position: relative;font-size: 0;}
+        .tab_wrap .tit_list:before {content:'';position: absolute;bottom: 0;left: 0;width: 100%;height: 1px;background: #ddd;z-index: 1;}
+        .tab_wrap .tit_list > li {display: inline-block;margin-right: 3px;vertical-align: top;}
+        .tab_wrap .tit_list > li a {display: inline-block;padding: 10px 15px;border: 1px solid #fff;border-radius:4px 4px 0 0;font-size: 14px;color: #000;text-decoration: none;}
+        .tab_wrap .tit_list > li a:hover {background: #efefef;border-color: #efefef;}
+        .tab_wrap .tit_list > li.active a {position: relative;background: #fff;border: 1px solid #ddd;border-bottom: 1px solid #fff;color: #8ab4f8;z-index: 2;}
+        .tab_wrap .tab_con {border: 1px solid #ddd;border-top: none;}
+        .tab_wrap .tab_con .tab_list {display: none;padding: 15px;}*/
+
+        /* 슬라이드 
+        .slider {font-size: 0;text-align: center;}
+        .slider .inner {overflow: hidden;width: 100%;margin: 0 auto;}
+        .slide_list > li {width: 25%;height: 150px;background: #8ab4f8;font-size: 20px;line-height: 150px;color: #000;text-align: center;}
+        .slider .btn_prev,
+        .slider .btn_next {display: inline-block;width: 35px;height: 35px;margin:30px 15px 0;background:url('images/arrow.png') center center no-repeat;background-size: cover;text-indent: -999em;cursor: pointer;}
+        .slider .btn_prev {transform: rotateY(180deg);}*/
+    </style>
+</head>
+<body>
+    
+<div class="tab_wrap">
+    <!-- 탭메뉴 제목 -->
+    <ul class="tit_list">
+        <li class="active"><a href="#con01">1번째 탭</a></li>
+        <li><a href="#con02">2번째 탭</a></li>
+    </ul>
+    <!-- 탭메뉴 컨텐츠 -->
+    <div class="tab_con">
+        <div id="con01" class="tab_list">
+            <div class="doc_Swiper">
+                <div class="inner">
+                    <ul class="swiper-wrapper slide_list">
+                        <li class="swiper-slide">slider1</li>
+                        <li class="swiper-slide">slider2</li>
+                        <li class="swiper-slide">slider3</li>
+                        <li class="swiper-slide">slider4</li>
+                        <li class="swiper-slide">slider5</li>
+                    </ul>
+                </div>
+                <span class="btn btn_prev">이전</span>
+                <span class="btn btn_next">다음</span>
+            </div>
+        </div>
+        <div id="con02" class="tab_list">
+            <div class="doc_Swiper">
+                <div class="inner">
+                    <ul class="swiper-wrapper slide_list">
+                        <li class="swiper-slide">slider11</li>
+                        <li class="swiper-slide">slider22</li>
+                        <li class="swiper-slide">slider33</li>
+                        <li class="swiper-slide">slider44</li>
+                        <li class="swiper-slide">slider54</li>
+                    </ul>
+                </div>
+                <span class="btn btn_prev">이전</span>
+                <span class="btn btn_next">다음</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    $(document).ready(function() {
+        tab();
+    });
+
+    function tab() {
+        function activateTab(tabId) {
+            $(".tab_wrap .tit_list > li").removeClass("active");
+            $(".tab_wrap .tab_list").hide();
+            $(`.tab_wrap .tit_list > li a[href="${tabId}"]`).parent().addClass("active");
+            $(tabId).show();
+        }
+
+        $(".tab_wrap .tit_list > li a").on("click", function(e) {
+            e.preventDefault();
+            let tabId = $(this).attr("href");
+            activateTab(tabId);
+        });
+
+        let firstTabId = $('.tab_wrap .tit_list > li:first-child a').attr('href');
+        activateTab(firstTabId);
+        slider(); //슬라이드 실행
+    }
+
+    function slider() {
+        $(".doc_Swiper").each(function(index) {
+            let $this = $(this);
+            let swiper = undefined;
+            let slideNum = $this.find('.swiper-slide').length; //슬라이드 총 개수
+            let slideInx = 0; //현재 슬라이드 index
+
+            //디바이스 체크
+            let oldWChk = window.innerWidth > 768 ? 'pc' : 'mo';
+            sliderAct();
+            $(window).on('resize', function() {
+                let newWChk = window.innerWidth > 768 ? 'pc' : 'mo';
+                if (newWChk != oldWChk) {
+                    oldWChk = newWChk;
+                    sliderAct();
+                }
+            });
+
+            function sliderAct() {
+                $this.addClass(`doc_Swiper${index}`);
+                if (swiper != undefined) {
+                    swiper.destroy();
+                    swiper = undefined;
+                }
+
+                let viewNum = oldWChk === 'pc' ? 4 : 2;
+                let loopChk = slideNum > viewNum;
+
+                swiper = new Swiper(`.doc_Swiper${index} .inner`, {
+                    slidesPerView: viewNum,
+                    initialSlide: slideInx,
+                    spaceBetween: 10,
+                    slidesPerGroup: 1,
+                    observer: true,
+                    observeParents: true,
+                    loop: true,
+                    autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+                    loop: loopChk,
+                    navigation: {
+                        prevEl: $(`.doc_Swiper${index} .btn_prev`)[0],
+                        nextEl: $(`.doc_Swiper${index} .btn_next`)[0],
+                    },
+                    on: {
+                        activeIndexChange: function() {
+                            if ($(`.doc_Swiper${index}`).parent('.tab_list').css('display') != 'none') {
+                                slideInx = this.realIndex; //현재 슬라이드 index 갱신
+                            }
+                        }
+                    },
+                });
+            }
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery 추가 -->
+    <style>
+        /* 탭 스타일 */
+.tab-container{
+  overflow:hidden;
+  height:100%
+}
+.tab-content{
+  height:100%;
+  position:relative;
+}
+.tabs {
+  display: flex;
+}
+.tab {
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  margin-right: 5px;
+  user-select: none;
+}
+.tab.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* 슬라이드 스타일 */
+.tab-content-slider {
+  display: none;
+  height: 100%;
+}
+
+.tab-content-slider.first{
+  display: block;
+}
+
+/* 슬라이드 내용 스타일 */
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+    </style>
+</head>
+<body>
+    
+    <div class="tab-container">
+        <div class="tabs">
+          <div class="tab active" data-tab="1">Tab 1</div>
+          <div class="tab" data-tab="2">Tab 2</div>
+        </div>
+      
+        <div class="tab-content">
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          
+          <div class="tab-content-slider swiper-container first" data-slider="1">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">Content 1</div>
+              <div class="swiper-slide">Content 2</div>
+              <div class="swiper-slide">Content 3</div>
+              <div class="swiper-slide">Content 4</div>
+              <div class="swiper-slide">Content 5</div>
+              <div class="swiper-slide">Content 6</div>
+            </div>
+          </div>
+      
+          <div class="tab-content-slider swiper-container" data-slider="2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">Content A</div>
+              <div class="swiper-slide">Content B</div>
+              <div class="swiper-slide">Content C</div>
+              <div class="swiper-slide">Content D</div>
+              <div class="swiper-slide">Content E</div>
+              <div class="swiper-slide">Content F</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var tabSliders = document.querySelectorAll('.tab-content-slider');
+
+  tabSliders.forEach(function (slider, index) {
+    var sliderId = index + 1;
+    var mySwiper = new Swiper(slider, {
+      observer: true,
+      observeParents: true,
+      slidesPerView: 3.5,
+      spaceBetween: 20,
+      centeredSlides: true, 
+      autoplay: {
+        delay: 3000, 
+        disableOnInteraction: false   
+      },
+      loop:true,
+    //   navigation: {
+    //     nextEl: ".swiper-button-next", 
+    //     prevEl: ".swiper-button-prev"
+    //   },      
+    });
+  });
+
+  document.querySelectorAll('.tab').forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      document.querySelector('.tab.active').classList.remove('active');
+      this.classList.add('active');
+      var targetSliderId = this.getAttribute('data-tab');
+      tabSliders.forEach(function (slider) {
+        slider.style.display = slider.getAttribute('data-slider') === targetSliderId ? 'block' : 'none';
+        slider.swiper.update();
+      });
+    });
+  });
+});
+</script>
+</body>
+</html>

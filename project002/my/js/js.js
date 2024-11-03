@@ -76,7 +76,7 @@ $(document).ready(function(){
     $('.type_left').click(function(){
         c++;
         var wid = $('.skin_type .skinImg li').width();
-        if (c == 6) c = 0;
+        if (c == 3) c = 0;
         console.log(c)
         let widM = wid * c;
         $('.skin_type .skinImg').stop().animate({'left': -(widM)}, 800)

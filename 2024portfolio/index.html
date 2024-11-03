@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>풀페이지</title>
+    <title>설은진 포트폴리오</title>
     <!-- 풀페이지 라이브러리 -->
     <link rel="stylesheet" href="css/fullpage.min.css">
-    <!-- 외부 -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/pretendard.css">
+
+
+    <!-- <link rel="stylesheet" href="css/pretendard.css"> -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
     
     <!-- 제이쿼리 cdn -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -21,6 +23,9 @@
 
     <!-- Swiper 라이브러리 -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- GSAP 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
 
     <!-- 나머지 스크립트 파일 -->
     <script src="js/js.js"></script>
@@ -31,11 +36,7 @@
         <header id="header">
             <div class="headerWrap">
                 <p class="mainTxt">2024 SEOL EUNJIN PORTFOLIO</p>
-                <ul>
-                    <li>아이콘</li>
-                    <li>아이콘</li>
-                    <li>아이콘</li>
-                </ul>
+                <p class="mainTxt Contact">CONTACT</p>
             </div>
         </header>
         <div id="full-page">
@@ -43,7 +44,7 @@
             <div class="section s0">
                 <div class="wrapper">
                     <h2>PORTPOLIO</h2>
-                    <p class="mainTxt">안녕하세요. 웹 디자이너 겸 퍼블리셔 설은진입니다.</p>
+                    <p class="mainTxt">안녕하세요! 웹 디자이너 겸 퍼블리셔 설은진입니다.</p>
                 </div>
             </div>
 
@@ -68,31 +69,28 @@
                             수료내역
                         </h3>
                         <p class="Txt">
-                            : 2022.10 ~ 2023.03 대전컴퓨터아트학원대전둔산(6개월)<br>
+                            : 22.10 ~ 23.03 컴퓨터아트학원대전(6개월)<br>
                             UI/UX반응형웹디자인&웹퍼블리셔(코딩)개발자
                         </p>
                         <h3 class="MTxt">경력사항</h3>
                         <p class="Txt">
-                            : 2023.06 ~ 2024.01 (주)비엔에스파트너(8개월)
+                            : 23.06 ~ 24.01 (주)비엔에스파트너(8개월)
                             <br>
-                            웹디자이너 - 디자인 업무, 기획 및 사이트 관리
+                            웹디자이너 - 홈페이지 디자인 및 기획, 시각디자인 업무
                         </p>
                         <p class="Txt">
-                            : 2021.12 ~ 2022.09 제5군수지원여단(9개월)
+                            : 21.12 ~ 22.09 제5군수지원여단(9개월)
                             <br>
                             탄약관리부 9급 - 탄약재고관리담당
                             <br>
                         </p>
-                    </div>
-                    <div class="personalTag Txt left">
-                        <span>#꼼꼼한</span><span>#세심한</span><span>#ISFJ</span><span>#여행</span><br>
-                        <span>#인내심</span><span>#소통</span><span>#체계적인</span>
                     </div>
                 </div>
             </div>
 
             <div class="section s2">
                 <div class="wrapper">
+                    <div class="Develop">
                     <h2 class="BTxt">Develop Tech</h2>
                     <ul class="TechImg DevelopTech">
                         <li><img src="img/section3Img1.png" alt=""></li>
@@ -101,6 +99,8 @@
                         <li><img src="img/section3Img4.png" alt=""></li>
                         <li><img src="img/section3Img5.png" alt=""></li>
                     </ul>
+                    </div>
+                    <div class="Design">
                     <h2 class="BTxt">Design Tech</h2>
                     <ul class="TechImg">
                         <li><img src="img/section3Img6.png" alt=""></li>
@@ -108,75 +108,168 @@
                         <li><img src="img/section3Img8.png" alt=""></li>
                         <li><img src="img/section3Img9.png" alt=""></li>
                     </ul>
+                    </div>
                 </div> 
             </div> 
 
             <div class="section s3">
                     <div class="swiper-container wrapper">
+                        <div class="txtWrap">
                         <h2 class="BTxt">WEB PROJECT</h2>
+                        <p class="Txt">※ 옆으로 드래그를 통해 작업물을 확인하실 수 있습니다.</p>
+                        </div>
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="slideImg left">
-                                    <span>img</span>
+                                    <img src="img/section4Img5.jpg" alt="">
                                 </div>
                                 <div class="slideTxt right">
-                                    <h3 class="MTxt">한국동물보호연합</h3>
-                                    <p class="Txt">주황색의 따뜻함과 귀여운 느낌을 살려<br>이용자들로부터 친숙한 사이트로 리뉴얼하였습니다.</p>
+                                    <h3 class="MTxt">포트폴리오 사이트(반응형)</h3>
+                                    <p class="Txt">
+                                        이용자가 편하게 사용하는 사이트를 만드는 것이 제 목표이며,<br> 부드럽고 다가오기 편한 느낌의 사이트를 제작하였습니다.
+                                    </p>
                                     <table class="Txt">
                                         <tr>
-                                            <td>작업기간</td>
-                                            <td>hr</td>
+                                            <td style="width: 33%;">작업기간</td>
+                                            <td>32hr</td>
                                         </tr>
                                         <tr>
                                             <td>참여도</td>
-                                            <td>열 4</td>
+                                            <td>디자인100%, 구현100%</td>
                                         </tr>
                                         <tr>
                                             <td>제작 페이지</td>
-                                            <td>열 6</td>
+                                            <td>main</td>
                                         </tr>
                                         <tr>
                                             <td>사용툴</td>
-                                            <td>열 8</td>
+                                            <td>Figma , Photoshop, Illustration,<br> HTML5, CSS3, JavaScript</td>
                                         </tr>
                                     </table>
-                                    <button><a href="#">디테일 뷰</a></button>
                                     <button><a href="#">완성 페이지</a></button>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="slideImg left">
-                                    <span>img</span>
+                                    <img src="img/section4Img4.jpg" alt="">
                                 </div>
                                 <div class="slideTxt right">
-                                    <h3 class="MTxt">강도현밥보</h3>
-                                    <p class="Txt">주황색의 따뜻함과 귀여운 느낌을 살려<br>이용자들로부터 친숙한 사이트로 리뉴얼하였습니다.</p>
+                                    <h3 class="MTxt">병원 사이트 제작 : 운정채한의원</h3>
+                                    <p class="Txt">
+                                        한의원을 대표하는 6가지 진료과목을 기준으로 하여 사이트를 제작하였습니다
+                                    </p>
                                     <table class="Txt">
                                         <tr>
-                                            <td>작업기간</td>
-                                            <td>hr</td>
+                                            <td style="width: 33%;">작업기간</td>
+                                            <td>52hr</td>
                                         </tr>
                                         <tr>
                                             <td>참여도</td>
-                                            <td>열 4</td>
+                                            <td>디자인80%, 구현100%</td>
                                         </tr>
                                         <tr>
                                             <td>제작 페이지</td>
-                                            <td>열 6</td>
+                                            <td>main*1, Sub*6</td>
                                         </tr>
                                         <tr>
                                             <td>사용툴</td>
-                                            <td>열 8</td>
+                                            <td>아임웹 , Photoshop, Illustration, XD,<br> HTML5, CSS3, JavaScript</td>
                                         </tr>
                                     </table>
-                                    <button><a href="#">디테일 뷰</a></button>
-                                    <button><a href="#">완성 페이지</a></button>
+                                    <button><a href="https://www.unjeongchae.com/" target="_blank">완성 페이지</a></button>
                                 </div>
                             </div>
-                            
-                            
+                            <div class="swiper-slide">
+                                <div class="slideImg left">
+                                    <img src="img/section4Img3.jpg" alt="">
+                                </div>
+                                <div class="slideTxt right">
+                                    <h3 class="MTxt">병원 사이트 제작 : 포유맘케어</h3>
+                                    <p class="Txt">
+                                        산후조리사이트의 이미지의 맞게 정보를 알려주는 사이트로<br> 깔끔하고 한눈에 보이게 디자인하였습니다.
+                                    </p>
+                                    <table class="Txt">
+                                        <tr>
+                                            <td style="width: 33%;">작업기간</td>
+                                            <td>32hr</td>
+                                        </tr>
+                                        <tr>
+                                            <td>참여도</td>
+                                            <td>디자인80%, 구현100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>제작 페이지</td>
+                                            <td>main*1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>사용툴</td>
+                                            <td>아임웹 , Photoshop, Illustration,<br> HTML5, CSS3, JavaScript</td>
+                                        </tr>
+                                    </table>
+                                    <button><a href="https://www.4umomcare.co.kr/" target="_blank">완성 페이지</a></button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slideImg left">
+                                    <img src="img/section4Img1.jpg" alt="">
+                                </div>
+                                <div class="slideTxt right">
+                                    <h3 class="MTxt">쇼핑몰 사이트 제작 : 눅스</h3>
+                                    <p class="Txt">
+                                        눅스의 대표가 제품인 멀티 드라이 프로디쥬스 오일이므로<br> #맑고 #깔끔한 느낌의 홈페이지를 제작했습니다.
+                                    </p>
+                                    <table class="Txt">
+                                        <tr>
+                                            <td style="width: 33%;">작업기간</td>
+                                            <td>48hr</td>
+                                        </tr>
+                                        <tr>
+                                            <td>참여도</td>
+                                            <td>디자인100%, 구현100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>제작 페이지</td>
+                                            <td>main*1, Sub*2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>사용툴</td>
+                                            <td>Figma , Photoshop, HTML5, CSS3, JavaScript</td>
+                                        </tr>
+                                    </table>
+                                    <button class="WebProtectClick1"><a href="#">디테일 뷰</a></button>
+                                    <button><a href="http://snoweunjin.com/project002/index.html" target="_blank">완성 페이지</a></button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slideImg left">
+                                    <img src="img/section4Img2.jpg" alt="">
+                                </div>
+                                <div class="slideTxt right">
+                                    <h3 class="MTxt">팬페이지 : 윈터우즈</h3>
+                                    <p class="Txt">주변 인물로부터 여러 감정들이 생기는 부분을 다양한<br>색상을 사용하여 신비한 느낌의 홈페이지를 제작하였습니다.</p>
+                                    <table class="Txt">
+                                        <tr>
+                                            <td style="width: 33%;">작업기간</td>
+                                            <td>32hr</td>
+                                        </tr>
+                                        <tr>
+                                            <td>참여도</td>
+                                            <td>디자인100%, 구현100%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>제작 페이지</td>
+                                            <td>main*1, Sub*3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>사용툴</td>
+                                            <td>Figma , Photoshop, HTML5, CSS3, JavaScript</td>
+                                        </tr>
+                                    </table>
+                                    <button class="WebProtectClick2"><a href="#">디테일 뷰</a></button>
+                                    <button><a href="http://snoweunjin.com/project003/index.html" target="_blank">완성 페이지</a></button>
+                                </div>
+                            </div>
                         </div>
-                        
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
                         <div class="swiper-pagination"></div>
@@ -185,9 +278,12 @@
 
             <div class="section s4 fp-auto-height">
                 <div class="wrapper">
+                    <div class="txtWrap">
                     <h2 class="BTxt">DESING</h2>
+                    <p class="Txt">※ 작업물을 자세히 보려면 이미지를 클릭(터치)해주세요.</p>
+                    </div>
                     <section class="desing Sns">
-                        <h3>01.SNS</h3>
+                        <h3 class="MTxt">01. SNS</h3>
                         <ul class="DesignGallery SnsImg">
                             <li><div><h4>자세히 보기</h4></div><img src="img/section5SnsImg1.jpg" alt=""></li>
                             <li><div><h4>자세히 보기</h4></div><img src="img/section5SnsImg2.jpg" alt=""></li>
@@ -197,10 +293,11 @@
                             <li><div><h4>자세히 보기</h4></div><img src="img/section5SnsImg6.jpg" alt=""></li>
                             <li><div><h4>자세히 보기</h4></div><img src="img/section5SnsImg7.jpg" alt=""></li>
                             <li><div><h4>자세히 보기</h4></div><img src="img/section5SnsImg8.jpg" alt=""></li>
+                            <li></li>
                         </ul>
                     </section>
                     <section class="desing Detail">
-                        <h3>02.Detail</h3>
+                        <h3 class="MTxt">02. Detail</h3>
                         <ul class="DesignGallery DetailImg">
                             <li><div><h4>자세히 보기</h4></div><img src="img/section5DetailImg1.jpg" alt=""></li>
                             <li><div><h4>자세히 보기</h4></div><img src="img/section5DetailImg2.jpg" alt=""></li>
@@ -209,21 +306,36 @@
                         </ul>
                     </section>
                     <section class="desing CardNews">
-                        <h3>03.Card News</h3>
+                        <h3 class="MTxt">03. Card News</h3>
                         <ul class="DesignGallery CardNewsImg">
                             <li><div><h4>자세히 보기</h4></div><img src="img/section5CardImg1.jpg" alt=""></li>
                             <li><div><h4>자세히 보기</h4></div><img src="img/section5CardImg2.jpg" alt=""></li>
                             <li><div><h4>자세히 보기</h4></div><img src="img/section5CardImg3.jpg" alt=""></li>
                             <li><div><h4>자세히 보기</h4></div><img src="img/section5CardImg4.jpg" alt=""></li>
                             <li><div><h4>자세히 보기</h4></div><img src="img/section5CardImg5.jpg" alt=""></li>
+                            <li></li>
+                        </ul>
+                    </section>
+                    <section class="desing Event">
+                        <h3 class="MTxt">04. Event</h3>
+                        <ul class="DesignGallery EventImg">
+                            <li><div><h4>자세히 보기</h4></div><img src="img/section5EventImg1.jpg" alt=""></li>
+                            <li><div><h4>자세히 보기</h4></div><img src="img/section5EventImg2.jpg" alt=""></li>
+                            <li><div><h4>자세히 보기</h4></div><img src="img/section5EventImg3.jpg" alt=""></li>
+                            <li></li>
                         </ul>
                     </section>
                 </div>
             </div>
             <div class="section s5 fp-auto-height">
                 <div class="wrapper">
-                <p>본 페이지는 상업적 목적이 아닌
-                    <br>
+                <h2 class="BTxt">CONTACT</h2>
+                <h3 class="MTxt">끊임없이 발전하는 웹디자이너, 설은진이었습니다. <br>끝까지 봐주셔서 감사합니다!</h3>
+                <div>
+                    <span>E-mail : anah12@naver.com</span>
+                    <span>Tell : 010-3328-9026</span>
+                </div>
+                <p class="Txt">본 페이지는 상업적 목적이 아닌<br>
                     개인 포트폴리오용으로 제작되었습니다.
                     <br>
                     © 2024 Seol-Eun-jin. All Rights Reserved.</p>
@@ -232,6 +344,7 @@
         </div>
 
         <div class="DesignClick">
+            <div class="ScrollDown"><p class="Txt ">이미지를 밑으로 드래그 해주세요.</p></div>
             <div class="DesignImg SnsZoom">
                 <img src="img/section5SnsImg1.jpg" alt="">
                 <img src="img/section5SnsImg2.jpg" alt="">
@@ -254,6 +367,17 @@
                 <img src="img/section5CardImgL3.jpg" alt="">
                 <img src="img/section5CardImgL4.jpg" alt="">
                 <img src="img/section5CardImgL5.jpg" alt="">
+            </div>
+            <div class="DesignImg EventZoom">
+                <img src="img/section5EventImgL1.jpg" alt="">
+                <img src="img/section5EventImgL2.jpg" alt="">
+                <img src="img/section5EventImgL3.jpg" alt="">
+            </div>
+            <div class="DesignImg WebProtectImg4">
+                <img src="img/section4DImg1.jpg" alt="">
+            </div>
+            <div class="DesignImg WebProtectImg5">
+                <img src="img/section4DImg2.jpg" alt="">
             </div>
             <div class="Close">  
                 <svg  viewBox="0 0 32 32">

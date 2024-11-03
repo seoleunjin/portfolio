@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        .container {height: 300vh;}
+        .scroll-container {
+            overflow: auto;
+            height: 100vh;
+        }
+
+        .scroll-section {
+            height: 2000px; /* 또는 원하는 섹션 높이 */
+        }
+
+        .aos-item {
+            margin: 20px;
+            opacity: 0;
+        }
+
+        .aos-animate {
+            opacity: 1 !important;
+            transition: opacity 0.6s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+    </div>
+
+    <div class="scroll-container">
+        <section class="scroll-section">
+            <div class="aos-item" data-aos="fade-up">Content 1</div>
+            <div class="aos-item" data-aos="fade-up">Content 2</div>
+            <!-- More items -->
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script type="module">
+        import ScrollMagic from 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js';
+        import 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js';
+
+        AOS.init();
+
+        const scrollContainer = document.querySelector('.scroll-container');
+
+        const controller = new ScrollMagic.Controller();
+
+        new ScrollMagic.Scene({
+            triggerElement: scrollContainer,
+            triggerHook: 0,
+            duration: scrollContainer.scrollHeight
+        })
+        .setPin(scrollContainer)
+        .addTo(controller);
+
+        document.querySelectorAll('.aos-item').forEach((element) => {
+            new ScrollMagic.Scene({
+                triggerElement: element,
+                triggerHook: 0.9,
+                offset: -200
+            })
+            .setClassToggle(element, 'aos-animate')
+            .addTo(controller);
+        });
+
+    </script>
+</body>
+</html>

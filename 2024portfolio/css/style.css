@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
 
 /* 변수설정 */
 :root {
@@ -5,6 +7,14 @@
     --color-main: #030303;
     --color-point: #CD6E1C;
     --color-bg: #EBE9DD;
+}
+:root {
+    --swiper-navigation-color: #CD6E1C;
+    --swiper-pagination-color: #CD6E1C;
+    --swiper-pagination-bullet-inactive-color:#CD6E1C;
+    --swiper-pagination-bullet-inactive-opacity: 0.25;
+    --swiper-pagination-bottom: 3rem;
+    --swiper-navigation-top-offset: 55%;
 }
 /* 기본 전체 설정 */
 
@@ -14,6 +24,7 @@ html {
     letter-spacing: -0.025rem;
 }
 
+
 @media (max-width: 768px) {
     html {
         font-size: 58%;
@@ -22,9 +33,11 @@ html {
 
 @media (max-width: 500px) {
     html {
-        font-size: 55.125%;
+        font-size: 50%;
     }
 }
+
+
 
 * {
     margin: 0;
@@ -42,7 +55,7 @@ html {
 
 a {
     text-decoration: none;
-    color: #000;
+    color: #363636;
 }
 img {
     border: none;
@@ -61,6 +74,7 @@ button {
     appearance: none;
     border: none;
 }
+
 
 /* 폰트 설정 */
 
@@ -82,6 +96,7 @@ button {
     line-height: 1.8;
     margin-top: 1.8rem;
 }
+
 /* 18px 본문 텍스트 */
 
 
@@ -98,7 +113,6 @@ body {
     position: relative;
 }
 
-#full-page {}
 
 .section {}
 
@@ -108,6 +122,17 @@ body {
     text-align: center;
 }
 
+/* 네비 기본설정 */
+
+#fp-nav ul li a.active span {
+    background-color: var(--color-point);
+}
+#fp-nav ul li a:hover span {
+    background-color: var(--color-point);
+}
+#fp-nav ul li .fp-tooltip.fp-left {
+    color: var(--color-point);
+}
 /* 해더기본설정 */
 header {
     display: block;
@@ -134,11 +159,7 @@ header {
     -webkit-box-align: center;
     align-items: center;
 }
-header .headerWrap p {
-    font-size: 2rem;
-    font-weight: 600;
-    color: var(--color-point);
-}
+
 
 header ul {
     height: 100%;
@@ -150,10 +171,13 @@ header ul {
 header ul li {
     height: 100%;
 }
-
+.Contact {
+    cursor: pointer;
+    z-index: 99999;
+}
 /* s0 */
 .s0 {
-    background-image: url("/2024portfolio/img/main_bg.png");
+    background-image: url("../img/mainbg.png");
     background-position: bottom center;
     background-size: cover;
 }
@@ -170,20 +194,24 @@ header ul li {
 /* s1 */
 .s1 .wrapper {}
 
-.personalTag,
 .s1 .wrapper .imgBox {
-    width: 39%;
+    transition: all 0.15s;
+    opacity: 0;
+    width: 41%;
     float: left;
 }
+
 .s1 .wrapper .imgBox img {
-    width: 82%;
+    width: 100%;
     float: left;
     margin-top: 1.8rem;
     border-radius: 0.8rem;
 }
 .s1 .wrapper .txtBox {
+    transition: all 0.8s;
+    opacity: 0;
     text-align: left;
-    width: 51%;
+    width: 54%;
     float: right;
 }
 
@@ -195,19 +223,16 @@ header ul li {
     color: var(--color-point);
     margin-top: 2.8rem;
 }
-.personalTag {}
-.personalTag span {
-    float: left;
-    padding: 1.6rem 1.8rem;
-    border: 0.1rem solid var(--color-point);
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-    display: inline-block;
-    color: var(--color-point);
-    border-radius: 200rem;
-}
 
 /* s2 */
+.s2 .Develop {
+    opacity: 0;
+    transition: all 0.8s;
+}
+.s2 .Design {
+    opacity: 0;
+    transition: all 0.8s;
+}
 .s2 .wrapper h2 {
     font-size: 4.8rem;
     margin-bottom: 4.8rem;
@@ -230,22 +255,25 @@ header ul li {
 .TechImg li {
 }
 /* s3 */
+
 .swiper-container .BTxt {
-    margin-bottom: 7.2rem;
     text-align: left;
 }
 .s3 .wrapper {
-    position: relative;
 }
 .swiper-slide {
     background-color: var(--color-bg);
+    margin-top: 7.2rem;
 }
 .slideImg {
-    width: 50%;
+    width: 55%;
     float: left;
-    background-color: #CD6E1C;
+    border-radius: 0.8rem;
+    overflow: hidden;
 }
-
+.slideImg img {
+    width: 100%;
+}
 .slideTxt {
     width: 40%;
     float: right;
@@ -256,9 +284,11 @@ header ul li {
 .slideTxt table {
     margin-top: 2.8rem;
 }
-.slideTxt table td:nth-child(odd) {
+.slideTxt table td {
+    vertical-align: top;
+}
+.slideTxt table tr td:nth-child(odd) {
     font-weight: 600;
-    padding-right: 1rem;
 }
 .slideTxt button {
     margin-top: 2.8rem;
@@ -293,20 +323,47 @@ header ul li {
     color: var(--color-main);
     transition: all 0.3s;
 }
-/* 슬라이드 버튼 */
-.swiper-button-next,.swiper-button-prev {
+.DesignClick .WebProtectImg4,
+.DesignClick .WebProtectImg5 {
+    overflow-y: scroll;
 }
 
+.DesignClick .WebProtectImg4.on,
+.DesignClick .WebProtectImg5.on {
+    display: block;
+}
+
+.DesignClick .WebProtectImg4 img.on,
+.DesignClick .WebProtectImg5 img.on {
+    display: block;
+}
+
+
+
+
+/* 슬라이드 버튼 */
+.swiper-button-next {
+    right: 15%;
+}
+.swiper-button-prev {
+    left: 15%;
+}
 /* s4 */
 
 .s4 .BTxt {
-    margin-top: 14.4rem;
     text-align: left;
 }
-
+.txtWrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14.4rem;
+}
+.txtWrap .Txt {
+    margin-top: 1.4rem;
+    color: var(--color-point);
+}
 .s4 h3 {
     text-align: left;
-    font-size: 2.8rem;
     margin-top: 7.2rem;
     margin-bottom: 2.8rem;
 }
@@ -356,8 +413,41 @@ header ul li {
 .DesignGallery li:hover div {
     display: flex;
 }
+.s4 .SnsImg li:nth-child(9) {
+    display: none;
+}
+.s4 .CardNewsImg li:nth-child(5) {
+    display: none;
+}
 
-
+/* s5 */
+.s5 .wrapper .BTxt {
+    padding-top: 14.4rem;
+    padding-bottom: 2.8rem;
+}
+.s5 .wrapper .MTxt {
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+.s5 .wrapper .Txt{
+    padding-bottom: 14.4rem;
+}
+.s5 .wrapper div {
+    margin-top: 2.8rem;
+    margin-bottom: 4.8rem;
+}
+.s5 .wrapper span {
+    background-color: var(--color-bg);
+    padding: 1.6rem 1.8rem;
+    border-radius: 0.8rem;
+    margin-right: 1rem;
+    background-color: rgba(205, 110, 28, 0.25);
+    transition: all 0.3s;
+    color: var(--color-point);
+    font-size: 1.6rem;
+    font-weight: 600;
+    display: inline-block;
+}
 /* DesignClick */
 .DesignClick {
     width: 100%;
@@ -392,33 +482,26 @@ header ul li {
 }
 .DesignClick .SnsZoom {
 }
-.DesignClick .SnsZoom.on {
-    display: block;
-}
-.DesignClick .SnsZoom img.on {
-    display: block;
-}
-.DesignClick .DetailZoom {
-    overflow-y: scroll; 
-}
-.DesignClick .DetailZoom.on {
-    display: block;
-    scrollTop:0;
-}
-.DesignClick .DetailZoom img.on {
-    display: block;
-}
-.DesignClick .CardZoom {
-    overflow-y: scroll; 
-}
-.DesignClick .CardZoom.on {
-    display: block;
-}
-.DesignClick .CardZoom img.on {
+.DesignClick .SnsZoom.on,
+.DesignClick .DetailZoom.on,
+.DesignClick .CardZoom.on,
+.DesignClick .EventZoom.on {
     display: block;
 }
 
-/* 디자인 자세히 보기 */
+.DesignClick .SnsZoom img.on,
+.DesignClick .DetailZoom img.on,
+.DesignClick .CardZoom img.on,
+.DesignClick .EventZoom img.on {
+    display: block;
+}
+
+.DesignClick .DetailZoom,
+.DesignClick .CardZoom,
+.DesignClick .EventZoom {
+    overflow-y: scroll;
+}
+/* 취소버튼 */
 .Close {
     position: absolute;
     bottom: 7%;
@@ -469,3 +552,418 @@ header ul li {
     background: rgba(255, 255, 255, 0.06);
   }
   
+  @media(max-width:1280px) {
+    /* .s3 */
+    .swiper-button-next, .swiper-button-prev {
+        display: none;
+    }
+    .ScrollDown {
+        width: 100%;
+        position: absolute;
+        top: 25%;
+        left: 0;
+        color: #fff;
+    }
+    .ScrollDown p {
+        text-align: center;
+    }
+  }
+/* 1025px이상 1280px이하 */
+@media(min-width:1025px) and (max-width:1200px){
+    :root {
+        --swiper-pagination-bottom: 6rem;
+    }
+
+    /* 기본 레이아웃 설정 */
+    .wrapper {
+        max-width: 964px;
+    }
+
+    #header .headerWrap {
+        max-width: 964px;
+    }
+
+    #header {
+        height: 5.0rem;
+    }
+    
+    /* DesignClick */
+    .DesignClick .DesignImg {
+        width: 51rem;
+        height: 51rem;
+    }
+    .ScrollDown {
+        width: 100%;
+        position: absolute;
+        top: 25%;
+        left: 0;
+        color: #fff;
+    }
+    .ScrollDown p {
+        text-align: center;
+    }
+    /* 취소버튼 */
+    .Close {
+        width: 7rem;
+        height: 7rem;
+        bottom: 5%;
+        margin-left: -3.5rem;
+    }
+
+}
+
+
+/* 769px이상 1024px이하 */
+@media(min-width:769px) and (max-width:1024px){
+    :root {
+        --swiper-pagination-bottom: 0rem;
+    }
+    .wrapper {
+        max-width: 708px;
+    }
+    #header .headerWrap {
+        max-width: 708px;
+    }
+    #header {
+        height: 5.0rem;
+    }
+    /* s1 */
+    .s0 {
+        height: 100vh;
+        overflow: hidden;
+        background-image: url("../img/mainbg1024.png");
+    }
+    .s0 .wrapper h2 {
+        font-size: 12.6rem;
+        line-height: 18rem;
+        margin-top: 15rem;
+    }
+    .s1 .wrapper .txtBox {
+        width: 100%;
+    }
+    .s0 .wrapper p {
+        padding-bottom: 36rem;
+    }
+    .s1 .wrapper .txtBox p:nth-child(7) {
+        margin-bottom: 14.4rem;
+    }
+    
+    .s1 .wrapper .imgBox {
+        width: 100%;
+    }
+
+    .s1 .wrapper .imgBox img {
+        width: 80%;
+        margin-top: 14.4rem;
+        margin-bottom: 4.8rem
+}
+    
+
+    .TechImg li {
+        width: 15%;
+        margin: 0 1rem;
+    }
+    /* s3 */
+    .s3 table br {
+        display: none;
+    }
+    .s3 {
+        position: relative;
+    }
+    .s3 .BTxt {
+        margin-top: 14.4rem;
+    }
+    .slideImg {
+        width: 100%;
+        margin-bottom: 4.8rem;
+    }
+    .slideTxt {
+        width: 100%;
+        word-break: keep-all;
+    }
+    /* s4 */
+    
+    .DesignGallery li {
+        width: 32%;
+    }
+    .s4 .SnsImg li:nth-child(9) {
+        display: block;
+    }
+    .s4 .CardNewsImg li:nth-child(5) {
+        display: block;
+    }
+    .txtWrap {
+        flex-wrap: wrap;
+    }
+    
+    /* DesignClick */
+    .DesignGallery li:hover div {
+        display: none;
+    }
+    .DesignClick .DesignImg {
+        width: 51rem;
+        height: 51rem;
+    }
+    .ScrollDown {
+        width: 100%;
+        position: absolute;
+        top: 25%;
+        left: 0;
+        color: #fff;
+    }
+    .ScrollDown p {
+        text-align: center;
+    }
+    /* 취소버튼 */
+    .Close {
+        width: 7rem;
+        height: 7rem;
+        bottom: 4%;
+        margin-left: -3.5rem;
+    }
+}
+
+/* 481px이상 768px이하 */
+@media(min-width:481px) and (max-width:768px){
+    :root {
+        --swiper-pagination-bottom: 0rem;
+    }
+    .wrapper {
+        max-width: 420px;
+    }
+    /* 해더 메인 본문 텍스트 */
+    .mainTxt {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: var(--color-point);
+    }
+    #header .headerWrap {
+        max-width: 420px;
+    }
+    #header {
+        height: 4.8rem;
+    }
+    /* s1 */
+    .s0 {
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    .s0 .wrapper h2 {
+        font-size: 7.2rem;
+        line-height: 11.8rem;
+        margin-top: 9rem;
+    }
+    .s1 .wrapper .txtBox {
+        width: 100%;
+    }
+    .s0 .wrapper p {
+        padding-bottom: 36rem;
+    }
+    .s1 .wrapper .txtBox p:nth-child(7) {
+        margin-bottom: 14.4rem;
+    }
+    .s1 .wrapper .imgBox {
+        width: 100%;
+    }
+
+    .s1 .wrapper .imgBox img {
+        width: 100%;
+        margin-top: 14.4rem;
+        margin-bottom: 4.8rem
+}
+    .TechImg li {
+        width: 15%;
+        margin: 0 1rem;
+    }
+    /* s3 */
+    .s3 table br {
+        display: none;
+    }
+    .s3 {
+        position: relative;
+    }
+    .s3 .BTxt {
+        margin-top: 14.4rem;
+    }
+    .slideImg {
+        width: 100%;
+        margin-bottom: 4.8rem;
+    }
+    .slideTxt {
+        width: 100%;
+        word-break: keep-all;
+    }
+    /* s4 */
+    .txtWrap {
+        display: block;
+    }
+    .txtWrap .Txt {
+        margin-top: 1.4rem;
+        text-align: left;
+    }
+    .DesignGallery li {
+        width: 47.6%;
+    }
+    .s4 .SnsImg li:nth-child(9) {
+        display: block;
+    }
+    .s4 .CardNewsImg li:nth-child(5) {
+        display: block;
+    }
+    /* DesignClick */
+    .DesignGallery li:hover div {
+        display: none;
+    }
+    .ScrollDown {
+        width: 100%;
+        position: absolute;
+        top: 25%;
+        left: 0;
+        color: #fff;
+    }
+    .ScrollDown p {
+        text-align: center;
+    }
+    .DesignClick .DesignImg {
+        width: 32rem;
+        height: 32rem;
+    }
+    /* 취소버튼 */
+    .Close {
+        width: 7rem;
+        height: 7rem;
+        bottom: 2%;
+        margin-left: -3.5rem;
+    }
+}
+
+/* 320px이상 480px이하 */
+@media(min-width:320px) and (max-width:480px){
+    :root {
+        --swiper-pagination-bottom: 0rem;
+    }
+    .wrapper {
+        max-width: 320px;
+    }
+    /* 해더 메인 본문 텍스트 */
+    .mainTxt {
+        font-size: 1.6rem;
+    }
+    #header .headerWrap {
+        max-width: 320px;
+    }
+    #header {
+        height: 4.8rem;
+    }
+    /* s1 */
+    .s0 {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        background-image: url("../img/mainbg320.png");
+    }
+    .s0 .wrapper h2 {
+        font-size: 6rem;
+        line-height: 9rem;
+        margin-top: 20rem;
+    }
+    .s1 .wrapper .txtBox {
+        width: 100%;
+    }
+    .s1 .wrapper .txtBox p:nth-child(2) br {
+        display: none;
+    }
+    .s0 .wrapper p {
+        padding-bottom: 36rem;
+        line-height: 1.8;
+    }
+    .s1 .wrapper .txtBox p:nth-child(7) {
+        margin-bottom: 14.4rem;
+    }
+    
+    .s1 .wrapper .imgBox {
+        width: 100%;
+    }
+
+    .s1 .wrapper .imgBox img {
+        width: 100%;
+        margin-top: 14.4rem;
+        margin-bottom: 4.8rem
+}
+    .TechImg li {
+        width: 15%;
+        margin: 0 1rem;
+    }
+    /* s3 */
+    .s3 table br {
+        display: none;
+    }
+    .s3 {
+        position: relative;
+    }
+    .s3 .BTxt {
+        margin-top: 14.4rem;
+    }
+    .slideImg {
+        width: 100%;
+        margin-bottom: 4.8rem;
+    }
+    .slideTxt {
+        width: 100%;
+        word-break: keep-all;
+    }
+    .slideTxt p br {
+        display: none;
+    }
+    /* s4 */
+    .txtWrap {
+        display: block;
+    }
+    .txtWrap .Txt {
+        margin-top: 1.4rem;
+        text-align: left;
+    }
+    .DesignGallery li {
+        width: 47.6%;
+    }
+    .s4 .SnsImg li:nth-child(9) {
+        display: block;
+    }
+    .s4 .CardNewsImg li:nth-child(5) {
+        display: block;
+    }
+    /* .s5 */
+    .s5 .wrapper div span:nth-child(2) {
+        margin-top: 1.8rem;
+    }
+    /* DesignClick */
+    .DesignGallery li:hover div {
+        display: none;
+    }
+    .DesignClick .DesignImg {
+        width: 32rem;
+        height: 32rem;
+    }
+    .ScrollDown {
+        width: 100%;
+        position: absolute;
+        top: 25%;
+        left: 0;
+        color: #fff;
+    }
+    .ScrollDown p {
+        text-align: center;
+    }
+    .ScrollDown.on {
+        display: none;
+    }
+    /* 취소버튼 */
+    .Close {
+        width: 7rem;
+        height: 7rem;
+        bottom: 20%;
+        margin-left: -3.5rem;
+    }
+}

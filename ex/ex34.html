@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        .container {height: 300vh;}
+        .scroll-container {
+            overflow: auto;
+            height: 100vh;
+        }
+
+        .scroll-section {
+            height: 2000px; /* 또는 원하는 섹션 높이 */
+            display: flex; align-items: center;
+        }
+
+        .aos-item {
+            margin: 20px;
+            opacity: 0;
+        }
+
+        .aos-animate {
+            opacity: 1 !important;
+            transition: opacity 0.6s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="">
+            <div >Content 1</div>
+            <div >Content 2</div>
+            <!-- More items -->
+        </section>
+    </div>
+    <div class="scroll-container">
+        <section class="scroll-section">
+            <div class="aos-item" data-aos="fade-up">Content 1</div>
+            <div class="aos-item" data-aos="fade-up">Content 2</div>
+            <!-- More items -->
+        </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script type="module">
+        AOS.init();
+
+        const observerOptions = {
+            root: document.querySelector('.scroll-container'),
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('aos-animate');
+                } else {
+                    entry.target.classList.remove('aos-animate');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.aos-item').forEach((item) => {
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>
